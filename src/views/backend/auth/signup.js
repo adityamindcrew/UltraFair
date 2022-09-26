@@ -56,8 +56,8 @@ const SignUp = (props) => {
 
   return (
     <>
-      <div className={`rtl-box ${show === true ? "" : ""}`}>
-        {/* <button type="button" className="btn btn-light rtl-btn">
+      {/* <div className={`rtl-box ${show === true ? "" : ""}`}>
+         <button type="button" className="btn btn-light rtl-btn">
           <svg
             onClick={() => setShow(!show)}
             xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ const SignUp = (props) => {
               clipRule="evenodd"
             />
           </svg>
-        </button> */}
+        </button> 
         <div className="rtl-panel">
           <ul className="modes">
             <li
@@ -99,7 +99,7 @@ const SignUp = (props) => {
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
       <div className="sign-in-page">
         {/* <section className="sign-in-page">
           <Container>
