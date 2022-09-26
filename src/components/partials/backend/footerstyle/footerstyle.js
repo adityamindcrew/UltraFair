@@ -10,6 +10,7 @@ import '../../../../assets/css/Ultrafair/footerstyle.css'
 
 import Vector from '../../../../assets/images/Ultrafair/Vector.png'
 import Flag from '../../../../assets/images/Ultrafair/flag.png'
+import Ultrafair from '../../../../assets/images/Ultrafair/Ultrafairlogo.png'
 
 
 
@@ -125,17 +126,18 @@ const FooterStyle = (props) => {
                                 <option >English</option>
                                 <option>Hindi</option>
                             </select></div></li>
-                            <li>Odds</li>
-                            <li><div style={{width: "100px" ,marginLeft: "0px"}}><select className="form-control" id="exampleFormControlSelect2">
+                            <li  className='laguagetext'>Odds</li>
+                            <li><div style={{ width: "99px", marginLeft: "0px" }}><select className="form-control" id="exampleFormControlSelect2">
                                 <option >Decimal</option>
                                 <option>Number</option>
-                            </select></div> </li>
+                            </select></div><div className='mr-2 pt-4'></div> </li>
                         </ul>
                     </div>
                     <div class="clearfix"></div>
                     <hr class="linedesign"></hr>
 
-                    <div className='p-5'>
+                    <div className='p-2'>
+                        <center className="pb-5"><img src={Ultrafair} /></center>
                         <center><p className='mainfootertext'>© 2022 Ultrafair.com | All Rights Reserved.</p></center>
                         <center><h5 className='mb-4 mainfootertext'>1 BTC = $22,624.43</h5></center>
                         <center>

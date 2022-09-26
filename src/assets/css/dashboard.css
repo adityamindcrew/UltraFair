@@ -107,6 +107,68 @@
     width: 100px; 
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.text-right{
+    white-space: nowrap; 
+    width: 100px; 
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    text-align: end !important;
+}
+.left-text-color{
+    color: #B3BAD1 !important;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    white-space: nowrap; 
+    width: 100px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right !important;
+}
 
+.left-text-greencolor{
+    color: #11FFBD !important;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    white-space: nowrap; 
+    width: 100px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right !important;
+}
+@media (min-width: 576px) { 
+    .NEW-BTN {
+      width: 20% !important;
+    }
+}
+
+@media (min-width: 768px) { 
+    .NEW-BTN {
+        width: 30% !important;
+
+    }
+ }
+
+@media (min-width: 992px) { 
+    .NEW-BTN {
+        width: 20% !important;
+
+    }
+ }
+
+@media (min-width: 1200px) { 
+    .NEW-BTN {
+        width: 20% !important;
+
+    }
+ }
+
+@media (min-width: 1400px) { 
+    .NEW-BTN {
+        width: 30px;
+
+    }
 
 }
