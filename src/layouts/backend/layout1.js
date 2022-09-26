@@ -20,7 +20,7 @@ const Layout1 = () => {
             <HeaderStyle1 />
             
             <div className="content-page" id="content-page">
-                <Layout1Route />aaaaaaaaaaaaaaaaaaaaa
+                <Layout1Route />
             </div>
          </div>
          <FooterStyle />
