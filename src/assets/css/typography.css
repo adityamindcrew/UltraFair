@@ -66,7 +66,7 @@ Font
 /*---------------------------------------------------------------------
 General
 -----------------------------------------------------------------------*/
-*::-moz-selection {
+*::-moz-selection { 
     background: var(--iq-primary);
     color: var(--iq-white);
     text-shadow: none;
@@ -104,11 +104,7 @@ a,
     -o-transition: all 0.5s ease-out 0s;
     transition: all 0.5s ease-out 0s;
 }
-
-  background: var(--iq-primary);
-  color: var(--iq-white);
-  text-shadow: none;
-}
+ 
 ::-moz-selection {
   background: var(--iq-primary);
   color: var(--iq-white);
@@ -139,11 +135,11 @@ a,
   -ms-transition: all 0.5s ease-out 0s;
   -o-transition: all 0.5s ease-out 0s;
   transition: all 0.5s ease-out 0s; */
-}
+} 
 a,
 button,
 input,
-btn {
+btn { 
     outline: medium none !important;
 }
 
@@ -158,9 +154,7 @@ a:hover {
 hr {
     border: 1px solid #344452;
 }
-
-  outline: medium none !important;
-}
+ 
 a {
   color: var(--iq-primary);
 }
@@ -169,32 +163,27 @@ a:hover {
 }
 hr {
   border-color: var(--iq-border-light);
-}
+} 
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6 { 
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     margin: 0px;
     line-height: 1.5;
     color: var(--iq-title-text);
 }
-
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  margin: 0px;
-  line-height: 1.5;
-  color: var(--iq-title-text);
-}
+ 
+   
 h1 a,
 h2 a,
 h3 a,
 h4 a,
 h5 a,
-h6 a {
+h6 a { 
     color: inherit;
 }
 
@@ -227,7 +216,7 @@ h5 {
 h6 {
     font-size: 1.0em;
     line-height: 1.3em;
-  color: inherit;
+   color: inherit;
 }
 label {
   font-weight: normal;
@@ -251,12 +240,12 @@ h5 {
 }
 h6 {
   font-size: 1em;
-  line-height: 1.3em;
+  line-height: 1.3em; 
 }
 
 /*----------------------------------------------
 Input
-------------------------------------------------*/
+------------------------------------------------*/ 
 label {
     color: var(--iq-secondary);
 }
@@ -268,6 +257,7 @@ label {
 .form-control.form-control-lg {
     height: 50px;
     line-height: 50px;
+}
 /* label { color: var(--iq-secondary); } */
 label {
   color: #b3bad1;
@@ -277,11 +267,11 @@ label {
 }
 .form-control.form-control-lg {
   height: 50px;
-  line-height: 50px;
+  line-height: 50px; 
 }
 
 /* Definition Lists */
-dl dd {
+dl dd { 
     margin-bottom: 15px;
 }
 
@@ -296,10 +286,8 @@ dl dd:last-child {
 .table td,
 .table th {
     vertical-align: middle;
-}
-
-  margin-bottom: 15px;
-}
+} 
+   
 dl dd:last-child {
   margin-bottom: 0px;
 }
@@ -309,15 +297,14 @@ dl dd:last-child {
 .table td,
 .table th {
   vertical-align: middle;
-}
+} 
 .table thead th {
   border-bottom: 2px solid var(--iq-body-bg);
 }
 .table td,
 .table th {
   border-top: 1px solid var(--iq-body-bg);
-}
-
+} 
 .table td,
 .table th {
     border-top: 1px solid var(--iq-body-bg);
@@ -328,9 +315,12 @@ dl dd:last-child {
     border: 1px solid var(--iq-body-bg)
 }
 
-.table-bordered td,
+ .table-bordered td,
 .table-bordered th {
   border: 1px solid var(--iq-body-bg);
+}
+textarea {
+    resize: none;
 }
 textarea {
     resize: none;
@@ -340,29 +330,25 @@ textarea {
 .form-control[readonly] {
     background-color: var(--iq-disable) !important;
     opacity: 1;
-.form-control:disabled,
-.form-control[readonly] {
-  background-color: var(--iq-disable) !important;
-  opacity: 1;
 }
 
 /*----model----*/
-.modal-header {
+.modal-header { 
     border-bottom: 1px solid var(--iq-body-bg);
 }
 
 .modal-footer {
     border-top: 1px solid var(--iq-body-bg);
-  border-bottom: 1px solid var(--iq-body-bg);
+   border-bottom: 1px solid var(--iq-body-bg);
 }
 .modal-footer {
-  border-top: 1px solid var(--iq-body-bg);
+  border-top: 1px solid var(--iq-body-bg); 
 }
 
 /*----------------------------------------------
 loading
 ------------------------------------------------*/
-#loading {
+#loading { 
     background: var(--iq-body-bg) url(../images/loader.gif) no-repeat scroll center center;
     height: 100%;
     width: 100%;
@@ -392,7 +378,7 @@ loading
     top: 0;
     bottom: 0;
     position: absolute;
-  background: var(--iq-body-bg) url(../images/loader.gif) no-repeat scroll
+   background: var(--iq-body-bg) url(../images/loader.gif) no-repeat scroll
     center center;
   height: 100%;
   width: 100%;
@@ -418,12 +404,11 @@ loading
   left: 0;
   right: 0;
   top: 0;
-  bottom: 0;
-  position: absolute;
+  bottom: 0; 
 }
 
 /* Bootstrap override */
-.rounded {
+.rounded { 
     border-radius: 5px !important;
 }
 
@@ -548,7 +533,7 @@ div.dataTables_wrapper div.dataTables_filter label {
 .btn-outline-primary:disabled {
     color: var(--iq-primary);
     background-color: transparent;
-  border-radius: 5px !important;
+   border-radius: 5px !important;
 }
 .rounded-circle {
   border-radius: 50% !important;
@@ -652,11 +637,11 @@ div.dataTables_wrapper div.dataTables_filter label {
 .btn-outline-primary.disabled,
 .btn-outline-primary:disabled {
   color: var(--iq-primary);
-  background-color: transparent;
+  background-color: transparent; 
 }
 
 /* right sidebar */
-.iq-right-fixed {
+.iq-right-fixed { 
     margin: 0 15px;
 }
 
@@ -709,7 +694,7 @@ div.dataTables_wrapper div.dataTables_filter label {
 
 .right-sidebar-toggle span {
     display: none !important;
-  margin: 0 15px;
+   margin: 0 15px;
 }
 .right-sidebar-mini {
   top: 75px;
@@ -752,14 +737,14 @@ div.dataTables_wrapper div.dataTables_filter label {
   display: block;
 }
 .right-sidebar-toggle span {
-  display: none !important;
+  display: none !important; 
 }
 
 /*----------------------------------------------
 Background Color
 ------------------------------------------------*/
 .bg-primary,
-.badge-primary {
+.badge-primary { 
     color: var(--iq-white);
     background: var(--iq-primary) !important;
 }
@@ -803,11 +788,7 @@ Background Color
 .badge-dark {
     color: var(--iq-white);
     background-color: var(--iq-dark) !important;
-}
-
-  color: var(--iq-white);
-  background: var(--iq-primary) !important;
-}
+} 
 .bg-secondary,
 .badge-secondary {
   color: var(--iq-white);
@@ -841,11 +822,11 @@ Background Color
 .badge-dark {
   color: var(--iq-white);
   background-color: var(--iq-dark) !important;
-}
+} 
 a.bg-primary:focus,
 a.bg-primary:hover,
 button.bg-primary:focus,
-button.bg-primary:hover {
+button.bg-primary:hover { 
     background-color: var(--iq-primary-hover) !important;
     color: var(--iq-white);
 }
@@ -853,18 +834,14 @@ button.bg-primary:hover {
 a.text-primary:focus,
 a.text-primary:hover {
     color: var(--iq-primary) !important;
-  background-color: var(--iq-primary-hover) !important;
-  color: var(--iq-white);
-}
-a.text-primary:focus,
-a.text-primary:hover {
-  color: var(--iq-primary) !important;
-}
+   background-color: var(--iq-primary-hover) !important;
+ }
+ 
 
 /*----------------------------------------------
 Background Color Opacity
 ------------------------------------------------*/
-.iq-bg-primary {
+.iq-bg-primary { 
     background: var(--iq-light-primary) !important;
     color: var(--iq-primary) !important;
 }
@@ -894,9 +871,7 @@ Background Color Opacity
     color: var(--iq-info) !important;
 }
 
-.iq-bg-dark {
-    background: var(--iq-light-dark) !important;
-    color: var(--iq-dark1) !important;
+.iq-bg-dark {  
   background: var(--iq-light-primary) !important;
   color: var(--iq-primary) !important;
 }
@@ -922,11 +897,11 @@ Background Color Opacity
 }
 .iq-bg-dark {
   background: var(--iq-light-dark) !important;
-  color: var(--iq-dark1) !important;
+  color: var(--iq-dark1) !important; 
 }
 
 /*--------------*/
-.iq-bg-primary-hover:hover {
+.iq-bg-primary-hover:hover { 
     background: var(--iq-light-primary) !important;
     color: var(--iq-primary);
 }
@@ -952,7 +927,6 @@ Background Color Opacity
 }
 
 .iq-bg-primary-dark-hover:hover {
-    background: var(--iq-light-dark) !important;
   background: var(--iq-light-primary) !important;
   color: var(--iq-primary);
 }
@@ -1217,12 +1191,12 @@ Avatar Size
 .avatar-235 {
   height: 235px;
   width: 235px;
-  line-height: 235px;
+  line-height: 235px; 
 }
 
 /*----------------------------------------------
     Background Border Color
-------------------------------------------------*/
+------------------------------------------------*/ 
 .iq-border {
     border: 1px solid var(--iq-border);
 }
@@ -1251,7 +1225,8 @@ Avatar Size
 
 .iq-border-alert {
     border: 10px solid var(--iq-border-danger);
-.iq-card {
+}
+ .iq-card {
   background: var(--iq-light-card);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -1458,12 +1433,12 @@ Avatar Size
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 0;
+  z-index: 0; 
 }
 
 /*----------------------------------------------
 Text Color
-------------------------------------------------*/
+------------------------------------------------*/ 
 .text-primary {
     color: var(--iq-primary) !important;
 }
@@ -1509,8 +1484,8 @@ Text Color
 }
 
 .text-body {
-    color: var(--iq-body-text) !important;
-.btn.focus,
+    color: var(--iq-body-text) !important; 
+}
 .btn:focus {
   box-shadow: none !important;
 }
@@ -1937,12 +1912,12 @@ Text Color
 .btn-outline-dark.disabled,
 .btn-outline-dark:disabled {
   color: var(--iq-dark);
-  background-color: transparent;
+  background-color: transparent; 
 }
 
 /*----------------------------------------------
 Line Height
-------------------------------------------------*/
+------------------------------------------------*/ 
 .line-height {
     line-height: normal !important;
 }
@@ -1969,6 +1944,7 @@ Line Height
 
 .line-height-7 {
     line-height: 50px !important;
+}
 .alert-primary {
   color: var(--iq-primary);
   border-color: var(--iq-primary);
@@ -2127,12 +2103,12 @@ Border
   border-color: var(--iq-dark1) !important;
 }
 .border-white {
-  border-color: var(--iq-white) !important;
+  border-color: var(--iq-white) !important; 
 }
 
 /*----------------------------------------------
 Font Size
-------------------------------------------------*/
+------------------------------------------------*/ 
 .font-size-11 {
     font-size: 11px !important;
 }
@@ -3286,7 +3262,7 @@ Grid Boxes
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-}
+} 
 .iq-card-block.iq-card-stretch {
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -3312,4 +3288,4 @@ Grid Boxes
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-}
+} 

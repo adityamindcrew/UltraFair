@@ -1,65 +1,117 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Navbar, Button, Form, Nav, Dropdown } from 'react-bootstrap'
-import Card from '../../../Card'
-import CustomToggle from '../../../dropdowns'
-//img
-
-import user1 from '../../../../assets/images/user/1.jpg'
-import user01 from '../../../../assets/images/user/01.jpg'
-import user02 from '../../../../assets/images/user/02.jpg'
-import user03 from '../../../../assets/images/user/03.jpg'
-import user04 from '../../../../assets/images/user/04.jpg'
-import user05 from '../../../../assets/images/user/05.jpg'
 
 //img
 import logo from '../../../../../src/assets/images/sidebar/UltrafairLogo.png'
 import smallLogo from '../../../../assets/images/sidebar/UltrafairSmallLogo.png'
+import React from "react";
+import { Link, useHistory } from "react-router-dom";
+import { Navbar, Button, Form, Nav, Dropdown } from "react-bootstrap";
+ 
 
+//Modal
+import Modal from "react-bootstrap/Modal";
+import Signup from "../../../../views/backend/auth/signup";
+import Signin from "../../../../views/backend/auth/signin";
 
 const HeaderStyle1 = (props) => {
-    const minisidbar = () => {
-        document.body.classList.toggle('sidebar-main')
-    }
-
+  const [signUpModalShow, setSignUpModalShow] = React.useState(false);
+  const [loginModalShow, setLoginModalShow] = React.useState(false);
+  const minisidbar = () => {
+    document.body.classList.toggle("sidebar-main");
+  };
+  function SignUpModal(props) {
     return (
-        <>
-            <div className="iq-top-navbar">
-                <div className="iq-navbar-custom">
-                    <Navbar className="p-0" expand="sm">
-                        <div className="iq-menu-bt d-flex align-items-center">
-                            <div className="wrapper-menu" onClick={minisidbar}>
-                                <div className="main-circle"><i className="las la-bars"></i></div>
-                            </div>
-                            <div className="iq-navbar-logo d-flex justify-content-between">
-                                <Link to="#" className="header-logo">
-                                    <img src={logo} className="logoImg fullLogo img-fluid rounded-normal" alt="" />
-                                    {/* <div className="logo-title">
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+        style={{ justifyContent: "center" }}
+      >
+        {/* <Modal.Header closeButton></Modal.Header> */}
+        <Modal.Body style={{ padding: "0px" }}>
+          <Signup showModal={loginCallback} close={CloseButton} />
+        </Modal.Body>
+      </Modal>
+    );
+  }
+  function LoginModal(props) {
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+        style={{ justifyContent: "center" }}
+      >
+        {/* <Modal.Header closeButton></Modal.Header> */}
+        <Modal.Body style={{ padding: "0px" }}>
+          <Signin showModal={signUpCallback} close={CloseButton} />
+        </Modal.Body>
+      </Modal>
+    );
+  }
+
+  let history = useHistory();
+
+  const CloseButton = () => {
+    setLoginModalShow(false);
+    setSignUpModalShow(false);
+  };
+
+  const loginCallback = (d) => {
+    console.log("fun called", d);
+    setLoginModalShow(d);
+    setSignUpModalShow(!d);
+  };
+  const signUpCallback = (l) => {
+    console.log("func signup", l);
+    setSignUpModalShow(l);
+    setLoginModalShow(!l);
+  };
+  const registerHandler = () => {
+    setSignUpModalShow(true);
+  };
+  const loginHandler = () => {
+    setLoginModalShow(true);
+  };
+  return (
+    <>
+      <div className="iq-top-navbar">
+        <div className="iq-navbar-custom">
+          <Navbar className="p-0" expand="sm">
+            <div className="iq-menu-bt d-flex align-items-center">
+              <div className="wrapper-menu" onClick={minisidbar}>
+                <div className="main-circle"><i className="las la-bars"></i></div>
+              </div>
+              <div className="iq-navbar-logo d-flex justify-content-between">
+                <Link to="#" className="header-logo">
+                  <img src={logo} className="logoImg fullLogo img-fluid rounded-normal" alt="" />
+                  {/* <div className="logo-title">
                                         <span className="text-primary text-uppercase">Ultrafair</span>
                                     </div> */}
-                                    <img src={smallLogo} className="logoImg collapsedLogo img-fluid rounded-normal" alt="" />
-                                    {/* <div className="logo-title">
+                  <img src={smallLogo} className="logoImg collapsedLogo img-fluid rounded-normal" alt="" />
+                  {/* <div className="logo-title">
                                         <span className="text-primary text-uppercase">Ultrafair</span>
                                     </div> */}
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="iq-search-bar ml-auto">
-                            {/* <Form action="#" className="searchbox">
+                </Link>
+              </div>
+            </div>
+            <div className="iq-search-bar ml-auto">
+              {/* <Form action="#" className="searchbox">
                         <input type="text" className="text search-input" placeholder="Search Here..."/>
                         <Link className="search-link" to="#"><i className="ri-search-line"></i></Link>
                     </Form> */}
-                        </div>
-                        <Navbar.Toggle as={Button} aria-controls="responsive-navbar-nav">
-                            <i className="ri-menu-3-line"></i>
-                        </Navbar.Toggle>
-                        <Navbar.Collapse id="responsive-navbar-nav">
-                            <Nav as="ul" className="ml-auto navbar-list iq-header">
-                                {/* <div className='navItem'> </div> */}
-                                <Link className="navItem" to="#">Sign In</Link>
-                                <Button className='navItem' type="button" variant="btn btn-primary">Register</Button>
+            </div>
+            <Navbar.Toggle as={Button} aria-controls="responsive-navbar-nav">
+              <i className="ri-menu-3-line"></i>
+            </Navbar.Toggle>
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav as="ul" className="ml-auto navbar-list iq-header">
+                {/* <div className='navItem'> </div> */}
+                <Link className="navItem" to="#" onClick={registerHandler}>Sign In</Link>
+                <Button className='navItem' type="button" variant="btn btn-primary" onClick={loginHandler}>Register</Button>
 
-                                {/* <Dropdown as="li" className="nav-item nav-icon search-content iq-search">
+                {/* <Dropdown as="li" className="nav-item nav-icon search-content iq-search">
                                     <Dropdown.Toggle as={CustomToggle} href="#" variant="search-toggle iq-waves-effect text-gray rounded">
                                         <i className="ri-search-line"></i>
                                     </Dropdown.Toggle>
@@ -70,7 +122,7 @@ const HeaderStyle1 = (props) => {
                                         </Form>
                                     </Dropdown.Menu>
                                 </Dropdown> */}
-                                {/*  <Dropdown as="li" className="nav-item nav-icon">
+                {/*  <Dropdown as="li" className="nav-item nav-icon">
                             <Dropdown.Toggle as={CustomToggle} href="#" variant="search-toggle iq-waves-effect text-gray rounded">
                                 <span className="ripple rippleEffect" style={{width: '35px' , height: '35px', top: '0.5px' ,left: '-8.5px'}}></span>
                                     <i className="ri-notification-2-line"></i>
@@ -272,17 +324,25 @@ const HeaderStyle1 = (props) => {
                                 </Card>    
                             </Dropdown.Menu>
                         </Dropdown>   */}
-                            </Nav>
-                        </Navbar.Collapse>
-                    </Navbar>
-                </div>
-            </div>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+        </div>
+      </div>
+      <SignUpModal
+        show={signUpModalShow}
+        onHide={() => setSignUpModalShow(false)}
+      />
+      <LoginModal
+        show={loginModalShow}
+        onHide={() => setLoginModalShow(false)}
+      />
 
 
 
-
-        </>
-    )
+    </>
+  )
 }
+
 
 export default HeaderStyle1
