@@ -1,11 +1,12 @@
-import React from 'react'
+import React ,{useState}from 'react'
 import { Link } from 'react-router-dom'
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col ,Form, Button} from 'react-bootstrap';
 import  Card  from '../../../components/Card'
 import Chart from "react-apexcharts";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Autoplay  } from 'swiper';
 import 'swiper/swiper-bundle.css';
+import "../../../assets/css/dashboard.css"
 import Select from 'react-select'
 
 // img
@@ -15,6 +16,24 @@ import dash03 from '../../../assets/images/dashboard/03.jpg'
 import dash04 from '../../../assets/images/dashboard/04.jpg'
 import dash05 from '../../../assets/images/dashboard/05.jpg'
 import dash06 from '../../../assets/images/dashboard/06.jpg'
+import Pic1 from '../../../assets/images/dashboard/dash1.png'
+import Pic2 from '../../../assets/images/dashboard/dash2.png'
+import Pic3 from '../../../assets/images/dashboard/dash3.png'
+import ICON1 from '../../../assets/images/icon/ICON1.png'
+import ICON2 from '../../../assets/images/icon/ICON2.png'
+import ICON3 from '../../../assets/images/icon/ICON3.png'
+import ICON4 from '../../../assets/images/icon/ICON4.png'
+import ICON5 from '../../../assets/images/icon/ICON5.png'
+
+import Svg1 from '../../../assets/images/icon/V1.svg'
+import Svg2 from '../../../assets/images/icon/V2.svg'
+import Svg3 from '../../../assets/images/icon/V3.svg'
+import Svg4 from '../../../assets/images/icon/V4.svg'
+
+import Svg5 from '../../../assets/images/icon/V5.svg'
+import Showimg1 from '../../../assets/images/Show1.png'
+import Showimg2 from '../../../assets/images/Show2.png'
+import Showimg3 from '../../../assets/images/Show3.png'
 
 import mt01 from '../../../assets/images/movie-thumb/01.jpg'
 import mt04 from '../../../assets/images/movie-thumb/04.jpg'
@@ -25,7 +44,12 @@ SwiperCore.use([Navigation, Autoplay ]);
 
 const Dashbord = () => { 
    // const Navigation = () => {
+      const [btn,setbtn]= useState("")
      
+  const   btncolorhandles =(color)=>{
+        setbtn(color)
+        console.log('dsklfjsdl')
+      }
    const options1 = [
       { value: 'today', label: 'Today' },
       { value: 'this month', label: 'This Month' },
@@ -155,12 +179,12 @@ const Dashbord = () => {
     return (
        <> 
         <Container fluid>
-           <Row>
-              <Col lg="8">
-                 <Row>
-                    <Col sm="6" lg="6" xl="3">
+           <Row style={{background:'#1E2C37'}}>
+              <Col lg="8"xl="12">
+                 <Row   xl="20" >
+                    <Col sm="6" lg="6" xl="4">
                        <Card className="iq-card-block iq-card-stretch iq-card-height">
-                          <Card.Body>
+                          {/* <Card.Body>
                              <div className="d-flex align-items-center justify-content-between">
                                 <div className="iq-cart-text text-capitalize">
                                    <p className="mb-0">
@@ -175,12 +199,13 @@ const Dashbord = () => {
                                 <h4 className=" mb-0">+24K</h4>
                                 <p className="mb-0 text-primary"><span><i className="fa fa-caret-down mr-2"></i></span>35%</p>
                              </div>
-                          </Card.Body>
+                          </Card.Body> */}
+                       <img src={Pic1}/>
                        </Card>
                     </Col>
-                    <Col sm="6" lg="6" xl="3">
+                    <Col sm="6" lg="6" xl="4">
                        <Card className="iq-card-block iq-card-stretch iq-card-height">
-                          <Card.Body>
+                          {/* <Card.Body>
                              <div className="d-flex align-items-center justify-content-between">
                                 <div className="iq-cart-text text-capitalize">
                                    <p className="mb-0 font-size-14">
@@ -195,12 +220,13 @@ const Dashbord = () => {
                                 <h4 className="mb-0">+55K</h4>
                                 <p className="mb-0 text-warning"><span><i className="fa fa-caret-up mr-2"></i></span>50%</p>
                              </div>
-                          </Card.Body>
+                          </Card.Body> */}
+                             <img src={Pic2}/>
                        </Card>
                     </Col>
-                    <Col sm="6" lg="6" xl="3">
+                    <Col sm="6" lg="6" xl="4">
                        <Card className="iq-card-block iq-card-stretch iq-card-height">
-                          <Card.Body>
+                          {/* <Card.Body>
                              <div className="d-flex align-items-center justify-content-between">
                                 <div className="iq-cart-text text-capitalize">
                                    <p className="mb-0 font-size-14">
@@ -211,14 +237,16 @@ const Dashbord = () => {
                                    <i className="las la-download"></i>
                                 </div>
                              </div>
-                             <div className="d-flex align-items-center justify-content-between mt-3">
+                             <div className="d-flex align-items-center justify-content-between mt-3">/static/media/dash1.c2e77b8f.png
                                 <h4 className="mb-0">+1M</h4>
                                 <p className="mb-0 text-info"><span><i className="fa fa-caret-up mr-2"></i></span>80%</p>
                              </div>
-                          </Card.Body>
+
+                          </Card.Body> */}   <img src={Pic3}/>
+
                        </Card>
                     </Col>
-                    <Col sm="6" lg="6" xl="3">
+                    {/* <Col sm="6" lg="6" xl="3">
                        <Card className="iq-card-block iq-card-stretch iq-card-height">
                           <Card.Body>
                              <div className="d-flex align-items-center justify-content-between">
@@ -237,16 +265,36 @@ const Dashbord = () => {
                              </div>
                           </Card.Body>
                        </Card>
-                    </Col>
+                    </Col> */}
                  </Row>
-                 <Card id="slider1">
+            <Row >
+            <div className="iq-search-bar ml-auto Searchtext1" style={{width:"100%"}}   >
+                    <Form action="#" className="searchbox Searchtext1" style={{backgroundRadius:"25px"}} >
+                        <input type="text" className="text search-input TEXTINPUT" style={{width:"360%",background:"#13212D",borderRadius:"25px",height:"44px"}} placeholder="Search Here..."/>
+                        <Link className="search-link" to="#"><i className="ri-search-line"></i></Link>
+                    </Form>
+                </div>
+            </Row>
+
+            <Row style={{marginLeft:"0px"}} xl="20">
+            <div className="iq-search-bar Searchit" style={{background:"#13212D",borderRadius:"30px",width:"70%",marginTop:"3%",marginBottom:"3%",display:"flex",justifyContent:"flex-start"}}   >
+                   <button className='BTN-1'  style={{background:btn==="btn1"?'#344452':"#13212D",padding:"10px",borderRadius:"30px",color:"white",border:btn==="btn1"?"1px solid #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignSelf:"flex-start",alignItems:"center",marginLeft:"-15px"}} onClick={()=>btncolorhandles("btn1")} ><img className='BTNLOGO'  src={btn==="btn1"?ICON1:Svg1} height="18px" width="18" />Button1</button>
+                   <button className='BTN-1' style={{background:btn==="btn2"?'#344452':"#13212D",padding:"10px",borderRadius:"30px",color:"white",border:btn==="btn2"?"1px solid  #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignItems:"center"}} onClick={()=>btncolorhandles("btn2")}> <img className='BTNLOGO' src={btn==="btn2"?Svg2:ICON2} height="18px" width="18"/>Button2</button>
+                   <button className='BTN-1' style={{background:btn==="btn3"?'#344452':"#13212D",padding:"10px",borderRadius:"23px",color:"white",border:btn==="btn3"?"1px solid  #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignItems:"center"}} onClick={()=>btncolorhandles("btn3")}> <img className='BTNLOGO' src={btn==="btn3"?Svg3:ICON3} height="18px" width="18"/>Button3</button>
+                   <button className='BTN-1' style={{background:btn==="btn4"?'#344452':"#13212D",padding:"10px",borderRadius:"30px",color:"white",border:btn==="btn4"?"1px solid  #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignItems:"center"}} onClick={()=>btncolorhandles("btn4")}><img className='BTNLOGO' src={btn==="btn4"?Svg4:ICON4} height="18px" width="18"/>Button4</button>
+                   <button className='BTN-1' style={{background:btn==="btn5"?'#344452':"#13212D",padding:"10px",borderRadius:"30px",color:"white",border:btn==="btn5"?"1px solid #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignItems:"center"}} onClick={()=>btncolorhandles("btn5")}><img className='BTNLOGO' src={btn==="btn5"?Svg5:ICON5} height="18px" width="15" style={{filter:""}} />Button5</button>
+                </div>
+            </Row>
+  
+
+                 <Card id="slider1" >
                     <Card.Header className="d-flex justify-content-between align-items-center">
                            <div>
-                              <h4 className="card-title m-0">Top Rated Item </h4>
+                              <h4 className="card-title m-0">Ultrafair Originals</h4>
                            </div>
                            <div className="" id="swiper">
-                              <div className="swiper-button swiper-button-prev">Previous</div>
-                              <div className="swiper-button swiper-button-next">Next</div>
+                              <div className="swiper-button swiper-button-prev" style={{background:"#344452"}}>Previous</div>
+                              <div className="swiper-button swiper-button-next" style={{background:"#344452"}}>Next</div>
                            </div>
                     </Card.Header>
                     <Card.Body>
@@ -264,7 +312,7 @@ const Dashbord = () => {
                            loop={true}
                            className="list-unstyled row top-rated-item mb-0 iq-rtl-direction"
                         >
-                          <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                          {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
                              <Card className="mb-0">
                                 <Card.Body className="p-0">
                                    <div className="iq-thumb">
@@ -282,8 +330,8 @@ const Dashbord = () => {
                                    </div>
                                 </Card.Body>
                              </Card>
-                          </SwiperSlide>
-                          <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                          </SwiperSlide> */}
+                          {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
                              <Card className="mb-0">
                                 <Card.Body className="p-0">
                                    <div className="iq-thumb">
@@ -301,8 +349,8 @@ const Dashbord = () => {
                                    </div>
                                 </Card.Body>
                              </Card>
-                          </SwiperSlide>
-                          <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                          </SwiperSlide> */}
+                          {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
                              <Card className="mb-0">
                                 <Card.Body className="p-0">
                                    <div className="iq-thumb">
@@ -339,8 +387,8 @@ const Dashbord = () => {
                                    </div>
                                 </Card.Body>
                              </Card>
-                          </SwiperSlide>
-                          <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                          </SwiperSlide> */}
+                          {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
                              <Card className="mb-0">
                                 <Card.Body className="p-0">
                                    <div className="iq-thumb">
@@ -358,17 +406,109 @@ const Dashbord = () => {
                                    </div>
                                 </Card.Body>
                              </Card>
+                          </SwiperSlide> */}
+                          <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                             
+               
+                                   <div className="iq-thumb" >
+                                      <Link to="#">
+                                         <img src={Pic1} className="img-fluid  img-border-radius" width="200vw" height="400vh" alt=""/>
+                                      </Link>
+                                   </div>
+                                   {/* <div className="iq-feature-list">
+                                      <h6 className="font-weight-600 mb-0">Opend Dead Shot</h6>
+                                      <p className="mb-0 mt-2">T.v show</p>
+                                      <div className="d-flex align-items-center my-2 iq-ltr-direction">
+                                         <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 134</p>
+                                         <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
+                                      </div>
+                                   </div> */}
+                          
+                    
                           </SwiperSlide>
                           <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                             
+               
+                             <div className="iq-thumb" >
+                                <Link to="#">
+                                   <img src={Pic2} className="img-fluid  img-border-radius" width="200vw" height="400vh" alt=""/>
+                                </Link>
+                             </div>
+                             {/* <div className="iq-feature-list">
+                                <h6 className="font-weight-600 mb-0">Opend Dead Shot</h6>
+                                <p className="mb-0 mt-2">T.v show</p>
+                                <div className="d-flex align-items-center my-2 iq-ltr-direction">
+                                   <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 134</p>
+                                   <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
+                                </div>
+                             </div> */}
+                    
+              
+                    </SwiperSlide>
+                    <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                             
+               
+                             <div className="iq-thumb" >
+                                <Link to="#">
+                                   <img src={Pic3} className="img-fluid  img-border-radius" width="200vw" height="400vh" alt=""/>
+                                </Link>
+                             </div>
+                             {/* <div className="iq-feature-list">
+                                <h6 className="font-weight-600 mb-0">Opend Dead Shot</h6>
+                                <p className="mb-0 mt-2">T.v show</p>
+                                <div className="d-flex align-items-center my-2 iq-ltr-direction">
+                                   <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 134</p>
+                                   <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
+                                </div>
+                             </div> */}
+                    
+              
+                    </SwiperSlide>
+                          
+                          </Swiper>
+                    </Card.Body>
+                 </Card>
+
+
+                 <Card id="slider1" >
+                    <Card.Header className="d-flex justify-content-between align-items-center">
+                           <div>
+                              <h4 className="card-title m-0">Slots</h4>
+                           </div>
+                      
+                              {/* <div className="BTTTN  right  " style={{background:"#344452"}}><i class="ri-arrow-left-line"></i></div>
+                              <div className="BTTTN  left  " style={{background:"#344452"}}><i class="ri-arrow-right-line"></i></div> */}
+                                <div className="" id="swiper">
+                              <div className="swiper-button right " style={{background:"#344452",lineHeight:1.5}}>Previous</div>
+                              <div className="swiper-button left " style={{background:"#344452",lineHeight:1.5}}>Next</div>
+                           
+                           </div>
+                    </Card.Header>
+                    <Card.Body>
+                       <Swiper
+                           navigation={{
+                              prevEl: '.right',
+                              nextEl: '.left'
+                           }}
+                           breakpoints={{
+                              320: {   slidesPerView: 1},                
+                              550: { slidesPerView: 2 },
+                              991: { slidesPerView: 3 },
+                              1400: { slidesPerView: 4 },
+                           }}
+                           loop={true}
+                           className="list-unstyled row top-rated-item mb-0 iq-rtl-direction"
+                        >
+                          {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
                              <Card className="mb-0">
                                 <Card.Body className="p-0">
                                    <div className="iq-thumb">
                                       <Link to="#">
-                                         <img src={dash06} className="img-fluid w-100 img-border-radius" alt=""/>
+                                         <img src={dash01} className="img-fluid w-100 img-border-radius" alt=""/>
                                       </Link>
                                    </div>
                                    <div className="iq-feature-list">
-                                      <h6 className="font-weight-600 mb-0">Opend Dead Shot</h6>
+                                      <h6 className="font-weight-600 mb-0">The Last Breath</h6>
                                       <p className="mb-0 mt-2">T.v show</p>
                                       <div className="d-flex align-items-center my-2 iq-ltr-direction">
                                          <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 134</p>
@@ -377,12 +517,150 @@ const Dashbord = () => {
                                    </div>
                                 </Card.Body>
                              </Card>
+                          </SwiperSlide> */}
+                          {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                             <Card className="mb-0">
+                                <Card.Body className="p-0">
+                                   <div className="iq-thumb">
+                                      <Link to="#">
+                                         <img src={dash02} className="img-fluid w-100 img-border-radius" alt=""/>
+                                      </Link>
+                                   </div>
+                                   <div className="iq-feature-list">
+                                      <h6 className="font-weight-600 mb-0">Last Night</h6>
+                                      <p className="mb-0 mt-2">Movie</p>
+                                      <div className="d-flex align-items-center my-2 iq-ltr-direction">
+                                         <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 133</p>
+                                         <p className="mb-0 "><i className="las la-download ml-2"></i> 20 k</p>
+                                      </div>
+                                   </div>
+                                </Card.Body>
+                             </Card>
+                          </SwiperSlide> */}
+                          {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                             <Card className="mb-0">
+                                <Card.Body className="p-0">
+                                   <div className="iq-thumb">
+                                      <Link to="#">
+                                         <img src={dash03} className="img-fluid w-100 img-border-radius" alt=""/>
+                                      </Link>
+                                   </div>
+                                   <div className="iq-feature-list">
+                                      <h6 className="font-weight-600 mb-0">Jeon Woochie</h6>
+                                      <p className="mb-0 mt-2">Movie</p>
+                                      <div className="d-flex align-items-center my-2 iq-ltr-direction">
+                                         <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 222</p>
+                                         <p className="mb-0 "><i className="las la-download ml-2"></i> 40 k</p>
+                                      </div>
+                                   </div>
+                                </Card.Body>
+                             </Card>
                           </SwiperSlide>
+                          <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                             <Card className="mb-0">
+                                <Card.Body className="p-0">
+                                   <div className="iq-thumb">
+                                      <Link to="#">
+                                         <img src={dash04} className="img-fluid w-100 img-border-radius" alt=""/>
+                                      </Link>
+                                   </div>
+                                   <div className="iq-feature-list">
+                                      <h6 className="font-weight-600 mb-0">Dino Land</h6>
+                                      <p className="mb-0 mt-2">T.v show</p>
+                                      <div className="d-flex align-items-center my-2 iq-ltr-direction">
+                                         <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 122</p>
+                                         <p className="mb-0 "><i className="las la-download ml-2"></i> 25 k</p>
+                                      </div>
+                                   </div>
+                                </Card.Body>
+                             </Card>
+                          </SwiperSlide> */}
+                          {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                             <Card className="mb-0">
+                                <Card.Body className="p-0">
+                                   <div className="iq-thumb">
+                                      <Link to="#">
+                                         <img src={dash05} className="img-fluid w-100 img-border-radius" alt=""/>
+                                      </Link>
+                                   </div>
+                                   <div className="iq-feature-list">
+                                      <h6 className="font-weight-600 mb-0">Last Race</h6>
+                                      <p className="mb-0 mt-2">T.v show</p>
+                                      <div className="d-flex align-items-center my-2 iq-ltr-direction">
+                                         <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 144</p>
+                                         <p className="mb-0 "><i className="las la-download ml-2"></i> 35 k</p>
+                                      </div>
+                                   </div>
+                                </Card.Body>
+                             </Card>
+                          </SwiperSlide> */}
+                          <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                             
+               
+                                   <div className="iq-thumb" >
+                                      <Link to="#">
+                                         <img src={Showimg1} className="img-fluid  img-border-radius" width="150vw" height="300vh" alt=""/>
+                                      </Link>
+                                   </div>
+                                   {/* <div className="iq-feature-list">
+                                      <h6 className="font-weight-600 mb-0">Opend Dead Shot</h6>
+                                      <p className="mb-0 mt-2">T.v show</p>
+                                      <div className="d-flex align-items-center my-2 iq-ltr-direction">
+                                         <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 134</p>
+                                         <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
+                                      </div>
+                                   </div> */}
+                          
+                    
+                          </SwiperSlide>
+                          <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                             
+               
+                             <div className="iq-thumb" >
+                                <Link to="#">
+                                   <img src={Showimg2} className="img-fluid  img-border-radius" width="150vw" height="300vh" alt=""/>
+                                </Link>
+                             </div>
+                             {/* <div className="iq-feature-list">
+                                <h6 className="font-weight-600 mb-0">Opend Dead Shot</h6>
+                                <p className="mb-0 mt-2">T.v show</p>
+                                <div className="d-flex align-items-center my-2 iq-ltr-direction">
+                                   <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 134</p>
+                                   <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
+                                </div>
+                             </div> */}
+                    
+              
+                    </SwiperSlide>
+                    <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                             
+               
+                             <div className="iq-thumb" >
+                                <Link to="#">
+                                   <img src={Showimg3} className="img-fluid  img-border-radius" width="150vw" height="300vh" alt=""/>
+                                </Link>
+                             </div>
+                             {/* <div className="iq-feature-list">
+                                <h6 className="font-weight-600 mb-0">Opend Dead Shot</h6>
+                                <p className="mb-0 mt-2">T.v show</p>
+                                <div className="d-flex align-items-center my-2 iq-ltr-direction">
+                                   <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 134</p>
+                                   <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
+                                </div>
+                             </div> */}
+                    
+              
+                    </SwiperSlide>
+                          
                           </Swiper>
                     </Card.Body>
                  </Card>
               </Col>
-              <Col lg="4">
+
+
+
+
+              {/* <Col lg="4">
                  <Card className="iq-card-block iq-card-stretch iq-card-height">
                     <div className="iq-card-header">
                        <Card.Header.Title>
@@ -451,9 +729,9 @@ const Dashbord = () => {
                        </Row>
                     </Card.Body>
                  </Card>
-              </Col>
+              </Col> */}
            </Row>
-           <Row>
+           {/* <Row>
               <Col sm="12" lg="4">
                  <Card className="iq-card-block iq-card-stretch iq-card-height">
                     <Card.Header className="d-flex align-items-center justify-content-between">
@@ -695,10 +973,14 @@ const Dashbord = () => {
                     </Card.Body>
                  </Card>
               </Col>
-           </Row>
+           </Row> */}
         </Container>
         </>
     )
 }
 
 export default Dashbord;
+
+
+
+
