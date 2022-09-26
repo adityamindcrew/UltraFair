@@ -452,7 +452,7 @@ Sign In
 .sign-in-page {
   height: 100vh;
   position: relative;
-  background: url("../images/login/login.jpg") no-repeat scroll 0 0;
+  /* background: url("../images/login/login.jpg") no-repeat scroll 0 0; */
   background-size: cover;
 }
 .sign-in-page .height-self-center {
@@ -515,6 +515,8 @@ Sign In
   margin-left: 15px;
   width: 93%;
   transition: none !important;
+  margin: 2.5px;
+  margin-left: 15px !important;
 }
 
 .sign-user_card {
@@ -529,7 +531,7 @@ Sign In
   -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: block;
-  margin: 25px auto;
+  /* margin: 25px auto; */
   max-width: 500px;
   max-height: fit-content !important;
 }
@@ -3674,7 +3676,7 @@ h6 span {
   border-color: #13212d;
 }
 .registerToggleOuter {
-  width: 215px;
+  width: 235px;
   height: 38px;
   background: #13212d;
   border-color: #13212d;
@@ -3699,6 +3701,7 @@ h6 span {
   border-bottom-right-radius: 27px !important;
   text-align: center;
   margin: 2.5px;
+  margin-left: 15px !important;
   transition: none !important;
   translate: none !important;
 }
@@ -3717,4 +3720,11 @@ h6 span {
 }
 .form-group {
   margin-bottom: 0.5rem !important;
+}
+
+.modal-content {
+  width: fit-content !important;
+}
+.modal.show .modal-dialog {
+  justify-content: center !important;
 }

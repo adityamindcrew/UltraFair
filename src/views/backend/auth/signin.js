@@ -38,15 +38,15 @@ const SignIn = (props) => {
   let history = useHistory();
 
   const registerHandler = () => {
-    history.push("/auth/sign-up");
+    props.showModal(true);
   };
   const loginHandler = () => {
-    history.push("/auth/sign-in");
+    props.showModal(false);
   };
 
   return (
     <>
-      <div className={`rtl-box ${show === true ? "show" : ""}`}>
+      <div className={`rtl-box ${show === true ? "" : ""}`}>
         {/* <button type="button" className="btn btn-light rtl-btn">
           <svg
             onClick={() => setShow(!show)}
@@ -62,7 +62,7 @@ const SignIn = (props) => {
               clipRule="evenodd"
             />
           </svg>
-        </button> */}
+        </button>  */}
         <div className="rtl-panel">
           <ul className="modes">
             <li
@@ -90,86 +90,91 @@ const SignIn = (props) => {
           </ul>
         </div>
       </div>
-      <section className="sign-in-page">
-        <Container>
-          <Row className="justify-content-center align-items-center height-self-center">
-            <Col lg="5" md="12" className="align-self-center">
-              <div className="sign-user_card ">
-                <div className="sign-in-page-data">
-                  <button
+      <div className="sign-in-page">
+        {/* <section className="sign-in-page">
+          <Container>
+            <Row className="justify-content-center align-items-center height-self-center">
+              <Col lg="5" md="12" className="align-self-center"> */}
+        <div className="sign-user_card ">
+          <button
+            type="button"
+            class="close"
+            aria-label="Close"
+            style={{ color: "white", fontSize: "20px" }}
+            onClick={() => {
+              console.log("Hellow!");
+              props.close(false);
+            }}
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div className="sign-in-page-data">
+            <div className="sign-in-from w-100 m-auto">
+              <Form className="mt-4" action="">
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginBottom: "1em",
+                  }}
+                >
+                  <div class="btn-group registerToggleOuter">
+                    <button
+                      type="button"
+                      class="btn btn-secondary registerToggle"
+                      onClick={registerHandler}
+                    >
+                      Register
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-secondary registerToggle"
+                      onClick={loginHandler}
+                    >
+                      Sign In
+                    </button>
+                  </div>
+                </div>
+                <Form.Group>
+                  <Form.Label>Email or Username </Form.Label>
+                  <Form.Label style={{ color: "red", marginLeft: "7px" }}>
+                    {" "}
+                    *
+                  </Form.Label>
+                  <Form.Control
+                    type="email"
+                    className="mb-0"
+                    id="exampleInputEmail1"
+                    placeholder="Enter email"
+                    autoComplete="off"
+                    required
+                  />
+                </Form.Group>
+                <Form.Group>
+                  <Form.Label>Password</Form.Label>
+                  <Form.Label style={{ color: "red", marginLeft: "7px" }}>
+                    {" "}
+                    *
+                  </Form.Label>
+                  <Form.Control
+                    type="password"
+                    className="mb-0"
+                    id="exampleInputPassword2"
+                    placeholder="Password"
+                    required
+                  />
+                  <br />
+                </Form.Group>
+                <div className="sign-info">
+                  <Button
                     type="button"
-                    class="close"
-                    aria-label="Close"
-                    style={{ color: "white", fontSize: "20px" }}
+                    onClick={() => props.close(false)}
+                    variant="btn btn-primary"
+                    style={{ color: "black" }}
                   >
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                  <div className="sign-in-from w-100 m-auto">
-                    <Form className="mt-4" action="">
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "center",
-                          marginBottom: "1em",
-                        }}
-                      >
-                        <div class="btn-group registerToggleOuter">
-                          <button
-                            type="button"
-                            class="btn btn-secondary registerToggle"
-                            onClick={registerHandler}
-                          >
-                            Register
-                          </button>
-                          <button
-                            type="button"
-                            class="btn btn-secondary registerToggle"
-                            onClick={loginHandler}
-                          >
-                            Sign In
-                          </button>
-                        </div>
-                      </div>
-                      <Form.Group>
-                        <Form.Label>Email or Username </Form.Label>
-                        <Form.Label style={{ color: "red", marginLeft: "7px" }}>
-                          {" "}
-                          *
-                        </Form.Label>
-                        <Form.Control
-                          type="email"
-                          className="mb-0"
-                          id="exampleInputEmail1"
-                          placeholder="Enter email"
-                          autoComplete="off"
-                          required
-                        />
-                      </Form.Group>
-                      <Form.Group>
-                        <Form.Label>Password</Form.Label>
-                        <Form.Label style={{ color: "red", marginLeft: "7px" }}>
-                          {" "}
-                          *
-                        </Form.Label>
-                        <Form.Control
-                          type="password"
-                          className="mb-0"
-                          id="exampleInputPassword2"
-                          placeholder="Password"
-                          required
-                        />
-                        <br />
-                      </Form.Group>
-                      <div className="sign-info">
-                        <Button
-                          type="button"
-                          onClick={() => history.push("/")}
-                          variant="btn btn-primary"
-                          style={{ color: "black" }}
-                        >
-                          Sign in
-                        </Button>
-                        {/* <div className="custom-control custom-checkbox d-inline-block">
+                    Sign in
+                  </Button>
+                  {/* <div className="custom-control custom-checkbox d-inline-block">
                           <input
                             type="checkbox"
                             className="custom-control-input"
@@ -182,10 +187,10 @@ const SignIn = (props) => {
                             Remember Me
                           </label>
                         </div> */}
-                      </div>
-                    </Form>
-                  </div>
-                  {/* <div className="mt-3">
+                </div>
+              </Form>
+            </div>
+            {/* <div className="mt-3">
                   <div className="d-flex justify-content-center links">
                     Don't have an account?{" "}
                     <Link to="/auth/sign-up" className="text-primary ml-2">
@@ -198,37 +203,38 @@ const SignIn = (props) => {
                     </Link>
                   </div>
                 </div> */}
-                  <h6>
-                    <span> OR </span>
-                  </h6>
-                  <div className="cardSocialOut">
-                    <Card className="cardSocialIn">
-                      {" "}
-                      <img src={FB} className="socialImage" />
-                    </Card>
-                    <Card className="cardSocialIn">
-                      <img src={Google} className="socialImage" />
-                    </Card>
-                    <Card className="cardSocialIn">
-                      {" "}
-                      <img src={Line} className="socialImage" />
-                    </Card>
-                    <Card className="cardSocialIn">
-                      {" "}
-                      <img src={Chat} className="socialImage" />
-                    </Card>
-                  </div>
-                  <p style={{ textAlign: "center" }}>Forgot Password</p>
-                  <p className="privacyPolicy">
-                    This site is protected by hCaptcha and the hCaptcha Privacy
-                    Policy and Terms of Service apply.
-                  </p>
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+            <h6>
+              <span> OR </span>
+            </h6>
+            <div className="cardSocialOut">
+              <Card className="cardSocialIn">
+                {" "}
+                <img src={FB} className="socialImage" />
+              </Card>
+              <Card className="cardSocialIn">
+                <img src={Google} className="socialImage" />
+              </Card>
+              <Card className="cardSocialIn">
+                {" "}
+                <img src={Line} className="socialImage" />
+              </Card>
+              <Card className="cardSocialIn">
+                {" "}
+                <img src={Chat} className="socialImage" />
+              </Card>
+            </div>
+            <p style={{ textAlign: "center" }}>Forgot Password</p>
+            <p className="privacyPolicy">
+              This site is protected by hCaptcha and the hCaptcha Privacy Policy
+              and Terms of Service apply.
+            </p>
+          </div>
+        </div>
+        {/* </Col>
+            </Row>
+          </Container>
+        </section> */}
+      </div>
     </>
   );
 };

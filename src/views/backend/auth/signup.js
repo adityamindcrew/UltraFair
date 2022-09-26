@@ -34,6 +34,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const SignUp = (props) => {
+  console.log("props==>", props);
   const [show, setShow] = useState(false);
   useEffect(() => {
     const rtlMode = sessionStorage.getItem("rtl-mode");
@@ -47,15 +48,15 @@ const SignUp = (props) => {
   let history = useHistory();
 
   const registerHandler = () => {
-    history.push("/auth/sign-up");
+    props.showModal(false);
   };
   const loginHandler = () => {
-    history.push("/auth/sign-in");
+    props.showModal(true);
   };
 
   return (
     <>
-      <div className={`rtl-box ${show === true ? "show" : ""}`}>
+      <div className={`rtl-box ${show === true ? "" : ""}`}>
         {/* <button type="button" className="btn btn-light rtl-btn">
           <svg
             onClick={() => setShow(!show)}
@@ -99,87 +100,88 @@ const SignUp = (props) => {
           </ul>
         </div>
       </div>
-      <section className="sign-in-page">
-        <Container>
-          <Row className="justify-content-center align-items-center height-self-center">
-            <Col lg="7" md="12" className="align-self-center">
-              <div className="sign-user_card ">
-                <div className="sign-in-page-data">
-                  <button
-                    type="button"
-                    class="close"
-                    aria-label="Close"
-                    style={{ color: "white", fontSize: "20px" }}
-                  >
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                  <div className="sign-in-from w-100 m-auto">
-                    <Form className="" action="/">
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "center",
-                          marginBottom: "1em",
-                        }}
-                      >
-                        <div class="btn-group registerToggleOuter">
-                          <button
-                            type="button"
-                            class="btn btn-secondary registerToggle"
-                            onClick={registerHandler}
-                          >
-                            Register
-                          </button>
-                          <button
-                            type="button"
-                            class="btn btn-secondary registerToggle"
-                            onClick={loginHandler}
-                          >
-                            Sign In
-                          </button>
-                        </div>
-                      </div>
-                      {/* <Row> */}
-                      <Col md="12">
-                        <Form.Group>
-                          <Form.Label>E - mail </Form.Label>
-                          <Form.Label
-                            style={{ color: "red", marginLeft: "7px" }}
-                          >
-                            {" "}
-                            *
-                          </Form.Label>
-                          <Form.Control
-                            type="email"
-                            className="mb-0"
-                            id="exampleInputEmail3"
-                            placeholder=""
-                            autoComplete="off"
-                            required
-                          />
-                        </Form.Group>
-                      </Col>
-                      <Col md="12">
-                        <Form.Group>
-                          <Form.Label>Username </Form.Label>
-                          <Form.Label
-                            style={{ color: "red", marginLeft: "7px" }}
-                          >
-                            {" "}
-                            *
-                          </Form.Label>
-                          <Form.Control
-                            type="text"
-                            className="mb-0"
-                            id="exampleInputEmail2"
-                            placeholder=""
-                            autoComplete="off"
-                            required
-                          />
-                        </Form.Group>
-                      </Col>
+      <div className="sign-in-page">
+        {/* <section className="sign-in-page">
+          <Container>
+            <Row className="justify-content-center align-items-center height-self-center">
+              <Col lg="7" md="12" className="align-self-center"> */}
+        <div className="sign-user_card ">
+          <div className="sign-in-page-data">
+            <button
+              type="button"
+              class="close"
+              aria-label="Close"
+              style={{ color: "white", fontSize: "20px" }}
+              onClick={() => {
+                console.log("Hellow!");
+                props.close(false);
+              }}
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div className="sign-in-from w-100 m-auto">
+              <Form className="" action="/">
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginBottom: "1em",
+                  }}
+                >
+                  <div class="btn-group registerToggleOuter">
+                    <button
+                      type="button"
+                      class="btn btn-secondary registerToggle"
+                      onClick={registerHandler}
+                    >
+                      Register
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-secondary registerToggle"
+                      onClick={loginHandler}
+                    >
+                      Sign In
+                    </button>
+                  </div>
+                </div>
+                {/* <Row> */}
+                <Col md="12">
+                  <Form.Group>
+                    <Form.Label>E - mail </Form.Label>
+                    <Form.Label style={{ color: "red", marginLeft: "7px" }}>
+                      {" "}
+                      *
+                    </Form.Label>
+                    <Form.Control
+                      type="email"
+                      className="mb-0"
+                      id="exampleInputEmail3"
+                      placeholder=""
+                      autoComplete="off"
+                      required
+                    />
+                  </Form.Group>
+                </Col>
+                <Col md="12">
+                  <Form.Group>
+                    <Form.Label>Username </Form.Label>
+                    <Form.Label style={{ color: "red", marginLeft: "7px" }}>
+                      {" "}
+                      *
+                    </Form.Label>
+                    <Form.Control
+                      type="text"
+                      className="mb-0"
+                      id="exampleInputEmail2"
+                      placeholder=""
+                      autoComplete="off"
+                      required
+                    />
+                  </Form.Group>
+                </Col>
 
-                      {/* <Col md="6">
+                {/* <Col md="6">
                         <Form.Group>
                           <Form.Label>First Name</Form.Label>
                           <Form.Control
@@ -192,7 +194,7 @@ const SignUp = (props) => {
                           />
                         </Form.Group>
                       </Col> */}
-                      {/* <Col md="6">
+                {/* <Col md="6">
                         <Form.Group>
                           <Form.Label>Last Name</Form.Label>
                           <Form.Control
@@ -205,99 +207,95 @@ const SignUp = (props) => {
                           />
                         </Form.Group>
                       </Col> */}
-                      <Col md="12">
-                        <Form.Group>
-                          <Form.Label>Password </Form.Label>
-                          <Form.Label
-                            style={{ color: "red", marginLeft: "7px" }}
-                          >
-                            {" "}
-                            *
-                          </Form.Label>
-                          <Form.Control
-                            type="password"
-                            className="mb-0"
-                            id="exampleInputPassword6"
-                            placeholder=""
-                            required
-                          />
-                        </Form.Group>
-                      </Col>
-                      <Col md="12">
-                        <Form.Group>
-                          <Form.Label>Date of Birth </Form.Label>
-                          <Form.Label
-                            style={{ color: "red", marginLeft: "7px" }}
-                          >
-                            {" "}
-                            *
-                          </Form.Label>
-                          <div
-                            style={{
-                              display: "flex",
-                              flexDirection: "row",
-                              justifyContent: "space-between",
-                            }}
-                          >
-                            <Form.Control
-                              type="text"
-                              className="mb-0"
-                              id="exampleInputPassword7"
-                              placeholder="Day"
-                              required
-                              style={{ marginRight: "10px" }}
-                            />
-                            <Form.Control
-                              type="text"
-                              className="mb-0"
-                              id="exampleInputPassword7"
-                              placeholder="Month"
-                              required
-                              style={{ marginRight: "10px" }}
-                            />
-                            <Form.Control
-                              type="text"
-                              className="mb-0"
-                              id="exampleInputPassword7"
-                              placeholder="Year"
-                              required
-                            />
-                          </div>
-                        </Form.Group>
-                      </Col>
-                      <Col md="12">
-                        <Form.Group>
-                          <Form.Label>{"Code (Optional)"}</Form.Label>
-                          <Form.Control
-                            type="text"
-                            className="mb-0"
-                            id="exampleInputEmail8"
-                            placeholder=""
-                            autoComplete="off"
-                            required
-                          />
-                        </Form.Group>
-                      </Col>
-                      <InputGroup
-                        className="mb-3"
-                        style={{
-                          flexWrap: "nowrap",
-                          width: "400px",
-                          height: "30px",
-                          color: "#B3BAD1",
-                          fontSize: "15px",
-                          fontFamily: "Montserrat",
-                          fontStyle: "normal",
-                          fontWeight: "500",
-                          lineHeight: "18px",
-                        }}
-                      >
-                        <InputGroup.Checkbox aria-label="Checkbox for following text input" />
-                        By clicking the checkbox, you are indicating that you
-                        have read and acknowledge the Terms & Conditions
-                      </InputGroup>
-                      {/* </Row> */}
-                      {/* <div className="custom-control custom-radio mt-2">
+                <Col md="12">
+                  <Form.Group>
+                    <Form.Label>Password </Form.Label>
+                    <Form.Label style={{ color: "red", marginLeft: "7px" }}>
+                      {" "}
+                      *
+                    </Form.Label>
+                    <Form.Control
+                      type="password"
+                      className="mb-0"
+                      id="exampleInputPassword6"
+                      placeholder=""
+                      required
+                    />
+                  </Form.Group>
+                </Col>
+                <Col md="12">
+                  <Form.Group>
+                    <Form.Label>Date of Birth </Form.Label>
+                    <Form.Label style={{ color: "red", marginLeft: "7px" }}>
+                      {" "}
+                      *
+                    </Form.Label>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <Form.Control
+                        type="text"
+                        className="mb-0"
+                        id="exampleInputPassword7"
+                        placeholder="Day"
+                        required
+                        style={{ marginRight: "10px" }}
+                      />
+                      <Form.Control
+                        type="text"
+                        className="mb-0"
+                        id="exampleInputPassword7"
+                        placeholder="Month"
+                        required
+                        style={{ marginRight: "10px" }}
+                      />
+                      <Form.Control
+                        type="text"
+                        className="mb-0"
+                        id="exampleInputPassword7"
+                        placeholder="Year"
+                        required
+                      />
+                    </div>
+                  </Form.Group>
+                </Col>
+                <Col md="12">
+                  <Form.Group>
+                    <Form.Label>{"Code (Optional)"}</Form.Label>
+                    <Form.Control
+                      type="text"
+                      className="mb-0"
+                      id="exampleInputEmail8"
+                      placeholder=""
+                      autoComplete="off"
+                      required
+                    />
+                  </Form.Group>
+                </Col>
+                <InputGroup
+                  className="mb-3"
+                  style={{
+                    flexWrap: "nowrap",
+                    width: "400px",
+                    height: "30px",
+                    color: "#B3BAD1",
+                    fontSize: "15px",
+                    fontFamily: "Montserrat",
+                    fontStyle: "normal",
+                    fontWeight: "500",
+                    lineHeight: "18px",
+                  }}
+                >
+                  <InputGroup.Checkbox aria-label="Checkbox for following text input" />
+                  By clicking the checkbox, you are indicating that you have
+                  read and acknowledge the Terms & Conditions
+                </InputGroup>
+                {/* </Row> */}
+                {/* <div className="custom-control custom-radio mt-2">
                                     <input type="radio" id="customRadio1" name="customRadio" className="custom-control-input"/>
                                     <label className="custom-control-label" htmlFor="customRadio1">Premium-$39 / 3 Months
                                        with a 5 day free trial</label>
@@ -310,18 +308,18 @@ const SignUp = (props) => {
                                     <input type="radio" id="customRadio3" name="customRadio" className="custom-control-input"/>
                                     <label className="custom-control-label" htmlFor="customRadio3">Free-Free</label>
                                  </div> */}
-                      <Button
-                        type="button"
-                        onClick={() => history.push("/")}
-                        variant="btn btn-primary my-2"
-                        style={{ color: "black" }}
-                      >
-                        Play Now
-                      </Button>
-                    </Form>
-                  </div>
-                </div>
-                {/* <div className="mt-3">
+                <Button
+                  type="button"
+                  onClick={() => props.close(false)}
+                  variant="btn btn-primary my-2"
+                  style={{ color: "black" }}
+                >
+                  Play Now
+                </Button>
+              </Form>
+            </div>
+          </div>
+          {/* <div className="mt-3">
                   <div className="d-flex justify-content-center links">
                     Already have an account?{" "}
                     <Link to="/auth/sign-in" className="text-primary ml-2">
@@ -329,35 +327,36 @@ const SignUp = (props) => {
                     </Link>
                   </div>
                 </div> */}
-                <h6>
-                  <span> OR </span>
-                </h6>
-                <div className="cardSocialOut">
-                  <Card className="cardSocialIn">
-                    {" "}
-                    <img src={FB} className="socialImage" />
-                  </Card>
-                  <Card className="cardSocialIn">
-                    <img src={Google} className="socialImage" />
-                  </Card>
-                  <Card className="cardSocialIn">
-                    {" "}
-                    <img src={Line} className="socialImage" />
-                  </Card>
-                  <Card className="cardSocialIn">
-                    {" "}
-                    <img src={Chat} className="socialImage" />
-                  </Card>
-                </div>
-                <p className="privacyPolicy">
-                  This site is protected by hCaptcha and the hCaptcha Privacy
-                  Policy and Terms of Service apply.
-                </p>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+          <h6>
+            <span> OR </span>
+          </h6>
+          <div className="cardSocialOut">
+            <Card className="cardSocialIn">
+              {" "}
+              <img src={FB} className="socialImage" />
+            </Card>
+            <Card className="cardSocialIn">
+              <img src={Google} className="socialImage" />
+            </Card>
+            <Card className="cardSocialIn">
+              {" "}
+              <img src={Line} className="socialImage" />
+            </Card>
+            <Card className="cardSocialIn">
+              {" "}
+              <img src={Chat} className="socialImage" />
+            </Card>
+          </div>
+          <p className="privacyPolicy">
+            This site is protected by hCaptcha and the hCaptcha Privacy Policy
+            and Terms of Service apply.
+          </p>
+        </div>
+        {/* </Col>
+            </Row>
+          </Container>
+        </section> */}
+      </div>
     </>
   );
 };
