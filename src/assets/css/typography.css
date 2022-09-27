@@ -1,3 +1,5 @@
+
+
 /*
 Template: Streamit  - Responsive Bootstrap 4 Admin Dashboard Template
 Author: iqonicthemes.in
@@ -174,6 +176,10 @@ h6 {
     line-height: 1.5;
     color: var(--iq-title-text);
 }
+ 
+   
+
+
 h1 a,
 h2 a,
 h3 a,
@@ -252,9 +258,8 @@ label {
 
 .form-control.form-control-lg {
     height: 50px;
-    line-height: 50px;
-}
-/* label { color: var(--iq-secondary); } */
+    line-height: 50px;}
+/* / label { color: var(--iq-secondary); } / */
 label {
   color: #b3bad1;
 }
@@ -266,8 +271,8 @@ label {
   line-height: 50px; 
 }
 
-/* Definition Lists */
-dl dd { 
+/* / Definition Lists / */
+dl dd {
     margin-bottom: 15px;
 }
 
@@ -282,8 +287,10 @@ dl dd:last-child {
 .table td,
 .table th {
     vertical-align: middle;
-} 
-   
+}
+
+  /* margin-bottom: 15px;
+} */
 dl dd:last-child {
   margin-bottom: 0px;
 }
@@ -325,7 +332,11 @@ textarea {
 .form-control:disabled,
 .form-control[readonly] {
     background-color: var(--iq-disable) !important;
-    opacity: 1;
+    opacity: 1;}
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: var(--iq-disable) !important;
+  opacity: 1;
 }
 
 /*----model----*/
@@ -403,8 +414,8 @@ loading
   bottom: 0; 
 }
 
-/* Bootstrap override */
-.rounded { 
+/* / Bootstrap override / */
+.rounded {
     border-radius: 5px !important;
 }
 
@@ -636,8 +647,8 @@ div.dataTables_wrapper div.dataTables_filter label {
   background-color: transparent; 
 }
 
-/* right sidebar */
-.iq-right-fixed { 
+/* / right sidebar / */
+.iq-right-fixed {
     margin: 0 15px;
 }
 
@@ -784,7 +795,11 @@ Background Color
 .badge-dark {
     color: var(--iq-white);
     background-color: var(--iq-dark) !important;
-} 
+}
+
+  /* color: var(--iq-white);
+  background: var(--iq-primary) !important;
+} */
 .bg-secondary,
 .badge-secondary {
   color: var(--iq-white);
@@ -1193,6 +1208,7 @@ Avatar Size
 /*----------------------------------------------
     Background Border Color
 ------------------------------------------------*/ 
+------------------------------------------------*/
 .iq-border {
     border: 1px solid var(--iq-border);
 }
@@ -1222,9 +1238,8 @@ Avatar Size
 .iq-border-alert {
     border: 10px solid var(--iq-border-danger);
 }
-
- .iq-card {
-  background: var(--iq-light-card);
+.iq-card {
+  background:"#1E2C37";
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -1298,6 +1313,23 @@ Avatar Size
 .breadcrumb {
   background-color: var(--iq-light-dark-card);
 }
+
+/* var(--iq-light-card) */
+.iq-card { background:"#1E2C37" ; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; margin-bottom: 30px; border: none; }
+.iq-card-transparent { background: transparent; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; margin-bottom: 30px; border: none; box-shadow: none; }
+.iq-card-body { padding: 15px; }
+.iq-card .iq-card-header, .iq-card-transparent .iq-card-header { padding: 20px; margin-bottom: 0; -ms-flex-align: center !important; align-items: center !important;}
+.iq-card-transparent .iq-card-header { padding: 0px; border-bottom: 0; }
+.iq-card-transparent .iq-card-header .iq-header-title { display: inline-block; align-self: center !important; background: var(--iq-body-bg); padding: 0 20px; z-index: 9; }
+.iq-card-transparent .iq-card-header .iq-header-title { padding-left: 0px; }
+.iq-card-transparent .iq-card-header .iq-card-header-toolbar { display: inline-block; padding: 0px 20px; background: var(--iq-body-bg); z-index: 9; }
+.iq-card-transparent .iq-card-header .iq-card-header-toolbar { padding-right: 0px; }
+.iq-card .iq-card-header .iq-header-title .card-title, .iq-card-transparent .iq-card-header .iq-header-title .card-title { margin-bottom: 0; }
+.iq-card-header-toolbar .nav-item a { color: var(--iq-body-text); padding: 4px 12px; font-size: 14px; }
+.iq-card-header-toolbar .dropdown-toggle i { font-size: 22px; line-height: normal; color: var(--iq-body-text); vertical-align: text-bottom; }
+.iq-card-header-toolbar .dropdown-toggle::after { display: none; }
+.card{ background-color:var(--iq-light-card);}
+.breadcrumb{background-color:var(--iq-light-dark-card);}
 
 /*--------------*/
 .nav-pills .nav-item a {
@@ -3286,3 +3318,4 @@ Grid Boxes
   -ms-flex-direction: column;
   flex-direction: column;
 } 
+.iq-card-transpare{}

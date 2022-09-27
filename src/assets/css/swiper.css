@@ -3,11 +3,14 @@
 #swiper { display: flex; align-items: center; justify-content: center; }
 #swiper .swiper-button-prev:before { color: var(--iq-white);  content: "\f30a"; font-family: 'Line Awesome Free'; font-weight: 900; font-size: 20px }
 #swiper .swiper-button-next:before { color: var(--iq-white);  content: "\f30b"; font-family: 'Line Awesome Free'; font-weight: 900; font-size: 20px}
-#swiper .swiper-button-prev:hover::before { color: var(--iq-primary); }
-#swiper .swiper-button-next:hover::before { color: var(--iq-primary); }
+/* #swiper .swiper-button-prev:hover::before { color: var(--iq-primary); }
+#swiper .swiper-button-next:hover::before { color: var(--iq-primary); } */
 .swiper-button { width: 30px; height: 30px; border-radius: 5px !important; text-align: center; opacity: 1; font-size: 24px; z-index: 9; }
 .swiper-button-next:after{content: 'none'}
 .swiper-button-prev:after{content: 'none'}
+
+#swiper .right:before { color: var(--iq-white);  content: "\f30a"; font-family: 'Line Awesome Free'; font-weight: 900; font-size: 20px ;margin-top: "10px"}
+#swiper .left:before { color: var(--iq-white);  content: "\f30b"; font-family: 'Line Awesome Free'; font-weight: 900; font-size: 20px}
 @media (min-width: 320px) and (max-width: 1000px){
     .swiper-button.swiper-button-prev{
         display: none !important;
@@ -46,6 +49,8 @@
     }
     
 }
+
+
 
 @media screen and (min-width: 0px) and (max-width: 1150px) {
 .BTN-1{
