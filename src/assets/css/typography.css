@@ -570,16 +570,16 @@ div.dataTables_wrapper div.dataTables_filter label {
   border-color: var(--iq-primary);
 }
 .form-control {
-  background-color: var(--iq-body-bg);
-  border: 1px solid transparent;
-  height: 46px;
-  position: relative;
-  color: var(--iq-body-text);
-  font-size: 16px;
-  width: 100%;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-}
+     background-color: #0D1D29 !important; 
+    /* border: 1px solid transparent; */
+    height: 46px;
+    position: relative;
+    color: white;
+    font-size: 12px;
+    width: 84%;
+    border-radius: 6px;
+    padding-bottom: 5px;
+  }
 .form-control:focus {
   color: var(--iq-dark1);
   border-color: transparent;
@@ -1313,8 +1313,7 @@ Avatar Size
 .breadcrumb {
   background-color: var(--iq-light-dark-card);
 }
-Card
-------------------------------------------------*/
+
 /* var(--iq-light-card) */
 .iq-card { background:"#1E2C37" ; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; margin-bottom: 30px; border: none; }
 .iq-card-transparent { background: transparent; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; margin-bottom: 30px; border: none; box-shadow: none; }
@@ -1513,9 +1512,6 @@ Text Color
     color: var(--iq-body-text) !important;
 }
 
-.text-body {
-    color: var(--iq-body-text) !important; 
-}
 .btn:focus {
   box-shadow: none !important;
 }
@@ -2138,7 +2134,9 @@ Border
 
 /*----------------------------------------------
 Font Size
-------------------------------------------------*/ 
+<<<<<<< HEAD
+------------------------------------------------*/
+
 .font-size-11 {
     font-size: 11px !important;
 }
@@ -3292,7 +3290,8 @@ Grid Boxes
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-} 
+}
+
 .iq-card-block.iq-card-stretch {
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
