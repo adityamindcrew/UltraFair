@@ -5917,7 +5917,8 @@ a.badge-dark:focus, a.badge-dark.focus {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-}
+       
+        }
 
 .list-group {
   display: -webkit-box;
