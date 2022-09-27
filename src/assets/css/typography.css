@@ -1264,7 +1264,7 @@ Avatar Size
   margin-bottom: 0;
   -ms-flex-align: center !important;
   align-items: center !important;
-  border-bottom: 1px solid rgb(20 20 20);
+  /* border-bottom: 1px solid rgb(20 20 20); */
 }
 .iq-card-transparent .iq-card-header {
   padding: 0px;
@@ -2320,7 +2320,7 @@ Avatar Size
 Card
 ------------------------------------------------*/
 .iq-card {
-    background: var(--iq-light-card);
+    background:'#1E2C37';
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -2348,7 +2348,7 @@ Card
     margin-bottom: 0;
     -ms-flex-align: center !important;
     align-items: center !important;
-    border-bottom: 1px solid rgb(20 20 20);
+    /* border-bottom: 1px solid rgb(20 20 20); */
 }
 
 .iq-card-transparent .iq-card-header {

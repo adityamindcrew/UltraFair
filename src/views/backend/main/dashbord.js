@@ -289,7 +289,7 @@ const Dashbord = () => {
             <Row >
             <div className="iq-search-bar ml-auto Searchtext1" style={{width:"100%"}}   >
                     <Form action="#" className="searchbox Searchtext1" style={{backgroundRadius:"25px"}} >
-                        <input type="text" className="text search-input TEXTINPUT" style={{width:"360%",background:"#13212D",borderRadius:"25px",height:"44px"}} placeholder="Search Here..."/>
+                        <input type="text" className="text search-input TEXTINPUT" style={{width:"325%",background:"#13212D",borderRadius:"25px",height:"44px"}} placeholder="Search Here..."/>
                         <Link className="search-link" to="#"><i className="ri-search-line"></i></Link>
                     </Form>
                 </div>
@@ -316,6 +316,8 @@ const Dashbord = () => {
                               <div className="swiper-button swiper-button-next" style={{background:"#344452"}}>Next</div>
                            </div>
                     </Card.Header>
+
+                    
                     <Card.Body>
                        <Swiper
                            navigation={{
