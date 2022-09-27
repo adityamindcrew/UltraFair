@@ -2,11 +2,6 @@ import React ,{useState}from 'react'
 import { Link } from 'react-router-dom'
 import { Container, Row, Col ,Form, Button} from 'react-bootstrap';
 import  Card  from '../../../components/Card'
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Container, Row, Col } from 'react-bootstrap';
-import Card from '../../../components/Card'
-
 import Chart from "react-apexcharts";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Autoplay } from 'swiper';
@@ -60,7 +55,7 @@ SwiperCore.use([Navigation, Autoplay]);
 
 const Dashbord = () => {
    // const Navigation = () => {
-
+   const [ tablebtn, settablebtn] = useState("")
       const [btn,setbtn]= useState("")
      
   const   btncolorhandles =(color)=>{
@@ -73,9 +68,6 @@ const Dashbord = () => {
       { value: 'this week', label: 'This Week' }
    ]
 
-   const [ tablebtn, settablebtn] = useState("")
-
-
    const tablebtncolorhandles = (color) => {
       settablebtn(color)
    }
@@ -87,10 +79,7 @@ const Dashbord = () => {
       { value: '50', label: '50' },
       { value: '100', label: '100' },
    ]
-   return (
-      <>
-         <Container fluid>
-
+  
    const chart1={
       options:{
          chart: {
@@ -1004,11 +993,7 @@ const Dashbord = () => {
                  </Card>
               </Col>
            </Row> */}
-        </Container>
-        </>
-    )
-=======
-            <Row>
+             <Row>
                <Col sm="12">
                   <Card>
                      <Row>
@@ -1182,9 +1167,13 @@ const Dashbord = () => {
                   </Card>
                </Col>
             </Row>
-         </Container>
-      </>
-   )
+        </Container>
+        </>
+    )
 }
 
 export default Dashbord;
+
+
+
+

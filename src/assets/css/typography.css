@@ -1196,24 +1196,7 @@ Avatar Size
 
 /*----------------------------------------------
     Background Border Color
-------------------------------------------------*/
-/* var(--iq-light-card) */
-.iq-card { background:"#1E2C37" ; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; margin-bottom: 30px; border: none; }
-.iq-card-transparent { background: transparent; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; margin-bottom: 30px; border: none; box-shadow: none; }
-.iq-card-body { padding: 15px; }
-.iq-card .iq-card-header, .iq-card-transparent .iq-card-header { padding: 20px; margin-bottom: 0; -ms-flex-align: center !important; align-items: center !important;}
-.iq-card-transparent .iq-card-header { padding: 0px; border-bottom: 0; }
-.iq-card-transparent .iq-card-header .iq-header-title { display: inline-block; align-self: center !important; background: var(--iq-body-bg); padding: 0 20px; z-index: 9; }
-.iq-card-transparent .iq-card-header .iq-header-title { padding-left: 0px; }
-.iq-card-transparent .iq-card-header .iq-card-header-toolbar { display: inline-block; padding: 0px 20px; background: var(--iq-body-bg); z-index: 9; }
-.iq-card-transparent .iq-card-header .iq-card-header-toolbar { padding-right: 0px; }
-.iq-card .iq-card-header .iq-header-title .card-title, .iq-card-transparent .iq-card-header .iq-header-title .card-title { margin-bottom: 0; }
-.iq-card-header-toolbar .nav-item a { color: var(--iq-body-text); padding: 4px 12px; font-size: 14px; }
-.iq-card-header-toolbar .dropdown-toggle i { font-size: 22px; line-height: normal; color: var(--iq-body-text); vertical-align: text-bottom; }
-.iq-card-header-toolbar .dropdown-toggle::after { display: none; }
-.card{ background-color:var(--iq-light-card);}
-.breadcrumb{background-color:var(--iq-light-dark-card);}
-
+------------------------------------------------*/ 
 .iq-border {
     border: 1px solid var(--iq-border);
 }
@@ -1318,6 +1301,24 @@ Avatar Size
 .breadcrumb {
   background-color: var(--iq-light-dark-card);
 }
+Card
+------------------------------------------------*/
+/* var(--iq-light-card) */
+.iq-card { background:"#1E2C37" ; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; margin-bottom: 30px; border: none; }
+.iq-card-transparent { background: transparent; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; margin-bottom: 30px; border: none; box-shadow: none; }
+.iq-card-body { padding: 15px; }
+.iq-card .iq-card-header, .iq-card-transparent .iq-card-header { padding: 20px; margin-bottom: 0; -ms-flex-align: center !important; align-items: center !important;}
+.iq-card-transparent .iq-card-header { padding: 0px; border-bottom: 0; }
+.iq-card-transparent .iq-card-header .iq-header-title { display: inline-block; align-self: center !important; background: var(--iq-body-bg); padding: 0 20px; z-index: 9; }
+.iq-card-transparent .iq-card-header .iq-header-title { padding-left: 0px; }
+.iq-card-transparent .iq-card-header .iq-card-header-toolbar { display: inline-block; padding: 0px 20px; background: var(--iq-body-bg); z-index: 9; }
+.iq-card-transparent .iq-card-header .iq-card-header-toolbar { padding-right: 0px; }
+.iq-card .iq-card-header .iq-header-title .card-title, .iq-card-transparent .iq-card-header .iq-header-title .card-title { margin-bottom: 0; }
+.iq-card-header-toolbar .nav-item a { color: var(--iq-body-text); padding: 4px 12px; font-size: 14px; }
+.iq-card-header-toolbar .dropdown-toggle i { font-size: 22px; line-height: normal; color: var(--iq-body-text); vertical-align: text-bottom; }
+.iq-card-header-toolbar .dropdown-toggle::after { display: none; }
+.card{ background-color:var(--iq-light-card);}
+.breadcrumb{background-color:var(--iq-light-dark-card);}
 
 /*--------------*/
 .nav-pills .nav-item a {

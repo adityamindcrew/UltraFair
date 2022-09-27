@@ -89,11 +89,6 @@
     /* background-color: var(--iq-primary); */
 }
 
-
-.Searchtext1{
-    background-color: "red" !important;
-}
-
 .timetextcolor {
     color: #1E2C37 !important;
     font-style: normal;
@@ -177,3 +172,9 @@
     }
 
 }
+.Searchtext1{
+    background-color: "red" !important;
+}
+
+
+
