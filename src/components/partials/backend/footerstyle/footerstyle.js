@@ -22,13 +22,14 @@ const mapStateToProps = (state) => {
 
 }
 const mapDispatchToProps = dispatch => ({
-  ...bindActionCreators(
-    {
-      rtlModeAction
-    },
-    dispatch
-  )
+    ...bindActionCreators(
+        {
+            rtlModeAction
+        },
+        dispatch
+    )
 })
+
 
 
 const FooterStyle = (props) => {
@@ -43,15 +44,6 @@ const FooterStyle = (props) => {
     }
   });
 
-
-
-  // const rtlBox =()=>{document.body.parentElement.setAttribute('dir','ltr')
-  //                     document.querySelector('[data-value="ltr"]').classList.add('active')
-  //                     document.querySelector('[data-value="rtl"]').classList.remove('active')
-  //                 }
-  // const ltlBox = () =>{document.body.parentElement.setAttribute('dir','rtl')
-  //                     document.querySelector('[data-value="rtl"]').classList.add('active')
-  //                     document.querySelector('[data-value="ltr"]').classList.remove('active')  }
   return (
     <>
       <div className={`rtl-box ${show === true ? 'show' : ''}`} >
@@ -141,7 +133,7 @@ const FooterStyle = (props) => {
             <center><h5 className='mb-4 mainfootertext'>1 BTC = $22,624.43</h5></center>
             <center>
               <div className='footertext'>
-                Ultrafair is owned and operated by Medium Rare N.V., registration number: 145353, registered address: Fransche Bloemweg, 4 Willemstad Curaçao. Contact us at support@ultrafair.com. Payment agent company is Medium Rare Limited with address 7-9 Riga Feraiou, LIZANTIA COURT, Office 310, Agioi Omologites, 1087 Nicosia, Cyprus and Registration number: HE 410775 Stake is authorized and regulated by the Government of Curacao and operates under License No. 8048/JAZ issued to Antillephone. Stake has passed all compliance and is legally authorized to conduct gaming operations for all games of chance and wagering.
+                Ultrafair is owned and operated by Medium Rare N.V., registration number: 145353, registered address: Fransche Bloemweg, 4 Willemstad Curaçao. Contact us at mailto:support@ultrafair.com. Payment agent company is Medium Rare Limited with address 7-9 Riga Feraiou, LIZANTIA COURT, Office 310, Agioi Omologites, 1087 Nicosia, Cyprus and Registration number: HE 410775 Stake is authorized and regulated by the Government of Curacao and operates under License No. 8048/JAZ issued to Antillephone. Stake has passed all compliance and is legally authorized to conduct gaming operations for all games of chance and wagering.
               </div></center>
           </div>
         </div>

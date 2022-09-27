@@ -68,7 +68,6 @@ General
   text-shadow: none;
 }
 
-/* Definition Lists */
 dl dd {
   margin-bottom: 15px;
 }
@@ -76,7 +75,6 @@ dl dd:last-child {
   margin-bottom: 0px;
 }
 
-/* Table */
 th {
 }
 a:hover {
@@ -91,8 +89,6 @@ a:hover {
 .table {
   color: var(--iq-body-text);
 }
-
-/* scroller */
 .scroller {
   overflow-y: auto;
   scrollbar-color: var(--iq-primary) var(--iq-light-primary);
@@ -124,25 +120,21 @@ a:hover {
   border-radius: 5px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: var(--iq-border-light);
   border-radius: 5px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--iq-secondary);
   border-radius: 5px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--iq-dark);
   border-radius: 5px;
 }
 
-/* Form */
 #sidebar-scrollbar {
   height: 100%;
 }
@@ -452,7 +444,7 @@ Sign In
 .sign-in-page {
   height: 100vh;
   position: relative;
-  /* background: url("../images/login/login.jpg") no-repeat scroll 0 0; */
+  /* / background: url("../images/login/login.jpg") no-repeat scroll 0 0; / */
   background-size: cover;
 }
 .sign-in-page .height-self-center {
@@ -531,7 +523,7 @@ Sign In
   -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: block;
-  /* margin: 25px auto; */
+  /* / margin: 25px auto; / */
   max-width: 500px;
   max-height: fit-content !important;
 }
@@ -559,17 +551,17 @@ Sign In
   border: 1px solid var(--iq-primary);
 }
 ::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  /* color: #d9d5d5 !important; */
+  /* / Chrome, Firefox, Opera, Safari 10.1+ / */
+  /* / color: #d9d5d5 !important; / */
   color: #344452 !important;
-  opacity: 1; /* Firefox */
+  /* opacity: 1; / Firefox / */
 }
 :-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
+  /* / Internet Explorer 10-11 / */
   color: #d9d5d5 !important;
 }
 ::-ms-input-placeholder {
-  /* Microsoft Edge */
+  /* / Microsoft Edge / */
   color: #d9d5d5 !important;
 }
 .f-link:hover {
@@ -597,7 +589,7 @@ Waves Effect
   position: relative;
 }
 
-/*  Ripple */
+/* /  Ripple / */
 .ripple {
   width: 0;
   height: 0;
@@ -643,10 +635,16 @@ Waves Effect
   width: 100%;
 }
 
+
+/*---------------------------------------------------------------------
+                             Sidebar Menu
+ -----------------------------------------------------------------------*/
+
+/* / Form / */
 #sidebar-scrollbar { height: 100vh; }
 #sidebar-scrollbar .iq-sidebar-menu .iq-menu li a svg { overflow: unset !important; }
 
-/* to show logo on sidebar collpsed */
+/* / to show logo on sidebar collpsed / */
 .sidebar-main .fullLogo { display: none !important; }
 .sidebar-main .collapsedLogo { display: block !important; }
 .iq-sidebar:hover .fullLogo { display: block !important; }
