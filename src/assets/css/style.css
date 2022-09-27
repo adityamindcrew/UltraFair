@@ -622,6 +622,8 @@ Waves Effect
  -----------------------------------------------------------------------*/
 .iq-sidebar { position: fixed; z-index: 1000; top: 0; width: 300px; height: 100%; background: var(--iq-sidebar-dark); transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; }
 .iq-sidebar .iq-sidebar-logo { float: none; width: 100%; }
+.iq-sidebar { position: fixed; z-index: 1000; top: 0; width: 300px; height: 100%; background: var(--iq-sidebar-dark); transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; }
+.iq-sidebar .iq-sidebar-logo { float: none; width: 100%; }
 .iq-sidebar {
   position: fixed;
   z-index: 1000;
@@ -645,6 +647,8 @@ Waves Effect
  -----------------------------------------------------------------------*/
 
 /* Form */
+
+
 #sidebar-scrollbar { height: 100vh; }
 #sidebar-scrollbar .iq-sidebar-menu .iq-menu li a svg { overflow: unset !important; }
 
@@ -745,6 +749,7 @@ body.sidebar-main .iq-top-navbar { width: calc(100% - 80px); }
    line-height: 35px;
   margin: 15px 10px;
     padding: 5px 20px;
+}
 #sidebar-scrollbar {
   height: 100vh;
 }
@@ -1106,8 +1111,6 @@ body.sidebar-main .iq-top-navbar {
   border-radius: 50%;
   -webkit-border-radius: 50%;
 }
-
-}
 .navbar-list > a, .navbar-list > button{
 margin: auto;
 margin-right: 25px;
@@ -1194,8 +1197,27 @@ div#lottie-beil svg path, div#lottie-mail svg path, div#lottie-fullscreen svg pa
 .iq-navbar-logo a span { margin-left: 10px; font-size: 19px; line-height: 42px; font-weight: 600; color: var(--iq-body-text); text-transform: uppercase; flex: 1; -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; }
 .iq-navbar-logo a:hover, .iq-navbar-logo a:focus { text-decoration: none; }
 .iq-navbar-logo img { height: 45px; }
+.iq-top-navbar .iq-navbar-custom .iq-menu-bt { display: none; } 
+div#lottie-beil, div#lottie-mail, div#lottie-fullscreen { height: 20px; width: 20px; }
+div#lottie-beil svg path, div#lottie-mail svg path, div#lottie-fullscreen svg path { stroke: var(--iq-primary); }
+.navbar-list li .caption { line-height: 16px; }
+.navbar-list li .caption p { color: var(--iq-body-text); font-size: 12px; }
+.top-nav-bottom { margin-left: 260px; border-top: 1px solid var(--iq-light-primary); }
+.topnav-toolbar li a { display: block; padding: 10px 15px; text-transform: capitalize; color: var(--iq-secondary); border-radius: 5px; -webkit-border-radius: 5px; }
+.topnav-toolbar li.date-today { background: var(--iq-light); }
+.topnav-toolbar li.active a { background: var(--iq-light-primary); color: var(--iq-primary); }
+.topnav-toolbar ul li { list-style: none; padding: 13px 0; }
+.navbar-list li > .dropdown { line-height: 73px; cursor: pointer; }
+.iq-search-bar { padding: 0 0 0 15px; }
+.iq-search-bar .searchbox { width: 480px; position: relative; }
+.iq-search-bar .search-input { width: 100%; height: 40px; padding: 5px 15px 5px 40px; font-size: 13px; border-radius: 5px; color: var(--iq-body-text); border: none; background-color: var(--iq-body-bg); }
+.iq-navbar-logo { padding: 20px; width: auto; position: relative; background: var(--iq-white); -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; background: transparent; }
+.iq-navbar-logo a { display: flex; align-items: flex-start; }
+.iq-navbar-logo a span { margin-left: 10px; font-size: 19px; line-height: 42px; font-weight: 600; color: var(--iq-body-text); text-transform: uppercase; flex: 1; -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; }
+.iq-navbar-logo a:hover, .iq-navbar-logo a:focus { text-decoration: none; }
+.iq-navbar-logo img { height: 45px; }
 .iq-top-navbar .iq-navbar-custom .iq-menu-bt { display: none; }
-div#lottie-beil,
+ div#lottie-beil,
 div#lottie-mail,
 div#lottie-fullscreen {
   height: 20px;
@@ -1301,6 +1323,7 @@ div#lottie-fullscreen svg path {
 /*---------------------------------------------------------------------
 content Page
 -----------------------------------------------------------------------*/
+ 
 .content-page {    background: linear-gradient(180deg, #1f4949 0%, rgba(17, 255, 189, 0) 100%);
   mix-blend-mode: normal;  overflow: hidden; margin-left: 300px; padding: 117px 15px 0; min-height: 100vh; -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; }
 .iq-user-dropdown { width: 350px; }
@@ -1549,6 +1572,8 @@ body.sidebar-main .content-page {
 
 /*---------- Sidebar Logo --------------*/
 .iq-sidebar-logo { padding-top: 15px; padding-left: 20px; width: 260px; float: left; position: relative; background: var(--iq-white); -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; background: transparent; }
+ 
+ .iq-sidebar-logo { padding-top: 15px; padding-left: 20px; width: 260px; float: left; position: relative; background: var(--iq-white); -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; background: transparent; }
 .iq-sidebar-logo a { display: flex; align-items: flex-start }
 .iq-sidebar-logo a span { margin-left: 10px; font-size: 19px; line-height: 42px; padding-left: 1px; letter-spacing: 1.5px; font-weight: 600; flex: 1; -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s }
 .logo-text { color: var(--iq-body-text); text-transform: uppercase; font-size: 10px; letter-spacing: 5px }
@@ -1563,7 +1588,10 @@ body.sidebar-main .content-page {
 .line-menu.start { transition: transform 330ms cubic-bezier(0.54, -0.81, 0.37, 0.37); transform-origin: right; }
 .open .line-menu.start { transform: rotate(-90deg) translateX(3px); }
 .line-menu.end { align-self: flex-end; transition: transform 330ms cubic-bezier(0.54, -0.81, 0.37, 0.37); transform-origin: left; }
+ 
 .open .line-menu.end { transform: rotate(-90deg) translateX(-3px); }
+
+
 .iq-sidebar-logo {
   padding-top: 15px;
   padding-left: 20px;
@@ -1666,9 +1694,7 @@ body.sidebar-main .content-page {
 .open .line-menu.end {
   transform: rotate(-90deg) translateX(-3px);
 }
-
-/*----------------------*/
-.iq-top-navbar .iq-sub-dropdown {
+ .iq-top-navbar .iq-sub-dropdown {
   width: 300px;
   display: none;
   position: absolute;
@@ -3769,7 +3795,8 @@ Pricing Page
   border: 1px solid #404043 !important;
   border-radius: unset !important;
 }
-.rtl-box{
+
+ .rtl-box{
   display: none !important;
 }
 
@@ -3941,3 +3968,4 @@ h6 span {
       justify-content: flex-start;
   }
 }
+
