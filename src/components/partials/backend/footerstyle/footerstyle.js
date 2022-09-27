@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+// import React, { useState, useEffect } from 'react'
+// import { Link } from 'react-router-dom'
 // import {Container,Col,Row }from 'react-bootstrap'
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { rtlModeAction, getRtlMode } from '../../../../store/mode/rtlmode'
-import '../../../../assets/css/Ultrafair/footerstyle.css'
+// import { connect } from "react-redux";
+// import { bindActionCreators } from "redux";
+// import { rtlModeAction, getRtlMode } from '../../../../store/mode/rtlmode'
+// import '../../../../assets/css/Ultrafair/footerstyle.css'
 
-// icon 
+// // icon 
 
 import Vector from '../../../../assets/images/Ultrafair/Vector.png'
 import Flag from '../../../../assets/images/Ultrafair/flag.png'
@@ -14,27 +14,29 @@ import Ultrafair from '../../../../assets/images/Ultrafair/Ultrafairlogo.png'
 
 
 
-const mapStateToProps = (state) => {
-    return {
-        rtlMode: getRtlMode(state)
-    };
+// const mapStateToProps = (state) => {
+//     return {
+//         rtlMode: getRtlMode(state)
+//     };
 
 
-}
-const mapDispatchToProps = dispatch => ({
-    ...bindActionCreators(
-        {
-            rtlModeAction
-        },
-        dispatch
-    )
-})
+// }
+// const mapDispatchToProps = dispatch => ({
+//     ...bindActionCreators(
+//         {
+//             rtlModeAction
+//         },
+//         dispatch
+//     )
+// })
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import {Container,Col,Row }from 'react-bootstrap'
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { rtlModeAction, getRtlMode } from "../../../../store/mode/rtlmode";
+// import Vector from '../../../assets/images/icon/ICON4.png'
+// import Flag from '../../../assets/images/icon/ICON5.png'
 
 const mapStateToProps = (state) => {
   return {
@@ -182,7 +184,7 @@ const FooterStyle = (props) => {
     )
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(FooterStyle)
+// export default connect(mapStateToProps, mapDispatchToProps)(FooterStyle)
   // const rtlBox =()=>{document.body.parentElement.setAttribute('dir','ltr')
   //                     document.querySelector('[data-value="ltr"]').classList.add('active')
   //                     document.querySelector('[data-value="rtl"]').classList.remove('active')

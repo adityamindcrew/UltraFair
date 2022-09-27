@@ -1,10 +1,10 @@
-import React ,{useState}from 'react'
-import { Link } from 'react-router-dom'
-import { Container, Row, Col ,Form, Button} from 'react-bootstrap';
-import  Card  from '../../../components/Card'
+// import React ,{useState}from 'react'
+// import { Link } from 'react-router-dom'
+// import { Container, Row, Col ,Form, Button} from 'react-bootstrap';
+// import  Card  from '../../../components/Card'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col ,Form} from 'react-bootstrap';
 import Card from '../../../components/Card'
 
 import Chart from "react-apexcharts";
@@ -87,11 +87,11 @@ const Dashbord = () => {
       { value: '50', label: '50' },
       { value: '100', label: '100' },
    ]
-   return (
-      <>
-         <Container fluid>
+   // return (
+   //    <>
+   //       <Container fluid>
 
-   const chart1={
+   {/* const chart1={
       options:{
          chart: {
             id: "view-chart-01",
@@ -122,6 +122,7 @@ const Dashbord = () => {
       },
        series: [44, 55, 30, 30],
    }
+   
    const chart2={
          options : {
        colors:['#e20e02', '#007aff'],
@@ -205,14 +206,14 @@ const Dashbord = () => {
        }]
        },
        series: [44, 30, 20, 43, 22,20],
-   }
+   } */}
     return (
        <> 
         <Container fluid>
-           <Row style={{background:'#1E2C37'}}>
+           <Row style={{background:'#1E2C37',marginLeft:"4%"}}>
               <Col lg="8"xl="12">
-                 <Row   xl="20" >
-                    <Col sm="6" lg="6" xl="4">
+                 <Row   xl="20" style={{marginTop:"5%",justifyContent:'space-around'}} >
+                    <Col sm="6" lg="6" xl="3">
                        <Card className="iq-card-block iq-card-stretch iq-card-height">
                           {/* <Card.Body>
                              <div className="d-flex align-items-center justify-content-between">
@@ -230,10 +231,10 @@ const Dashbord = () => {
                                 <p className="mb-0 text-primary"><span><i className="fa fa-caret-down mr-2"></i></span>35%</p>
                              </div>
                           </Card.Body> */}
-                       <img src={Pic1}/>
+                       <img src={Pic1} style={{height:"200px",width:"400px"}}/>
                        </Card>
                     </Col>
-                    <Col sm="6" lg="6" xl="4">
+                    <Col sm="6" lg="6" xl="3">
                        <Card className="iq-card-block iq-card-stretch iq-card-height">
                           {/* <Card.Body>
                              <div className="d-flex align-items-center justify-content-between">
@@ -251,10 +252,10 @@ const Dashbord = () => {
                                 <p className="mb-0 text-warning"><span><i className="fa fa-caret-up mr-2"></i></span>50%</p>
                              </div>
                           </Card.Body> */}
-                             <img src={Pic2}/>
+                             <img src={Pic2} style={{height:"200px",width:"400px"}}/>
                        </Card>
                     </Col>
-                    <Col sm="6" lg="6" xl="4">
+                    <Col sm="6" lg="6" xl="3">
                        <Card className="iq-card-block iq-card-stretch iq-card-height">
                           {/* <Card.Body>
                              <div className="d-flex align-items-center justify-content-between">
@@ -272,7 +273,7 @@ const Dashbord = () => {
                                 <p className="mb-0 text-info"><span><i className="fa fa-caret-up mr-2"></i></span>80%</p>
                              </div>
 
-                          </Card.Body> */}   <img src={Pic3}/>
+                          </Card.Body> */}   <img src={Pic3} style={{height:"200px",width:"400px"}}/>
 
                        </Card>
                     </Col>
@@ -299,7 +300,7 @@ const Dashbord = () => {
                  </Row>
             <Row >
             <div className="iq-search-bar ml-auto Searchtext1" style={{width:"100%"}}   >
-                    <Form action="#" className="searchbox Searchtext1" style={{backgroundRadius:"25px"}} >
+                    <Form action="#" className="searchbox Searchtext1" style={{backgroundRadius:"25px",marginLeft:"2%"}} >
                         <input type="text" className="text search-input TEXTINPUT" style={{width:"360%",background:"#13212D",borderRadius:"25px",height:"44px"}} placeholder="Search Here..."/>
                         <Link className="search-link" to="#"><i className="ri-search-line"></i></Link>
                     </Form>
@@ -307,7 +308,7 @@ const Dashbord = () => {
             </Row>
 
             <Row style={{marginLeft:"0px"}} xl="20">
-            <div className="iq-search-bar Searchit" style={{background:"#13212D",borderRadius:"30px",width:"70%",marginTop:"3%",marginBottom:"3%",display:"flex",justifyContent:"flex-start"}}   >
+            <div className="iq-search-bar Searchit" style={{background:"#13212D",borderRadius:"30px",width:"70%",marginTop:"3%",marginBottom:"3%",display:"flex",justifyContent:"flex-start",marginLeft:"2%"}}   >
                    <button className='BTN-1'  style={{background:btn==="btn1"?'#344452':"#13212D",padding:"10px",borderRadius:"30px",color:"white",border:btn==="btn1"?"1px solid #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignSelf:"flex-start",alignItems:"center",marginLeft:"-15px"}} onClick={()=>btncolorhandles("btn1")} ><img className='BTNLOGO'  src={btn==="btn1"?ICON1:Svg1} height="18px" width="18" />Button1</button>
                    <button className='BTN-1' style={{background:btn==="btn2"?'#344452':"#13212D",padding:"10px",borderRadius:"30px",color:"white",border:btn==="btn2"?"1px solid  #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignItems:"center"}} onClick={()=>btncolorhandles("btn2")}> <img className='BTNLOGO' src={btn==="btn2"?Svg2:ICON2} height="18px" width="18"/>Button2</button>
                    <button className='BTN-1' style={{background:btn==="btn3"?'#344452':"#13212D",padding:"10px",borderRadius:"23px",color:"white",border:btn==="btn3"?"1px solid  #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignItems:"center"}} onClick={()=>btncolorhandles("btn3")}> <img className='BTNLOGO' src={btn==="btn3"?Svg3:ICON3} height="18px" width="18"/>Button3</button>
@@ -317,7 +318,7 @@ const Dashbord = () => {
             </Row>
   
 
-                 <Card id="slider1" >
+                 <Card  >
                     <Card.Header className="d-flex justify-content-between align-items-center">
                            <div>
                               <h4 className="card-title m-0">Ultrafair Originals</h4>
@@ -500,7 +501,7 @@ const Dashbord = () => {
                  </Card>
 
 
-                 <Card id="slider1" >
+                 <Card id="slider1"  >
                     <Card.Header className="d-flex justify-content-between align-items-center">
                            <div>
                               <h4 className="card-title m-0">Slots</h4>
@@ -1004,11 +1005,9 @@ const Dashbord = () => {
                  </Card>
               </Col>
            </Row> */}
-        </Container>
-        </>
-    )
-=======
-            <Row>
+        {/* </Container>
+       */}
+        <Row>
                <Col sm="12">
                   <Card>
                      <Row>
@@ -1182,7 +1181,10 @@ const Dashbord = () => {
                   </Card>
                </Col>
             </Row>
-         </Container>
+    
+
+         
+          </Container>
       </>
    )
 }
