@@ -145,7 +145,7 @@ const SignIn = (props) => {
                     type="email"
                     className="mb-0"
                     id="exampleInputEmail1"
-                    placeholder="Enter email"
+                    placeholder=""
                     autoComplete="off"
                     required
                   />
@@ -160,7 +160,7 @@ const SignIn = (props) => {
                     type="password"
                     className="mb-0"
                     id="exampleInputPassword2"
-                    placeholder="Password"
+                    placeholder=""
                     required
                   />
                   <br />
@@ -170,9 +170,13 @@ const SignIn = (props) => {
                     type="button"
                     onClick={() => props.close(false)}
                     variant="btn btn-primary"
-                    style={{ color: "black" }}
+                    style={{
+                      color: "black",
+                      fontWeight: "bold",
+                    }}
+                    className="btn1"
                   >
-                    Sign in
+                    Sign In
                   </Button>
                   {/* <div className="custom-control custom-checkbox d-inline-block">
                           <input

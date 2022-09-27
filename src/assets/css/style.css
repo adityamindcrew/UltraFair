@@ -450,7 +450,7 @@ Sign In
   color: var(--iq-white);
 }
 .sign-in-page {
-  height: 100vh;
+  height: fit-content;
   position: relative;
   /* background: url("../images/login/login.jpg") no-repeat scroll 0 0; */
   background-size: cover;
@@ -512,6 +512,15 @@ Sign In
 .sign-in-page .btn {
   padding: 10px 25px;
   border-radius: 27px;
+  /* margin-left: 15px; */
+  width: 93%;
+  transition: none !important;
+  margin: 2.5px;
+  /* margin-left: 15px !important; */
+}
+.sign-in-page .btn1 {
+  padding: 10px 25px;
+  border-radius: 6px;
   margin-left: 15px;
   width: 93%;
   transition: none !important;
@@ -3713,6 +3722,42 @@ h6 span {
   border-bottom-left-radius: 27px !important;
   border-top-right-radius: 27px !important;
   border-bottom-right-radius: 27px !important;
+  text-align: center;
+  margin: 2.5px;
+  transition: none !important;
+  translate: none !important;
+}
+.btn1:active {
+  background: #344452;
+  border-color: #344452;
+  border-top-left-radius: 6px !important;
+  border-bottom-left-radius: 6px !important;
+  border-top-right-radius: 6px !important;
+  border-bottom-right-radius: 6px !important;
+  text-align: center;
+  margin: 2.5px;
+}
+.btn1:hover {
+  background: #344452;
+  border-color: #344452;
+  border-top-left-radius: 6px !important;
+  border-bottom-left-radius: 6px !important;
+  border-top-right-radius: 6px !important;
+  border-bottom-right-radius: 6px !important;
+  text-align: center;
+  margin: 2.5px;
+  margin-left: 15px !important;
+  transition: none !important;
+  translate: none !important;
+}
+
+.btn1:focus {
+  background: #344452;
+  border-color: #344452;
+  border-top-left-radius: 6px !important;
+  border-bottom-left-radius: 6px !important;
+  border-top-right-radius: 6px !important;
+  border-bottom-right-radius: 6px !important;
   text-align: center;
   margin: 2.5px;
   transition: none !important;

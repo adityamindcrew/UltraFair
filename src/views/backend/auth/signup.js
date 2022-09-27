@@ -312,7 +312,11 @@ const SignUp = (props) => {
                   type="button"
                   onClick={() => props.close(false)}
                   variant="btn btn-primary my-2"
-                  style={{ color: "black" }}
+                  className="btn1"
+                  style={{
+                    color: "black",
+                    fontWeight: "bold",
+                  }}
                 >
                   Play Now
                 </Button>
