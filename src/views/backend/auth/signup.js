@@ -10,6 +10,7 @@ import {
   ButtonGroup,
   ButtonToolbar,
 } from "react-bootstrap";
+import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { Link, useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -52,6 +53,9 @@ const SignUp = (props) => {
   };
   const loginHandler = () => {
     props.showModal(true);
+  };
+  const toggleButton = () => {
+    setShow((prevState) => !prevState);
   };
 
   return (
@@ -214,13 +218,22 @@ const SignUp = (props) => {
                       {" "}
                       *
                     </Form.Label>
-                    <Form.Control
-                      type="password"
-                      className="mb-0"
-                      id="exampleInputPassword6"
-                      placeholder=""
-                      required
-                    />
+                    <div className="password">
+                      <Form.Control
+                        type={show ? "text" : "password"}
+                        className="mb-0"
+                        id="exampleInputPassword6"
+                        placeholder=""
+                        required
+                      />
+                      <button
+                        type="button"
+                        className={"passwordBtn"}
+                        onClick={toggleButton}
+                      >
+                        {show ? <AiFillEye /> : <AiFillEyeInvisible />}
+                      </button>
+                    </div>
                   </Form.Group>
                 </Col>
                 <Col md="12">
@@ -280,7 +293,7 @@ const SignUp = (props) => {
                   className="mb-3"
                   style={{
                     flexWrap: "nowrap",
-                    width: "400px",
+                    width: "fit-content",
                     height: "30px",
                     color: "#B3BAD1",
                     fontSize: "15px",
@@ -308,6 +321,7 @@ const SignUp = (props) => {
                                     <input type="radio" id="customRadio3" name="customRadio" className="custom-control-input"/>
                                     <label className="custom-control-label" htmlFor="customRadio3">Free-Free</label>
                                  </div> */}
+                <br />
                 <Button
                   type="button"
                   onClick={() => props.close(false)}
@@ -331,6 +345,7 @@ const SignUp = (props) => {
                     </Link>
                   </div>
                 </div> */}
+          <br />
           <h6>
             <span> OR </span>
           </h6>

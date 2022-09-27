@@ -3,6 +3,7 @@ import { Container, Col, Row, Button, Form, Card } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { rtlModeAction, getRtlMode } from "../../../store/mode/rtlmode";
 import Google from "../../../assets/images/social/google.png";
 import FB from "../../../assets/images/social/facebook.png";
@@ -42,6 +43,9 @@ const SignIn = (props) => {
   };
   const loginHandler = () => {
     props.showModal(false);
+  };
+  const toggleButton = () => {
+    setShow((prevState) => !prevState);
   };
 
   return (
@@ -156,15 +160,24 @@ const SignIn = (props) => {
                     {" "}
                     *
                   </Form.Label>
-                  <Form.Control
-                    type="password"
-                    className="mb-0"
-                    id="exampleInputPassword2"
-                    placeholder=""
-                    required
-                  />
-                  <br />
+                  <div className="password">
+                    <Form.Control
+                      type={show ? "text" : "password"}
+                      className="mb-0"
+                      id="exampleInputPassword2"
+                      placeholder=""
+                      required
+                    />
+                    <button
+                      type="button"
+                      className={"passwordBtn"}
+                      onClick={toggleButton}
+                    >
+                      {show ? <AiFillEye /> : <AiFillEyeInvisible />}
+                    </button>
+                  </div>
                 </Form.Group>
+                <br />
                 <div className="sign-info">
                   <Button
                     type="button"
@@ -207,6 +220,7 @@ const SignIn = (props) => {
                     </Link>
                   </div>
                 </div> */}
+            <br />
             <h6>
               <span> OR </span>
             </h6>
@@ -227,7 +241,16 @@ const SignIn = (props) => {
                 <img src={Chat} className="socialImage" />
               </Card>
             </div>
-            <p style={{ textAlign: "center" }}>Forgot Password</p>
+            <br />
+            <p
+              style={{
+                textAlign: "center",
+                fontWeight: "bold",
+                color: "white",
+              }}
+            >
+              Forgot Password
+            </p>
             <p className="privacyPolicy">
               This site is protected by hCaptcha and the hCaptcha Privacy Policy
               and Terms of Service apply.
