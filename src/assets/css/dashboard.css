@@ -161,8 +161,17 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .NEW-BTN {
+    width: 20% !important;
+  }
+}
+
 @media (min-width: 1400px) {
   .NEW-BTN {
     width: 30px;
   }
+}
+.Searchtext1 {
+  background-color: "red" !important;
 }

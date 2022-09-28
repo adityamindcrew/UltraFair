@@ -1,3 +1,5 @@
+
+
 /*
 Template: Streamit  - Responsive Bootstrap 4 Admin Dashboard Template
 Author: iqonicthemes.in
@@ -104,7 +106,6 @@ a,
     -o-transition: all 0.5s ease-out 0s;
     transition: all 0.5s ease-out 0s;
 }
- 
 ::-moz-selection {
   background: var(--iq-primary);
   color: var(--iq-white);
@@ -154,7 +155,6 @@ a:hover {
 hr {
     border: 1px solid #344452;
 }
- 
 a {
   color: var(--iq-primary);
 }
@@ -178,6 +178,8 @@ h6 {
 }
  
    
+
+
 h1 a,
 h2 a,
 h3 a,
@@ -256,9 +258,8 @@ label {
 
 .form-control.form-control-lg {
     height: 50px;
-    line-height: 50px;
-}
-/* label { color: var(--iq-secondary); } */
+    line-height: 50px;}
+/* / label { color: var(--iq-secondary); } / */
 label {
   color: #b3bad1;
 }
@@ -270,8 +271,8 @@ label {
   line-height: 50px; 
 }
 
-/* Definition Lists */
-dl dd { 
+/* / Definition Lists / */
+dl dd {
     margin-bottom: 15px;
 }
 
@@ -286,8 +287,10 @@ dl dd:last-child {
 .table td,
 .table th {
     vertical-align: middle;
-} 
-   
+}
+
+  /* margin-bottom: 15px;
+} */
 dl dd:last-child {
   margin-bottom: 0px;
 }
@@ -329,7 +332,11 @@ textarea {
 .form-control:disabled,
 .form-control[readonly] {
     background-color: var(--iq-disable) !important;
-    opacity: 1;
+    opacity: 1;}
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: var(--iq-disable) !important;
+  opacity: 1;
 }
 
 /*----model----*/
@@ -407,8 +414,8 @@ loading
   bottom: 0; 
 }
 
-/* Bootstrap override */
-.rounded { 
+/* / Bootstrap override / */
+.rounded {
     border-radius: 5px !important;
 }
 
@@ -563,16 +570,16 @@ div.dataTables_wrapper div.dataTables_filter label {
   border-color: var(--iq-primary);
 }
 .form-control {
-  background-color: var(--iq-body-bg);
-  border: 1px solid transparent;
-  height: 46px;
-  position: relative;
-  color: var(--iq-body-text);
-  font-size: 16px;
-  width: 100%;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-}
+     background-color: #0D1D29 !important; 
+    /* border: 1px solid transparent; */
+    height: 46px;
+    position: relative;
+    color: white;
+    font-size: 12px;
+    width: 84%;
+    border-radius: 6px;
+    padding-bottom: 5px;
+  }
 .form-control:focus {
   color: var(--iq-dark1);
   border-color: transparent;
@@ -640,8 +647,8 @@ div.dataTables_wrapper div.dataTables_filter label {
   background-color: transparent; 
 }
 
-/* right sidebar */
-.iq-right-fixed { 
+/* / right sidebar / */
+.iq-right-fixed {
     margin: 0 15px;
 }
 
@@ -788,7 +795,11 @@ Background Color
 .badge-dark {
     color: var(--iq-white);
     background-color: var(--iq-dark) !important;
-} 
+}
+
+  /* color: var(--iq-white);
+  background: var(--iq-primary) !important;
+} */
 .bg-secondary,
 .badge-secondary {
   color: var(--iq-white);
@@ -1197,6 +1208,7 @@ Avatar Size
 /*----------------------------------------------
     Background Border Color
 ------------------------------------------------*/ 
+------------------------------------------------*/
 .iq-border {
     border: 1px solid var(--iq-border);
 }
@@ -1226,8 +1238,8 @@ Avatar Size
 .iq-border-alert {
     border: 10px solid var(--iq-border-danger);
 }
- .iq-card {
-  background: var(--iq-light-card);
+.iq-card {
+  background:"#1E2C37";
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -1252,7 +1264,7 @@ Avatar Size
   margin-bottom: 0;
   -ms-flex-align: center !important;
   align-items: center !important;
-  border-bottom: 1px solid rgb(20 20 20);
+  /* border-bottom: 1px solid rgb(20 20 20); */
 }
 .iq-card-transparent .iq-card-header {
   padding: 0px;
@@ -1301,6 +1313,23 @@ Avatar Size
 .breadcrumb {
   background-color: var(--iq-light-dark-card);
 }
+
+/* var(--iq-light-card) */
+.iq-card { background:"#1E2C37" ; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; margin-bottom: 30px; border: none; }
+.iq-card-transparent { background: transparent; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; margin-bottom: 30px; border: none; box-shadow: none; }
+.iq-card-body { padding: 15px; }
+.iq-card .iq-card-header, .iq-card-transparent .iq-card-header { padding: 20px; margin-bottom: 0; -ms-flex-align: center !important; align-items: center !important;}
+.iq-card-transparent .iq-card-header { padding: 0px; border-bottom: 0; }
+.iq-card-transparent .iq-card-header .iq-header-title { display: inline-block; align-self: center !important; background: var(--iq-body-bg); padding: 0 20px; z-index: 9; }
+.iq-card-transparent .iq-card-header .iq-header-title { padding-left: 0px; }
+.iq-card-transparent .iq-card-header .iq-card-header-toolbar { display: inline-block; padding: 0px 20px; background: var(--iq-body-bg); z-index: 9; }
+.iq-card-transparent .iq-card-header .iq-card-header-toolbar { padding-right: 0px; }
+.iq-card .iq-card-header .iq-header-title .card-title, .iq-card-transparent .iq-card-header .iq-header-title .card-title { margin-bottom: 0; }
+.iq-card-header-toolbar .nav-item a { color: var(--iq-body-text); padding: 4px 12px; font-size: 14px; }
+.iq-card-header-toolbar .dropdown-toggle i { font-size: 22px; line-height: normal; color: var(--iq-body-text); vertical-align: text-bottom; }
+.iq-card-header-toolbar .dropdown-toggle::after { display: none; }
+.card{ background-color:var(--iq-light-card);}
+.breadcrumb{background-color:var(--iq-light-dark-card);}
 
 /*--------------*/
 .nav-pills .nav-item a {
@@ -1483,9 +1512,6 @@ Text Color
     color: var(--iq-body-text) !important;
 }
 
-.text-body {
-    color: var(--iq-body-text) !important; 
-}
 .btn:focus {
   box-shadow: none !important;
 }
@@ -2108,7 +2134,9 @@ Border
 
 /*----------------------------------------------
 Font Size
-------------------------------------------------*/ 
+<<<<<<< HEAD
+------------------------------------------------*/
+
 .font-size-11 {
     font-size: 11px !important;
 }
@@ -2292,7 +2320,7 @@ Avatar Size
 Card
 ------------------------------------------------*/
 .iq-card {
-    background: var(--iq-light-card);
+    background:'#1E2C37';
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -2320,7 +2348,7 @@ Card
     margin-bottom: 0;
     -ms-flex-align: center !important;
     align-items: center !important;
-    border-bottom: 1px solid rgb(20 20 20);
+    /* border-bottom: 1px solid rgb(20 20 20); */
 }
 
 .iq-card-transparent .iq-card-header {
@@ -3262,7 +3290,8 @@ Grid Boxes
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-} 
+}
+
 .iq-card-block.iq-card-stretch {
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -3289,3 +3318,4 @@ Grid Boxes
   -ms-flex-direction: column;
   flex-direction: column;
 } 
+.iq-card-transpare{}
