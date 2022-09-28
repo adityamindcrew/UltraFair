@@ -1,11 +1,9 @@
-
 //img
-import logo from '../../../../../src/assets/images/sidebar/UltrafairLogo.png'
-import smallLogo from '../../../../assets/images/sidebar/UltrafairSmallLogo.png'
+import logo from "../../../../../src/assets/images/sidebar/UltrafairLogo.png";
+import smallLogo from "../../../../assets/images/sidebar/UltrafairSmallLogo.png";
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import { Navbar, Button, Form, Nav, Dropdown } from "react-bootstrap";
- 
 
 //Modal
 import Modal from "react-bootstrap/Modal";
@@ -81,15 +79,25 @@ const HeaderStyle1 = (props) => {
           <Navbar className="p-0" expand="sm">
             <div className="iq-menu-bt d-flex align-items-center">
               <div className="wrapper-menu" onClick={minisidbar}>
-                <div className="main-circle"><i className="las la-bars"></i></div>
+                <div className="main-circle">
+                  <i className="las la-bars"></i>
+                </div>
               </div>
               <div className="iq-navbar-logo d-flex justify-content-between">
                 <Link to="#" className="header-logo">
-                  <img src={logo} className="logoImg fullLogo img-fluid rounded-normal" alt="" />
+                  <img
+                    src={logo}
+                    className="logoImg fullLogo img-fluid rounded-normal"
+                    alt=""
+                  />
                   {/* <div className="logo-title">
                                         <span className="text-primary text-uppercase">Ultrafair</span>
                                     </div> */}
-                  <img src={smallLogo} className="logoImg collapsedLogo img-fluid rounded-normal" alt="" />
+                  <img
+                    src={smallLogo}
+                    className="logoImg collapsedLogo img-fluid rounded-normal"
+                    alt=""
+                  />
                   {/* <div className="logo-title">
                                         <span className="text-primary text-uppercase">Ultrafair</span>
                                     </div> */}
@@ -108,8 +116,17 @@ const HeaderStyle1 = (props) => {
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav as="ul" className="ml-auto navbar-list iq-header">
                 {/* <div className='navItem'> </div> */}
-                <Link className="navItem" to="#" onClick={registerHandler}>Sign In</Link>
-                <Button className='navItem' type="button" variant="btn btn-primary" onClick={loginHandler}>Register</Button>
+                <Link className="navItem" to="#" onClick={loginHandler}>
+                  Sign In
+                </Link>
+                <Button
+                  className="navItem btn1"
+                  type="button"
+                  variant="btn btn-primary"
+                  onClick={registerHandler}
+                >
+                  Register
+                </Button>
 
                 {/* <Dropdown as="li" className="nav-item nav-icon search-content iq-search">
                                     <Dropdown.Toggle as={CustomToggle} href="#" variant="search-toggle iq-waves-effect text-gray rounded">
@@ -337,12 +354,8 @@ const HeaderStyle1 = (props) => {
         show={loginModalShow}
         onHide={() => setLoginModalShow(false)}
       />
-
-
-
     </>
-  )
-}
+  );
+};
 
-
-export default HeaderStyle1
+export default HeaderStyle1;
