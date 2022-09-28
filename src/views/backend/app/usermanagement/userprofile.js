@@ -10,7 +10,7 @@ import {
 } from "react-bootstrap";
 import Card from "../../../../components/Card";
 
-import Img1 from "../../../../assets/images/Customheader/Headerimg121.png"
+import Img1 from "../../../../assets/images/Customheader/Headerimg121.png";
 // import CustomToggle from '../../../components/dropdowns'
 import CustomToggle from "../../../../components/dropdowns";
 
@@ -38,10 +38,5 @@ const UserProfile = () => {
     </>
   );
 };
-           </Container>
-        </>
-    )
-}
-
 
 export default UserProfile;
