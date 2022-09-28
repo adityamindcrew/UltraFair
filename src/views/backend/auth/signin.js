@@ -3,6 +3,7 @@ import { Container, Col, Row, Button, Form, Card } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { rtlModeAction, getRtlMode } from "../../../store/mode/rtlmode";
 import Google from "../../../assets/images/social/google.png";
 import FB from "../../../assets/images/social/facebook.png";
@@ -43,11 +44,14 @@ const SignIn = (props) => {
   const loginHandler = () => {
     props.showModal(false);
   };
+  const toggleButton = () => {
+    setShow((prevState) => !prevState);
+  };
 
   return (
     <>
-      <div className={`rtl-box ${show === true ? "" : ""}`}>
-        {/* <button type="button" className="btn btn-light rtl-btn">
+      {/* <div className={`rtl-box ${show === true ? "" : ""}`}>
+        <button type="button" className="btn btn-light rtl-btn">
           <svg
             onClick={() => setShow(!show)}
             xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +66,7 @@ const SignIn = (props) => {
               clipRule="evenodd"
             />
           </svg>
-        </button>  */}
+        </button> 
         <div className="rtl-panel">
           <ul className="modes">
             <li
@@ -89,7 +93,7 @@ const SignIn = (props) => {
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
       <div className="sign-in-page">
         {/* <section className="sign-in-page">
           <Container>
@@ -145,7 +149,7 @@ const SignIn = (props) => {
                     type="email"
                     className="mb-0"
                     id="exampleInputEmail1"
-                    placeholder="Enter email"
+                    placeholder=""
                     autoComplete="off"
                     required
                   />
@@ -156,23 +160,36 @@ const SignIn = (props) => {
                     {" "}
                     *
                   </Form.Label>
-                  <Form.Control
-                    type="password"
-                    className="mb-0"
-                    id="exampleInputPassword2"
-                    placeholder="Password"
-                    required
-                  />
-                  <br />
+                  <div className="password">
+                    <Form.Control
+                      type={show ? "text" : "password"}
+                      className="mb-0"
+                      id="exampleInputPassword2"
+                      placeholder=""
+                      required
+                    />
+                    <button
+                      type="button"
+                      className={"passwordBtn"}
+                      onClick={toggleButton}
+                    >
+                      {show ? <AiFillEye /> : <AiFillEyeInvisible />}
+                    </button>
+                  </div>
                 </Form.Group>
+                <br />
                 <div className="sign-info">
                   <Button
                     type="button"
                     onClick={() => props.close(false)}
                     variant="btn btn-primary"
-                    style={{ color: "black" }}
+                    style={{
+                      color: "black",
+                      fontWeight: "bold",
+                    }}
+                    className="btn1"
                   >
-                    Sign in
+                    Sign In
                   </Button>
                   {/* <div className="custom-control custom-checkbox d-inline-block">
                           <input
@@ -203,6 +220,7 @@ const SignIn = (props) => {
                     </Link>
                   </div>
                 </div> */}
+            <br />
             <h6>
               <span> OR </span>
             </h6>
@@ -223,7 +241,16 @@ const SignIn = (props) => {
                 <img src={Chat} className="socialImage" />
               </Card>
             </div>
-            <p style={{ textAlign: "center" }}>Forgot Password</p>
+            <br />
+            <p
+              style={{
+                textAlign: "center",
+                fontWeight: "bold",
+                color: "white",
+              }}
+            >
+              Forgot Password
+            </p>
             <p className="privacyPolicy">
               This site is protected by hCaptcha and the hCaptcha Privacy Policy
               and Terms of Service apply.
