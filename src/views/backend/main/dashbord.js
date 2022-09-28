@@ -198,7 +198,7 @@ const Dashbord = () => {
     return (
        <> 
         <Container fluid>
-           <Row style={{background:'#1E2C37'}}>
+           <Row >
               <Col lg="8"xl="12">
                  <Row   xl="20" >
                     <Col sm="6" lg="6" xl="4">
@@ -428,7 +428,7 @@ const Dashbord = () => {
                                 </Card.Body>
                              </Card>
                           </SwiperSlide> */}
-                          <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                          <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
                              
                
                                    <div className="iq-thumb" >
@@ -447,7 +447,7 @@ const Dashbord = () => {
                           
                     
                           </SwiperSlide>
-                          <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                          <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
                              
                
                              <div className="iq-thumb" >
@@ -466,7 +466,7 @@ const Dashbord = () => {
                     
               
                     </SwiperSlide>
-                    <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                    <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
                              
                
                              <div className="iq-thumb" >
@@ -615,7 +615,7 @@ const Dashbord = () => {
                                 </Card.Body>
                              </Card>
                           </SwiperSlide> */}
-                          <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                          <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
                              
                
                                    <div className="iq-thumb" >
@@ -634,7 +634,7 @@ const Dashbord = () => {
                           
                     
                           </SwiperSlide>
-                          <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                          <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
                              
                
                              <div className="iq-thumb" >
@@ -653,7 +653,7 @@ const Dashbord = () => {
                     
               
                     </SwiperSlide>
-                    <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                    <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
                              
                
                              <div className="iq-thumb" >

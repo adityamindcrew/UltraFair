@@ -3,11 +3,12 @@ import { Container ,Row, Col,Form } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import  Card from '../../../../components/Card'
 
+import Img1 from "../../../../assets/images/Customheader/Headerimg.2.png"
 const UserPrivacySetting = () => {
     return (
     <>
       <Container fluid>
-         <Row>
+         {/* <Row>
             <Col lg="12">
                <Card>
                   <Card.Header className="d-flex justify-content-between">
@@ -99,7 +100,28 @@ const UserPrivacySetting = () => {
                   </Card.Body>
                </Card>
             </Col>
-         </Row>
+         </Row> */}
+                 <Row>
+      <div className="iq-top-navbar headertop" style={{height:"10%",marginTop:"4%",background:"#1E2C37"}}>
+                 <div className="iq-navbar-custom" style={{display:"flex",flexDirection:"row-reverse",justifyContent:"space-between",marginTop:"7.5px"}}>
+                 <div>
+ <img src={Img1} className="LOGOO" style={{height:"9vh",width:"19vw"}}/>
+                 </div>
+                 <div style={{display:"flex",flexDirection:"row",justifyContent:'space-between',alignItems:"center",width:"14%"}}>
+                    {/* <img src={UltrafairOrignalsSVG} height="20px" width="20px"/>
+                     */}
+            <svg width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.99995 14.3782L13.15 16.8882C13.91 17.3482 14.8399 16.6682 14.6399 15.8082L13.54 11.0882L17.2099 7.90816C17.8799 7.32816 17.5199 6.22816 16.6399 6.15816L11.81 5.74816L9.91995 1.28816C9.57995 0.478164 8.41995 0.478164 8.07995 1.28816L6.18995 5.73816L1.35995 6.14816C0.479951 6.21816 0.119951 7.31816 0.789951 7.89816L4.45995 11.0782L3.35995 15.7982C3.15995 16.6582 4.08995 17.3382 4.84995 16.8782L8.99995 14.3782Z" fill="#F7B32B" />
+    </svg>
+                    <h4>Ultrafair Exclusive</h4>
+                 </div>
+
+
+                 </div>
+                 </div>
+
+                 
+      </Row>
       </Container>
     </>
     )
