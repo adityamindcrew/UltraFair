@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Col, Row, Container ,ProgressBar, Dropdown } from 'react-bootstrap'
 import  Card from '../../../../components/Card'
 
+import Img1 from "../../../../assets/images/Customheader/Headerimg121.png"
 // import CustomToggle from '../../../components/dropdowns'
 import CustomToggle from '../../../../components/dropdowns' 
 
@@ -16,7 +17,7 @@ const UserProfile = () => {
     return (
         <>
             <Container fluid>
-                <Row className="profile-content">
+                {/* <Row className="profile-content">
                     <Col className="col-12 col-md-12 col-lg-4">
                         <Card>
                             <Card.Body className=" profile-page">
@@ -473,7 +474,28 @@ const UserProfile = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                </Row>
+                </Row> */}
+                  <Row>
+      <div className="iq-top-navbar headertop" style={{height:"10%",marginTop:"4%",background:"#1E2C37"}}>
+                 <div className="iq-navbar-custom" style={{display:"flex",flexDirection:"row-reverse",justifyContent:"space-between",marginTop:"7.5px"}}>
+                 <div>
+ <img src={Img1} className="LOGOO" style={{height:"9vh",width:"19vw"}}/>
+                 </div>
+                 <div style={{display:"flex",flexDirection:"row",justifyContent:'space-between',alignItems:"center",width:"14%"}}>
+                    {/* <img src={UltrafairOrignalsSVG} height="20px" width="20px"/>
+                     */}
+                    <svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.48 11.4581C13.91 7.37805 8.32 7.15805 9.67 1.22805C9.77 0.78805 9.3 0.448051 8.92 0.678051C5.29 2.81805 2.68 7.10805 4.87 12.7281C5.05 13.1881 4.51 13.6181 4.12 13.3181C2.31 11.9481 2.12 9.97805 2.28 8.56805C2.34 8.04805 1.66 7.79805 1.37 8.22805C0.69 9.26805 0 10.9481 0 13.4781C0.38 19.0781 5.11 20.7981 6.81 21.0181C9.24 21.3281 11.87 20.8781 13.76 19.1481C15.84 17.2181 16.6 14.1381 15.48 11.4581ZM6.2 16.488C7.64 16.138 8.38 15.0981 8.58 14.1781C8.91 12.748 7.62 11.3481 8.49 9.08805C8.82 10.958 11.76 12.1281 11.76 14.1681C11.84 16.6981 9.1 18.868 6.2 16.488Z" fill="#B4E1FF" />
+    </svg>
+                    <h4>Ultrafair Originals</h4>
+                 </div>
+
+
+                 </div>
+                 </div>
+
+                 
+      </Row>
             </Container>
         </>
     )

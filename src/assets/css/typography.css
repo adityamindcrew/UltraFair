@@ -2402,7 +2402,7 @@ Card
 }
 
 .card {
-    background-color: var(--iq-light-card);
+    background-color:#263642;
 }
 
 .breadcrumb {
