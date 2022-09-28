@@ -175,66 +175,7 @@ const Pricing = () => {
           </div> */}
         </div>
 
-        {/* <Row>
-                    <Col sm="12">
-                        <Card>
-                            <Card.Body>
-                                <div className="table-responsive pricing pt-2">
-                                    <table id="my-table" className="table">
-                                        <thead>
-                                        <tr>
-                                            <th className="text-center prc-wrap"></th>
-                                            <th className="text-center prc-wrap">
-                                                <div className={`prc-box ${pricing === 'Basic' ? 'active' : ''} `} onClick={() =>setPricing('Basic')}>
-                                                    <div className="h3 pt-4 text-white">$19<small> / Per month</small></div>
-                                                    <span className="type">Basic</span>
-                                                </div>
-                                            </th>
-                                            <th className="text-center prc-wrap">
-                                                <div className={`prc-box  ${pricing === 'pricing' ? 'active' : ''}`} onClick={() =>setPricing('pricing')}>
-                                                    <div className="h3 pt-4 text-white">$39<small> / Per month</small></div>
-                                                    <span className="type">Standard</span>
-                                                </div>
-                                            </th>
-                                            <th className="text-center prc-wrap">
-                                                <div className={`prc-box ${pricing === 'Platinum' ? 'active' : ''}`} onClick={() =>setPricing('Platinum')}>
-                                                    <div className="h3 pt-4 text-white">$119<small> / Per month</small></div>
-                                                    <span className="type">Platinum</span>
-                                                </div>
-                                            </th>
-                                            <th className="text-center prc-wrap">
-                                                <div className={`prc-box ${pricing === 'Premium' ? 'active' : ''} `} onClick={() =>setPricing('Premium')}>
-                                                    <div className="h3 pt-4 text-white">$219<small> / Per month</small></div>
-                                                    <span className="type">Premium</span>
-                                                </div>
-                                            </th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                            {pricingLists.map((item) => (
-                                                <tr key={item.title}>
-                                                    <th className="text-center" scope="row">{item.title}</th>
-                                                    <td className={`text-center child-cell ${pricing === 'Basic' ? 'active' : ''}`}>{item.icon}</td>
-                                                    <td className={`text-center child-cell ${pricing === 'pricing' ? 'active' : ''}`}>{item.icon1}</td>
-                                                    <td className={`text-center child-cell ${pricing === 'Platinum' ? 'active' : ''}`}>{item.icon2}</td>
-                                                    <td className={`text-center child-cell ${pricing === 'Premium' ? 'active' : ''}`}>{item.icon3}</td>
-                                                </tr>
-                                                
-                                            ))}
-                                            <tr>
-                                                <td className="text-center"><i className="ri-close-line i_close"></i></td>
-                                                <td className="text-center"> <Button href="#" variant="primary mt-3">Purchase</Button></td>
-                                                <td className="text-center"> <Button href="#" variant="primary mt-3">Purchase</Button></td>
-                                                <td className="text-center"> <Button href="#" variant="primary mt-3">Purchase</Button></td>
-                                                <td className="text-center"> <Button href="#" variant="primary mt-3">Purchase</Button></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                </Row> */}
+       
       </Container>
     </>
   );

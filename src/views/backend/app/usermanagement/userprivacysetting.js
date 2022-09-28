@@ -6,16 +6,19 @@ import SearchBar from "../../../../Common/SearchBar";
 import UltraFairTable from "../../../../Common/UltraFairTable";
 import UltraFairCard from "../../../../Common/UltraFairCard";
 
+import Img1 from "../../../../assets/images/Customheader/Headerimg.2.png"
 const UserPrivacySetting = () => {
   return (
     <>
       <Container fluid>
+
         <SearchBar />
         <br />
         <UltraFairCard />
         <br />
         <CardSwiper />
         <UltraFairTable />
+
       </Container>
     </>
   );

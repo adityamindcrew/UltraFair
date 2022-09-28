@@ -1,0 +1,14 @@
+
+
+@media screen and (min-width: 100px) and (max-width: 500px){
+
+.headertop{
+    margin-top: "17%"!important;
+    height: "5%"!important;
+}
+.LOGOO{
+    width: 14vw !important;
+    height: 7vh!important;
+    display: none !important;
+}
+}
