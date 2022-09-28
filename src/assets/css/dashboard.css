@@ -1,15 +1,15 @@
 .navbar-list li {
-    float: left;
-    list-style-type: none;
-    position: relative;
+  float: left;
+  list-style-type: none;
+  position: relative;
 }
 
 .show .iq-sub-dropdown {
-    display: inline-block !important;
+  display: inline-block !important;
 }
 
 .iq-color {
-    color: white !important;
+  color: white !important;
 }
 
 /* .badge{
@@ -18,157 +18,151 @@
     width: 10%
 } */
 .iq-text {
-    color: #d1d0cf !important
+  color: #d1d0cf !important;
 }
 
 .css-319lph-ValueContainer .css-1s2u09g-control .css-tlfecz-indicatorContainer {
-    background: #141414 !important;
-    border: none !important
+  background: #141414 !important;
+  border: none !important;
 }
 
 .css-1okebmr-indicatorSeparator {
-    background: #141414 !important;
-    border: none !important
+  background: #141414 !important;
+  border: none !important;
 }
 
 .css-qc6sy-singleValue {
-    color: #D1D0CF !important;
-    border: none !important
+  color: #d1d0cf !important;
+  border: none !important;
 }
 
 .css-1s2u09g-control .css-b62m3t-container {
-    background-color: #141414 !important;
-    border: none !important
+  background-color: #141414 !important;
+  border: none !important;
 }
 
 .css-1pahdxg-control {
-    background-color: #141414 !important;
-    border: none !important;
-    box-shadow: none !important
+  background-color: #141414 !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .css-1f43avz-a11yText-A11yText {
-    background-color: #141414 !important;
-    border: none !important
+  background-color: #141414 !important;
+  border: none !important;
 }
 
 .css-b62m3t-container {
-    background-color: #141414 !important;
-    border: none !important;
-    box-shadow: none !important
+  background-color: #141414 !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .css-1s2u09g-control {
-    background-color: #141414 !important;
-    border: none !important;
+  background-color: #141414 !important;
+  border: none !important;
 }
 
 .css-2613qy-menu {
-    background-color: #141414 !important;
+  background-color: #141414 !important;
 }
 
 .css-tlfecz-indicatorContainer {
-    background: #141414 !important
+  background: #141414 !important;
 }
 
 .css-yk16xz-control {
-    background: #141414 !important;
-
+  background: #141414 !important;
 }
 
 .css-1gtu0rj-indicatorContainer {
-    background: #141414 !important;
+  background: #141414 !important;
 }
 
 .iq-select.css-b62m3t-container #react-select-2-listbox {
-    background-color: var(--iq-body-bg);
-    color: var(--iq-white);
+  background-color: var(--iq-body-bg);
+  color: var(--iq-white);
 }
 
 .iq-select.css-b62m3t-container #react-select-2-listbox {
-    /* background-color: var(--iq-primary); */
+  /* background-color: var(--iq-primary); */
 }
 
 .timetextcolor {
-    color: #1E2C37 !important;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
+  color: #1e2c37 !important;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 .text-color {
-    color: #B3BAD1 !important;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    white-space: nowrap; 
-    width: 100px; 
-    overflow: hidden;
-    text-overflow: ellipsis;
+  color: #b3bad1 !important;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  white-space: nowrap;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.text-right{
-    white-space: nowrap; 
-    width: 100px; 
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    text-align: end !important;
+.text-right {
+  white-space: nowrap;
+  width: 100px;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  text-align: end !important;
 }
-.left-text-color{
-    color: #B3BAD1 !important;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    white-space: nowrap; 
-    width: 100px; 
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: right !important;
-}
-
-.left-text-greencolor{
-    color: #11FFBD !important;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    white-space: nowrap; 
-    width: 100px; 
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: right !important;
-}
-@media (min-width: 576px) { 
-    .NEW-BTN {
-      width: 20% !important;
-    }
+.left-text-color {
+  color: #b3bad1 !important;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  white-space: nowrap;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right !important;
 }
 
-@media (min-width: 768px) { 
-    .NEW-BTN {
-        width: 30% !important;
+.left-text-greencolor {
+  color: #11ffbd !important;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  white-space: nowrap;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right !important;
+}
+@media (min-width: 576px) {
+  .NEW-BTN {
+    width: 20% !important;
+  }
+}
 
-    }
- }
+@media (min-width: 768px) {
+  .NEW-BTN {
+    width: 30% !important;
+  }
+}
 
-@media (min-width: 992px) { 
-    .NEW-BTN {
-        width: 20% !important;
+@media (min-width: 992px) {
+  .NEW-BTN {
+    width: 20% !important;
+  }
+}
 
-    }
- }
+@media (min-width: 1200px) {
+  .NEW-BTN {
+    width: 20% !important;
+  }
+}
 
-@media (min-width: 1200px) { 
-    .NEW-BTN {
-        width: 20% !important;
-
-    }
- }
-
-@media (min-width: 1400px) { 
-    .NEW-BTN {
-        width: 30px;
-
-    }
-
+@media (min-width: 1400px) {
+  .NEW-BTN {
+    width: 30px;
+  }
 }

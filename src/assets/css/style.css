@@ -4600,3 +4600,10 @@ h6 span {
   flex-direction: row;
   justify-content: flex-start;
 }
+.cards-section {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  gap: 10px;
+  justify-content: center;
+}
