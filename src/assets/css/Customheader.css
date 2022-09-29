@@ -1,6 +1,6 @@
 
 
-@media screen and (min-width: 100px) and (max-width: 500px){
+@media screen and (min-width: 0px) and (max-width: 700px){
 
 .headertop{
     margin-top: "17%"!important;
@@ -10,5 +10,9 @@
     width: 14vw !important;
     height: 7vh!important;
     display: none !important;
+}
+.Headertitle{
+    width: 40% !important;
+    margin-top: 4% !important;
 }
 }

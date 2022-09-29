@@ -30,9 +30,9 @@ function UltraFairCard() {
       <Row>
         {ultraFairOriginalsCard.map((card, i) => {
           return (
-            <Col sm="6" md="6" lg="2" key={i}>
+            <Col sm="2" md="2" lg="2" key={i}>
               <Card
-                className="iq-card iq-card-block iq-card-stretch iq-card-height iq-mb-3"
+                className="iq-card iq-card-block iq-card-stretch iq-card-height iq-mb-2"
                 style={{ height: "195px", width: "150px" }}
               >
                 <Card.Img
