@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Col, Row, Container ,ProgressBar, Dropdown } from 'react-bootstrap'
+import { Col, Row, Container ,ProgressBar, Dropdown ,Form} from 'react-bootstrap'
 import  Card from '../../../../components/Card'
 
 import Img1 from "../../../../assets/images/Customheader/Headerimg121.png"
@@ -496,6 +496,14 @@ const UserProfile = () => {
 
                  
       </Row>
+      <Row >
+            <div className="iq-search-bar ml-auto Searchtext1" style={{width:"100%",marginTop:"9vh"}}   >
+                    <Form action="#" className="searchbox Searchtext1" style={{backgroundRadius:"25px"}} >
+                        <input type="text" className="text search-input TEXTINPUT" style={{width:"392%",background:"#13212D",borderRadius:"25px",height:"44px"}} placeholder="Search Here..."/>
+                        <Link className="search-link" to="#"><i className="ri-search-line"></i></Link>
+                    </Form>
+                </div>
+            </Row>
             </Container>
         </>
     )

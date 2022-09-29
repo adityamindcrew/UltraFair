@@ -297,11 +297,11 @@ const Dashbord = () => {
 
             <Row style={{marginLeft:"0px"}} xl="20">
             <div className="iq-search-bar Searchit" style={{background:"#13212D",borderRadius:"30px",width:"70%",marginTop:"3%",marginBottom:"3%",display:"flex",justifyContent:"flex-start"}}   >
-                   <button className='BTN-1'  style={{background:btn==="btn1"?'#344452':"#13212D",padding:"10px",borderRadius:"30px",color:"white",border:btn==="btn1"?"1px solid #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignSelf:"flex-start",alignItems:"center",marginLeft:"-15px"}} onClick={()=>btncolorhandles("btn1")} ><img className='BTNLOGO'  src={btn==="btn1"?ICON1:Svg1} height="18px" width="18" />Button1</button>
-                   <button className='BTN-1' style={{background:btn==="btn2"?'#344452':"#13212D",padding:"10px",borderRadius:"30px",color:"white",border:btn==="btn2"?"1px solid  #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignItems:"center"}} onClick={()=>btncolorhandles("btn2")}> <img className='BTNLOGO' src={btn==="btn2"?Svg2:ICON2} height="18px" width="18"/>Button2</button>
-                   <button className='BTN-1' style={{background:btn==="btn3"?'#344452':"#13212D",padding:"10px",borderRadius:"23px",color:"white",border:btn==="btn3"?"1px solid  #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignItems:"center"}} onClick={()=>btncolorhandles("btn3")}> <img className='BTNLOGO' src={btn==="btn3"?Svg3:ICON3} height="18px" width="18"/>Button3</button>
-                   <button className='BTN-1' style={{background:btn==="btn4"?'#344452':"#13212D",padding:"10px",borderRadius:"30px",color:"white",border:btn==="btn4"?"1px solid  #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignItems:"center"}} onClick={()=>btncolorhandles("btn4")}><img className='BTNLOGO' src={btn==="btn4"?Svg4:ICON4} height="18px" width="18"/>Button4</button>
-                   <button className='BTN-1' style={{background:btn==="btn5"?'#344452':"#13212D",padding:"10px",borderRadius:"30px",color:"white",border:btn==="btn5"?"1px solid #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignItems:"center"}} onClick={()=>btncolorhandles("btn5")}><img className='BTNLOGO' src={btn==="btn5"?Svg5:ICON5} height="18px" width="15" style={{filter:""}} />Button5</button>
+                   <button className='BTN-1 bbt'  style={{background:btn==="btn1"?'#344452':"#13212D",padding:"10px",borderRadius:"30px",color:"white",border:btn==="btn1"?"1px solid #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignSelf:"flex-start",alignItems:"center",marginLeft:"-15px"}} onClick={()=>btncolorhandles("btn1")} ><img className='BTNLOGO'  src={btn==="btn1"?ICON1:Svg1} height="18px" width="18" />Lobby</button>
+                   <button className='BTN-1' style={{background:btn==="btn2"?'#344452':"#13212D",padding:"10px",borderRadius:"30px",color:"white",border:btn==="btn2"?"1px solid  #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignItems:"center"}} onClick={()=>btncolorhandles("btn2")}> <img className='BTNLOGO' src={btn==="btn2"?Svg2:ICON2} height="18px" width="18"/>Live Casino</button>
+                   <button className='BTN-1' style={{background:btn==="btn3"?'#344452':"#13212D",padding:"10px",borderRadius:"23px",color:"white",border:btn==="btn3"?"1px solid  #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignItems:"center"}} onClick={()=>btncolorhandles("btn3")}> <img className='BTNLOGO' src={btn==="btn3"?Svg3:ICON3} height="18px" width="18"/>Featured slots</button>
+                   <button className='BTN-1' style={{background:btn==="btn4"?'#344452':"#13212D",padding:"10px",borderRadius:"30px",color:"white",border:btn==="btn4"?"1px solid  #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignItems:"center"}} onClick={()=>btncolorhandles("btn4")}><img className='BTNLOGO' src={btn==="btn4"?Svg4:ICON4} height="18px" width="18"/>Live Shows</button>
+                   <button className='BTN-1' style={{background:btn==="btn5"?'#344452':"#13212D",padding:"10px",borderRadius:"30px",color:"white",border:btn==="btn5"?"1px solid #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignItems:"center"}} onClick={()=>btncolorhandles("btn5")}><img className='BTNLOGO' src={btn==="btn5"?Svg5:ICON5} height="18px" width="15" style={{filter:""}} />Ultrafair Originals</button>
                 </div>
             </Row>
   
@@ -615,7 +615,7 @@ const Dashbord = () => {
                                 </Card.Body>
                              </Card>
                           </SwiperSlide> */}
-                          <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
+                          <SwiperSlide className="col-sm-2 col-lg-2 col-xl-2 iq-rated-box">
                              
                
                                    <div className="iq-thumb" >
@@ -634,7 +634,7 @@ const Dashbord = () => {
                           
                     
                           </SwiperSlide>
-                          <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
+                          <SwiperSlide className="col-sm-2 col-lg-2 col-xl-2 iq-rated-box">
                              
                
                              <div className="iq-thumb" >
@@ -653,7 +653,7 @@ const Dashbord = () => {
                     
               
                     </SwiperSlide>
-                    <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
+                    <SwiperSlide className="col-sm-2 col-lg-2 col-xl-2 iq-rated-box">
                              
                
                              <div className="iq-thumb" >
