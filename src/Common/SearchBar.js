@@ -4,31 +4,37 @@ import { Link } from "react-router-dom";
 
 function SearchBar() {
   return (
-    <div
-      className="iq-search-bar ml-auto Searchtext1"
-      style={{ width: "100%" }}
-    >
-      <Form
-        action="#"
-        className="searchbox Searchtext1"
-        style={{ backgroundRadius: "25px" }}
-      >
-        <input
-          type="text"
-          className="text search-input TEXTINPUT"
-          style={{
-            width: "325%",
-            background: "#13212D",
-            borderRadius: "25px",
-            height: "44px",
-          }}
-          placeholder="Search your game"
-        />
-        <Link className="search-link" to="#">
-          <i className="ri-search-line"></i>
-        </Link>
-      </Form>
-    </div>
+    // <div
+    //   className="iq-search-bar ml-auto Searchtext1"
+    //   style={{ width: "100%" }}
+    // >
+    //   <Form
+    //     action="#"
+    //     className="searchbox Searchtext1"
+    //     style={{ backgroundRadius: "25px" }}
+    //   >
+    //     <input
+    //       type="text"
+    //       className="text search-input TEXTINPUT"
+    //       style={{
+    //         width: "325%",
+    //         background: "#13212D",
+    //         borderRadius: "25px",
+    //         height: "44px",
+    //       }}
+    //       placeholder="Search your game"
+    //     />
+    //     <Link className="search-link" to="#">
+    //       <i className="ri-search-line"></i>
+    //     </Link>
+    //   </Form>
+    // </div>
+    <div className="iq-search-bar ml-auto Searchtext1" style={{width:"100%"}}   >
+    <Form action="#" className="searchbox Searchtext1" style={{backgroundRadius:"25px"}} >
+        <input type="text" className="text search-input TEXTINPUT" style={{width:"390%",background:"#13212D",borderRadius:"25px",height:"44px"}} placeholder="Search Here..."/>
+        <Link className="search-link" to="#"><i className="ri-search-line"></i></Link>
+    </Form>
+</div>
   );
 }
 

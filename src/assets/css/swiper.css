@@ -103,7 +103,7 @@
 
 @media screen and (min-width: 0px) and (max-width: 1150px) {
 .BTN-1{
-    font-size: 8px;
+    font-size: 5px;
 }
 .BTNLOGO{
     height: 8px;
@@ -111,9 +111,12 @@
 
 }
 .Searchit{
-    width: 100%;
+    width: 100%!important ;
 }
 .TEXTINPUT{
     width: 100% !important;
+}
+.bbt{
+    margin-top: 3px;
 }
 }

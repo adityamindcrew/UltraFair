@@ -67,7 +67,7 @@ function CardSwiper() {
         >
           {swiperImages.map((s, i) => {
             return (
-              <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+              <SwiperSlide className="col-sm-2 col-lg-2 col-xl-2 iq-rated-box">
                 <div className="iq-thumb">
                   <Link to="#">
                     <img
