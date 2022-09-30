@@ -116,14 +116,15 @@ const HeaderStyle1 = (props) => {
                 <Link className="navItem-hide" to="#" onClick={loginHandler}>
                   Sign In
                 </Link>
-                <Button
-                  className="navItem btn1"
+                <span
+                  className="navItem btnNavbar"
                   type="button"
-                  variant="btn btn-primary"
+                  variant=" btn-primary"
                   onClick={registerHandler2}
+                  style={{backgroundColor:'#11ffbd', color: 'black', textAlign:'center', paddingTop:5,paddingRight: 20,paddingLeft: 20, borderRadius:7, marginTop:1, fontWeight:'bold', fontSize:15}}
                 >
                   Register
-                </Button>
+                </span>
               </Nav>
             </div>
 
@@ -143,7 +144,7 @@ const HeaderStyle1 = (props) => {
                   type="button"
                   
                   onClick={registerHandler2}
-                  style={{backgroundColor:'#11ffbd', color: 'black', textAlign:'center', paddingTop:5, borderRadius:7, marginTop:10, fontWeight:'bold', fontSize:15}}
+                  style={{backgroundColor:'#11ffbd', color: 'black', textAlign:'center', paddingTop:5,paddingRight: 20,paddingLeft: 20, borderRadius:7, marginTop:10, fontWeight:'bold', fontSize:15}}
                 >
                   Register
                 </span>

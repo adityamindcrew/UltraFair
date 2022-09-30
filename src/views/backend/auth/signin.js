@@ -278,7 +278,7 @@ const SignIn = (props) => {
               Forgot Password
             </p>
             <p className="privacyPolicy">
-              This site is protected by hCaptcha and the hCaptcha Privacy Policy
+              This site is protected by reCaptcha and the reCaptcha Privacy Policy
               and Terms of Service apply.
             </p>
           </div>

@@ -4869,6 +4869,12 @@ h6 span {
   text-align: center;
   margin: 2.5px;
 }
+.btnNavbar:active {
+  
+  
+  text-align: center;
+  margin: 2.5px;
+}
 .btn1:hover {
   background: #344452;
   border-color: #344452;
