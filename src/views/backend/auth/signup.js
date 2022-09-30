@@ -19,6 +19,7 @@ import Google from "../../../assets/images/social/google.png";
 import FB from "../../../assets/images/social/facebook.png";
 import Line from "../../../assets/images/social/line.png";
 import Chat from "../../../assets/images/social/chat.png";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const mapStateToProps = (state) => {
   return {
@@ -48,15 +49,23 @@ const SignUp = (props) => {
 
   let history = useHistory();
 
-  const registerHandler = () => {
+  const[btncolor, setBtncolor] = useState('registerButton')
+
+  const registerHandler = (color) => {
     props.showModal(false);
+    setBtncolor(color)
   };
-  const loginHandler = () => {
+  const loginHandler = (color) => {
     props.showModal(true);
+    setBtncolor(color)
   };
   const toggleButton = () => {
     setShow((prevState) => !prevState);
   };
+
+  function onChange(value) {
+    console.log("Captcha value:", value);
+  }
 
   return (
     <>
@@ -115,13 +124,13 @@ const SignUp = (props) => {
               type="button"
               class="close"
               aria-label="Close"
-              style={{ color: "white", fontSize: "20px" }}
+              style={{ color: "white", position:'relative', top:-15, left:3, fontSize:33}}
               onClick={() => {
                 console.log("Hellow!");
                 props.close(false);
               }}
             >
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true" style={{fontWeight:1}}>&times;</span>
             </button>
             <div className="sign-in-from w-100 m-auto">
               <Form className="" action="/">
@@ -135,15 +144,19 @@ const SignUp = (props) => {
                   <div class="btn-group registerToggleOuter">
                     <button
                       type="button"
-                      class="btn btn-secondary registerToggle"
-                      onClick={registerHandler}
+                      class="btn btn-secondary registerToggle selected"
+                      
+                      onClick={()=>{registerHandler('registerButton')}}
+                     // style={{backgroundColor: btncolor=='registerButton'?'#344452':'rgba 0.07, 0.13, 0.18, 1.0'}}
                     >
                       Register
                     </button>
                     <button
                       type="button"
                       class="btn btn-secondary registerToggle"
-                      onClick={loginHandler}
+                     
+                      onClick={()=>{loginHandler('loginButton')}}
+                      //style={{backgroundColor: btncolor=='loginButton'?'#344452':'rgba 0.07, 0.13, 0.18, 1.0'}}
                     >
                       Sign In
                     </button>
@@ -164,6 +177,7 @@ const SignUp = (props) => {
                       placeholder=""
                       autoComplete="off"
                       required
+                      style={{width:'100%'}}
                     />
                   </Form.Group>
                 </Col>
@@ -181,6 +195,7 @@ const SignUp = (props) => {
                       placeholder=""
                       autoComplete="off"
                       required
+                      style={{width:'100%'}}
                     />
                   </Form.Group>
                 </Col>
@@ -225,6 +240,33 @@ const SignUp = (props) => {
                         id="exampleInputPassword6"
                         placeholder=""
                         required
+                        style={{width:'100%'}}
+                      />
+                      <button
+                        type="button"
+                        className={"passwordBtn"}
+                        onClick={toggleButton}
+                      >
+                        {show ? <AiFillEye /> : <AiFillEyeInvisible />}
+                      </button>
+                    </div>
+                  </Form.Group>
+                </Col>
+                <Col md="12">
+                  <Form.Group>
+                    <Form.Label>Confirm Password </Form.Label>
+                    <Form.Label style={{ color: "red", marginLeft: "7px" }}>
+                      {" "}
+                      *
+                    </Form.Label>
+                    <div className="password">
+                      <Form.Control
+                        type={show ? "text" : "password"}
+                        className="mb-0"
+                        id="exampleInputPassword6"
+                        placeholder=""
+                        required
+                        style={{width:'100%'}}
                       />
                       <button
                         type="button"
@@ -276,7 +318,7 @@ const SignUp = (props) => {
                     </div>
                   </Form.Group>
                 </Col>
-                <Col md="12">
+                {/* <Col md="12">
                   <Form.Group>
                     <Form.Label>{"Code (Optional)"}</Form.Label>
                     <Form.Control
@@ -288,7 +330,7 @@ const SignUp = (props) => {
                       required
                     />
                   </Form.Group>
-                </Col>
+                </Col> */}
                 <InputGroup
                   className="mb-3"
                   style={{
@@ -296,17 +338,27 @@ const SignUp = (props) => {
                     width: "fit-content",
                     height: "30px",
                     color: "#B3BAD1",
-                    fontSize: "15px",
+                    fontSize: "11px",
                     fontFamily: "Montserrat",
                     fontStyle: "normal",
                     fontWeight: "500",
                     lineHeight: "18px",
+                    marginTop:20
                   }}
                 >
-                  <InputGroup.Checkbox aria-label="Checkbox for following text input" />
+                  <InputGroup.Checkbox aria-label="Checkbox for following text input"/>
                   By clicking the checkbox, you are indicating that you have
                   read and acknowledge the Terms & Conditions
                 </InputGroup>
+
+                <div className="reCaptcha-signup container text-center">
+                  <ReCAPTCHA
+                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                    onChange={onChange}
+                    style={{ display:'flex', justifyContent:'center'}}
+                   
+                  />
+                </div>
                 {/* </Row> */}
                 {/* <div className="custom-control custom-radio mt-2">
                                     <input type="radio" id="customRadio1" name="customRadio" className="custom-control-input"/>
@@ -329,7 +381,7 @@ const SignUp = (props) => {
                   className="btn1"
                   style={{
                     color: "black",
-                    fontWeight: "bold",
+                    
                   }}
                 >
                   Play Now
@@ -352,7 +404,7 @@ const SignUp = (props) => {
           <div className="cardSocialOut">
             <Card className="cardSocialIn">
               {" "}
-              <img src={FB} className="socialImage" />
+              <img src={FB} className="socialImage-f" />
             </Card>
             <Card className="cardSocialIn">
               <img src={Google} className="socialImage" />

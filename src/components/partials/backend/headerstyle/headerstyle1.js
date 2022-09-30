@@ -66,7 +66,7 @@ const HeaderStyle1 = (props) => {
     setSignUpModalShow(l);
     setLoginModalShow(!l);
   };
-  const registerHandler = () => {
+  const registerHandler2 = () => {
     setSignUpModalShow(true);
   };
   const loginHandler = () => {
@@ -110,23 +110,43 @@ const HeaderStyle1 = (props) => {
                         <Link className="search-link" to="#"><i className="ri-search-line"></i></Link>
                     </Form> */}
             </div>
-            <Navbar.Toggle as={Button} aria-controls="responsive-navbar-nav">
-              <i className="ri-menu-3-line"></i>
-            </Navbar.Toggle>
-            <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav as="ul" className="ml-auto navbar-list iq-header">
+            <div className="navbar-list-hide">
+              <Nav as="ul" className=" navbar-list iq-header">
                 {/* <div className='navItem'> </div> */}
-                <Link className="navItem" to="#" onClick={loginHandler}>
+                <Link className="navItem-hide" to="#" onClick={loginHandler}>
                   Sign In
                 </Link>
                 <Button
                   className="navItem btn1"
                   type="button"
                   variant="btn btn-primary"
-                  onClick={registerHandler}
+                  onClick={registerHandler2}
                 >
                   Register
                 </Button>
+              </Nav>
+            </div>
+
+            <Navbar.Toggle as={Button}
+              aria-controls="responsive-navbar-nav">
+              <i className="ri-menu-3-line"></i>
+            </Navbar.Toggle>
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav as="ul" className="ml-auto navbar-list iq-header">
+                {/* <div className='navItem'> </div> */}
+                <Link className="navItem mt-3" to="#" onClick={loginHandler}>
+                  Sign In
+                </Link>
+                
+                <span
+                  className="navItem btn8"
+                  type="button"
+                  
+                  onClick={registerHandler2}
+                  style={{backgroundColor:'#11ffbd', color: 'black', textAlign:'center', paddingTop:5, borderRadius:7, marginTop:10, fontWeight:'bold', fontSize:15}}
+                >
+                  Register
+                </span>
 
                 {/* <Dropdown as="li" className="nav-item nav-icon search-content iq-search">
                                     <Dropdown.Toggle as={CustomToggle} href="#" variant="search-toggle iq-waves-effect text-gray rounded">
