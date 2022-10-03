@@ -4,11 +4,16 @@ import  Card from '../../../../components/Card'
 import Customheader from '../../../../components/Customheader';
 import Img1 from "../../../../assets/images/Customheader/Headerimg9.png"
 
+import Custombtn from "../../../../components/Custombtn";
+import Customsearchbar from "../../../../components/Customsearchbar";
+import UltraFairCard from "../../../../Common/UltraFairCard";
+import CardSwiper from "../../../../Common/CardSwiper";
+
 
 const Validations = () => {
     
 const SVG =  <svg width="25" height="25" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7 0.108154C4.375 4.60815 0 6.40815 0 10.9082C0 12.7082 1.75 14.5082 3.5 14.5082C4.375 14.5082 5.25 14.5082 6.125 13.6082C6.125 13.6082 6.405 15.4082 4.375 18.1082H9.625C7.875 15.4082 7.875 13.6082 7.875 13.6082C8.75 14.5082 9.625 14.5082 10.5 14.5082C12.25 14.5082 14 12.7082 14 10.9082C14 6.40815 9.625 4.60815 7 0.108154Z" fill="#B4E1FF" />
+<path d="M7 0.108154C4.375 4.60815 0 6.40815 0 10.9082C0 12.7082 1.75 14.5082 3.5 14.5082C4.375 14.5082 5.25 14.5082 6.125 13.6082C6.125 13.6082 6.405 15.4082 4.375 18.1082H9.625C7.875 15.4082 7.875 13.6082 7.875 13.6082C8.75 14.5082 9.625 14.5082 10.5 14.5082C12.25 14.5082 14 12.7082 14 10.9082C14 6.40815 9.625 4.60815 7 0.108154Z" fill="#D68FD6" />
 </svg>
 
    //form validation
@@ -287,7 +292,11 @@ const SVG =  <svg width="25" height="25" viewBox="0 0 14 19" fill="none" xmlns="
             </Col>
          </Row> */}
 
-         <Customheader title="Table Games" SVG={SVG} wid="15%" Img={Img1}/>
+         <Customheader title="Blackjack" SVG={SVG} wid="15%" Img={Img1}/>
+         <Customsearchbar hg="5%" wd="390%" />
+        <Custombtn mr="2%" flx="flex-start" />
+        <UltraFairCard />
+        <CardSwiper classnm="AxC" classnm1="AxCD" />
       </Container>
         </>
     )

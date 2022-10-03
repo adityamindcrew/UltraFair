@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom'
 import  Card from '../../../components/Card'
 import Customheader from '../../../components/Customheader'
 import Img1 from "../../../assets/images/Customheader/Headerimg11.png"
+import Custombtn from "../../../components/Custombtn";
+import Customsearchbar from "../../../components/Customsearchbar";
+import UltraFairCard from "../../../Common/UltraFairCard";
+import CardSwiper from "../../../Common/CardSwiper";
 
 const Dripicons = () => {
 
@@ -287,6 +291,10 @@ const Dripicons = () => {
          </Row> */}
 
      <Customheader title="Roulette" SVG={SVG} wid="12%" Img={Img1}/>         
+     <Customsearchbar hg="5%" wd="390%" />
+        <Custombtn mr="2%" flx="flex-start" />
+        <UltraFairCard />
+        <CardSwiper classnm="ABdoC" classnm1="Ac0BCD" />
       </Container>
      </>
  )

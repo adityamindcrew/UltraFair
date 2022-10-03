@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import  Card  from '../components/Card'
 
 import { Link } from 'react-router-dom'
@@ -8,7 +8,16 @@ import Showimg2 from '../assets/images/Show2.png'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Showimg3 from '../assets/images/Show3.png'
 
+
 const Customslider = ({classnm,classnm2,title}) => {
+  function handlemouse(id){
+    setshow(id)
+    console.log("dfsdfsd",id)
+
+   }
+
+  const [show,setshow]= useState(null)
+   const Images =[Showimg1, Showimg2, Showimg3,Showimg1, Showimg2, Showimg3]
   return (
     <div>
         <Card id="slider1" >
@@ -17,16 +26,16 @@ const Customslider = ({classnm,classnm2,title}) => {
                               <h4 className="card-title m-0">{title}</h4>
                            </div>
                                 <div className="" id="swiper">
-                              <div className={`swiper-button right ${classnm}`} style={{background:"#344452",lineHeight:1.5}}>Previous</div>
-                              <div className={`swiper-button left ${classnm2}`} style={{background:"#344452",lineHeight:1.5}}>Next</div>
+                              <div className={`swiper-button swiper-button-prev ${classnm}`} style={{background:"#344452",padding: '18px 25px 18px 25px' }}>Previous</div>
+                              <div className={`swiper-button swiper-button-next ${classnm2}`} style={{background:"#344452",padding: '18px 25px 18px 25px' }}>Next</div>
                            
                            </div>
                     </Card.Header>
                     <Card.Body>
                        <Swiper
                            navigation={{
-                              prevEl: `.${classnm}`,
-                              nextEl: `.${classnm2}`
+                              prevEl: `.${classnm2}`,
+                              nextEl: `.${classnm}`,
                            }}
                            breakpoints={{
                               320: {   slidesPerView: 1},                
@@ -37,54 +46,36 @@ const Customslider = ({classnm,classnm2,title}) => {
                            loop={true}
                            className="list-unstyled row top-rated-item mb-0 iq-rtl-direction"
                         >
+                        {Images.map((e,i)=>{
+                           return(
+                                 <SwiperSlide className="col-sm-2 col-lg-2 col-xl-2 iq-rated-box" key={i} style={{padding:0}}>
+                             
+               
+                                 <div className="iq-thumb bg-image hover-overlay" style={{position:"relative"}}  onMouseLeave={()=>setshow(null)} >
+                           
+                                       <img src={e} className="img-fluid  img-border-radius" width="150vw" height="300vh"style={{borderRadius:"0px",borderRadius:'10px'}} alt="" onMouseEnter={()=>handlemouse(i)} />
                         
-                          <SwiperSlide className="col-sm-2 col-lg-2 col-xl-2 iq-rated-box">
-                             
-               
-                                   <div className="iq-thumb" >
-                                      <Link >
-                                         <img src={Showimg1} className="img-fluid  img-border-radius" width="150vw" height="300vh" alt=""/>
-                                      </Link>
-                                   </div>
-                            
-                          
-                    
-                          </SwiperSlide>
-                          <SwiperSlide className="col-sm-2 col-lg-2 col-xl-2 iq-rated-box">
-                             
-               
-                             <div className="iq-thumb" >
-                                <Link >
-                                   <img src={Showimg2} className="img-fluid  img-border-radius" width="150vw" height="300vh" alt=""/>
-                                </Link>
-                             </div>
-                       
-                    
-              
-                    </SwiperSlide>
-                    <SwiperSlide className="col-sm-2 col-lg-2 col-xl-2 iq-rated-box">
-                             
-               
-                             <div className="iq-thumb" >
-                                <Link >
-                                   <img src={Showimg3} className="img-fluid  img-border-radius" width="150vw" height="300vh" alt=""/>
-                                </Link>
-                             </div>
+                                    <div style={{display:show==i?"flex":"none",background:'#11FFBD',position:"absolute",top:0,left:0,width:"95%",height:"100%",borderRadius:'10px',opacity:0.9,justifyContent:"center",alignItems:"center",flexDirection:"column"}}>
+                                    <svg width="50" height="50" viewBox="0 0 32 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 3.31249V35.6875C0 38.1562 2.71875 39.6562 4.8125 38.3125L30.25 22.125C32.1875 20.9062 32.1875 18.0937 30.25 16.8437L4.8125 0.687495C2.71875 -0.656255 0 0.843745 0 3.31249Z" fill="#263642"/>
+</svg><span style={{color:'black'}}>{title}</span>
+
+
+    
+                                    </div>
+                                 </div>
+        
+           
+                           
+                        
                   
-              
-                    </SwiperSlide>
-                    <SwiperSlide className="col-sm-2 col-lg-2 col-xl-2 iq-rated-box">
-                             
-               
-                             <div className="iq-thumb" >
-                                <Link >
-                                   <img src={Showimg2} className="img-fluid  img-border-radius" width="150vw" height="300vh" alt=""/>
-                                </Link>
-                             </div>
-                       
+                        </SwiperSlide>
+                           )
+
+                        })}
                     
+               
               
-                    </SwiperSlide>
                     
                           
                           </Swiper>
