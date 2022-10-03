@@ -4947,3 +4947,10 @@ h6 span {
     justify-content: flex-start;
   }
 }
+
+@media screen and (min-width: 0px) and (max-width: 950px){
+
+  
+  .Searcbr{
+  margin-top: 14% !important;
+}}

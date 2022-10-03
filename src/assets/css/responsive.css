@@ -1192,13 +1192,51 @@ NOTE: This file contains the styling for responsive Template.
 		margin-top: 17% !important;
 		height: 5% !important;
 	}
-	.LOGOicon{
+	.LOGOO{
 		width: 7vw ;
 		height: 14vw;
 		display: none;
 	}
+  .FilterBtn{
+    width: 35% !important;
+   
+  }
+  .Casinocards{
+    margin: 10% !important;
+   }
 	}
 
+  @media screen and (min-width: 600px) and (max-width: 830px){
+
+    .headertop{
+     margin-top: 14% !important;
+     height: 5% !important;
+   }
+   .LOGOO{
+     width: 7vw ;
+     height: 14vw;
+     display: none !important;
+   }
+   }
+   @media screen and (min-width: 829px) and (max-width: 913px){
+
+    .headertop{
+     margin-top: 13% !important;
+     height: 5% !important;
+   }
+ 
+  
+
+   }
+   @media screen and (min-width: 512px) and (max-width: 540px){
+
+    .headertop{
+     margin-top: 13% !important;
+     height: 5% !important;
+   }
+ 
+  
+   }
 	/* @media screen and (min-width: 520px) and (max-width: 820px){
 		.LOGOicon{
 			height: 5vh;

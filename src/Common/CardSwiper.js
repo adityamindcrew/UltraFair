@@ -18,7 +18,7 @@ import Play from "../assets/images/swiper/play n go.png";
 import Pragmatic from "../assets/images/swiper/pragmatic.png";
 import Push from "../assets/images/swiper/push.png";
 
-function CardSwiper() {
+function CardSwiper({classnm,classnm1}) {
   const swiperImages = [
     { img: Evolution },
     { img: HackSaw },
@@ -36,14 +36,14 @@ function CardSwiper() {
         </div>
         <div className="" id="swiper">
           <div
-            className="swiper-button swiper-button-prev"
-            style={{ background: "#344452" }}
+            className={`swiper-button swiper-button-prev ${classnm}`}
+            style={{ background: "#344452",padding: '18px 25px 18px 25px' }}
           >
             Previous
           </div>
           <div
-            className="swiper-button swiper-button-next"
-            style={{ background: "#344452" }}
+            className={`swiper-button swiper-button-next ${classnm1}`}
+            style={{ background: "#344452",padding: '18px 25px 18px 25px' }}
           >
             Next
           </div>
@@ -53,8 +53,8 @@ function CardSwiper() {
       <Card.Body>
         <Swiper
           navigation={{
-            prevEl: ".swiper-button-prev",
-            nextEl: ".swiper-button-next",
+            prevEl: `.${classnm1}`,
+            nextEl: `.${classnm}`,
           }}
           breakpoints={{
             320: { slidesPerView: 1 },
@@ -67,7 +67,7 @@ function CardSwiper() {
         >
           {swiperImages.map((s, i) => {
             return (
-              <SwiperSlide className="col-sm-2 col-lg-2 col-xl-2 iq-rated-box">
+              <SwiperSlide className="col-sm-1 col-lg-2 col-xl-2 iq-rated-box" style={{padding:"0px"}}>
                 <div className="iq-thumb">
                   <Link to="#">
                     <img
@@ -76,6 +76,7 @@ function CardSwiper() {
                       width="200vw"
                       height="400vh"
                       alt=""
+                      style={{borderRadius: "10px"}}
                     />
                   </Link>
                 </div>
