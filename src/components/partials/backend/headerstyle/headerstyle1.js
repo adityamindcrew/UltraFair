@@ -72,9 +72,7 @@ const HeaderStyle1 = (props) => {
   const registerHandler2 = () => {
     setSignUpModalShow(true);
   };
-  const registerHandler2 = () => {
-    setSignUpModalShow(true);
-  };
+ 
   const loginHandler = () => {
     setLoginModalShow(true);
   };
@@ -116,15 +114,9 @@ const HeaderStyle1 = (props) => {
                         <Link className="search-link" to="#"><i className="ri-search-line"></i></Link>
                     </Form> */}
             </div>
-<<<<<<< HEAD
-            <div className="navbar-list-hide">
-              <Nav as="ul" className=" navbar-list iq-header">
-                {/* <div className='navItem'> </div> */}
-=======
             <div className="navbar-list-hide mt-2">
               <Nav as="ul" className=" navbar-list iq-header">
                 {/* {/ <div className='navItem'> </div> /} */}
->>>>>>> master
                 <Link className="navItem-hide" to="#" onClick={loginHandler}>
                   Sign In
                 </Link>
@@ -139,12 +131,6 @@ const HeaderStyle1 = (props) => {
                 </span>
               </Nav>
             </div>
-<<<<<<< HEAD
-
-           
-          
-=======
->>>>>>> master
           </Navbar>
         </div>
       </div>
@@ -159,5 +145,4 @@ const HeaderStyle1 = (props) => {
     </>
   );
 };
-
 export default HeaderStyle1;
