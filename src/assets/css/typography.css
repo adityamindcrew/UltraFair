@@ -3319,3 +3319,6 @@ Grid Boxes
   flex-direction: column;
 } 
 .iq-card-transpare{}
+.ResponsiveHeader{
+  padding: 0 !important;
+}
