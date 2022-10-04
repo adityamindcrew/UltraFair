@@ -131,6 +131,9 @@ const HeaderStyle1 = (props) => {
                 </span>
               </Nav>
             </div>
+
+           
+          
           </Navbar>
         </div>
       </div>
