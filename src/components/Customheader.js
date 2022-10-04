@@ -5,7 +5,7 @@ import { Container, Row, Col ,Form, Button} from 'react-bootstrap';
 // import Img1 from "../assets/images/Customheader/Headerimg44.png"
 import "../assets/css/Customheader.css"
 
-const Customheader = ({title,SVG,wid,Img}) => {
+const Customheader = ({title,SVG,wid,Img,Headercls}) => {
   return (
     <Row>
     <div className="iq-top-navbar headertop" style={{height:"10%",marginTop:"4%",background:"#1E2C37"}}>
@@ -13,7 +13,7 @@ const Customheader = ({title,SVG,wid,Img}) => {
                <div>
 <img src={Img} className="LOGOO" style={{height:"9vh",width:"19vw"}}/>
                </div>
-               <div className='Headertitle' style={{display:"flex",flexDirection:"row",justifyContent:'space-between',alignItems:"center",width:wid}}>
+               <div className={Headercls} style={{display:"flex",flexDirection:"row",justifyContent:'space-between',alignItems:"center",width:wid}}>
                   {/* <img src={UltrafairOrignalsSVG} height="20px" width="20px"/>
                    */}
     {SVG}

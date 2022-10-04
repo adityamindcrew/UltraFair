@@ -32,18 +32,18 @@ function CardSwiper({classnm,classnm1}) {
     <div>
       <Card.Header className="d-flex justify-content-between align-items-center">
         <div>
-          <h4 className="card-title m-0">Providers</h4>
+          <h3 className="card-title m-0">Providers</h3>
         </div>
         <div className="" id="swiper">
           <div
-            className={`swiper-button swiper-button-prev ${classnm}`}
-            style={{ background: "#344452",padding: '18px 25px 18px 25px' }}
+            className={`swiper-button swiper-button-prev Responsivrbtn ${classnm}`}
+            style={{ background: "#344452",padding: '23px 30px' }}
           >
             Previous
           </div>
           <div
-            className={`swiper-button swiper-button-next ${classnm1}`}
-            style={{ background: "#344452",padding: '18px 25px 18px 25px' }}
+            className={`swiper-button swiper-button-next Responsivrbtn ${classnm1}`}
+            style={{ background: "#344452",padding: '23px 30px'}}
           >
             Next
           </div>
@@ -69,7 +69,7 @@ function CardSwiper({classnm,classnm1}) {
             return (
               <SwiperSlide className="col-sm-1 col-lg-2 col-xl-2 iq-rated-box" style={{padding:"0px"}}>
                 <div className="iq-thumb">
-                  <Link to="#">
+                  <Link to="/providers">
                     <img
                       src={s.img}
                       className="img-fluid  img-border-radius"

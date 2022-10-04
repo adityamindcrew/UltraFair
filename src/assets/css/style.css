@@ -4953,4 +4953,7 @@ h6 span {
   
   .Searcbr{
   margin-top: 14% !important;
-}}
+  display: none !important;
+}
+
+}

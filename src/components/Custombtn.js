@@ -107,6 +107,7 @@ const Pricing = ({ mr, flx }) => {
             marginTop: mr,
             marginBottom:"2%",
           }}
+          className="FILTERBTN"
         >
           <div
             style={{

@@ -21,13 +21,13 @@ const Customslider = ({classnm,classnm2,title}) => {
   return (
     <div>
         <Card id="slider1" >
-                    <Card.Header className="d-flex justify-content-between align-items-center">
+                    <Card.Header className="d-flex justify-content-between align-items-center Cardresponsive ResponsiveHeader">
                            <div>
-                              <h4 className="card-title m-0">{title}</h4>
+                              <h3 className="card-title m-0">{title}</h3>
                            </div>
                                 <div className="" id="swiper">
-                              <div className={`swiper-button swiper-button-prev ${classnm}`} style={{background:"#344452",padding: '18px 25px 18px 25px' }}>Previous</div>
-                              <div className={`swiper-button swiper-button-next ${classnm2}`} style={{background:"#344452",padding: '18px 25px 18px 25px' }}>Next</div>
+                              <div className={`swiper-button swiper-button-prev Responsivrbtn ${classnm}`} style={{background:"#344452",padding: '23px 30px' }}>Previous</div>
+                              <div className={`swiper-button swiper-button-next  Responsivrbtn ${classnm2}`} style={{background:"#344452",padding: '23px 30px' }}>Next</div>
                            
                            </div>
                     </Card.Header>

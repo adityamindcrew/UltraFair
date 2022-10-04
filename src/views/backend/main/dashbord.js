@@ -222,7 +222,7 @@ const Dashbord = () => {
       <Container fluid>
         <Row>
           <Col lg="8" xl="12">
-            <Row xl="20">
+            <Row xl="20" className="DashborCards">
               {DashbordCard.map((e, i) => {
                 return (
                   <Col sm="6" lg="6" xl="4" key={i}>
@@ -234,7 +234,7 @@ const Dashbord = () => {
               })}
             </Row>
             <Row>
-              <SearchBar hg="5%" wd="390%" />
+              <SearchBar hg="5%" wd="399%" />
             </Row>
 
             <Row xl="20">
@@ -249,6 +249,7 @@ const Dashbord = () => {
                   display: "flex",
                   justifyContent: "flex-start",
                   height: "14%",
+                  marginLeft:"14px"
                 }}
               >
                 <button
