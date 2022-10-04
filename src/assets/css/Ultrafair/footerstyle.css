@@ -1,40 +1,32 @@
 /* REMOVE THIS, USE YOUR OWN  */
-html,
-body {
+/* html, */
+/* body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, Sans-serif;
-}
+} */
 
-.dummy_page {
+/* .dummy_page {
     height: 200px;
     width: 100%;
     background-color: #f0f0f0;
     text-align: center;
     box-sizing: border-box;
     padding: 60px 0px;
-}
+} */
 
 /* STYLES SPECIFIC TO FOOTER  */
-.footer {
+/* .footer {
     width: 100%;
     position: relative;
     height: auto;
     background-color: #0D1D29;
-}
+} */
 
-.footer .col {
-    width: 200px;
-    height: auto;
-    float: left;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    padding: 0px 20px 20px 20px;
-}
 
-.footer .col h1 {
-    margin: 0;
+
+.contain .col h1 {
+    margin-bottom: 14px;
     padding: 0;
     font-family: inherit;
     line-height: 17px;
@@ -46,13 +38,13 @@ body {
     font-size: 14px;
 }
 
-.footer .col ul {
+.contain .col ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.footer .col ul li {
+.contain .col ul li {
     color: #B3BAD1;
     font-family: inherit;
     padding: 5px 0px 5px 0px;
@@ -73,7 +65,7 @@ body {
     padding-right: 5px !important;
 }
 
-.footer .col ul li:hover {
+.contain .col ul li:hover {
     color: #ffffff;
     transition: .1s;
     -webkit-transition: .1s;
@@ -85,8 +77,17 @@ body {
 }
 
 @media only screen and (min-width: 1280px) {
+    .contain .col {
+        width: 20%;
+        height: auto;
+        float: left;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        padding: 0px 20px 20px 20px;
+    }
+
     .contain {
-        width: 1200px;
         margin: 0 auto;
     }
 }
@@ -97,43 +98,66 @@ body {
         display: block;
     }
 
+    .contain .col {
+        width: 20%;
+        height: auto;
+        float: left;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        padding: 0px 20px 20px 20px;
+    }
+
     .social h1 {
         margin: 0px;
     }
 }
 
 @media only screen and (max-width: 950px) {
-    .footer .col {
-        width: 33%;
+    .contain .col {
+        width: 20%;
+        height: auto;
+        float: left;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        padding: 0px 20px 20px 20px;
     }
 
-    .footer .col h1 {
+    .contain .col h1 {
+        text-align: left;
         font-size: 14px;
     }
 
-    .footer .col ul li {
+    .contain .col ul li {
         font-size: 13px;
     }
 }
 
 @media only screen and (max-width: 500px) {
-    .footer .col {
+    .contain .col-hide{
+        float: none !important;
+    }
+    .contain .col {
         width: 50%;
     }
 
-    .footer .col h1 {
+    .contain .col h1 {
+        text-align: left;
         font-size: 14px;
     }
 
-    .footer .col ul li {
+    .contain .col ul li {
         font-size: 13px;
     }
+ 
 }
 
 @media only screen and (max-width: 340px) {
-    .footer .col {
+    .contain .col {
         width: 100%;
     }
+   
 }
 
 .linedesign {
@@ -169,10 +193,12 @@ body {
 }
 
 .laguagetext {
-    
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700 !important;
-font-size: 14px !important;
-line-height: 17px;
+    color: #ffffff !important;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    line-height: 17px;
 }
+
+
