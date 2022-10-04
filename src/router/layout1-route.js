@@ -110,9 +110,9 @@ const Layout1Route = () => {
                     <Route path="/blackjack" component={Validations} />
                     <Route path="/baccarat" component={Heroicons} />
                     <Route path="/roulette" component={Dripicons} />
-                    <Route path="/blog" component={FontAwsome} />
                     <Route path="/live-support" component={LineAwsome} />
-
+                    <Route path="/blog" component={FontAwsome} />
+                    <Route path="/lockup" component={LineAwsome} />
                     <Route path="/rating" exact component={Rating} />
                     <Route path="/comment" exact component={Comment} />
                     <Route path="/user" exact component={User} />
@@ -141,7 +141,7 @@ const Layout1Route = () => {
                     <Route path="/icon-unicons" component={Unicons} />
 
                     {/* Extrapages */}
-                    <Route path="/pages-timeline" component={Timeline1} />
+                    <Route path="/providers" component={Timeline1} />
                     <Route path="/pages-invoice" component={Invoice} />
                     <Route path="/pages-faq" component={FAQ} />
                     <Route path="/blank-page" component={BlankPage} />

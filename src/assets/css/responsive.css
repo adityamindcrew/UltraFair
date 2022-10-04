@@ -252,6 +252,8 @@ NOTE: This file contains the styling for responsive Template.
     margin-left: 0px;
   }
 }
+
+
 @media (max-width: 1399px) {
   .animation-card .an-img .bodymovin {
     margin-bottom: -28px;
@@ -314,6 +316,11 @@ NOTE: This file contains the styling for responsive Template.
   }
   .iq-sidebar-logo .logo-title span {
     font-size: 18px !important;
+  }
+  .iq-sidebar-logo .logo-title span img {
+    height: 20px !important;
+    width: 80% !important;
+    padding: 4px;
   }
   body.sidebar-main .iq-top-navbar .iq-sidebar-logo a span {
     opacity: 1;

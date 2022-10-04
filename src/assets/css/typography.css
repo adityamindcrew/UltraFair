@@ -466,6 +466,7 @@ loading
     border-radius: 6px;
 }
 
+
 .form-control:focus {
     color: var(--iq-dark1);
     border-color: transparent;
@@ -570,15 +571,31 @@ div.dataTables_wrapper div.dataTables_filter label {
   border-color: var(--iq-primary);
 }
 .form-control {
-     background-color: #0D1D29 !important; 
+     background-color: #0D1D29
+     !important; 
     /* border: 1px solid transparent; */
     height: 46px;
     position: relative;
     color: white;
-    font-size: 12px;
+    font-size: 14px;
     width: 84%;
     border-radius: 6px;
     padding-bottom: 5px;
+  }
+
+  .form-control-dropdown {
+    background-color: #191919 !important; 
+    border: none !important;
+    background: #191919 !important;
+    height: 46px;
+    position: relative;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    width: 110%;
+    border-radius: 6px;
+    padding-bottom: 2px;
+    margin-inline-start: 5px;
   }
 .form-control:focus {
   color: var(--iq-dark1);

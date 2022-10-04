@@ -10,9 +10,14 @@ import Scrollbar from 'smooth-scrollbar'
 
 //img
 
+import Crossicon from '../../../../assets/images/Ultrafair/cross-icon.svg'
+
 import logo from '../../../../assets/images/sidebar/UltrafairLogo.png'
 import smallLogo from '../../../../assets/images/sidebar/UltrafairSmallLogo.png'
-import { UltrafairExclusivesSVG, SlotsSVG, GameShowsSVG, LiveCasinoSVG, NewReleasesSVG, UltrafairOrignalsSVG, FeatureBuySVG, TableGamesSVG, BlackjackSVG, BaccaratSVG, RouletteSVG, ChallengesSVG } from './sidebarIcons'
+import { UltrafairExclusivesSVG, SlotsSVG, GameShowsSVG, LiveCasinoSVG, NewReleasesSVG, UltrafairOrignalsSVG, FeatureBuySVG, TableGamesSVG, BlackjackSVG, BaccaratSVG, RouletteSVG, ChallengesSVG ,LockupSVG } from './sidebarIcons'
+import Flag from '../../../../assets/images/Ultrafair/flag.png'
+import logoicon from '../../../../assets/images/Ultrafair/logoicon.png'
+import logotext from '../../../../assets/images/Ultrafair/logotext.png'
 
 // function mapStateToProps(state) {
 //     return {
@@ -67,21 +72,19 @@ const SidebarStyle = (props) => {
     return (
         <>
             <div className="iq-sidebar">
-                <div className="iq-sidebar-logo d-flex justify-content-between">
-                    <Link to="/" className="header-logo">
-                        <img src={logo} className="logoImg fullLogo img-fluid rounded-normal" alt="" />
-                        {/* <div className="logo-title">
-                        <span className="text-primary text-uppercase">Streamit</span>
-
-                    </div> */}
-                        <img src={smallLogo} className="logoImg collapsedLogo img-fluid rounded-normal" alt="" />
+            <div className="iq-sidebar-logo d-flex justify-content-between">
+                    <Link to="/" className="header-logo ml-2">
+                    <img src={logoicon} className="img-fluid rounded-normal" height="20px" width="20px" alt=""/>
+                    <div className="logo-title">
+                        <span className="text-primary text-uppercase"><img src={logotext} className="img-fluid rounded-normal"  alt=""/></span>
+                    </div>
                     </Link>
                     <div className="iq-menu-bt-sidebar">
-                        <div className="iq-menu-bt align-self-center">
-                            <div className="wrapper-menu" onClick={minisidbar}>
-                                <div className="main-circle"><i className="las la-bars"></i></div>
-                            </div>
+                    <div className="iq-menu-bt align-self-center">
+                        <div className="wrapper-menu" onClick={minisidbar}>
+                            <div className="main-circle" ><img src={Crossicon}/></div>
                         </div>
+                    </div>
                     </div>
                 </div>
                 <div className="data-scrollbar" data-scroll="1" id="sidebar-scrollbar">
@@ -93,11 +96,8 @@ const SidebarStyle = (props) => {
                                 <span>Casino</span>
                             </Link>
                         </li> */}
-                            <li className={activeMenu === '0' ? 'active' : ''}>
+                            {/* <li className={activeMenu === '0' ? 'active' : ''}>
                                 <Accordion.Toggle as={Button} href="#" eventKey="0" variant=" collapsed" data-toggle="collapse" aria-expanded={activeMenu === '0' ? 'true' : 'false'}>
-                                    {/* <img src={ChallengeLogo} className="img-fluid rounded-normal" alt="" /> */}
-
-
                                     <span>Casino</span>
                                     <i className="las la-angle-down iq-arrow-right"></i>
                                 </Accordion.Toggle>
@@ -123,84 +123,90 @@ const SidebarStyle = (props) => {
                                     <span>Challenges</span>
                                 </Link>
                             </li>
-                            <li style={{ border: '1px solid #344452', background: '#344452' }}></li>
-                            <li className={`${location.pathname === '/ultrafair-originals' ? 'active' : ''} `}>
+                            <li style={{ border: '1px solid #344452', background: '#344452' }}></li> */}
+                            {/* <li className={`${location.pathname === '/ultrafair-originals' ? 'active' : ''} `}>
                                 <Link to="/ultrafair-originals" className="iq-waves-effect">
-                                    {/* <i className="las la-star-half-alt"></i> */}
                                     <UltrafairOrignalsSVG />
                                     <span>Ultrafair Originals </span>
                                 </Link>
                             </li>
                             <li className={`${location.pathname === '/ultrafair-exclusive' ? 'active' : ''} `}>
                                 <Link to="/ultrafair-exclusive" className="iq-waves-effect">
-                                    {/* <i className="las la-comments"></i> */}
                                     <UltrafairExclusivesSVG />
                                     <span>Ultrafair Exclusives</span>
                                 </Link>
-                            </li>
+                            </li> */}
                             <li className={`${location.pathname === '/slots' ? 'active' : ''} `}>
-                                <Link to="/slots" className="iq-waves-effect">
+                                <Link to="/slots" className="">
                                     <SlotsSVG />
                                     <span>Slots</span>
                                 </Link>
                             </li>
                             <li className={`${location.pathname === '/live-casino' ? 'active' : ''} `}>
-                                <Link to="/live-casino" className="iq-waves-effect">
+                                <Link to="/live-casino" className="">
                                     {/* <i className="las la-star-half-alt"></i> */}
                                     <LiveCasinoSVG />
                                     <span>Live Casino </span>
                                 </Link>
                             </li>
-                            <li className={`${location.pathname === '/game-shows' ? 'active' : ''} `}>
-                                <Link to="/game-shows" className="iq-waves-effect">
-                                    {/* <i className="las la-comments"></i> */}
-                                    <GameShowsSVG />
-                                    <span>Game Shows</span>
-                                </Link>
-                            </li>
+
                             <li className={`${location.pathname === '/new-release' ? 'active' : ''} `}>
-                                <Link to="/new-release" className="iq-waves-effect">
+                                <Link to="/new-release" className="">
                                     {/* <i className="las la-user-friends"></i> */}
                                     <NewReleasesSVG />
                                     <span>New Releases</span>
                                 </Link>
                             </li>
-                            <li className={`${location.pathname === '/feature-buy' ? 'active' : ''} `}>
+                            {/* <li className={`${location.pathname === '/game-shows' ? 'active' : ''} `}>
+                                <Link to="/game-shows" className="iq-waves-effect">
+                                    <GameShowsSVG />
+                                    <span>Game Shows</span>
+                                </Link>
+                            </li> */}
+                            {/* <li className={`${location.pathname === '/feature-buy' ? 'active' : ''} `}>
                                 <Link to="/feature-buy" className="iq-waves-effect">
-                                    {/* <i className="las la-star-half-alt"></i> */}
                                     <FeatureBuySVG />
                                     <span>Feature Buy-in </span>
                                 </Link>
-                            </li>
+                            </li> */}
                             <li className={`${location.pathname === '/table-games' ? 'active' : ''} `}>
-                                <Link to="/table-games" className="iq-waves-effect">
+                                <Link to="/table-games" className="">
                                     {/* <i className="las la-comments"></i> */}
                                     <TableGamesSVG />
                                     <span>Table Games</span>
                                 </Link>
                             </li>
                             <li className={`${location.pathname === '/blackjack' ? 'active' : ''} `}>
-                                <Link to="/blackjack" className="iq-waves-effect">
+                                <Link to="/blackjack" className="">
                                     {/* <i className="las la-user-friends"></i> */}
                                     <BlackjackSVG />
                                     <span>Blackjack</span>
                                 </Link>
                             </li>
                             <li className={`${location.pathname === '/baccarat' ? 'active' : ''} `}>
-                                <Link to="/baccarat" className="iq-waves-effect">
+                                <Link to="/baccarat" className="">
                                     {/* <i className="las la-star-half-alt"></i> */}
                                     <BaccaratSVG />
                                     <span>Baccarat </span>
                                 </Link>
                             </li>
                             <li className={`${location.pathname === '/roulette' ? 'active' : ''} `}>
-                                <Link to="/roulette" className="iq-waves-effect">
+                                <Link to="/roulette" className="">
                                     {/* <i className="las la-user-friends"></i> */}
                                     <RouletteSVG />
                                     <span>Roulette</span>
                                 </Link>
                             </li>
-                            <li style={{ border: '1px solid #344452', background: '#344452' }}></li>
+                            <li style={{ border: '1px solid #344452', margin: "10px", background: '#344452' }}></li>
+                            <li className={`${location.pathname === '/lockup' ? 'active' : ''} `}>
+                                <Link to="/lockup'" className="">
+                                    {/* <i className="las la-star-half-alt"></i> */}
+                                    <LockupSVG />
+                                    <span>Lockup </span>
+                                </Link>
+                            </li>
+                            <li style={{ border: '1px solid #344452', margin: "10px", background: '#344452' }}></li>
+
                             <li className={`${location.pathname === '/blog' ? 'active' : ''} `}>
                                 <Link to="/blog" className="iq-waves-effect">
                                     {/* <i className="las la-comments"></i> */}
@@ -213,7 +219,16 @@ const SidebarStyle = (props) => {
                                     <span>Live Support</span>
                                 </Link>
                             </li>
-
+                            <li className={`${location.pathname === '' ? 'active' : ''} `}>
+                                <Link to="" className="">
+                                    <img src={Flag} height="30px" width="30px" />
+                                    {/* <i className="las la-user-friends"></i> */}
+                                    <div><select className="form-control-dropdown" id="exampleFormControlSelect2">
+                                        <option style={{fontSize: "12px !important"}}>English</option>
+                                        <option>Hindi</option>
+                                    </select></div>
+                                </Link>
+                            </li>
                             {/* <li className={activeMenu === '1' ? 'active' : ''}>
                                 <Accordion.Toggle as={Button} href="#" eventKey="1" variant=" collapsed" data-toggle="collapse" aria-expanded="false"><i className="las la-film"></i><span>Movie</span><i className="ri-arrow-right-s-line iq-arrow-right"></i></Accordion.Toggle>
                                 <Accordion.Collapse className="submenu" eventKey="1">

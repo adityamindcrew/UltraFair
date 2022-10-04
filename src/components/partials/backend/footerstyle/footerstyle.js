@@ -5,14 +5,15 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { rtlModeAction, getRtlMode } from '../../../../store/mode/rtlmode'
 import '../../../../assets/css/Ultrafair/footerstyle.css'
-
+import '../../../../assets/css/Ultrafair/bottombarstyle.css'
 // icon 
 
 import Vector from '../../../../assets/images/Ultrafair/Vector.png'
 import Flag from '../../../../assets/images/Ultrafair/flag.png'
-import Ultrafair from '../../../../assets/images/Ultrafair/Ultrafairlogo.png'
+import Ultrafair from '../../../../assets/images/sidebar/UltrafairLogo.png'
+import { BitcoinsSVG ,TetherSVG , CurvedaotokenSVG , UsdcoinSVG, DailogoSVG, EtheremcoinsSVG} from './footerIcons';
 
-
+import Bottombarstyle from '../bottombarstyle/bottombarstyle';
 
 const mapStateToProps = (state) => {
   return {
@@ -29,8 +30,6 @@ const mapDispatchToProps = dispatch => ({
         dispatch
     )
 })
-
-
 
 const FooterStyle = (props) => {
   const [show, setShow] = useState(false);
@@ -59,17 +58,9 @@ const FooterStyle = (props) => {
           </ul>
         </div>
       </div>
-      <div class="footer">
-        <div class="contain">
-          <div class="col">
-            <h1>Sports</h1>
-            <ul>
-              <li>Home</li>
-              <li>Live</li>
-              <li>Sports Live</li>
-
-            </ul>
-          </div>
+                <footer className="iq-footer">
+                <div className="container-fluid">
+                    <div class="contain">
           <div class="col">
             <h1>Casino</h1>
             <ul>
@@ -96,6 +87,7 @@ const FooterStyle = (props) => {
               <li> <div className='d-flex flex-row'>Facebook<div className='ml-2'><img src={Vector} height="12px" width="12px" /></div></div></li>
               <li> <div className='d-flex flex-row'>Twitter<div className='ml-2'><img src={Vector} height="12px" width="12px" /></div></div></li>
               <li> <div className='d-flex flex-row'>Instagram<div className='ml-2'><img src={Vector} height="12px" width="12px" /></div></div></li>
+              <li> <div className='d-flex flex-row'>YouTube<div className='ml-2'><img src={Vector} height="12px" width="12px" /></div></div></li>
               <li> <div className='d-flex flex-row'>Shop<div className='ml-2'><img src={Vector} height="12px" width="12px" /></div></div></li>
             </ul>
           </div>
@@ -107,18 +99,17 @@ const FooterStyle = (props) => {
               <li>AML Policy</li>
               <li>Terms of Service</li>
               <li>Self Exclusion</li>
-              <li> <div className='d-flex flex-row'>Primedice<div className='ml-2'><img src={Vector} height="12px" width="12px" /></div></div></li>
             </ul>
           </div>
-          <div class="col">
+          <div class="col col-hide" >
             <h1>Language</h1>
             <ul>
-              <li> <div className='d-flex flex-row'><div className='mr-2 pt-1'><img src={Flag} height="25px" width="25px" /></div>         <select className="form-control" id="exampleFormControlSelect2">
+              <li> <div className='d-flex flex-row '><div className='pt-1 mt-1'><img src={Flag} height="25px" width="25px" /></div>         <select className="form-control" id="exampleFormControlSelect2">
                 <option >English</option>
                 <option>Hindi</option>
               </select></div></li>
               <li className='laguagetext'>Odds</li>
-              <li><div style={{ width: "110px", marginLeft: "0px" }}><select className="form-control" id="exampleFormControlSelect2">
+              <li><div style={{ width: "100px", marginLeft: "0px" , padding : "0" }}><select style={{padding : "0"}} className="form-control" id="exampleFormControlSelect2">
                 <option >Decimal</option>
                 <option>Number</option>
               </select></div><div className='mr-2 pt-4'></div> </li>
@@ -128,7 +119,8 @@ const FooterStyle = (props) => {
           <hr class="linedesign"></hr>
 
           <div className='p-2'>
-            <center className="pb-5"><img src={Ultrafair} /></center>
+            <center className="pb-4"><img src={Ultrafair} /></center>
+            <center className="pb-4 d-flex justify-content-center"> <div className='m-2'>< BitcoinsSVG /></div><div className='m-2'><EtheremcoinsSVG /></div><div className='m-2'> <UsdcoinSVG /></div><div className='m-2'> <TetherSVG /></div><div className='m-2'> <DailogoSVG /></div><div className='m-2'> <CurvedaotokenSVG /></div></center>
             <center><p className='mainfootertext'>© 2022 Ultrafair.com | All Rights Reserved.</p></center>
             <center><h5 className='mb-4 mainfootertext'>1 BTC = $22,624.43</h5></center>
             <center>
@@ -137,7 +129,8 @@ const FooterStyle = (props) => {
               </div></center>
           </div>
         </div>
-      </div>
+        </div>
+            </footer>   
 
     </>
   )
