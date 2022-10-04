@@ -2,12 +2,23 @@ import React from 'react'
 import {Container,Row,Col,Button} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import  Card from '../../../components/Card'
+import Customheader from '../../../components/Customheader'
+import Img1 from "../../../assets/images/Customheader/Headerimg11.png"
+import Custombtn from "../../../components/Custombtn";
+import Customsearchbar from "../../../components/Customsearchbar";
+import UltraFairCard from "../../../Common/UltraFairCard";
+import CardSwiper from "../../../Common/CardSwiper";
 
 const Dripicons = () => {
+
+   const SVG =
+ <svg width="25" height="25" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.49712 7.87466C10.465 9.01082 12.9813 8.33657 14.1175 6.3687C15.2536 4.40082 14.5794 1.88451 12.6115 0.748351C10.6436 -0.387803 8.1273 0.286441 6.99115 2.25432C5.855 4.22219 6.52924 6.73851 8.49712 7.87466ZM12.3171 9.48703C6.3457 11.0867 5.19075 5.37265 5.19075 5.37265L0.890417 13.6697C0.73213 13.9751 1.12868 14.2634 1.3703 14.0185L4.27227 11.0779L3.2254 16.5549C3.17628 16.8118 3.45667 17.0042 3.67872 16.8658L6.80683 14.9167L6.41224 17.6554C6.36621 17.9749 6.788 18.1317 6.9619 17.8598L12.3171 9.48703Z" fill="#F7B32B"/>
+      </svg>
  return (
      <>
      <Container fluid>
-         <Row>
+         {/* <Row>
             <Col sm="12">
                <Card>
                   <Card.Header className="d-flex justify-content-between">
@@ -277,7 +288,13 @@ const Dripicons = () => {
                   </Card.Body>
                </Card>
             </Col>
-         </Row>
+         </Row> */}
+
+     <Customheader Headercls="Headertitle" title="Roulette" SVG={SVG} wid="12%" Img={Img1}/>         
+     <Customsearchbar hg="5%" wd="390%" />
+        <Custombtn mr="2%" flx="flex-start" />
+        <UltraFairCard />
+        <CardSwiper classnm="ABdoC" classnm1="Ac0BCD" />
       </Container>
      </>
  )

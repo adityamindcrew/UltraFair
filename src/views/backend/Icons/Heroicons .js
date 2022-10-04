@@ -3,12 +3,24 @@ import {Container,Row,Col,Button} from 'react-bootstrap'
 import  Card from '../../../components/Card'
 import { Link } from 'react-router-dom'
 
+import Custombtn from "../../../components/Custombtn";
+import Customsearchbar from "../../../components/Customsearchbar";
+import UltraFairCard from "../../../Common/UltraFairCard";
+import CardSwiper from "../../../Common/CardSwiper";
+
+import Customheader from '../../../components/Customheader';
+
+import Img1 from "../../../assets/images/Customheader/Headerimg10.png"
+
 
 const Heroicons=()=>{
+   const SVG= <svg width="30" height="30" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M12.3798 0.108154H13.8197C14.8757 0.108154 15.7396 0.960786 15.7396 2.00289V8.06605L12.3798 0.108154ZM17.5635 1.62394L18.8115 2.19236C19.7714 2.57131 20.2514 3.70815 19.8674 4.65552L17.5635 10.245V1.62394ZM15.5476 12.7082L10.7478 1.33973C10.4599 0.581838 9.78788 0.202891 9.01992 0.202891C8.73193 0.202891 8.53994 0.297628 8.25195 0.392365L1.14826 3.23447C0.188298 3.61342 -0.291681 4.65552 0.188298 5.60289L4.98809 16.9713C5.27608 17.7292 5.94805 18.1082 6.71602 18.1082C7.004 18.1082 7.19599 18.1082 7.48398 17.9187L14.5877 15.0766C15.3556 14.7924 15.7396 14.1292 15.7396 13.3713C15.6436 13.1818 15.6436 12.8976 15.5476 12.7082ZM9.21191 12.2345L6.14004 9.96079L6.52402 6.17131L9.59589 8.445L9.21191 12.2345Z" fill="#11FFBD"/>
+   </svg>
     return(
         <>
         <Container fluid>
-         <Row>
+         {/* <Row>
             <Col sm="12">
                <Card>
                   <Card.Header className="d-flex justify-content-between">
@@ -329,7 +341,13 @@ const Heroicons=()=>{
                   </Card.Body>
                </Card>
             </Col>
-         </Row>
+         </Row> */}
+           <Customheader Headercls="Headertitle"  title="Blackjack" SVG={SVG} wid="15%" Img={Img1}/>
+         <Customsearchbar hg="5%" wd="390%" />
+        <Custombtn mr="2%" flx="flex-start" />
+        <UltraFairCard />
+        <CardSwiper classnm="AxC" classnm1="AxCD" />
+      
       </Container>
         </>
     )

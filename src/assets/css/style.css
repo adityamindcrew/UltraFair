@@ -5834,3 +5834,12 @@ h6 span {
 }
 
 .textclass {}
+@media screen and (min-width: 0px) and (max-width: 950px){
+
+  
+  .Searcbr{
+  margin-top: 14% !important;
+  display: none !important;
+}
+
+}

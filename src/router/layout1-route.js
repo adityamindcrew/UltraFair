@@ -141,7 +141,7 @@ const Layout1Route = () => {
                     <Route path="/icon-unicons" component={Unicons} />
 
                     {/* Extrapages */}
-                    <Route path="/pages-timeline" component={Timeline1} />
+                    <Route path="/providers" component={Timeline1} />
                     <Route path="/pages-invoice" component={Invoice} />
                     <Route path="/pages-faq" component={FAQ} />
                     <Route path="/blank-page" component={BlankPage} />

@@ -1,16 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import {
-  Col,
-  Row,
-  Container,
-  ProgressBar,
-  Dropdown,
-  Form,
-} from "react-bootstrap";
-import Card from "../../../../components/Card";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Col, Row, Container ,ProgressBar, Dropdown ,Form} from 'react-bootstrap'
+import  Card from '../../../../components/Card'
 
-import Img1 from "../../../../assets/images/Customheader/Headerimg121.png"
+import Img1 from "../../../../assets/images/Customheader/Headerimg121.png";
 // import CustomToggle from '../../../components/dropdowns'
 import CustomToggle from "../../../../components/dropdowns";
 
@@ -23,11 +16,13 @@ import SearchBar from "../../../../Common/SearchBar";
 import UltraFairCard from "../../../../Common/UltraFairCard";
 import CardSwiper from "../../../../Common/CardSwiper";
 import UltraFairTable from "../../../../Common/UltraFairTable";
+import Customheader from '../../../../components/Customheader';
 
 const UserProfile = () => {
   return (
     <>
       <Container fluid>
+        
         <SearchBar />
         <br />
         <UltraFairCard />
@@ -38,6 +33,5 @@ const UserProfile = () => {
     </>
   );
 };
-
 
 export default UserProfile;
