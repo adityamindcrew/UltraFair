@@ -105,12 +105,12 @@ const SignIn = (props) => {
           </ul>
         </div>
       </div> */}
-      <div className="sign-in-page">
+      <div className="sign-in-page" style={{borderRadius: 20}}>
         {/* <section className="sign-in-page">
           <Container>
             <Row className="justify-content-center align-items-center height-self-center">
               <Col lg="5" md="12" className="align-self-center"> */}
-        <div className="sign-user_card">
+        <div className="sign-user_card" style={{borderRadius: 20}}>
           <button
             type="button"
             class="close"

@@ -1,13 +1,15 @@
-import React ,{useState}from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Container, Row, Col ,Form, Button} from 'react-bootstrap';
-import  Card  from '../../../components/Card'
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import Card from '../../../components/Card'
 import Chart from "react-apexcharts";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Autoplay } from 'swiper';
 import 'swiper/swiper-bundle.css';
 import "../../../assets/css/dashboard.css"
 import Select from 'react-select'
+
+import Modal from 'react-bootstrap/Modal';
 
 // CSS 
 
@@ -49,20 +51,30 @@ import SweetBon from '../../../assets/images/Ultrafair/Sweetbon.svg'
 import Bitcion from '../../../assets/images/Ultrafair/Bitcion.svg'
 import BitcionLogo from '../../../assets/images/Ultrafair/Bitcoin-logo.png'
 import Ellipse from '../../../assets/images/Ultrafair/Ellipse.png'
+import Name from '../../../components/Modals/Wallet_Modals'
+import { BitCoinSVG, WalletSVG } from './dashboardIcons'
+
 
 
 SwiperCore.use([Navigation, Autoplay]);
 
+
 const Dashbord = () => {
    // const Navigation = () => {
+   const [show, setShow] = useState(false);
+
+   const handleClose = () => setShow(false);
+   const handleShow = () => setShow(true);
+
    const [tablebtn, settablebtn] = useState("")
    const [choice, setChoice] = useState();
-      const [btn,setbtn]= useState("")
-     
-  const   btncolorhandles =(color)=>{
-        setbtn(color)
-        console.log('dsklfjsdl')
-      }
+   const [btn, setbtn] = useState("")
+
+   const btncolorhandles = (color) => {
+      setbtn(color)
+      handleShow()
+      console.log('dsklfjsdl')
+   }
    const options1 = [
       { value: 'today', label: 'Today' },
       { value: 'this month', label: 'This Month' },
@@ -79,131 +91,135 @@ const Dashbord = () => {
       { value: '50', label: '50' },
       { value: '100', label: '100' },
    ]
-  
-   const chart1={
-      options:{
+
+   const chart1 = {
+      options: {
          chart: {
             id: "view-chart-01",
-            },
-         colors:['#e20e02', '#f68a04', '#007aff','#545e75'],
+         },
+         colors: ['#e20e02', '#f68a04', '#007aff', '#545e75'],
          labels: ["New Customer", "Exsisting Subscriber's", "Daily Visitor's", "Extented Subscriber's"],
          dataLabels: {
             enabled: false
-       },
-       stroke: {
-           show: false,
-           width: 0
-       },
-       legend: {
-           show: false,
-       },
-       responsive: [{
-         breakpoint: 480,
-         options: {
-           chart: {
-             width: 200
-           },
-           legend: {
-             position: 'bottom'
-           }
-         }
-       }]
-      },
-       series: [44, 55, 30, 30],
-   }
-   const chart2={
-         options : {
-       colors:['#e20e02', '#007aff'],
-         chart: {
-         id:"view-chart-03",
-         foreColor: '#D1D0CF'
-       },
-       plotOptions: {
-         bar: {
-           horizontal: false,
-           columnWidth: '55%',
-           endingShape: 'rounded'
          },
-       },
-       dataLabels: {
-         enabled: false
-       },
-       stroke: {
-         show: true,
-         width: 2,
-         colors: ['transparent']
-       },
-       xaxis: {
-         categories: ['a','b','c','d'],
-       },
-       yaxis: {
-         title: {
-           text: ''
-         }
-       },
-       fill: {
-         opacity: 1
-       },
-       tooltip: {
-           enabled: false,
-         y: {
-           formatter: function (val) {
-             return "$ " + val + " thousands"
-           }
-         }
-       }
-       },
-       series: [{
-         name: 'This Month',
-         data: [44, 55,30,60]
-       }, {
-         name: 'Last Month',
-         data: [35, 41,20,40]
-       }],
+         stroke: {
+            show: false,
+            width: 0
+         },
+         legend: {
+            show: false,
+         },
+         responsive: [{
+            breakpoint: 480,
+            options: {
+               chart: {
+                  width: 200
+               },
+               legend: {
+                  position: 'bottom'
+               }
+            }
+         }]
+      },
+      series: [44, 55, 30, 30],
    }
-   const chart3={
-         options : {
+   const chart2 = {
+      options: {
+         colors: ['#e20e02', '#007aff'],
          chart: {
-         id:"view-chart-02",
-       },
-       colors:['#e20e02','#83878a', '#007aff','#f68a04', '#14e788','#545e75'],
-       labels: ['Actions', 'Comedy', 'Harror', 'Drama', 'Kids','Thrilled'],
-       dataLabels: {
-         enabled: false
-       },
-       stroke: {
-           show: false,
-           width: 0
-       },
-       legend: {
-           show: false,
-         formatter: function(val, opts) {
-           return val + " - " + opts.w.globals.series[opts.seriesIndex]
+            id: "view-chart-03",
+            foreColor: '#D1D0CF'
+         },
+         plotOptions: {
+            bar: {
+               horizontal: false,
+               columnWidth: '55%',
+               endingShape: 'rounded'
+            },
+         },
+         dataLabels: {
+            enabled: false
+         },
+         stroke: {
+            show: true,
+            width: 2,
+            colors: ['transparent']
+         },
+         xaxis: {
+            categories: ['a', 'b', 'c', 'd'],
+         },
+         yaxis: {
+            title: {
+               text: ''
+            }
+         },
+         fill: {
+            opacity: 1
+         },
+         tooltip: {
+            enabled: false,
+            y: {
+               formatter: function (val) {
+                  return "$ " + val + " thousands"
+               }
+            }
          }
-       },
-       responsive: [{
-         breakpoint: 480,
-         options: {
-           chart: {
-             width: 200
-           },
-           legend: {
-             position: 'bottom'
-           }
-         }
-       }]
-       },
-       series: [44, 30, 20, 43, 22,20],
+      },
+      series: [{
+         name: 'This Month',
+         data: [44, 55, 30, 60]
+      }, {
+         name: 'Last Month',
+         data: [35, 41, 20, 40]
+      }],
    }
-    return (
-       <> 
-        <Container fluid>
-           <Row >
-              <Col lg="8"xl="12">
-                 <Row   xl="20" >
-                    <Col sm="6" lg="6" xl="4">
-                       <Card className="iq-card-block iq-card-stretch iq-card-height">
-                          {/* <Card.Body>
+   const chart3 = {
+      options: {
+         chart: {
+            id: "view-chart-02",
+         },
+         colors: ['#e20e02', '#83878a', '#007aff', '#f68a04', '#14e788', '#545e75'],
+         labels: ['Actions', 'Comedy', 'Harror', 'Drama', 'Kids', 'Thrilled'],
+         dataLabels: {
+            enabled: false
+         },
+         stroke: {
+            show: false,
+            width: 0
+         },
+         legend: {
+            show: false,
+            formatter: function (val, opts) {
+               return val + " - " + opts.w.globals.series[opts.seriesIndex]
+            }
+         },
+         responsive: [{
+            breakpoint: 480,
+            options: {
+               chart: {
+                  width: 200
+               },
+               legend: {
+                  position: 'bottom'
+               }
+            }
+         }]
+      },
+      series: [44, 30, 20, 43, 22, 20],
+   }
+
+   const [modalShow, setModalShow] = React.useState(false);
+
+
+   return (
+      <>
+         <Container fluid>
+            <Row >
+               <Col lg="8" xl="12">
+                  <Row xl="20" >
+                     <Col sm="6" lg="6" xl="4">
+                        <Card className="iq-card-block iq-card-stretch iq-card-height">
+                           {/* <Card.Body>
                              <div className="d-flex align-items-center justify-content-between">
                                 <div className="iq-cart-text text-capitalize">
                                    <p className="mb-0">
@@ -219,12 +235,12 @@ const Dashbord = () => {
                                 <p className="mb-0 text-primary"><span><i className="fa fa-caret-down mr-2"></i></span>35%</p>
                              </div>
                           </Card.Body> */}
-                       <img src={Pic1}/>
-                       </Card>
-                    </Col>
-                    <Col sm="6" lg="6" xl="4">
-                       <Card className="iq-card-block iq-card-stretch iq-card-height">
-                          {/* <Card.Body>
+                           <img src={Pic1} />
+                        </Card>
+                     </Col>
+                     <Col sm="6" lg="6" xl="4">
+                        <Card className="iq-card-block iq-card-stretch iq-card-height">
+                           {/* <Card.Body>
                              <div className="d-flex align-items-center justify-content-between">
                                 <div className="iq-cart-text text-capitalize">
                                    <p className="mb-0 font-size-14">
@@ -240,12 +256,12 @@ const Dashbord = () => {
                                 <p className="mb-0 text-warning"><span><i className="fa fa-caret-up mr-2"></i></span>50%</p>
                              </div>
                           </Card.Body> */}
-                             <img src={Pic2}/>
-                       </Card>
-                    </Col>
-                    <Col sm="6" lg="6" xl="4">
-                       <Card className="iq-card-block iq-card-stretch iq-card-height">
-                          {/* <Card.Body>
+                           <img src={Pic2} />
+                        </Card>
+                     </Col>
+                     <Col sm="6" lg="6" xl="4">
+                        <Card className="iq-card-block iq-card-stretch iq-card-height">
+                           {/* <Card.Body>
                              <div className="d-flex align-items-center justify-content-between">
                                 <div className="iq-cart-text text-capitalize">
                                    <p className="mb-0 font-size-14">
@@ -261,11 +277,11 @@ const Dashbord = () => {
                                 <p className="mb-0 text-info"><span><i className="fa fa-caret-up mr-2"></i></span>80%</p>
                              </div>
 
-                          </Card.Body> */}   <img src={Pic3}/>
+                          </Card.Body> */}   <img src={Pic3} />
 
-                       </Card>
-                    </Col>
-                    {/* <Col sm="6" lg="6" xl="3">
+                        </Card>
+                     </Col>
+                     {/* <Col sm="6" lg="6" xl="3">
                        <Card className="iq-card-block iq-card-stretch iq-card-height">
                           <Card.Body>
                              <div className="d-flex align-items-center justify-content-between">
@@ -285,47 +301,47 @@ const Dashbord = () => {
                           </Card.Body>
                        </Card>
                     </Col> */}
-                 </Row>
-            <Row >
-            <div className="iq-search-bar ml-auto Searchtext1" style={{width:"100%"}}   >
-                    <Form action="#" className="searchbox Searchtext1" style={{backgroundRadius:"25px"}} >
-                        <input type="text" className="text search-input TEXTINPUT" style={{width:"325%",background:"#13212D",borderRadius:"25px",height:"44px"}} placeholder="Search Here..."/>
-                        <Link className="search-link" to="#"><i className="ri-search-line"></i></Link>
-                    </Form>
-                </div>
-            </Row>
+                  </Row>
+                  <Row >
+                     <div className="iq-search-bar ml-auto Searchtext1" style={{ width: "100%" }}   >
+                        <Form action="#" className="searchbox Searchtext1" style={{ backgroundRadius: "25px" }} >
+                           <input type="text" className="text search-input TEXTINPUT" style={{ width: "325%", background: "#13212D", borderRadius: "25px", height: "44px" }} placeholder="Search Here..." />
+                           <Link className="search-link" to="#"><i className="ri-search-line"></i></Link>
+                        </Form>
+                     </div>
+                  </Row>
 
-            <Row style={{marginLeft:"0px"}} xl="20">
-            <div className="iq-search-bar Searchit" style={{background:"#13212D",borderRadius:"30px",width:"70%",marginTop:"3%",marginBottom:"3%",display:"flex",justifyContent:"flex-start"}}   >
-                   <button className='BTN-1'  style={{background:btn==="btn1"?'#344452':"#13212D",padding:"10px",borderRadius:"30px",color:"white",border:btn==="btn1"?"1px solid #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignSelf:"flex-start",alignItems:"center",marginLeft:"-15px"}} onClick={()=>btncolorhandles("btn1")} ><img className='BTNLOGO'  src={btn==="btn1"?ICON1:Svg1} height="18px" width="18" />Button1</button>
-                   <button className='BTN-1' style={{background:btn==="btn2"?'#344452':"#13212D",padding:"10px",borderRadius:"30px",color:"white",border:btn==="btn2"?"1px solid  #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignItems:"center"}} onClick={()=>btncolorhandles("btn2")}> <img className='BTNLOGO' src={btn==="btn2"?Svg2:ICON2} height="18px" width="18"/>Button2</button>
-                   <button className='BTN-1' style={{background:btn==="btn3"?'#344452':"#13212D",padding:"10px",borderRadius:"23px",color:"white",border:btn==="btn3"?"1px solid  #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignItems:"center"}} onClick={()=>btncolorhandles("btn3")}> <img className='BTNLOGO' src={btn==="btn3"?Svg3:ICON3} height="18px" width="18"/>Button3</button>
-                   <button className='BTN-1' style={{background:btn==="btn4"?'#344452':"#13212D",padding:"10px",borderRadius:"30px",color:"white",border:btn==="btn4"?"1px solid  #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignItems:"center"}} onClick={()=>btncolorhandles("btn4")}><img className='BTNLOGO' src={btn==="btn4"?Svg4:ICON4} height="18px" width="18"/>Button4</button>
-                   <button className='BTN-1' style={{background:btn==="btn5"?'#344452':"#13212D",padding:"10px",borderRadius:"30px",color:"white",border:btn==="btn5"?"1px solid #11FFBD":"0px",boxShadow:"none",width:"20%",display:"flex",justifyContent:"space-around",alignItems:"center"}} onClick={()=>btncolorhandles("btn5")}><img className='BTNLOGO' src={btn==="btn5"?Svg5:ICON5} height="18px" width="15" style={{filter:""}} />Button5</button>
-                </div>
-            </Row>
-  
+                  <Row style={{ marginLeft: "0px" }} xl="20">
+                     <div className="iq-search-bar Searchit" style={{ background: "#13212D", borderRadius: "30px", width: "70%", marginTop: "3%", marginBottom: "3%", display: "flex", justifyContent: "flex-start" }}   >
+                        <button className='BTN-1' style={{ background: btn === "btn1" ? '#344452' : "#13212D", padding: "10px", borderRadius: "30px", color: "white", border: btn === "btn1" ? "1px solid #11FFBD" : "0px", boxShadow: "none", width: "20%", display: "flex", justifyContent: "space-around", alignSelf: "flex-start", alignItems: "center", marginLeft: "-15px" }} onClick={() => btncolorhandles("btn1")} ><img className='BTNLOGO' src={btn === "btn1" ? ICON1 : Svg1} height="18px" width="18" />Button1</button>
+                        <button className='BTN-1' style={{ background: btn === "btn2" ? '#344452' : "#13212D", padding: "10px", borderRadius: "30px", color: "white", border: btn === "btn2" ? "1px solid  #11FFBD" : "0px", boxShadow: "none", width: "20%", display: "flex", justifyContent: "space-around", alignItems: "center" }} onClick={() => btncolorhandles("btn2")}> <img className='BTNLOGO' src={btn === "btn2" ? Svg2 : ICON2} height="18px" width="18" />Button2</button>
+                        <button className='BTN-1' style={{ background: btn === "btn3" ? '#344452' : "#13212D", padding: "10px", borderRadius: "23px", color: "white", border: btn === "btn3" ? "1px solid  #11FFBD" : "0px", boxShadow: "none", width: "20%", display: "flex", justifyContent: "space-around", alignItems: "center" }} onClick={() => btncolorhandles("btn3")}> <img className='BTNLOGO' src={btn === "btn3" ? Svg3 : ICON3} height="18px" width="18" />Button3</button>
+                        <button className='BTN-1' style={{ background: btn === "btn4" ? '#344452' : "#13212D", padding: "10px", borderRadius: "30px", color: "white", border: btn === "btn4" ? "1px solid  #11FFBD" : "0px", boxShadow: "none", width: "20%", display: "flex", justifyContent: "space-around", alignItems: "center" }} onClick={() => btncolorhandles("btn4")}><img className='BTNLOGO' src={btn === "btn4" ? Svg4 : ICON4} height="18px" width="18" />Button4</button>
+                        <button className='BTN-1' style={{ background: btn === "btn5" ? '#344452' : "#13212D", padding: "10px", borderRadius: "30px", color: "white", border: btn === "btn5" ? "1px solid #11FFBD" : "0px", boxShadow: "none", width: "20%", display: "flex", justifyContent: "space-around", alignItems: "center" }} onClick={() => btncolorhandles("btn5")}><img className='BTNLOGO' src={btn === "btn5" ? Svg5 : ICON5} height="18px" width="15" style={{ filter: "" }} />Button5</button>
+                     </div>
+                  </Row>
 
-                 <Card id="slider1" >
-                    <Card.Header className="d-flex justify-content-between align-items-center">
-                           <div>
-                              <h4 className="card-title m-0">Ultrafair Originals</h4>
-                           </div>
-                           <div className="" id="swiper">
-                              <div className="swiper-button swiper-button-prev" style={{background:"#344452"}}>Previous</div>
-                              <div className="swiper-button swiper-button-next" style={{background:"#344452"}}>Next</div>
-                           </div>
-                    </Card.Header>
 
-                    
-                    <Card.Body>
-                       <Swiper
+                  <Card id="slider1" >
+                     <Card.Header className="d-flex justify-content-between align-items-center">
+                        <div>
+                           <h4 className="card-title m-0">Ultrafair Originals</h4>
+                        </div>
+                        <div className="" id="swiper">
+                           <div className="swiper-button swiper-button-prev" style={{ background: "#344452" }}>Previous</div>
+                           <div className="swiper-button swiper-button-next" style={{ background: "#344452" }}>Next</div>
+                        </div>
+                     </Card.Header>
+
+
+                     <Card.Body>
+                        <Swiper
                            navigation={{
                               prevEl: '.swiper-button-prev',
                               nextEl: '.swiper-button-next'
                            }}
                            breakpoints={{
-                              320: {   slidesPerView: 1},                
+                              320: { slidesPerView: 1 },
                               550: { slidesPerView: 2 },
                               991: { slidesPerView: 3 },
                               1400: { slidesPerView: 4 },
@@ -333,7 +349,7 @@ const Dashbord = () => {
                            loop={true}
                            className="list-unstyled row top-rated-item mb-0 iq-rtl-direction"
                         >
-                          {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                           {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
                              <Card className="mb-0">
                                 <Card.Body className="p-0">
                                    <div className="iq-thumb">
@@ -352,7 +368,7 @@ const Dashbord = () => {
                                 </Card.Body>
                              </Card>
                           </SwiperSlide> */}
-                          {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                           {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
                              <Card className="mb-0">
                                 <Card.Body className="p-0">
                                    <div className="iq-thumb">
@@ -371,7 +387,7 @@ const Dashbord = () => {
                                 </Card.Body>
                              </Card>
                           </SwiperSlide> */}
-                          {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                           {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
                              <Card className="mb-0">
                                 <Card.Body className="p-0">
                                    <div className="iq-thumb">
@@ -409,7 +425,7 @@ const Dashbord = () => {
                                 </Card.Body>
                              </Card>
                           </SwiperSlide> */}
-                          {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                           {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
                              <Card className="mb-0">
                                 <Card.Body className="p-0">
                                    <div className="iq-thumb">
@@ -428,15 +444,15 @@ const Dashbord = () => {
                                 </Card.Body>
                              </Card>
                           </SwiperSlide> */}
-                          <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
-                             
-               
-                                   <div className="iq-thumb" >
-                                      <Link to="#">
-                                         <img src={Pic1} className="img-fluid  img-border-radius" width="200vw" height="400vh" alt=""/>
-                                      </Link>
-                                   </div>
-                                   {/* <div className="iq-feature-list">
+                           <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
+
+
+                              <div className="iq-thumb" >
+                                 <Link to="#">
+                                    <img src={Pic1} className="img-fluid  img-border-radius" width="200vw" height="400vh" alt="" />
+                                 </Link>
+                              </div>
+                              {/* <div className="iq-feature-list">
                                       <h6 className="font-weight-600 mb-0">Opend Dead Shot</h6>
                                       <p className="mb-0 mt-2">T.v show</p>
                                       <div className="d-flex align-items-center my-2 iq-ltr-direction">
@@ -444,18 +460,18 @@ const Dashbord = () => {
                                          <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
                                       </div>
                                    </div> */}
-                          
-                    
-                          </SwiperSlide>
-                          <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
-                             
-               
-                             <div className="iq-thumb" >
-                                <Link to="#">
-                                   <img src={Pic2} className="img-fluid  img-border-radius" width="200vw" height="400vh" alt=""/>
-                                </Link>
-                             </div>
-                             {/* <div className="iq-feature-list">
+
+
+                           </SwiperSlide>
+                           <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
+
+
+                              <div className="iq-thumb" >
+                                 <Link to="#">
+                                    <img src={Pic2} className="img-fluid  img-border-radius" width="200vw" height="400vh" alt="" />
+                                 </Link>
+                              </div>
+                              {/* <div className="iq-feature-list">
                                 <h6 className="font-weight-600 mb-0">Opend Dead Shot</h6>
                                 <p className="mb-0 mt-2">T.v show</p>
                                 <div className="d-flex align-items-center my-2 iq-ltr-direction">
@@ -463,18 +479,18 @@ const Dashbord = () => {
                                    <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
                                 </div>
                              </div> */}
-                    
-              
-                    </SwiperSlide>
-                    <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
-                             
-               
-                             <div className="iq-thumb" >
-                                <Link to="#">
-                                   <img src={Pic3} className="img-fluid  img-border-radius" width="200vw" height="400vh" alt=""/>
-                                </Link>
-                             </div>
-                             {/* <div className="iq-feature-list">
+
+
+                           </SwiperSlide>
+                           <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
+
+
+                              <div className="iq-thumb" >
+                                 <Link to="#">
+                                    <img src={Pic3} className="img-fluid  img-border-radius" width="200vw" height="400vh" alt="" />
+                                 </Link>
+                              </div>
+                              {/* <div className="iq-feature-list">
                                 <h6 className="font-weight-600 mb-0">Opend Dead Shot</h6>
                                 <p className="mb-0 mt-2">T.v show</p>
                                 <div className="d-flex align-items-center my-2 iq-ltr-direction">
@@ -482,37 +498,37 @@ const Dashbord = () => {
                                    <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
                                 </div>
                              </div> */}
-                    
-              
-                    </SwiperSlide>
-                          
-                          </Swiper>
-                    </Card.Body>
-                 </Card>
 
 
-                 <Card id="slider1" >
-                    <Card.Header className="d-flex justify-content-between align-items-center">
-                           <div>
-                              <h4 className="card-title m-0">Slots</h4>
-                           </div>
-                      
-                              {/* <div className="BTTTN  right  " style={{background:"#344452"}}><i class="ri-arrow-left-line"></i></div>
+                           </SwiperSlide>
+
+                        </Swiper>
+                     </Card.Body>
+                  </Card>
+
+
+                  <Card id="slider1" >
+                     <Card.Header className="d-flex justify-content-between align-items-center">
+                        <div>
+                           <h4 className="card-title m-0">Slots</h4>
+                        </div>
+
+                        {/* <div className="BTTTN  right  " style={{background:"#344452"}}><i class="ri-arrow-left-line"></i></div>
                               <div className="BTTTN  left  " style={{background:"#344452"}}><i class="ri-arrow-right-line"></i></div> */}
-                                <div className="" id="swiper">
-                              <div className="swiper-button right " style={{background:"#344452",lineHeight:1.5}}>Previous</div>
-                              <div className="swiper-button left " style={{background:"#344452",lineHeight:1.5}}>Next</div>
-                           
-                           </div>
-                    </Card.Header>
-                    <Card.Body>
-                       <Swiper
+                        <div className="" id="swiper">
+                           <div className="swiper-button right " style={{ background: "#344452", lineHeight: 1.5 }}>Previous</div>
+                           <div className="swiper-button left " style={{ background: "#344452", lineHeight: 1.5 }}>Next</div>
+
+                        </div>
+                     </Card.Header>
+                     <Card.Body>
+                        <Swiper
                            navigation={{
                               prevEl: '.right',
                               nextEl: '.left'
                            }}
                            breakpoints={{
-                              320: {   slidesPerView: 1},                
+                              320: { slidesPerView: 1 },
                               550: { slidesPerView: 2 },
                               991: { slidesPerView: 3 },
                               1400: { slidesPerView: 4 },
@@ -520,7 +536,7 @@ const Dashbord = () => {
                            loop={true}
                            className="list-unstyled row top-rated-item mb-0 iq-rtl-direction"
                         >
-                          {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                           {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
                              <Card className="mb-0">
                                 <Card.Body className="p-0">
                                    <div className="iq-thumb">
@@ -539,7 +555,7 @@ const Dashbord = () => {
                                 </Card.Body>
                              </Card>
                           </SwiperSlide> */}
-                          {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                           {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
                              <Card className="mb-0">
                                 <Card.Body className="p-0">
                                    <div className="iq-thumb">
@@ -558,7 +574,7 @@ const Dashbord = () => {
                                 </Card.Body>
                              </Card>
                           </SwiperSlide> */}
-                          {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                           {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
                              <Card className="mb-0">
                                 <Card.Body className="p-0">
                                    <div className="iq-thumb">
@@ -596,7 +612,7 @@ const Dashbord = () => {
                                 </Card.Body>
                              </Card>
                           </SwiperSlide> */}
-                          {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
+                           {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
                              <Card className="mb-0">
                                 <Card.Body className="p-0">
                                    <div className="iq-thumb">
@@ -615,15 +631,15 @@ const Dashbord = () => {
                                 </Card.Body>
                              </Card>
                           </SwiperSlide> */}
-                          <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
-                             
-               
-                                   <div className="iq-thumb" >
-                                      <Link to="#">
-                                         <img src={Showimg1} className="img-fluid  img-border-radius" width="150vw" height="300vh" alt=""/>
-                                      </Link>
-                                   </div>
-                                   {/* <div className="iq-feature-list">
+                           <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
+
+
+                              <div className="iq-thumb" >
+                                 <Link to="#">
+                                    <img src={Showimg1} className="img-fluid  img-border-radius" width="150vw" height="300vh" alt="" />
+                                 </Link>
+                              </div>
+                              {/* <div className="iq-feature-list">
                                       <h6 className="font-weight-600 mb-0">Opend Dead Shot</h6>
                                       <p className="mb-0 mt-2">T.v show</p>
                                       <div className="d-flex align-items-center my-2 iq-ltr-direction">
@@ -631,18 +647,18 @@ const Dashbord = () => {
                                          <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
                                       </div>
                                    </div> */}
-                          
-                    
-                          </SwiperSlide>
-                          <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
-                             
-               
-                             <div className="iq-thumb" >
-                                <Link to="#">
-                                   <img src={Showimg2} className="img-fluid  img-border-radius" width="150vw" height="300vh" alt=""/>
-                                </Link>
-                             </div>
-                             {/* <div className="iq-feature-list">
+
+
+                           </SwiperSlide>
+                           <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
+
+
+                              <div className="iq-thumb" >
+                                 <Link to="#">
+                                    <img src={Showimg2} className="img-fluid  img-border-radius" width="150vw" height="300vh" alt="" />
+                                 </Link>
+                              </div>
+                              {/* <div className="iq-feature-list">
                                 <h6 className="font-weight-600 mb-0">Opend Dead Shot</h6>
                                 <p className="mb-0 mt-2">T.v show</p>
                                 <div className="d-flex align-items-center my-2 iq-ltr-direction">
@@ -650,18 +666,18 @@ const Dashbord = () => {
                                    <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
                                 </div>
                              </div> */}
-                    
-              
-                    </SwiperSlide>
-                    <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
-                             
-               
-                             <div className="iq-thumb" >
-                                <Link to="#">
-                                   <img src={Showimg3} className="img-fluid  img-border-radius" width="150vw" height="300vh" alt=""/>
-                                </Link>
-                             </div>
-                             {/* <div className="iq-feature-list">
+
+
+                           </SwiperSlide>
+                           <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
+
+
+                              <div className="iq-thumb" >
+                                 <Link to="#">
+                                    <img src={Showimg3} className="img-fluid  img-border-radius" width="150vw" height="300vh" alt="" />
+                                 </Link>
+                              </div>
+                              {/* <div className="iq-feature-list">
                                 <h6 className="font-weight-600 mb-0">Opend Dead Shot</h6>
                                 <p className="mb-0 mt-2">T.v show</p>
                                 <div className="d-flex align-items-center my-2 iq-ltr-direction">
@@ -669,19 +685,19 @@ const Dashbord = () => {
                                    <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
                                 </div>
                              </div> */}
-                    
-              
-                    </SwiperSlide>
-                          
-                          </Swiper>
-                    </Card.Body>
-                 </Card>
-              </Col>
+
+
+                           </SwiperSlide>
+
+                        </Swiper>
+                     </Card.Body>
+                  </Card>
+               </Col>
 
 
 
 
-              {/* <Col lg="4">
+               {/* <Col lg="4">
                  <Card className="iq-card-block iq-card-stretch iq-card-height">
                     <div className="iq-card-header">
                        <Card.Header.Title>
@@ -751,8 +767,8 @@ const Dashbord = () => {
                     </Card.Body>
                  </Card>
               </Col> */}
-           </Row>
-           {/* <Row>
+            </Row>
+            {/* <Row>
               <Col sm="12" lg="4">
                  <Card className="iq-card-block iq-card-stretch iq-card-height">
                     <Card.Header className="d-flex align-items-center justify-content-between">
@@ -995,7 +1011,7 @@ const Dashbord = () => {
                  </Card>
               </Col>
            </Row> */}
-             <Row>
+            <Row>
                <Col sm="12">
                   <Card>
                      <Row>
@@ -1007,11 +1023,11 @@ const Dashbord = () => {
                               <button className='BTN-1' style={{ background: tablebtn === "btn4" ? '#344452' : "#13212D", border: tablebtn === "btn4" ? " " : "none", borderBottomStyle: tablebtn === "btn4" ? 'solid' : 'none', borderRightStyle: tablebtn === "btn4" ? 'solid' : 'none', padding: "5px", borderRadius: "30px", color: "white", borderColor: tablebtn === "btn4" ? "#11FFBD" : "rgb(19, 33, 45)", boxShadow: "none", width: "20%", display: "flex", justifyContent: "space-around", alignItems: "center" }} onClick={() => tablebtncolorhandles("btn4")}>Races <div><img src={Ellipse} style={{ marginLeft: "5px", paddingRight: '0px' }} height="10px" width="10px" /></div></button>
                            </div>
                         </Col><Col className='col-4'>
-                              <div className="m-2" style={{width : "50px !important"}}>
-                                 <Select style={{maxWidth : "50px !important"}} options={options2}
-                                 defaultValue={{label: "5", value: ""}}
-                               />
-                              </div>
+                           <div className="m-2" style={{ width: "50px !important" }}>
+                              <Select style={{ maxWidth: "50px !important" }} options={options2}
+                                 defaultValue={{ label: "5", value: "" }}
+                              />
+                           </div>
                         </Col>
                      </Row>
                      <Card.Body>
@@ -1174,9 +1190,45 @@ const Dashbord = () => {
                   </Card>
                </Col>
             </Row>
-        </Container>
-        </>
-    )
+            <div className='container wallet-modal'>
+               <Modal show={show} onHide={handleClose} size="lg"
+                  aria-labelledby="contained-modal-title-vcenter"
+                  centered
+                  className="textclass"
+                  
+               >
+                  <Modal.Header style={{ border: 'none' }}>
+                     <Modal.Title>
+                        <div style={{marginLeft: 50}}>
+                        <WalletSVG />
+                        <span style={{ fontSize: 15, color: "white", paddingLeft: 7 }}>Wallet</span>
+                        </div>
+                        <button
+                           type="button"
+                           class="close"
+                           aria-label="Close"
+                           style={{ color: "white", position: 'absolute', top: -1, right: 10 }}
+                           onClick={handleClose}
+                        >
+                           <span aria-hidden="true" style={{ fontSize: 33, fontWeight: 1 }}>&times;</span>
+                        </button>
+                     </Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                     <Name />
+                  </Modal.Body>
+
+               </Modal>
+            </div>
+            {/* <MyVerticallyCenteredModal
+        show={modalShow}
+        
+        onHide={() => setModalShow(false)}
+      /> */}
+
+         </Container>
+      </>
+   )
 }
 
 export default Dashbord;
