@@ -72,17 +72,20 @@ const HeaderStyle1 = (props) => {
   const registerHandler2 = () => {
     setSignUpModalShow(true);
   };
+  const registerHandler2 = () => {
+    setSignUpModalShow(true);
+  };
   const loginHandler = () => {
     setLoginModalShow(true);
   };
   return (
     <>
-      <div className="iq-top-navbar">
-        <div className="iq-navbar-custom">
-          <Navbar className="p-0" expand="sm">
+      <div className="iq-top-navbar p-2" >
+        <div className="iq-navbar-custom" >
+          <Navbar className="" expand="sm">
             <div className="iq-menu-bt d-flex align-items-center">
               <div className="wrapper-menu" onClick={minisidbar}>
-                <div className="main-circle">
+                <div className="main-circle meunview">
                   <i className="las la-bars"></i>
                 </div>
               </div>
@@ -113,9 +116,15 @@ const HeaderStyle1 = (props) => {
                         <Link className="search-link" to="#"><i className="ri-search-line"></i></Link>
                     </Form> */}
             </div>
+<<<<<<< HEAD
             <div className="navbar-list-hide">
               <Nav as="ul" className=" navbar-list iq-header">
                 {/* <div className='navItem'> </div> */}
+=======
+            <div className="navbar-list-hide mt-2">
+              <Nav as="ul" className=" navbar-list iq-header">
+                {/* {/ <div className='navItem'> </div> /} */}
+>>>>>>> master
                 <Link className="navItem-hide" to="#" onClick={loginHandler}>
                   Sign In
                 </Link>
@@ -130,9 +139,12 @@ const HeaderStyle1 = (props) => {
                 </span>
               </Nav>
             </div>
+<<<<<<< HEAD
 
            
           
+=======
+>>>>>>> master
           </Navbar>
         </div>
       </div>
