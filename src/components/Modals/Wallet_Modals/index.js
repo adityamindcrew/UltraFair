@@ -276,13 +276,13 @@ export default function Name() {
 
             <Row style={{ marginLeft: "0px" }} xl="20">
                 <div className="walletTab container" style={{
-                    background: "#13212D", borderRadius: "30px", width: '80%', padding: 5, textAlign: 'center',
+                    background: "#13212D", borderRadius: "30px", width: '90%', padding: 5, textAlign: 'center',
                     marginTop: "3%", marginBottom: "3%", display: "flex", justifyContent: "center"
                 }}   >
                      <button className='WalletButtonText' style={{ background: walletBtn === "btn1" ? '#344452' : "#13212D", padding: "1px", borderRadius: "30px", color: "white", border: walletBtn === "btn1" ? "1px solid #344452" : "0px", boxShadow: "none", display: "flex", justifyContent: "space-around", alignItems: "center", paddingLeft: 10, paddingRight: 10, marginRight: 12}} onClick={() => WalletbtnColorhandles("btn1")}>Deposit</button>
                     <button className='WalletButtonText' style={{ background: walletBtn === "btn2" ? '#344452' : "#13212D", padding: "10px", borderRadius: "30px", color: "white", border: walletBtn === "btn2" ? "1px solid #344452" : "0px", boxShadow: "none", display: "flex", justifyContent: "space-around", alignItems: "center", paddingLeft: 10, paddingRight: 10, marginRight: 12}} onClick={() => WalletbtnColorhandles("btn2")}>Withdraw</button>
                     <button className='WalletButtonText' style={{ background: walletBtn === "btn3" ? '#344452' : "#13212D", padding: "10px", borderRadius: "23px", color: "white", border: walletBtn === "btn3" ? "1px solid #344452" : "0px", boxShadow: "none", display: "flex", justifyContent: "space-around", alignItems: "center", paddingLeft: 10, paddingRight: 10, marginRight: 12 }} onClick={() => WalletbtnColorhandles("btn3")}>Buy Crypto</button>
-                    <button className='WalletButtonText' style={{ background: walletBtn === "btn4" ? '#344452' : "#13212D", padding: "10px", borderRadius: "30px", color: "white", border: walletBtn === "btn4" ? "1px solid #344452" : "0px", boxShadow: "none", display: "flex", justifyContent: "space-around", alignItems: "center", paddingLeft: 0, paddingRight: 0, marginRight: 2}} onClick={() => WalletbtnColorhandles("btn4")}>Tip</button>
+                    <button className='WalletButtonText' style={{ background: walletBtn === "btn4" ? '#344452' : "#13212D", padding: "10px", borderRadius: "30px", color: "white", border: walletBtn === "btn4" ? "1px solid #344452" : "0px", boxShadow: "none", display: "flex", justifyContent: "space-around", alignItems: "center", paddingLeft: 15, paddingRight: 15, marginRight: 2}} onClick={() => WalletbtnColorhandles("btn4")}>Tip</button>
 
                 </div>
             </Row>
