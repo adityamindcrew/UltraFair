@@ -5897,11 +5897,7 @@ h6 span {
 color: #f8f9fa !important;
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1650px){
-  .TEXTINPUT{
-    width: 260% !important;
-  }
-  } 
+
   @media screen and (min-width: 990px) and (max-width: 1180px){  
     .Fullcontainer{
       max-width: 100% !important;
@@ -5912,3 +5908,43 @@ color: #f8f9fa !important;
       .Searchit{
       width: 70% !important
     }}
+
+    
+    @media screen and (min-width: 1000px) and (max-width: 1650px){
+      .TEXTINPUT{
+        width: 388% !important;
+      }
+      } 
+        
+    @media screen and (min-width: 1000px) and (max-width: 1610px){
+      .TEXTINPUT{
+        width: 375% !important;
+      }
+      } 
+      @media screen and (min-width: 1000px) and (max-width: 1570px){
+        .TEXTINPUT{
+          width: 350% !important;
+        }
+        } 
+        @media screen and (min-width: 1000px) and (max-width: 1490px){
+          .TEXTINPUT{
+            width: 330% !important;
+          }
+          } 
+          @media screen and (min-width: 1000px) and (max-width: 1430px){
+
+            .TEXTINPUT{
+              width: 310% !important;
+            }
+            }
+            
+            @media screen and (min-width: 1000px) and (max-width: 1360px){
+              .TEXTINPUT{
+                width: 290% !important;
+              }
+              } 
+              @media screen and (min-width: 1000px) and (max-width: 1300px){
+                .TEXTINPUT{
+                  width: 270% !important;
+                }
+                }    
