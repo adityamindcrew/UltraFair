@@ -1196,7 +1196,7 @@ NOTE: This file contains the styling for responsive Template.
 @media screen and (min-width: 0px) and (max-width: 1000px){
 
 	 .headertop{
-		margin-top: 17% !important;
+		margin-top: 19% !important;
 		height: 5% !important;
 	}
 	.LOGOO{
@@ -1220,7 +1220,7 @@ NOTE: This file contains the styling for responsive Template.
   @media screen and (min-width: 600px) and (max-width: 830px){
 
     .headertop{
-     margin-top: 14% !important;
+     margin-top: 11% !important;
      height: 5% !important;
    }
    .LOGOO{
@@ -1232,7 +1232,7 @@ NOTE: This file contains the styling for responsive Template.
    @media screen and (min-width: 829px) and (max-width: 913px){
 
     .headertop{
-     margin-top: 13% !important;
+     margin-top: 11% !important;
      height: 5% !important;
    }
  
@@ -1242,7 +1242,7 @@ NOTE: This file contains the styling for responsive Template.
    @media screen and (min-width: 512px) and (max-width: 540px){
 
     .headertop{
-     margin-top: 13% !important;
+     margin-top: 14% !important;
      height: 5% !important;
    }
  
@@ -1256,3 +1256,12 @@ NOTE: This file contains the styling for responsive Template.
       padding: 23px 30px !important; 
     }
 	}
+
+  @media screen and (min-width: 1020px) and (max-width: 1030px){
+
+    .headertop{
+     margin-top: 7% !important;
+   }
+ 
+  
+   }
