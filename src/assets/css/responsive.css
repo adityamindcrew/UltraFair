@@ -1249,3 +1249,13 @@ NOTE: This file contains the styling for responsive Template.
       padding: 23px 30px !important; 
     }
 	}
+
+  @media screen and (min-width: 1020px) and (max-width: 1030px){
+
+    .headertop{
+     margin-top: 7% !important;
+     /* height: 5% !important; */
+   }
+ 
+  
+   }

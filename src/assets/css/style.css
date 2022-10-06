@@ -4957,3 +4957,27 @@ h6 span {
 }
 
 }
+
+
+@media screen and (min-width: 1000px) and (max-width: 1650px){
+
+  
+.TEXTINPUT{
+  width: 260% !important;
+}
+
+}
+
+@media screen and (min-width: 990px) and (max-width: 1180px){
+
+  
+  .Fullcontainer{
+    max-width: 100% !important;
+  }
+  
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1550px){
+    .Searchit{
+    width: 70% !important
+    
+  }}

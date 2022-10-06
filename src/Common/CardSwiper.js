@@ -30,7 +30,7 @@ function CardSwiper({classnm,classnm1}) {
 
   return (
     <div>
-      <Card.Header className="d-flex justify-content-between align-items-center">
+      <Card.Header className="d-flex justify-content-between align-items-center" style={{padding:0}}>
         <div>
           <h3 className="card-title m-0">Providers</h3>
         </div>
@@ -62,7 +62,7 @@ function CardSwiper({classnm,classnm1}) {
             991: { slidesPerView: 3 },
             1400: { slidesPerView: 4 },
           }}
-          loop={true}
+          // loop={true}
           className="list-unstyled row top-rated-item mb-0 iq-rtl-direction"
         >
           {swiperImages.map((s, i) => {
