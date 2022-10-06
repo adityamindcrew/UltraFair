@@ -9,10 +9,12 @@ import QRCode from "../../../assets/images/QR.jpg"
 
 export const form1 = () => {
 
+  const[isActive, setIsActive] = useState(false);
+
     return (
         <div className="text-center container">
             <div style={{ marginTop: 20, marginBottom: 20 }}>
-                <BitCoinSVG />
+                {/* <BitCoinSVG />
                 <DropdownButton
 
 
@@ -22,7 +24,12 @@ export const form1 = () => {
                     <Dropdown.Item href="#">Something else here</Dropdown.Item>
                     <Dropdown.Divider />
                     <Dropdown.Item href="#">Separated link</Dropdown.Item>
-                </DropdownButton>
+                </DropdownButton> */}
+                <div className="wallet-dropdown">
+                   <div className="wallet-dropdown-btn" onClick={(e)=>setIsActive()}>
+
+                   </div>
+                </div>
             </div>
 
             <div className="input-address-deposit">

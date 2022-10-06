@@ -610,7 +610,6 @@ Sign In
   /* margin: 25px auto; */
   max-width: auto;
 
-  width: 28vw;
   max-height: fit-content !important;
   border-radius: 30px;
 }
@@ -644,6 +643,20 @@ Sign In
   /* background-color: rgba(0.07 0.13 0.18 1.0); */
   background-color: #0D1D29;
 }
+@media (max-width: 1076px) {
+  
+  .sign-user_card{
+    width:100% !important;
+    max-width: auto;
+  }
+  }
+  @media (max-width: 586px) {
+  
+    .sign-user_card{
+      width:100% !important;
+      max-width: auto;
+    }
+    }
 
 
 .sign-user_logo {
@@ -692,6 +705,21 @@ Sign In
 
 .f-link:hover {
   color: var(--iq-primary);
+}
+.reCaptcha {
+  /* margin: 20px auto; 
+ max-width: auto;
+ width:28vw; */
+  margin-top: 1.5vw
+}
+
+.reCaptcha-signup {
+  margin-top: 3vw
+}
+
+.checkbox-input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
 }
 
 .reCaptcha {
@@ -1066,16 +1094,6 @@ body.sidebar-main .iq-sidebar .iq-menu li a[aria-expanded="false"].collapsed {
   -o-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s;
 }
-<<<<<<< HEAD
-/* .iq-sidebar-menu .iq-menu li.active > a::before {
-=======
-
-.iq-sidebar-menu .iq-menu li.active>a::before {
->>>>>>> bb81ec1 (04.oct)
-  opacity: 1;
-  height: 75%;
-} */
-
 /*------------------------*/
 .iq-sidebar-menu .iq-menu li ul {
   padding-left: 0;
@@ -5552,7 +5570,10 @@ h6 span {
   background: #13212d;
   border-color: #13212d;
   border-radius: 27px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> bacaf5773b55739dc6ea02d584572875206b834b
 }
 
 .registerToggleOuter {
@@ -5597,7 +5618,11 @@ h6 span {
   border-bottom-right-radius: 27px !important;
   text-align: center;
   margin: 2.5px;
+<<<<<<< HEAD
   /* margin-left: 15px !important; */
+=======
+   /* margin-left: 15px !important;  */
+>>>>>>> bacaf5773b55739dc6ea02d584572875206b834b
   transition: none !important;
   translate: none !important;
 }
@@ -5844,4 +5869,29 @@ h6 span {
   border-radius: 10px;
 }
 
-.textclass {}
+.img-fluid1 {
+  max-width: 100%;
+  height: auto;
+  width: auto !important;
+}
+
+.rc-anchor-alert {
+  display: none !important;
+color: #f8f9fa !important;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1650px){
+  .TEXTINPUT{
+    width: 260% !important;
+  }
+  } 
+  @media screen and (min-width: 990px) and (max-width: 1180px){  
+    .Fullcontainer{
+      max-width: 100% !important;
+    }  
+    }
+
+    @media screen and (min-width: 1200px) and (max-width: 1550px){
+      .Searchit{
+      width: 70% !important
+    }}
