@@ -5570,10 +5570,6 @@ h6 span {
   background: #13212d;
   border-color: #13212d;
   border-radius: 27px;
-<<<<<<< HEAD
-
-=======
->>>>>>> bacaf5773b55739dc6ea02d584572875206b834b
 }
 
 .registerToggleOuter {
@@ -5618,11 +5614,7 @@ h6 span {
   border-bottom-right-radius: 27px !important;
   text-align: center;
   margin: 2.5px;
-<<<<<<< HEAD
-  /* margin-left: 15px !important; */
-=======
-   /* margin-left: 15px !important;  */
->>>>>>> bacaf5773b55739dc6ea02d584572875206b834b
+
   transition: none !important;
   translate: none !important;
 }
