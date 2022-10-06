@@ -10,6 +10,7 @@ import Modal from "react-bootstrap/Modal";
 import Signup from "../../../../views/backend/auth/signup";
 import Signin from "../../../../views/backend/auth/signin";
 
+
 const HeaderStyle1 = (props) => {
   const [signUpModalShow, setSignUpModalShow] = React.useState(false);
   const [loginModalShow, setLoginModalShow] = React.useState(false);
@@ -23,7 +24,8 @@ const HeaderStyle1 = (props) => {
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
-        style={{ justifyContent: "center" }}
+        style={{ justifyContent: "center", }}
+        className="registerModal"
       >
         {/* <Modal.Header closeButton></Modal.Header> */}
         <Modal.Body style={{ padding: "0px" }}>
@@ -39,7 +41,8 @@ const HeaderStyle1 = (props) => {
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
-        style={{ justifyContent: "center" }}
+        style={{ justifyContent: "center",}}
+        className="signinModal"
       >
         {/* <Modal.Header closeButton></Modal.Header> */}
         <Modal.Body style={{ padding: "0px" }}>
@@ -66,12 +69,10 @@ const HeaderStyle1 = (props) => {
     setSignUpModalShow(l);
     setLoginModalShow(!l);
   };
-  const registerHandler = () => {
-    setSignUpModalShow(true);
-  };
   const registerHandler2 = () => {
     setSignUpModalShow(true);
   };
+ 
   const loginHandler = () => {
     setLoginModalShow(true);
   };
@@ -130,6 +131,9 @@ const HeaderStyle1 = (props) => {
                 </span>
               </Nav>
             </div>
+
+           
+          
           </Navbar>
         </div>
       </div>
@@ -144,5 +148,4 @@ const HeaderStyle1 = (props) => {
     </>
   );
 };
-
 export default HeaderStyle1;
