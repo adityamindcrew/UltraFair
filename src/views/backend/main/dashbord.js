@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Form, Button , Modal } from "react-bootstrap";
 import Card from "../../../components/Card";
 import Chart from "react-apexcharts";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,7 +8,7 @@ import SwiperCore, { Navigation, Autoplay } from "swiper";
 import "swiper/swiper-bundle.css";
 import "../../../assets/css/dashboard.css";
 import Select from "react-select";
-
+import Name from '../../../components/Modals/Wallet_Modals'
 // CSS
 
 import "../../.././assets/css/dashboard.css";
@@ -38,7 +38,7 @@ import Svg5 from "../../../assets/images/icon/V5.svg";
 import Showimg1 from "../../../assets/images/Show1.png";
 import Showimg2 from "../../../assets/images/Show2.png";
 import Showimg3 from "../../../assets/images/Show3.png";
-
+import { BitCoinSVG, WalletSVG } from './dashboardIcons'
 import mt01 from "../../../assets/images/movie-thumb/01.jpg";
 import mt04 from "../../../assets/images/movie-thumb/04.jpg";
 import mt05 from "../../../assets/images/movie-thumb/05.jpg";
@@ -60,11 +60,16 @@ const Dashbord = () => {
   const [tablebtn, settablebtn] = useState("");
   const [choice, setChoice] = useState();
   const [btn, setbtn] = useState("");
+  const [show, setShow] = useState(false);
+
+   const handleClose = () => setShow(false);
+   const handleShow = () => setShow(true);
+
   const DashbordCard = [Pic1, Pic2, Pic3];
 
   const btncolorhandles = (color) => {
     setbtn(color);
-    console.log("dsklfjsdl");
+    handleShow()
   };
   
 
@@ -459,6 +464,36 @@ const Dashbord = () => {
                   </Card>
                </Col>
             </Row> */}
+             <div className='container wallet-modal'>
+               <Modal show={show} onHide={handleClose} size="lg"
+                  aria-labelledby="contained-modal-title-vcenter"
+                  centered
+                  className="textclass"
+                  
+               >
+                  <Modal.Header style={{ border: 'none' }}>
+                     <Modal.Title>
+                        <div style={{marginLeft: 10}}>
+                        <WalletSVG />
+                        <span style={{ fontSize: 15, color: "white", paddingLeft: 7 }}>Wallet</span>
+                        </div>
+                        <button
+                           type="button"
+                           class="close"
+                           aria-label="Close"
+                           style={{ color: "white", position: 'absolute', top: -1, right: 10 }}
+                           onClick={handleClose}
+                        >
+                           <span aria-hidden="true" style={{ fontSize: 33, fontWeight: 1 }}>&times;</span>
+                        </button>
+                     </Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                     <Name />
+                  </Modal.Body>
+
+               </Modal>
+            </div>
       </Container>
     </>
   );
