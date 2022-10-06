@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import Card from "../../../components/Card";
-=======
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import Card from '../../../components/Card'
->>>>>>> bb81ec1 (04.oct)
 import Chart from "react-apexcharts";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Autoplay } from "swiper";
@@ -18,9 +11,7 @@ import Select from "react-select";
 
 import Modal from 'react-bootstrap/Modal';
 
-import Modal from 'react-bootstrap/Modal';
 
-// CSS 
 // CSS
 
 import "../../.././assets/css/dashboard.css";
@@ -63,10 +54,6 @@ import BitcionLogo from '../../../assets/images/Ultrafair/Bitcoin-logo.png'
 import Ellipse from '../../../assets/images/Ultrafair/Ellipse.png'
 import Name from '../../../components/Modals/Wallet_Modals'
 import { BitCoinSVG, WalletSVG } from './dashboardIcons'
-<<<<<<< HEAD
-=======
-
->>>>>>> bb81ec1 (04.oct)
 
 // import mt01 from "../../../assets/images/movie-thumb/01.jpg";
 // import mt04 from "../../../assets/images/movie-thumb/04.jpg";
@@ -95,11 +82,7 @@ const Dashbord = () => {
    const [tablebtn, settablebtn] = useState("")
    const [choice, setChoice] = useState();
    const [btn, setbtn] = useState("")
-<<<<<<< HEAD
- const DashbordCard = [Pic1, Pic2, Pic3];
-=======
-
->>>>>>> bb81ec1 (04.oct)
+   const DashbordCard = [Pic1, Pic2, Pic3];
    const btncolorhandles = (color) => {
       setbtn(color)
       handleShow()
@@ -202,7 +185,6 @@ const Dashbord = () => {
          name: 'Last Month',
          data: [35, 41, 20, 40]
       }],
-<<<<<<< HEAD
    }
    const chart3 = {
       options: {
@@ -245,605 +227,7 @@ const Dashbord = () => {
    return (
       <>
          <Container fluid>
-          
-=======
-   }
-   const chart3 = {
-      options: {
-         chart: {
-            id: "view-chart-02",
-         },
-         colors: ['#e20e02', '#83878a', '#007aff', '#f68a04', '#14e788', '#545e75'],
-         labels: ['Actions', 'Comedy', 'Harror', 'Drama', 'Kids', 'Thrilled'],
-         dataLabels: {
-            enabled: false
-         },
-         stroke: {
-            show: false,
-            width: 0
-         },
-         legend: {
-            show: false,
-            formatter: function (val, opts) {
-               return val + " - " + opts.w.globals.series[opts.seriesIndex]
-            }
-         },
-         responsive: [{
-            breakpoint: 480,
-            options: {
-               chart: {
-                  width: 200
-               },
-               legend: {
-                  position: 'bottom'
-               }
-            }
-         }]
-      },
-      series: [44, 30, 20, 43, 22, 20],
-   }
 
-   const [modalShow, setModalShow] = React.useState(false);
-
-
-   return (
-      <>
-         <Container fluid>
-            <Row >
-               <Col lg="8" xl="12">
-                  <Row xl="20" >
-                     <Col sm="6" lg="6" xl="4">
-                        <Card className="iq-card-block iq-card-stretch iq-card-height">
-                           {/* <Card.Body>
-                             <div className="d-flex align-items-center justify-content-between">
-                                <div className="iq-cart-text text-capitalize">
-                                   <p className="mb-0">
-                                      view
-                                   </p>
-                                </div>
-                                <div className="icon iq-icon-box-top rounded-circle bg-primary">
-                                   <i className="las la-eye"></i>
-                                </div>
-                             </div>
-                             <div className="d-flex align-items-center justify-content-between mt-3">
-                                <h4 className=" mb-0">+24K</h4>
-                                <p className="mb-0 text-primary"><span><i className="fa fa-caret-down mr-2"></i></span>35%</p>
-                             </div>
-                          </Card.Body> */}
-                           <img src={Pic1} />
-                        </Card>
-                     </Col>
-                     <Col sm="6" lg="6" xl="4">
-                        <Card className="iq-card-block iq-card-stretch iq-card-height">
-                           {/* <Card.Body>
-                             <div className="d-flex align-items-center justify-content-between">
-                                <div className="iq-cart-text text-capitalize">
-                                   <p className="mb-0 font-size-14">
-                                      Rated This App
-                                   </p>
-                                </div>
-                                <div className="icon iq-icon-box-top rounded-circle bg-warning">
-                                   <i className="lar la-star"></i>
-                                </div>
-                             </div>
-                             <div className="d-flex align-items-center justify-content-between mt-3">
-                                <h4 className="mb-0">+55K</h4>
-                                <p className="mb-0 text-warning"><span><i className="fa fa-caret-up mr-2"></i></span>50%</p>
-                             </div>
-                          </Card.Body> */}
-                           <img src={Pic2} />
-                        </Card>
-                     </Col>
-                     <Col sm="6" lg="6" xl="4">
-                        <Card className="iq-card-block iq-card-stretch iq-card-height">
-                           {/* <Card.Body>
-                             <div className="d-flex align-items-center justify-content-between">
-                                <div className="iq-cart-text text-capitalize">
-                                   <p className="mb-0 font-size-14">
-                                      Downloaded
-                                   </p>
-                                </div>
-                                <div className="icon iq-icon-box-top rounded-circle bg-info">
-                                   <i className="las la-download"></i>
-                                </div>
-                             </div>
-                             <div className="d-flex align-items-center justify-content-between mt-3">/static/media/dash1.c2e77b8f.png
-                                <h4 className="mb-0">+1M</h4>
-                                <p className="mb-0 text-info"><span><i className="fa fa-caret-up mr-2"></i></span>80%</p>
-                             </div>
-
-                          </Card.Body> */}   <img src={Pic3} />
-
-                        </Card>
-                     </Col>
-                     {/* <Col sm="6" lg="6" xl="3">
-                       <Card className="iq-card-block iq-card-stretch iq-card-height">
-                          <Card.Body>
-                             <div className="d-flex align-items-center justify-content-between">
-                                <div className="iq-cart-text text-uppercase">
-                                   <p className="mb-0 font-size-14">
-                                      Visitors
-                                   </p>
-                                </div>
-                                <div className="icon iq-icon-box-top rounded-circle bg-success">
-                                   <i className="lar la-user"></i>
-                                </div>
-                             </div>
-                             <div className="d-flex align-items-center justify-content-between mt-3">
-                                <h4 className="mb-0">+2M</h4>
-                                <p className="mb-0 text-success"><span><i className="fa fa-caret-up mr-2"></i></span>80%</p>
-                             </div>
-                          </Card.Body>
-                       </Card>
-                    </Col> */}
-                  </Row>
-                  <Row >
-                     <div className="iq-search-bar ml-auto Searchtext1" style={{ width: "100%" }}   >
-                        <Form action="#" className="searchbox Searchtext1" style={{ backgroundRadius: "25px" }} >
-                           <input type="text" className="text search-input TEXTINPUT" style={{ width: "325%", background: "#13212D", borderRadius: "25px", height: "44px" }} placeholder="Search Here..." />
-                           <Link className="search-link" to="#"><i className="ri-search-line"></i></Link>
-                        </Form>
-                     </div>
-                  </Row>
-
-                  <Row style={{ marginLeft: "0px" }} xl="20">
-                     <div className="iq-search-bar Searchit" style={{ background: "#13212D", borderRadius: "30px", width: "70%", marginTop: "3%", marginBottom: "3%", display: "flex", justifyContent: "flex-start" }}   >
-                        <button className='BTN-1' style={{ background: btn === "btn1" ? '#344452' : "#13212D", padding: "10px", borderRadius: "30px", color: "white", border: btn === "btn1" ? "1px solid #11FFBD" : "0px", boxShadow: "none", width: "20%", display: "flex", justifyContent: "space-around", alignSelf: "flex-start", alignItems: "center", marginLeft: "-15px" }} onClick={() => btncolorhandles("btn1")} ><img className='BTNLOGO' src={btn === "btn1" ? ICON1 : Svg1} height="18px" width="18" />Button1</button>
-                        <button className='BTN-1' style={{ background: btn === "btn2" ? '#344452' : "#13212D", padding: "10px", borderRadius: "30px", color: "white", border: btn === "btn2" ? "1px solid  #11FFBD" : "0px", boxShadow: "none", width: "20%", display: "flex", justifyContent: "space-around", alignItems: "center" }} onClick={() => btncolorhandles("btn2")}> <img className='BTNLOGO' src={btn === "btn2" ? Svg2 : ICON2} height="18px" width="18" />Button2</button>
-                        <button className='BTN-1' style={{ background: btn === "btn3" ? '#344452' : "#13212D", padding: "10px", borderRadius: "23px", color: "white", border: btn === "btn3" ? "1px solid  #11FFBD" : "0px", boxShadow: "none", width: "20%", display: "flex", justifyContent: "space-around", alignItems: "center" }} onClick={() => btncolorhandles("btn3")}> <img className='BTNLOGO' src={btn === "btn3" ? Svg3 : ICON3} height="18px" width="18" />Button3</button>
-                        <button className='BTN-1' style={{ background: btn === "btn4" ? '#344452' : "#13212D", padding: "10px", borderRadius: "30px", color: "white", border: btn === "btn4" ? "1px solid  #11FFBD" : "0px", boxShadow: "none", width: "20%", display: "flex", justifyContent: "space-around", alignItems: "center" }} onClick={() => btncolorhandles("btn4")}><img className='BTNLOGO' src={btn === "btn4" ? Svg4 : ICON4} height="18px" width="18" />Button4</button>
-                        <button className='BTN-1' style={{ background: btn === "btn5" ? '#344452' : "#13212D", padding: "10px", borderRadius: "30px", color: "white", border: btn === "btn5" ? "1px solid #11FFBD" : "0px", boxShadow: "none", width: "20%", display: "flex", justifyContent: "space-around", alignItems: "center" }} onClick={() => btncolorhandles("btn5")}><img className='BTNLOGO' src={btn === "btn5" ? Svg5 : ICON5} height="18px" width="15" style={{ filter: "" }} />Button5</button>
-                     </div>
-                  </Row>
-
-
-                  <Card id="slider1" >
-                     <Card.Header className="d-flex justify-content-between align-items-center">
-                        <div>
-                           <h4 className="card-title m-0">Ultrafair Originals</h4>
-                        </div>
-                        <div className="" id="swiper">
-                           <div className="swiper-button swiper-button-prev" style={{ background: "#344452" }}>Previous</div>
-                           <div className="swiper-button swiper-button-next" style={{ background: "#344452" }}>Next</div>
-                        </div>
-                     </Card.Header>
-
-
-                     <Card.Body>
-                        <Swiper
-                           navigation={{
-                              prevEl: '.swiper-button-prev',
-                              nextEl: '.swiper-button-next'
-                           }}
-                           breakpoints={{
-                              320: { slidesPerView: 1 },
-                              550: { slidesPerView: 2 },
-                              991: { slidesPerView: 3 },
-                              1400: { slidesPerView: 4 },
-                           }}
-                           loop={true}
-                           className="list-unstyled row top-rated-item mb-0 iq-rtl-direction"
-                        >
-                           {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
-                             <Card className="mb-0">
-                                <Card.Body className="p-0">
-                                   <div className="iq-thumb">
-                                      <Link to="#">
-                                         <img src={dash01} className="img-fluid w-100 img-border-radius" alt=""/>
-                                      </Link>
-                                   </div>
-                                   <div className="iq-feature-list">
-                                      <h6 className="font-weight-600 mb-0">The Last Breath</h6>
-                                      <p className="mb-0 mt-2">T.v show</p>
-                                      <div className="d-flex align-items-center my-2 iq-ltr-direction">
-                                         <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 134</p>
-                                         <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
-                                      </div>
-                                   </div>
-                                </Card.Body>
-                             </Card>
-                          </SwiperSlide> */}
-                           {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
-                             <Card className="mb-0">
-                                <Card.Body className="p-0">
-                                   <div className="iq-thumb">
-                                      <Link to="#">
-                                         <img src={dash02} className="img-fluid w-100 img-border-radius" alt=""/>
-                                      </Link>
-                                   </div>
-                                   <div className="iq-feature-list">
-                                      <h6 className="font-weight-600 mb-0">Last Night</h6>
-                                      <p className="mb-0 mt-2">Movie</p>
-                                      <div className="d-flex align-items-center my-2 iq-ltr-direction">
-                                         <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 133</p>
-                                         <p className="mb-0 "><i className="las la-download ml-2"></i> 20 k</p>
-                                      </div>
-                                   </div>
-                                </Card.Body>
-                             </Card>
-                          </SwiperSlide> */}
-                           {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
-                             <Card className="mb-0">
-                                <Card.Body className="p-0">
-                                   <div className="iq-thumb">
-                                      <Link to="#">
-                                         <img src={dash03} className="img-fluid w-100 img-border-radius" alt=""/>
-                                      </Link>
-                                   </div>
-                                   <div className="iq-feature-list">
-                                      <h6 className="font-weight-600 mb-0">Jeon Woochie</h6>
-                                      <p className="mb-0 mt-2">Movie</p>
-                                      <div className="d-flex align-items-center my-2 iq-ltr-direction">
-                                         <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 222</p>
-                                         <p className="mb-0 "><i className="las la-download ml-2"></i> 40 k</p>
-                                      </div>
-                                   </div>
-                                </Card.Body>
-                             </Card>
-                          </SwiperSlide>
-                          <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
-                             <Card className="mb-0">
-                                <Card.Body className="p-0">
-                                   <div className="iq-thumb">
-                                      <Link to="#">
-                                         <img src={dash04} className="img-fluid w-100 img-border-radius" alt=""/>
-                                      </Link>
-                                   </div>
-                                   <div className="iq-feature-list">
-                                      <h6 className="font-weight-600 mb-0">Dino Land</h6>
-                                      <p className="mb-0 mt-2">T.v show</p>
-                                      <div className="d-flex align-items-center my-2 iq-ltr-direction">
-                                         <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 122</p>
-                                         <p className="mb-0 "><i className="las la-download ml-2"></i> 25 k</p>
-                                      </div>
-                                   </div>
-                                </Card.Body>
-                             </Card>
-                          </SwiperSlide> */}
-                           {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
-                             <Card className="mb-0">
-                                <Card.Body className="p-0">
-                                   <div className="iq-thumb">
-                                      <Link to="#">
-                                         <img src={dash05} className="img-fluid w-100 img-border-radius" alt=""/>
-                                      </Link>
-                                   </div>
-                                   <div className="iq-feature-list">
-                                      <h6 className="font-weight-600 mb-0">Last Race</h6>
-                                      <p className="mb-0 mt-2">T.v show</p>
-                                      <div className="d-flex align-items-center my-2 iq-ltr-direction">
-                                         <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 144</p>
-                                         <p className="mb-0 "><i className="las la-download ml-2"></i> 35 k</p>
-                                      </div>
-                                   </div>
-                                </Card.Body>
-                             </Card>
-                          </SwiperSlide> */}
-                           <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
-
-
-                              <div className="iq-thumb" >
-                                 <Link to="#">
-                                    <img src={Pic1} className="img-fluid  img-border-radius" width="200vw" height="400vh" alt="" />
-                                 </Link>
-                              </div>
-                              {/* <div className="iq-feature-list">
-                                      <h6 className="font-weight-600 mb-0">Opend Dead Shot</h6>
-                                      <p className="mb-0 mt-2">T.v show</p>
-                                      <div className="d-flex align-items-center my-2 iq-ltr-direction">
-                                         <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 134</p>
-                                         <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
-                                      </div>
-                                   </div> */}
-
-
-                           </SwiperSlide>
-                           <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
-
-
-                              <div className="iq-thumb" >
-                                 <Link to="#">
-                                    <img src={Pic2} className="img-fluid  img-border-radius" width="200vw" height="400vh" alt="" />
-                                 </Link>
-                              </div>
-                              {/* <div className="iq-feature-list">
-                                <h6 className="font-weight-600 mb-0">Opend Dead Shot</h6>
-                                <p className="mb-0 mt-2">T.v show</p>
-                                <div className="d-flex align-items-center my-2 iq-ltr-direction">
-                                   <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 134</p>
-                                   <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
-                                </div>
-                             </div> */}
-
-
-                           </SwiperSlide>
-                           <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
-
-
-                              <div className="iq-thumb" >
-                                 <Link to="#">
-                                    <img src={Pic3} className="img-fluid  img-border-radius" width="200vw" height="400vh" alt="" />
-                                 </Link>
-                              </div>
-                              {/* <div className="iq-feature-list">
-                                <h6 className="font-weight-600 mb-0">Opend Dead Shot</h6>
-                                <p className="mb-0 mt-2">T.v show</p>
-                                <div className="d-flex align-items-center my-2 iq-ltr-direction">
-                                   <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 134</p>
-                                   <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
-                                </div>
-                             </div> */}
-
-
-                           </SwiperSlide>
-
-                        </Swiper>
-                     </Card.Body>
-                  </Card>
-
-
-                  <Card id="slider1" >
-                     <Card.Header className="d-flex justify-content-between align-items-center">
-                        <div>
-                           <h4 className="card-title m-0">Slots</h4>
-                        </div>
-
-                        {/* <div className="BTTTN  right  " style={{background:"#344452"}}><i class="ri-arrow-left-line"></i></div>
-                              <div className="BTTTN  left  " style={{background:"#344452"}}><i class="ri-arrow-right-line"></i></div> */}
-                        <div className="" id="swiper">
-                           <div className="swiper-button right " style={{ background: "#344452", lineHeight: 1.5 }}>Previous</div>
-                           <div className="swiper-button left " style={{ background: "#344452", lineHeight: 1.5 }}>Next</div>
-
-                        </div>
-                     </Card.Header>
-                     <Card.Body>
-                        <Swiper
-                           navigation={{
-                              prevEl: '.right',
-                              nextEl: '.left'
-                           }}
-                           breakpoints={{
-                              320: { slidesPerView: 1 },
-                              550: { slidesPerView: 2 },
-                              991: { slidesPerView: 3 },
-                              1400: { slidesPerView: 4 },
-                           }}
-                           loop={true}
-                           className="list-unstyled row top-rated-item mb-0 iq-rtl-direction"
-                        >
-                           {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
-                             <Card className="mb-0">
-                                <Card.Body className="p-0">
-                                   <div className="iq-thumb">
-                                      <Link to="#">
-                                         <img src={dash01} className="img-fluid w-100 img-border-radius" alt=""/>
-                                      </Link>
-                                   </div>
-                                   <div className="iq-feature-list">
-                                      <h6 className="font-weight-600 mb-0">The Last Breath</h6>
-                                      <p className="mb-0 mt-2">T.v show</p>
-                                      <div className="d-flex align-items-center my-2 iq-ltr-direction">
-                                         <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 134</p>
-                                         <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
-                                      </div>
-                                   </div>
-                                </Card.Body>
-                             </Card>
-                          </SwiperSlide> */}
-                           {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
-                             <Card className="mb-0">
-                                <Card.Body className="p-0">
-                                   <div className="iq-thumb">
-                                      <Link to="#">
-                                         <img src={dash02} className="img-fluid w-100 img-border-radius" alt=""/>
-                                      </Link>
-                                   </div>
-                                   <div className="iq-feature-list">
-                                      <h6 className="font-weight-600 mb-0">Last Night</h6>
-                                      <p className="mb-0 mt-2">Movie</p>
-                                      <div className="d-flex align-items-center my-2 iq-ltr-direction">
-                                         <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 133</p>
-                                         <p className="mb-0 "><i className="las la-download ml-2"></i> 20 k</p>
-                                      </div>
-                                   </div>
-                                </Card.Body>
-                             </Card>
-                          </SwiperSlide> */}
-                           {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
-                             <Card className="mb-0">
-                                <Card.Body className="p-0">
-                                   <div className="iq-thumb">
-                                      <Link to="#">
-                                         <img src={dash03} className="img-fluid w-100 img-border-radius" alt=""/>
-                                      </Link>
-                                   </div>
-                                   <div className="iq-feature-list">
-                                      <h6 className="font-weight-600 mb-0">Jeon Woochie</h6>
-                                      <p className="mb-0 mt-2">Movie</p>
-                                      <div className="d-flex align-items-center my-2 iq-ltr-direction">
-                                         <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 222</p>
-                                         <p className="mb-0 "><i className="las la-download ml-2"></i> 40 k</p>
-                                      </div>
-                                   </div>
-                                </Card.Body>
-                             </Card>
-                          </SwiperSlide>
-                          <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
-                             <Card className="mb-0">
-                                <Card.Body className="p-0">
-                                   <div className="iq-thumb">
-                                      <Link to="#">
-                                         <img src={dash04} className="img-fluid w-100 img-border-radius" alt=""/>
-                                      </Link>
-                                   </div>
-                                   <div className="iq-feature-list">
-                                      <h6 className="font-weight-600 mb-0">Dino Land</h6>
-                                      <p className="mb-0 mt-2">T.v show</p>
-                                      <div className="d-flex align-items-center my-2 iq-ltr-direction">
-                                         <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 122</p>
-                                         <p className="mb-0 "><i className="las la-download ml-2"></i> 25 k</p>
-                                      </div>
-                                   </div>
-                                </Card.Body>
-                             </Card>
-                          </SwiperSlide> */}
-                           {/* <SwiperSlide className="col-sm-6 col-lg-4 col-xl-3 iq-rated-box">
-                             <Card className="mb-0">
-                                <Card.Body className="p-0">
-                                   <div className="iq-thumb">
-                                      <Link to="#">
-                                         <img src={dash05} className="img-fluid w-100 img-border-radius" alt=""/>
-                                      </Link>
-                                   </div>
-                                   <div className="iq-feature-list">
-                                      <h6 className="font-weight-600 mb-0">Last Race</h6>
-                                      <p className="mb-0 mt-2">T.v show</p>
-                                      <div className="d-flex align-items-center my-2 iq-ltr-direction">
-                                         <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 144</p>
-                                         <p className="mb-0 "><i className="las la-download ml-2"></i> 35 k</p>
-                                      </div>
-                                   </div>
-                                </Card.Body>
-                             </Card>
-                          </SwiperSlide> */}
-                           <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
-
-
-                              <div className="iq-thumb" >
-                                 <Link to="#">
-                                    <img src={Showimg1} className="img-fluid  img-border-radius" width="150vw" height="300vh" alt="" />
-                                 </Link>
-                              </div>
-                              {/* <div className="iq-feature-list">
-                                      <h6 className="font-weight-600 mb-0">Opend Dead Shot</h6>
-                                      <p className="mb-0 mt-2">T.v show</p>
-                                      <div className="d-flex align-items-center my-2 iq-ltr-direction">
-                                         <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 134</p>
-                                         <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
-                                      </div>
-                                   </div> */}
-
-
-                           </SwiperSlide>
-                           <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
-
-
-                              <div className="iq-thumb" >
-                                 <Link to="#">
-                                    <img src={Showimg2} className="img-fluid  img-border-radius" width="150vw" height="300vh" alt="" />
-                                 </Link>
-                              </div>
-                              {/* <div className="iq-feature-list">
-                                <h6 className="font-weight-600 mb-0">Opend Dead Shot</h6>
-                                <p className="mb-0 mt-2">T.v show</p>
-                                <div className="d-flex align-items-center my-2 iq-ltr-direction">
-                                   <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 134</p>
-                                   <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
-                                </div>
-                             </div> */}
-
-
-                           </SwiperSlide>
-                           <SwiperSlide className="col-sm-6 col-lg-2 col-xl-2 iq-rated-box">
-
-
-                              <div className="iq-thumb" >
-                                 <Link to="#">
-                                    <img src={Showimg3} className="img-fluid  img-border-radius" width="150vw" height="300vh" alt="" />
-                                 </Link>
-                              </div>
-                              {/* <div className="iq-feature-list">
-                                <h6 className="font-weight-600 mb-0">Opend Dead Shot</h6>
-                                <p className="mb-0 mt-2">T.v show</p>
-                                <div className="d-flex align-items-center my-2 iq-ltr-direction">
-                                   <p className="mb-0 mr-2"><i className="lar la-eye mr-1"></i> 134</p>
-                                   <p className="mb-0 "><i className="las la-download ml-2"></i> 30 k</p>
-                                </div>
-                             </div> */}
-
-
-                           </SwiperSlide>
-
-                        </Swiper>
-                     </Card.Body>
-                  </Card>
-               </Col>
-
-
-
-
-               {/* <Col lg="4">
-                 <Card className="iq-card-block iq-card-stretch iq-card-height">
-                    <div className="iq-card-header">
-                       <Card.Header.Title>
-                          <h4 className="card-title text-center">User's Of Product</h4>
-                       </Card.Header.Title>
-                    </div>
-                    <Card.Body className="pb-0">
-                        <Chart  id="view-chart-01" options={chart1.options} series={chart1.series} type="donut" width="250"  />
-                       <Row className="mt-1">
-                          <Col sm="6" md="3" lg="6" className="iq-user-list">
-                             <Card>
-                                <Card.Body>
-                                   <div className="media align-items-center">
-                                      <div className="iq-user-box bg-primary"></div>
-                                      <div className="media-body text-white">
-                                         <p className="mb-0 font-size-14 line-height">New <br/>
-                                            Customer
-                                         </p>
-                                      </div>
-                                   </div>
-                                </Card.Body>
-                             </Card>
-                          </Col>
-                          <Col sm="6" md="3" lg="6" className="iq-user-list">
-                             <Card>
-                                <Card.Body>
-                                   <div className="media align-items-center">
-                                      <div className="iq-user-box bg-warning"></div>
-                                      <div className="media-body text-white">
-                                         <p className="mb-0 font-size-14 line-height">Exsisting <br/>
-                                            Subscriber's
-                                         </p>
-                                      </div>
-                                   </div>
-                                </Card.Body>
-                             </Card>
-                          </Col>
-                          <Col sm="6" md="3" lg="6" className="iq-user-list">
-                             <Card>
-                                <Card.Body>
-                                   <div className="media align-items-center">
-                                      <div className="iq-user-box bg-info"></div>
-                                      <div className="media-body text-white">
-                                         <p className="mb-0 font-size-14 line-height">Daily<br/>
-                                            Visitor's
-                                         </p>
-                                      </div>
-                                   </div>
-                                </Card.Body>
-                             </Card>
-                          </Col>
-                          <Col sm="6" md="3" lg="6" className="iq-user-list">
-                             <Card>
-                                <Card.Body>
-                                   <div className="media align-items-center">
-                                      <div className="iq-user-box bg-danger"></div>
-                                      <div className="media-body text-white">
-                                         <p className="mb-0 font-size-14 line-height">Extented <br/>
-                                            Subscriber's
-                                         </p>
-                                      </div>
-                                   </div>
-                                </Card.Body>
-                             </Card>
-                          </Col>
-                       </Row>
-                    </Card.Body>
-                 </Card>
-              </Col> */}
-            </Row>
->>>>>>> bb81ec1 (04.oct)
             {/* <Row>
               <Col sm="12" lg="4">
                  <Card className="iq-card-block iq-card-stretch iq-card-height">
@@ -1088,8 +472,7 @@ const Dashbord = () => {
               </Col>
            </Row> */}
             <Row>
-<<<<<<< HEAD
-  {/* // const Navigation = () => {
+               {/* // const Navigation = () => {
   const [tablebtn, settablebtn] = useState("");
   const [choice, setChoice] = useState();
   const [btn, setbtn] = useState("");
@@ -1250,213 +633,211 @@ const Dashbord = () => {
     },
     series: [44, 30, 20, 43, 22, 20],
   }; */}
-  {/* return ( */}
-    <>
-      <Container fluid>
-        <Row>
-          <Col lg="8" xl="12">
-            <Row xl="20" className="DashborCards">
-              {DashbordCard.map((e, i) => {
-                return (
-                  <Col sm="6" lg="6" xl="4" key={i}>
-                    <Card className="iq-card-block iq-card-stretch iq-card-height">
-                      <img src={e} style={{ borderRadius: "10px" }} />
-                    </Card>
-                  </Col>
-                );
-              })}
-            </Row>
-            <Row>
-              <SearchBar hg="5%" wd="325%" />
-            </Row>
+               {/* return ( */}
+               <>
+                  <Container fluid>
+                     <Row>
+                        <Col lg="8" xl="12">
+                           <Row xl="20" className="DashborCards">
+                              {DashbordCard.map((e, i) => {
+                                 return (
+                                    <Col sm="6" lg="6" xl="4" key={i}>
+                                       <Card className="iq-card-block iq-card-stretch iq-card-height">
+                                          <img src={e} style={{ borderRadius: "10px" }} />
+                                       </Card>
+                                    </Col>
+                                 );
+                              })}
+                           </Row>
+                           <Row>
+                              <SearchBar hg="5%" wd="325%" />
+                           </Row>
 
-            <Row xl="20">
-              <div
-                className="iq-search-bar Searchit"
-                style={{
-                  background: "#13212D",
-                  borderRadius: "30px",
-                  width: "67%",
-                  marginTop: "3%",
-                  marginBottom: "3%",
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  height: "14%",
-                  marginLeft:"14px"
-                }}
-              >
-                <button
-                  className="BTN-1 bbt"
-                  style={{
-                    background: btn === "btn1" ? "#344452" : "#13212D",
-                    padding: "10px",
-                    borderRadius: "30px",
-                    color: "white",
-                    border: btn === "btn1" ? "1px solid #11FFBD" : "0px",
-                    boxShadow: "none",
-                    width: "20%",
-                    display: "flex",
-                    justifyContent: "space-around",
-                    alignSelf: "flex-start",
-                    alignItems: "center",
-                    marginLeft: "-12px",
-                  }}
-                  onClick={() => btncolorhandles("btn1")}
-                >
-                  <img
-                    className="BTNLOGO"
-                    src={btn === "btn1" ? ICON1 : Svg1}
-                    height="18px"
-                    width="18"
-                  />
-                 Lobby
-                </button>
-                <button
-                  className="BTN-1"
-                  style={{
-                    background: btn === "btn2" ? "#344452" : "#13212D",
-                    padding: "10px",
-                    borderRadius: "30px",
-                    color: "white",
-                    border: btn === "btn2" ? "1px solid  #11FFBD" : "0px",
-                    boxShadow: "none",
-                    width: "20%",
-                    display: "flex",
-                    justifyContent: "space-around",
-                    alignItems: "center",
-                    height: "90%",
-                    alignSelf: "center",
-                  }}
-                  onClick={() => btncolorhandles("btn2")}
-                >
-                  {" "}
-                  <img
-                    className="BTNLOGO"
-                    src={btn === "btn2" ? Svg2 : ICON2}
-                    height="18px"
-                    width="18"
-                  />
-                  <span>Live Casino</span>
-                </button>
-                <button
-                  className="BTN-1"
-                  style={{
-                    background: btn === "btn3" ? "#344452" : "#13212D",
-                    padding: "10px",
-                    borderRadius: "23px",
-                    color: "white",
-                    border: btn === "btn3" ? "1px solid  #11FFBD" : "0px",
-                    boxShadow: "none",
-                    width: "22%",
-                    display: "flex",
-                    justifyContent: "space-around",
-                    alignItems: "center",
-                    height: "90%",
-                    alignSelf: "center",
-                  }}
-                  onClick={() => btncolorhandles("btn3")}
-                >
-                  {" "}
-                  <img
-                    className="BTNLOGO"
-                    src={btn === "btn3" ? Svg3 : ICON3}
-                    height="18px"
-                    width="18"
-                  />
-                  Featured slots
-                </button>
-                <button
-                  className="BTN-1"
-                  style={{
-                    background: btn === "btn4" ? "#344452" : "#13212D",
-                    padding: "10px",
-                    borderRadius: "30px",
-                    color: "white",
-                    border: btn === "btn4" ? "1px solid  #11FFBD" : "0px",
-                    boxShadow: "none",
-                    width: "20%",
-                    display: "flex",
-                    justifyContent: "space-around",
-                    alignItems: "center",
-                    height: "90%",
-                    alignSelf: "center",
-                  }}
-                  onClick={() => btncolorhandles("btn4")}
-                >
-                  <img
-                    className="BTNLOGO"
-                    src={btn === "btn4" ? Svg4 : ICON4}
-                    height="18px"
-                    width="18"
-                  />
-                  Live Shows
-                </button>
-                <button
-                  className="BTN-1"
-                  style={{
-                    background: btn === "btn5" ? "#344452" : "#13212D",
-                    padding: "10px",
-                    borderRadius: "30px",
-                    color: "white",
-                    border: btn === "btn5" ? "1px solid #11FFBD" : "0px",
-                    boxShadow: "none",
-                    width: "23%",
-                    display: "flex",
-                    justifyContent: "space-around",
-                    alignItems: "center",
-                    height: "90%",
-                    alignSelf: "center",
-                    marginRight: "-12px",
-                  }}
-                  onClick={() => btncolorhandles("btn5")}
-                >
-                  <img
-                    className="BTNLOGO"
-                    src={btn === "btn5" ? Svg5 : ICON5}
-                    height="18px"
-                    width="15"
-                  />
-                  Ultrafair Originals
-                </button>
-              </div>
-            </Row>
+                           <Row xl="20">
+                              <div
+                                 className="iq-search-bar Searchit"
+                                 style={{
+                                    background: "#13212D",
+                                    borderRadius: "30px",
+                                    width: "67%",
+                                    marginTop: "3%",
+                                    marginBottom: "3%",
+                                    display: "flex",
+                                    justifyContent: "flex-start",
+                                    height: "14%",
+                                    marginLeft: "14px"
+                                 }}
+                              >
+                                 <button
+                                    className="BTN-1 bbt"
+                                    style={{
+                                       background: btn === "btn1" ? "#344452" : "#13212D",
+                                       padding: "10px",
+                                       borderRadius: "30px",
+                                       color: "white",
+                                       border: btn === "btn1" ? "1px solid #11FFBD" : "0px",
+                                       boxShadow: "none",
+                                       width: "20%",
+                                       display: "flex",
+                                       justifyContent: "space-around",
+                                       alignSelf: "flex-start",
+                                       alignItems: "center",
+                                       marginLeft: "-12px",
+                                    }}
+                                    onClick={() => btncolorhandles("btn1")}
+                                 >
+                                    <img
+                                       className="BTNLOGO"
+                                       src={btn === "btn1" ? ICON1 : Svg1}
+                                       height="18px"
+                                       width="18"
+                                    />
+                                    Lobby
+                                 </button>
+                                 <button
+                                    className="BTN-1"
+                                    style={{
+                                       background: btn === "btn2" ? "#344452" : "#13212D",
+                                       padding: "10px",
+                                       borderRadius: "30px",
+                                       color: "white",
+                                       border: btn === "btn2" ? "1px solid  #11FFBD" : "0px",
+                                       boxShadow: "none",
+                                       width: "20%",
+                                       display: "flex",
+                                       justifyContent: "space-around",
+                                       alignItems: "center",
+                                       height: "90%",
+                                       alignSelf: "center",
+                                    }}
+                                    onClick={() => btncolorhandles("btn2")}
+                                 >
+                                    {" "}
+                                    <img
+                                       className="BTNLOGO"
+                                       src={btn === "btn2" ? Svg2 : ICON2}
+                                       height="18px"
+                                       width="18"
+                                    />
+                                    <span>Live Casino</span>
+                                 </button>
+                                 <button
+                                    className="BTN-1"
+                                    style={{
+                                       background: btn === "btn3" ? "#344452" : "#13212D",
+                                       padding: "10px",
+                                       borderRadius: "23px",
+                                       color: "white",
+                                       border: btn === "btn3" ? "1px solid  #11FFBD" : "0px",
+                                       boxShadow: "none",
+                                       width: "22%",
+                                       display: "flex",
+                                       justifyContent: "space-around",
+                                       alignItems: "center",
+                                       height: "90%",
+                                       alignSelf: "center",
+                                    }}
+                                    onClick={() => btncolorhandles("btn3")}
+                                 >
+                                    {" "}
+                                    <img
+                                       className="BTNLOGO"
+                                       src={btn === "btn3" ? Svg3 : ICON3}
+                                       height="18px"
+                                       width="18"
+                                    />
+                                    Featured slots
+                                 </button>
+                                 <button
+                                    className="BTN-1"
+                                    style={{
+                                       background: btn === "btn4" ? "#344452" : "#13212D",
+                                       padding: "10px",
+                                       borderRadius: "30px",
+                                       color: "white",
+                                       border: btn === "btn4" ? "1px solid  #11FFBD" : "0px",
+                                       boxShadow: "none",
+                                       width: "20%",
+                                       display: "flex",
+                                       justifyContent: "space-around",
+                                       alignItems: "center",
+                                       height: "90%",
+                                       alignSelf: "center",
+                                    }}
+                                    onClick={() => btncolorhandles("btn4")}
+                                 >
+                                    <img
+                                       className="BTNLOGO"
+                                       src={btn === "btn4" ? Svg4 : ICON4}
+                                       height="18px"
+                                       width="18"
+                                    />
+                                    Live Shows
+                                 </button>
+                                 <button
+                                    className="BTN-1"
+                                    style={{
+                                       background: btn === "btn5" ? "#344452" : "#13212D",
+                                       padding: "10px",
+                                       borderRadius: "30px",
+                                       color: "white",
+                                       border: btn === "btn5" ? "1px solid #11FFBD" : "0px",
+                                       boxShadow: "none",
+                                       width: "23%",
+                                       display: "flex",
+                                       justifyContent: "space-around",
+                                       alignItems: "center",
+                                       height: "90%",
+                                       alignSelf: "center",
+                                       marginRight: "-12px",
+                                    }}
+                                    onClick={() => btncolorhandles("btn5")}
+                                 >
+                                    <img
+                                       className="BTNLOGO"
+                                       src={btn === "btn5" ? Svg5 : ICON5}
+                                       height="18px"
+                                       width="15"
+                                    />
+                                    Ultrafair Originals
+                                 </button>
+                              </div>
+                           </Row>
 
-            <Customslider
-              classnm="testclass11"
-              classnm2="testclass12"
-              title="Ultrafair Origianls"
-            />
-            <Customslider
-              classnm="testclass31"
-              classnm2="testclass32"
-              title="Slots"
-            />
-            <CardSwiper
-              classnm="testclass21"
-              classnm1="testclass22"
-              title="Providers"
-            />
-            <Customslider
-              classnm="testclass41"
-              classnm2="testclass42"
-              title="Live Casino"
-            />
-            <Customslider
-              classnm="testclass51"
-              classnm2="testclass52"
-              title="Table Games"
-            />
-            <Customslider
-              classnm="testclass54"
-              classnm2="testclass53"
-              title="New Releases"
-            />
-          </Col>
-        </Row>
+                           <Customslider
+                              classnm="testclass11"
+                              classnm2="testclass12"
+                              title="Ultrafair Origianls"
+                           />
+                           <Customslider
+                              classnm="testclass31"
+                              classnm2="testclass32"
+                              title="Slots"
+                           />
+                           <CardSwiper
+                              classnm="testclass21"
+                              classnm1="testclass22"
+                              title="Providers"
+                           />
+                           <Customslider
+                              classnm="testclass41"
+                              classnm2="testclass42"
+                              title="Live Casino"
+                           />
+                           <Customslider
+                              classnm="testclass51"
+                              classnm2="testclass52"
+                              title="Table Games"
+                           />
+                           <Customslider
+                              classnm="testclass54"
+                              classnm2="testclass53"
+                              title="New Releases"
+                           />
+                        </Col>
+                     </Row>
 
-        {/* <Row>
-=======
->>>>>>> bb81ec1 (04.oct)
+                     {/* <Row>
                <Col sm="12">
                   <Card>
                      <Row>
@@ -1671,19 +1052,45 @@ const Dashbord = () => {
         onHide={() => setModalShow(false)}
       /> */}
 
-         </Container>
-      </>
-<<<<<<< HEAD
-   
+                  </Container>
+               </>
 
-            </Row> 
-      </Container>
-    </>
-  );
+
+            </Row>
+
+            <Modal show={show} onHide={handleClose} size="lg"
+               aria-labelledby="contained-modal-title-vcenter"
+               centered
+               className="wallet-modal'"
+
+            >
+               <Modal.Header style={{ border: 'none' }}>
+                  <Modal.Title>
+                     <div style={{ marginLeft: 10 }}>
+                        <WalletSVG />
+                        <span style={{ fontSize: 15, color: "white", paddingLeft: 7 }}>Wallet</span>
+                     </div>
+                     <button
+                        type="button"
+                        class="close"
+                        aria-label="Close"
+                        style={{ color: "white", position: 'absolute', top: -1, right: 10 }}
+                        onClick={handleClose}
+                     >
+                        <span aria-hidden="true" style={{ fontSize: 33, fontWeight: 1 }}>&times;</span>
+                     </button>
+                  </Modal.Title>
+               </Modal.Header>
+               <Modal.Body>
+                  <Name />
+               </Modal.Body>
+
+            </Modal>
+
+         </Container>
+
+      </>
+   );
 };
-=======
-   )
-}
->>>>>>> bb81ec1 (04.oct)
 
 export default Dashbord;

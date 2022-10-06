@@ -508,6 +508,16 @@ mark {
 	height: auto;
 	width: 95%
 }
+.img-fluid1 {
+	max-width: 100%;
+	height: auto;
+	width: 10%
+}
+.img-fluid2 {
+	max-width: 100%;
+	height: auto;
+	width: 82%
+}
 
 .img-thumbnail {
 	padding: .25rem;

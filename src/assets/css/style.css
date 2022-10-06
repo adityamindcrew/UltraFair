@@ -615,30 +615,7 @@ Sign In
   border-radius: 30px;
 }
 
-.wallet-modal {
-  /* max-width: auto; 
-  
-  width: 28vw;
-  max-height: fit-content !important;
-  border-radius: 10px; */
-  position: relative;
-  background: #0d4a78;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  padding: 20px 25px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /* display: block; */
-  /* margin: 25px auto; */
-  max-width: 26vw;
 
-  width: 90% !important;
-  max-height: fit-content !important;
-  border-radius: 10px;
-}
 
 .ammount-wallet {
   /* background-color: rgba(0.07 0.13 0.18 1.0); */
@@ -672,6 +649,7 @@ Sign In
   box-shadow: none;
   border: 1px solid var(--iq-primary);
 }
+
 
 ::placeholder {
   /* / Chrome, Firefox, Opera, Safari 10.1+ / */
@@ -1066,12 +1044,8 @@ body.sidebar-main .iq-sidebar .iq-menu li a[aria-expanded="false"].collapsed {
   -o-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s;
 }
-<<<<<<< HEAD
-/* .iq-sidebar-menu .iq-menu li.active > a::before {
-=======
 
 .iq-sidebar-menu .iq-menu li.active>a::before {
->>>>>>> bb81ec1 (04.oct)
   opacity: 1;
   height: 75%;
 } */
@@ -1944,7 +1918,7 @@ div#lottie-fullscreen svg path {
   margin-bottom: "3%";
   display: "flex";
   justify-content: "center" */
-    margin: 0vw 5vw;
+     margin: 0vw 3vw; 
 }
 
 .iq-navbar-logo {
@@ -5837,11 +5811,39 @@ h6 span {
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /* display: block; */
   /* margin: 25px auto; */
-  max-width: 26vw;
+  max-width: auto;
 
   width: 90% !important;
   max-height: fit-content !important;
   border-radius: 10px;
 }
 
+.rc-anchor-alert {
+display: none !important;
+}
+.wallet-address-deposit{
+  display: flex;
+  background-color: #344452;;
+  width:100%;
+  margin-bottom: 20px;
+  border-radius: 4px;
+ 
+
+}
+.wallet-link{
+  width:80%;
+ 
+  
+}
+.wallet-icons-1{
+  width: 10%;
+}
+.refresh-icon{
+   height: 10px;
+   width :10px; 
+}
+.wallet-icons-2{
+  width: 10%;
+  
+}
 .textclass {}
