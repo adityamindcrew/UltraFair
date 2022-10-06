@@ -221,7 +221,7 @@ const Dashbord = () => {
     <>
       <Container fluid>
         <Row>
-          <Col lg="8" xl="12">
+          <Col lg="" xl="12" className="Fullcontainer">
             <Row xl="20" className="DashborCards">
               {DashbordCard.map((e, i) => {
                 return (

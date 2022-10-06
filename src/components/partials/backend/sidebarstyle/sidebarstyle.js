@@ -74,9 +74,9 @@ const SidebarStyle = (props) => {
             <div className="iq-sidebar">
             <div className="iq-sidebar-logo d-flex justify-content-between">
                     <Link to="/" className="header-logo ml-2">
-                    <img src={logoicon} className="img-fluid rounded-normal" height="20px" width="20px" alt=""/>
+                    <img src={logoicon} className="img-fluid1 rounded-normal" height="20px" width="20px" alt=""/>
                     <div className="logo-title">
-                        <span className="text-primary text-uppercase"><img src={logotext} className="img-fluid rounded-normal"  alt=""/></span>
+                        <span className="text-primary text-uppercase"><img src={logotext} className="img-fluid1 rounded-normal"  alt=""/></span>
                     </div>
                     </Link>
                     <div className="iq-menu-bt-sidebar">

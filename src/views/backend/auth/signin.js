@@ -9,6 +9,7 @@ import Google from "../../../assets/images/social/google.png";
 import FB from "../../../assets/images/social/facebook.png";
 import Line from "../../../assets/images/social/line.png";
 import Chat from "../../../assets/images/social/chat.png";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const mapStateToProps = (state) => {
   return {
@@ -29,24 +30,34 @@ const SignIn = (props) => {
 
   useEffect(() => {
     const rtlMode = sessionStorage.getItem("rtl-mode");
+   
     if (rtlMode === null) {
       props.rtlModeAction(props.rtlMode);
     } else {
       props.rtlModeAction(rtlMode);
+     
     }
   });
 
   let history = useHistory();
 
-  const registerHandler = () => {
+  const[btncolor, setBtncolor] = useState('loginButton')
+
+  const registerHandler = (color) => {
     props.showModal(true);
+    setBtncolor(color)
   };
-  const loginHandler = () => {
+  const loginHandler = (color) => {
     props.showModal(false);
+    setBtncolor(color)
   };
   const toggleButton = () => {
     setShow((prevState) => !prevState);
   };
+
+  function onChange(value) {
+    console.log("Captcha value:", value);
+  }
 
   return (
     <>
@@ -94,27 +105,27 @@ const SignIn = (props) => {
           </ul>
         </div>
       </div> */}
-      <div className="sign-in-page">
+      <div className="sign-in-page" style={{borderRadius: 20}}>
         {/* <section className="sign-in-page">
           <Container>
             <Row className="justify-content-center align-items-center height-self-center">
               <Col lg="5" md="12" className="align-self-center"> */}
-        <div className="sign-user_card ">
+        <div className="sign-user_card" style={{borderRadius: 20}}>
           <button
             type="button"
             class="close"
             aria-label="Close"
-            style={{ color: "white", fontSize: "20px" }}
+            style={{ color: "white", position:'relative', top:-15, left:3 }}
             onClick={() => {
               console.log("Hellow!");
               props.close(false);
             }}
           >
-            <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true" style={{fontSize:33, fontWeight:1}}>&times;</span>
           </button>
           <div className="sign-in-page-data">
             <div className="sign-in-from w-100 m-auto">
-              <Form className="mt-4" action="">
+              <Form className="mt-2" action="">
                 <div
                   style={{
                     display: "flex",
@@ -125,15 +136,18 @@ const SignIn = (props) => {
                   <div class="btn-group registerToggleOuter">
                     <button
                       type="button"
-                      class="btn btn-secondary registerToggle"
-                      onClick={registerHandler}
+                      class="btn btn-secondary registerToggle" 
+                      onClick={()=>{registerHandler('registerButton')}}
+                      //style={{borderColor: btncolor=='registerButton'?'#344452':'rgba 0.07, 0.13, 0.18, 1.0' }}
                     >
                       Register
                     </button>
                     <button
                       type="button"
-                      class="btn btn-secondary registerToggle"
-                      onClick={loginHandler}
+                      class="btn btn-secondary registerToggle selected text-center"
+                      onClick={() => {loginHandler('loginButton')}}
+                      // style={{backgroundColor: btncolor=='loginButton'?'#344452':'rgba 0.07, 0.13, 0.18, 1.0'}}
+
                     >
                       Sign In
                     </button>
@@ -152,6 +166,7 @@ const SignIn = (props) => {
                     placeholder=""
                     autoComplete="off"
                     required
+                    style={{ width: '100%' }}
                   />
                 </Form.Group>
                 <Form.Group>
@@ -167,6 +182,7 @@ const SignIn = (props) => {
                       id="exampleInputPassword2"
                       placeholder=""
                       required
+                      style={{ width: '100%' }}
                     />
                     <button
                       type="button"
@@ -177,6 +193,16 @@ const SignIn = (props) => {
                     </button>
                   </div>
                 </Form.Group>
+
+                <div className="reCaptcha container">
+                  <ReCAPTCHA
+                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                    onChange={onChange}
+                    style={{ display:'flex', justifyContent:'center'}}
+                   
+                  />
+                </div>
+
                 <br />
                 <div className="sign-info">
                   <Button
@@ -185,7 +211,7 @@ const SignIn = (props) => {
                     variant="btn btn-primary"
                     style={{
                       color: "black",
-                      fontWeight: "bold",
+                      
                     }}
                     className="btn1"
                   >
@@ -227,7 +253,7 @@ const SignIn = (props) => {
             <div className="cardSocialOut">
               <Card className="cardSocialIn">
                 {" "}
-                <img src={FB} className="socialImage" />
+                <img src={FB} className="socialImage-f" />
               </Card>
               <Card className="cardSocialIn">
                 <img src={Google} className="socialImage" />
@@ -252,7 +278,7 @@ const SignIn = (props) => {
               Forgot Password
             </p>
             <p className="privacyPolicy">
-              This site is protected by hCaptcha and the hCaptcha Privacy Policy
+              This site is protected by reCaptcha and the reCaptcha Privacy Policy
               and Terms of Service apply.
             </p>
           </div>
