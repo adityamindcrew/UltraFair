@@ -29,12 +29,14 @@ function SearchBar(wd) {
     //     </Link>
     //   </Form>
     // </div>
-    <div className="iq-search-bar ml-auto Searchtext1" style={{width:"100%",marginTop:"2%"}}   >
+
+      <div className="iq-search-bar ml-auto Searchtext1" style={{width:"100%",marginTop:"2%"}}   >
     <Form action="#" className="searchbox Searchtext1" style={{backgroundRadius:"25px"}} >
         <input type="text" className="text search-input TEXTINPUT" style={{width:"399%",background:"#13212D",borderRadius:"25px",height:"44px",}} placeholder="Search your game"/>
         <Link className="search-link" to="#"><i className="ri-search-line" style={{color:"#5B6F84",}}></i></Link>
     </Form>
 </div>
+ 
   );
 }
 

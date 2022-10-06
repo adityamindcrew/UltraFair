@@ -62,7 +62,7 @@ function CardSwiper({classnm,classnm1}) {
             991: { slidesPerView: 3 },
             1400: { slidesPerView: 4 },
           }}
-          loop={true}
+          // loop={true}
           className="list-unstyled row top-rated-item mb-0 iq-rtl-direction"
         >
           {swiperImages.map((s, i) => {
