@@ -95,7 +95,7 @@ const Dashbord = () => {
 
             <Row xl="20" >
               <div
-                className="iq-search-bar Searchit DashbordCards"
+                className="iq-search-bar Searchit "
                 style={{
                   background: "#13212D",
                   borderRadius: "30px",
@@ -104,7 +104,7 @@ const Dashbord = () => {
                   marginBottom: "3%",
                   display: "flex",
                   justifyContent: "flex-start",
-                  height: "14%",
+                  height: "55px",
                   marginLeft:"14px"
                 }}
                 
@@ -124,6 +124,8 @@ const Dashbord = () => {
                     alignSelf: "flex-start",
                     alignItems: "center",
                     marginLeft: "-12px",
+                    marginTop:"4px",
+                    height: "48px"
                   }}
                   onClick={() => btncolorhandles("btn1")}
                 >
