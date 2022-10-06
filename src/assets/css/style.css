@@ -609,7 +609,7 @@ Sign In
   display: block;
   /* margin: 25px auto; */
   max-width: auto;
-
+ width: 28vw;
   max-height: fit-content !important;
   border-radius: 30px;
 }
