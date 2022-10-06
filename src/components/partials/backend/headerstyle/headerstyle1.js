@@ -98,7 +98,7 @@ const HeaderStyle1 = (props) => {
                                         <span className="text-primary text-uppercase">Ultrafair</span>
                                     </div> */}
                   <img
-                    src={smallLogo}
+                    src={logo}
                     className="logoImg collapsedLogo img-fluid rounded-normal"
                     alt=""
                   />

@@ -289,6 +289,8 @@ NOTE: This file contains the styling for responsive Template.
     left: 0;
     right: 0;
     padding-left: 15px;
+    background: #1E2C37;
+box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
   }
   .iq-top-navbar.fixed-header {
     width: 100%;
@@ -318,7 +320,7 @@ NOTE: This file contains the styling for responsive Template.
     font-size: 18px !important;
   }
   .iq-sidebar-logo .logo-title span img {
-    height: 20px !important;
+    /* height: 20px !important; */
     width: 80% !important;
     padding: 4px;
   }
