@@ -21,7 +21,7 @@ function UltraFairCard({Images,htt,wdd ,disp,mr,nmm,Respo}) {
   ];
   return (
     <div style={{marginTop:'3%'}} className="Casinocards">
-      <Row className={`Flexcenter ${Respo}`} style={{marginTop:mr?mr:"",display:'flex',justifyContent:"center",marginLeft:'0px'}}>
+      <Row className={`Flexcenter ${Respo}`} style={{marginTop:mr?mr:"",display:'flex',marginLeft:'0px'}}>
         {
         Images?Images.map((card, i) => {
           return (
