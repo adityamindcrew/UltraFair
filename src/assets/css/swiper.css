@@ -83,33 +83,29 @@
 
 #swiper .right:before { color: var(--iq-white);  content: "\f30a"; font-family: 'Line Awesome Free'; font-weight: 900; font-size: 20px ;margin-top: "10px"}
 #swiper .left:before { color: var(--iq-white);  content: "\f30b"; font-family: 'Line Awesome Free'; font-weight: 900; font-size: 20px}
-/* @media (min-width: 320px) and (max-width: 1000px){
-    .swiper-button.swiper-button-prev{
-        display: none !important;
-    }
-    .swiper-button.swiper-button-next{
-        display: none !important;
-    }
-    .swiper-button.right{
-        display: none !important;
-    }
-    .swiper-button.left{
-        display: none !important;
-    }
-    
-} */
 
 
 
 @media screen and (min-width: 0px) and (max-width: 1150px) {
+    .Searchit {
+   min-width: 200%;
+    }
 .BTN-1{
-    font-size: 7px;
+    font-size: 12px;
 }
 .BTNLOGO{
     /* height: 8px;
     width: 8px; */
-   display: none;
+   /* display: none; */
 
+}
+.Swiper2{
+
+ width: 120px!important; 
+}
+.threeinone{
+ width: 120px!important; 
+ /* max-width:    */
 }
 .Searchit{
     width: 100%!important ;
@@ -125,3 +121,4 @@
     justify-content: flex-end;
 }
 }
+

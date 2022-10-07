@@ -5945,9 +5945,11 @@ color: #f8f9fa !important;
               } 
               @media screen and (min-width: 1000px) and (max-width: 1300px){
                 .TEXTINPUT{
-                  width: 270% !important;
+                  width: 280% !important;
                 }
-                }    
+                }   
+                
+                
     @media (max-width: 480px) {
     body.sidebar-main .iq-sidebar {
         margin-top: 86px;
