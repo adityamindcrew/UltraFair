@@ -24,11 +24,11 @@ const HeaderStyle1 = (props) => {
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
-        style={{ justifyContent: "center", }}
-        className="registerModal"
+        className="registerModal "
+        style={{ justifyContent: "center"}}
       >
         {/* <Modal.Header closeButton></Modal.Header> */}
-        <Modal.Body style={{ padding: "0px" }}>
+        <Modal.Body style={{ padding: "0px"  }}>
           <Signup showModal={loginCallback} close={CloseButton} />
         </Modal.Body>
       </Modal>

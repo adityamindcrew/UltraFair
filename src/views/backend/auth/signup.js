@@ -72,7 +72,7 @@ const SignUp = (props) => {
       
       <div className="sign-in-page">
        
-        <div className="sign-user_card ">
+        <div className="sign-user_card" >
           <div className="sign-in-page-data">
             <button
               type="button"
@@ -116,18 +116,19 @@ const SignUp = (props) => {
                     </button>
                   </div>
                 </div>
+
                 
                 <Col md="12">
                   <Form.Group>
-                    <Form.Label>E - mail </Form.Label>
-                    <Form.Label style={{ color: "red", marginLeft: "7px" }}>
+                    <Form.Label>First Name </Form.Label>
+                    <Form.Label style={{ color: "red", marginLeft: "5px" }}>
                       {" "}
                       *
                     </Form.Label>
                     <Form.Control
-                      type="email"
+                      type="text"
                       className="mb-0"
-                      id="exampleInputEmail3"
+                      id="exampleInputEmail2"
                       placeholder=""
                       autoComplete="off"
                       required
@@ -135,10 +136,11 @@ const SignUp = (props) => {
                     />
                   </Form.Group>
                 </Col>
+                 
                 <Col md="12">
                   <Form.Group>
-                    <Form.Label>Username </Form.Label>
-                    <Form.Label style={{ color: "red", marginLeft: "7px" }}>
+                    <Form.Label>Last Name </Form.Label>
+                    <Form.Label style={{ color: "red", marginLeft: "5px" }}>
                       {" "}
                       *
                     </Form.Label>
@@ -157,8 +159,29 @@ const SignUp = (props) => {
                
                 <Col md="12">
                   <Form.Group>
-                    <Form.Label>Password </Form.Label>
-                    <Form.Label style={{ color: "red", marginLeft: "7px" }}>
+                    <Form.Label>Email </Form.Label>
+                    <Form.Label style={{ color: "red", marginLeft: "5px" }}>
+                      {" "}
+                      *
+                    </Form.Label>
+                    <Form.Control
+                      type="email"
+                      className="mb-0"
+                      id="exampleInputEmail3"
+                      placeholder=""
+                      autoComplete="off"
+                      required
+                      style={{width:'100%'}}
+                    />
+                  </Form.Group>
+                </Col>
+               
+
+               
+                <Col md="12">
+                  <Form.Group>
+                    <Form.Label>Create Password </Form.Label>
+                    <Form.Label style={{ color: "red", marginLeft: "5px" }}>
                       {" "}
                       *
                     </Form.Label>
@@ -184,7 +207,7 @@ const SignUp = (props) => {
                 <Col md="12">
                   <Form.Group>
                     <Form.Label>Confirm Password </Form.Label>
-                    <Form.Label style={{ color: "red", marginLeft: "7px" }}>
+                    <Form.Label style={{ color: "red", marginLeft: "5px" }}>
                       {" "}
                       *
                     </Form.Label>
@@ -210,7 +233,7 @@ const SignUp = (props) => {
                 <Col md="12">
                   <Form.Group>
                     <Form.Label>Date of Birth </Form.Label>
-                    <Form.Label style={{ color: "red", marginLeft: "7px" }}>
+                    <Form.Label style={{ color: "red", marginLeft: "5px" }}>
                       {" "}
                       *
                     </Form.Label>
