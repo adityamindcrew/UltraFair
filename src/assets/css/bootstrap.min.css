@@ -506,6 +506,11 @@ mark {
 .img-fluid {
 	max-width: 100%;
 	height: auto;
+	width: 100%
+}
+.img-fluid119 {
+	max-width: 100%;
+	height: auto;
 	width: 95%
 }
 .img-fluid1 {
