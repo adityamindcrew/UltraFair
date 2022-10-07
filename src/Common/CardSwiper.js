@@ -29,7 +29,7 @@ function CardSwiper({classnm,classnm1}) {
   ];
 
   return (
-    <div>
+    <div className="Swiperresp">
       <Card.Header className="d-flex justify-content-between align-items-center" style={{padding:0}}>
         <div>
           <h3 className="card-title m-0">Providers</h3>
@@ -56,6 +56,7 @@ function CardSwiper({classnm,classnm1}) {
             prevEl: `.${classnm1}`,
             nextEl: `.${classnm}`,
           }}
+          Autoplay={true}
           breakpoints={{
             320: { slidesPerView: 1 },
             550: { slidesPerView: 2 },
