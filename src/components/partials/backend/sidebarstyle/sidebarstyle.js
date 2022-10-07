@@ -28,6 +28,7 @@ import logotext from '../../../../assets/images/Ultrafair/logotext.png'
 
 const minisidbar = () => {
     document.body.classList.toggle('sidebar-main')
+
 }
 
 
@@ -69,20 +70,33 @@ const SidebarStyle = (props) => {
             Scrollbar.init(document.querySelector('#sidebar-scrollbar'))
         }
     )
+
+    const scrollToTop = () =>{
+        window.scrollTo({
+          top: 0, 
+          behavior: 'smooth'
+          /* you can also use 'auto' behaviour
+             in place of 'smooth' */
+        });
+        if(window.innerWidth  < 1300){
+            minisidbar();
+        }
+      };
+      
     return (
         <>
             <div className="iq-sidebar">
             <div className="iq-sidebar-logo d-flex justify-content-between">
-                    <Link to="/" className="header-logo ml-2">
-                    <img src={logoicon} className="img-fluid1 rounded-normal" height="20px" width="20px" alt=""/>
+                    <Link to="/" className="header-logo ml-2" onClick={scrollToTop}>
+                    <img src={logoicon} className="img-fluid1 rounded-normal" height="20px" width="20px" onClick={minisidbar} alt=""/>
                     <div className="logo-title">
-                        <span className="text-primary text-uppercase"><img src={logotext} className="img-fluid2 rounded-normal"  alt=""/></span>
+                        <span className="text-primary text-uppercase"><img src={logotext} className="img-fluid1 rounded-normal"  alt=""/></span>
                     </div>
                     </Link>
                     <div className="iq-menu-bt-sidebar">
                     <div className="iq-menu-bt align-self-center">
                         <div className="wrapper-menu" onClick={minisidbar}>
-                            <div className="main-circle" ><img src={Crossicon}/></div>
+                            <div className="main-circle"><img  src={Crossicon}/></div>
                         </div>
                     </div>
                     </div>
@@ -136,13 +150,13 @@ const SidebarStyle = (props) => {
                                     <span>Ultrafair Exclusives</span>
                                 </Link>
                             </li> */}
-                            <li className={`${location.pathname === '/slots' ? 'active' : ''} `}>
-                                <Link to="/slots" className="">
+                            <li className={`${location.pathname === '/slots' ? 'active' : ''} `} >
+                                <Link to="/slots" className="" onClick={scrollToTop}>
                                     <SlotsSVG />
                                     <span>Slots</span>
                                 </Link>
                             </li>
-                            <li className={`${location.pathname === '/live-casino' ? 'active' : ''} `}>
+                            <li  className={`${location.pathname === '/live-casino' ? 'active' : ''} `} onClick={scrollToTop}>
                                 <Link to="/live-casino" className="">
                                     {/* <i className="las la-star-half-alt"></i> */}
                                     <LiveCasinoSVG />
@@ -151,7 +165,7 @@ const SidebarStyle = (props) => {
                             </li>
 
                             <li className={`${location.pathname === '/new-release' ? 'active' : ''} `}>
-                                <Link to="/new-release" className="">
+                                <Link to="/new-release" className="" onClick={scrollToTop}>
                                     {/* <i className="las la-user-friends"></i> */}
                                     <NewReleasesSVG />
                                     <span>New Releases</span>
@@ -170,28 +184,28 @@ const SidebarStyle = (props) => {
                                 </Link>
                             </li> */}
                             <li className={`${location.pathname === '/table-games' ? 'active' : ''} `}>
-                                <Link to="/table-games" className="">
+                                <Link to="/table-games" className="" onClick={scrollToTop}>
                                     {/* <i className="las la-comments"></i> */}
                                     <TableGamesSVG />
                                     <span>Table Games</span>
                                 </Link>
                             </li>
                             <li className={`${location.pathname === '/blackjack' ? 'active' : ''} `}>
-                                <Link to="/blackjack" className="">
+                                <Link to="/blackjack" className="" onClick={scrollToTop}>
                                     {/* <i className="las la-user-friends"></i> */}
                                     <BlackjackSVG />
                                     <span>Blackjack</span>
                                 </Link>
                             </li>
                             <li className={`${location.pathname === '/baccarat' ? 'active' : ''} `}>
-                                <Link to="/baccarat" className="">
+                                <Link to="/baccarat" className="" onClick={scrollToTop}>
                                     {/* <i className="las la-star-half-alt"></i> */}
                                     <BaccaratSVG />
                                     <span>Baccarat </span>
                                 </Link>
                             </li>
                             <li className={`${location.pathname === '/roulette' ? 'active' : ''} `}>
-                                <Link to="/roulette" className="">
+                                <Link to="/roulette" className="" onClick={scrollToTop}>
                                     {/* <i className="las la-user-friends"></i> */}
                                     <RouletteSVG />
                                     <span>Roulette</span>
@@ -199,7 +213,7 @@ const SidebarStyle = (props) => {
                             </li>
                             <li style={{ border: '1px solid #344452', margin: "10px", background: '#344452' }}></li>
                             <li className={`${location.pathname === '/lockup' ? 'active' : ''} `}>
-                                <Link to="/lockup'" className="">
+                                <Link to="/lockup'" className="" onClick={scrollToTop}>
                                     {/* <i className="las la-star-half-alt"></i> */}
                                     <LockupSVG />
                                     <span>Lockup </span>
@@ -208,13 +222,13 @@ const SidebarStyle = (props) => {
                             <li style={{ border: '1px solid #344452', margin: "10px", background: '#344452' }}></li>
 
                             <li className={`${location.pathname === '/blog' ? 'active' : ''} `}>
-                                <Link to="/blog" className="iq-waves-effect">
+                                <Link to="/blog" className="iq-waves-effect" onClick={scrollToTop}>
                                     {/* <i className="las la-comments"></i> */}
                                     <span>Blog</span>
                                 </Link>
                             </li>
                             <li className={`${location.pathname === '/live-support' ? 'active' : ''} `}>
-                                <Link to="/live-support" className="iq-waves-effect">
+                                <Link to="/live-support" className="iq-waves-effect" onClick={scrollToTop}>
                                     {/* <i className="las la-comments"></i> */}
                                     <span>Live Support</span>
                                 </Link>
