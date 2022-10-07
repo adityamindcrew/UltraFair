@@ -88,7 +88,7 @@ const HeaderStyle1 = (props) => {
                 </div>
               </div>
               <div className="iq-navbar-logo d-flex justify-content-between">
-                <Link to="#" className="header-logo">
+                <Link to="/" className="header-logo">
                   <img
                     src={logo}
                     className="logoImg fullLogo img-fluid rounded-normal"
