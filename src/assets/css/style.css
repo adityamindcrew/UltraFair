@@ -502,6 +502,7 @@ Sign In
   /* position: relative; */
   /* / background: url("../images/login/login.jpg") no-repeat scroll 0 0; / */
   background-size: cover;
+  border-radius: 12px;
 }
 
 .sign-in-page .height-self-center {
@@ -610,9 +611,9 @@ Sign In
   /* margin: 25px auto; */
   max-width: auto;
 
-  width: 28vw;
+  width: 30vw;
   max-height: fit-content !important;
-  border-radius: 30px;
+  border-radius: 12px;
 }
 
 
@@ -5800,7 +5801,7 @@ h6 span {
   max-height: fit-content !important;
   border-radius: 10px; */
   position: relative;
-  background: #0d4a78;
+  
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   padding: 20px 25px;
@@ -5827,23 +5828,148 @@ display: none !important;
   width:100%;
   margin-bottom: 20px;
   border-radius: 4px;
- 
-
-}
+  justify-content: center;
+  padding: 5px;
+  
+ }
 .wallet-link{
-  width:80%;
+  width:100%;
+  padding-left: 10px;
+  justify-content: space-around;
+   align-items: center;
+   color:white;
+ 
+   
+}
+.wallet-icons-1{
+
+  width: 10%;
  
   
 }
-.wallet-icons-1{
-  width: 10%;
-}
 .refresh-icon{
-   height: 10px;
-   width :10px; 
+   height: 17px;
+   width :17px; 
+   
 }
 .wallet-icons-2{
   width: 10%;
+  /* padding-right: 5px; */
+}
+.wallet-bitcoin{
+  background-color: orange;
+  border-radius: 20px;
+  padding: 0px 4px;  
+ 
+}
+.wallet-Text{
+  text-align: left;
+  width: 100%;
+  
+  position: relative;
+  left:-15px
+}
+.modal-content{
+  border-radius: 12px;
   
 }
-.textclass {}
+@media only screen and (max-width: 1026px) {
+ 
+  .wallet-address-deposit{
+   
+    width:100%;
+   
+   }
+  .wallet-link{
+    /* width:80%; */
+    padding-left: 10px;
+    justify-content: space-around;
+     align-items: center;
+     color:white;
+     padding-right: 10px;
+     
+  }
+  .wallet-icons-1{
+    /* width: 10%; */
+    padding-right: 10px;
+    
+  }
+  .wallet-icons-2{
+    /* width: 10%; */
+    padding-right: 5px;
+  }
+
+
+
+}
+
+
+.dropdown-wallet{
+  
+  border-color: #0D1D29;
+  background: #0D1D29;
+  
+  text-align: center;
+  margin: 2.5px;
+  /* margin-left: 15px !important; */
+  transition: none !important;
+  translate: none !important;
+  padding-right: 22px;
+  padding-left: 22px;
+}
+.dropdown-wallet:hover{
+  background: #344452;
+  border-color: #344452;
+  border-top-left-radius: 27px !important;
+  border-bottom-left-radius: 27px !important;
+  border-top-right-radius: 27px !important;
+  border-bottom-right-radius: 27px !important;
+  text-align: center;
+  margin: 2.5px;
+  /* margin-left: 15px !important; */
+  transition: none !important;
+  translate: none !important;
+}
+.dropdown-wallet:focus{
+  background: #344452;
+  border-color: #344452;
+  border-top-left-radius: 27px !important;
+  border-bottom-left-radius: 27px !important;
+  border-top-right-radius: 27px !important;
+  border-bottom-right-radius: 27px !important;
+  text-align: center;
+  margin: 2.5px;
+  /* margin-left: 15px !important; */
+  transition: none !important;
+  translate: none !important;
+}
+
+
+ /* .dropdown .dropdown-btn{
+  padding: 10px;
+  background-color: transparent;
+  box-shadow: 3px 3px 10px 6px rgba(0,0,0, 0.06);
+  font-weight: bold;
+  color: green;
+  border: 2px solid black;
+  
+}  
+
+ .dropdown .dropdown-content{
+  position: absolute;
+    top: 100%;
+    left: 34%;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 3px 3px 10px 6px rgb(0 0 0 / 6%);
+    font-weight: 500;
+    color: green;
+    width: 50%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+
+}
+.dropdown-item li {
+  list-style-type: none;
+} */

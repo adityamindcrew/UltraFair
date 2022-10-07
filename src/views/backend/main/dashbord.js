@@ -82,7 +82,7 @@ const Dashbord = () => {
    const [tablebtn, settablebtn] = useState("")
    const [choice, setChoice] = useState();
    const [btn, setbtn] = useState("")
-   const DashbordCard = [Pic1, Pic2, Pic3];
+ const DashbordCard = [Pic1, Pic2, Pic3];
    const btncolorhandles = (color) => {
       setbtn(color)
       handleShow()
@@ -227,7 +227,7 @@ const Dashbord = () => {
    return (
       <>
          <Container fluid>
-
+          
             {/* <Row>
               <Col sm="12" lg="4">
                  <Card className="iq-card-block iq-card-stretch iq-card-height">
@@ -472,7 +472,7 @@ const Dashbord = () => {
               </Col>
            </Row> */}
             <Row>
-               {/* // const Navigation = () => {
+  {/* // const Navigation = () => {
   const [tablebtn, settablebtn] = useState("");
   const [choice, setChoice] = useState();
   const [btn, setbtn] = useState("");
@@ -633,211 +633,211 @@ const Dashbord = () => {
     },
     series: [44, 30, 20, 43, 22, 20],
   }; */}
-               {/* return ( */}
-               <>
-                  <Container fluid>
-                     <Row>
-                        <Col lg="8" xl="12">
-                           <Row xl="20" className="DashborCards">
-                              {DashbordCard.map((e, i) => {
-                                 return (
-                                    <Col sm="6" lg="6" xl="4" key={i}>
-                                       <Card className="iq-card-block iq-card-stretch iq-card-height">
-                                          <img src={e} style={{ borderRadius: "10px" }} />
-                                       </Card>
-                                    </Col>
-                                 );
-                              })}
-                           </Row>
-                           <Row>
-                              <SearchBar hg="5%" wd="325%" />
-                           </Row>
+  {/* return ( */}
+    <>
+      <Container fluid>
+        <Row>
+          <Col lg="8" xl="12">
+            <Row xl="20" className="DashborCards">
+              {DashbordCard.map((e, i) => {
+                return (
+                  <Col sm="6" lg="6" xl="4" key={i}>
+                    <Card className="iq-card-block iq-card-stretch iq-card-height">
+                      <img src={e} style={{ borderRadius: "10px" }} />
+                    </Card>
+                  </Col>
+                );
+              })}
+            </Row>
+            <Row>
+              <SearchBar hg="5%" wd="325%" />
+            </Row>
 
-                           <Row xl="20">
-                              <div
-                                 className="iq-search-bar Searchit"
-                                 style={{
-                                    background: "#13212D",
-                                    borderRadius: "30px",
-                                    width: "67%",
-                                    marginTop: "3%",
-                                    marginBottom: "3%",
-                                    display: "flex",
-                                    justifyContent: "flex-start",
-                                    height: "14%",
-                                    marginLeft: "14px"
-                                 }}
-                              >
-                                 <button
-                                    className="BTN-1 bbt"
-                                    style={{
-                                       background: btn === "btn1" ? "#344452" : "#13212D",
-                                       padding: "10px",
-                                       borderRadius: "30px",
-                                       color: "white",
-                                       border: btn === "btn1" ? "1px solid #11FFBD" : "0px",
-                                       boxShadow: "none",
-                                       width: "20%",
-                                       display: "flex",
-                                       justifyContent: "space-around",
-                                       alignSelf: "flex-start",
-                                       alignItems: "center",
-                                       marginLeft: "-12px",
-                                    }}
-                                    onClick={() => btncolorhandles("btn1")}
-                                 >
-                                    <img
-                                       className="BTNLOGO"
-                                       src={btn === "btn1" ? ICON1 : Svg1}
-                                       height="18px"
-                                       width="18"
-                                    />
-                                    Lobby
-                                 </button>
-                                 <button
-                                    className="BTN-1"
-                                    style={{
-                                       background: btn === "btn2" ? "#344452" : "#13212D",
-                                       padding: "10px",
-                                       borderRadius: "30px",
-                                       color: "white",
-                                       border: btn === "btn2" ? "1px solid  #11FFBD" : "0px",
-                                       boxShadow: "none",
-                                       width: "20%",
-                                       display: "flex",
-                                       justifyContent: "space-around",
-                                       alignItems: "center",
-                                       height: "90%",
-                                       alignSelf: "center",
-                                    }}
-                                    onClick={() => btncolorhandles("btn2")}
-                                 >
-                                    {" "}
-                                    <img
-                                       className="BTNLOGO"
-                                       src={btn === "btn2" ? Svg2 : ICON2}
-                                       height="18px"
-                                       width="18"
-                                    />
-                                    <span>Live Casino</span>
-                                 </button>
-                                 <button
-                                    className="BTN-1"
-                                    style={{
-                                       background: btn === "btn3" ? "#344452" : "#13212D",
-                                       padding: "10px",
-                                       borderRadius: "23px",
-                                       color: "white",
-                                       border: btn === "btn3" ? "1px solid  #11FFBD" : "0px",
-                                       boxShadow: "none",
-                                       width: "22%",
-                                       display: "flex",
-                                       justifyContent: "space-around",
-                                       alignItems: "center",
-                                       height: "90%",
-                                       alignSelf: "center",
-                                    }}
-                                    onClick={() => btncolorhandles("btn3")}
-                                 >
-                                    {" "}
-                                    <img
-                                       className="BTNLOGO"
-                                       src={btn === "btn3" ? Svg3 : ICON3}
-                                       height="18px"
-                                       width="18"
-                                    />
-                                    Featured slots
-                                 </button>
-                                 <button
-                                    className="BTN-1"
-                                    style={{
-                                       background: btn === "btn4" ? "#344452" : "#13212D",
-                                       padding: "10px",
-                                       borderRadius: "30px",
-                                       color: "white",
-                                       border: btn === "btn4" ? "1px solid  #11FFBD" : "0px",
-                                       boxShadow: "none",
-                                       width: "20%",
-                                       display: "flex",
-                                       justifyContent: "space-around",
-                                       alignItems: "center",
-                                       height: "90%",
-                                       alignSelf: "center",
-                                    }}
-                                    onClick={() => btncolorhandles("btn4")}
-                                 >
-                                    <img
-                                       className="BTNLOGO"
-                                       src={btn === "btn4" ? Svg4 : ICON4}
-                                       height="18px"
-                                       width="18"
-                                    />
-                                    Live Shows
-                                 </button>
-                                 <button
-                                    className="BTN-1"
-                                    style={{
-                                       background: btn === "btn5" ? "#344452" : "#13212D",
-                                       padding: "10px",
-                                       borderRadius: "30px",
-                                       color: "white",
-                                       border: btn === "btn5" ? "1px solid #11FFBD" : "0px",
-                                       boxShadow: "none",
-                                       width: "23%",
-                                       display: "flex",
-                                       justifyContent: "space-around",
-                                       alignItems: "center",
-                                       height: "90%",
-                                       alignSelf: "center",
-                                       marginRight: "-12px",
-                                    }}
-                                    onClick={() => btncolorhandles("btn5")}
-                                 >
-                                    <img
-                                       className="BTNLOGO"
-                                       src={btn === "btn5" ? Svg5 : ICON5}
-                                       height="18px"
-                                       width="15"
-                                    />
-                                    Ultrafair Originals
-                                 </button>
-                              </div>
-                           </Row>
+            <Row xl="20">
+              <div
+                className="iq-search-bar Searchit"
+                style={{
+                  background: "#13212D",
+                  borderRadius: "30px",
+                  width: "67%",
+                  marginTop: "3%",
+                  marginBottom: "3%",
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  height: "14%",
+                  marginLeft:"14px"
+                }}
+              >
+                <button
+                  className="BTN-1 bbt"
+                  style={{
+                    background: btn === "btn1" ? "#344452" : "#13212D",
+                    padding: "10px",
+                    borderRadius: "30px",
+                    color: "white",
+                    border: btn === "btn1" ? "1px solid #11FFBD" : "0px",
+                    boxShadow: "none",
+                    width: "20%",
+                    display: "flex",
+                    justifyContent: "space-around",
+                    alignSelf: "flex-start",
+                    alignItems: "center",
+                    marginLeft: "-12px",
+                  }}
+                  onClick={() => btncolorhandles("btn1")}
+                >
+                  <img
+                    className="BTNLOGO"
+                    src={btn === "btn1" ? ICON1 : Svg1}
+                    height="18px"
+                    width="18"
+                  />
+                 Lobby
+                </button>
+                <button
+                  className="BTN-1"
+                  style={{
+                    background: btn === "btn2" ? "#344452" : "#13212D",
+                    padding: "10px",
+                    borderRadius: "30px",
+                    color: "white",
+                    border: btn === "btn2" ? "1px solid  #11FFBD" : "0px",
+                    boxShadow: "none",
+                    width: "20%",
+                    display: "flex",
+                    justifyContent: "space-around",
+                    alignItems: "center",
+                    height: "90%",
+                    alignSelf: "center",
+                  }}
+                  onClick={() => btncolorhandles("btn2")}
+                >
+                  {" "}
+                  <img
+                    className="BTNLOGO"
+                    src={btn === "btn2" ? Svg2 : ICON2}
+                    height="18px"
+                    width="18"
+                  />
+                  <span>Live Casino</span>
+                </button>
+                <button
+                  className="BTN-1"
+                  style={{
+                    background: btn === "btn3" ? "#344452" : "#13212D",
+                    padding: "10px",
+                    borderRadius: "23px",
+                    color: "white",
+                    border: btn === "btn3" ? "1px solid  #11FFBD" : "0px",
+                    boxShadow: "none",
+                    width: "22%",
+                    display: "flex",
+                    justifyContent: "space-around",
+                    alignItems: "center",
+                    height: "90%",
+                    alignSelf: "center",
+                  }}
+                  onClick={() => btncolorhandles("btn3")}
+                >
+                  {" "}
+                  <img
+                    className="BTNLOGO"
+                    src={btn === "btn3" ? Svg3 : ICON3}
+                    height="18px"
+                    width="18"
+                  />
+                  Featured slots
+                </button>
+                <button
+                  className="BTN-1"
+                  style={{
+                    background: btn === "btn4" ? "#344452" : "#13212D",
+                    padding: "10px",
+                    borderRadius: "30px",
+                    color: "white",
+                    border: btn === "btn4" ? "1px solid  #11FFBD" : "0px",
+                    boxShadow: "none",
+                    width: "20%",
+                    display: "flex",
+                    justifyContent: "space-around",
+                    alignItems: "center",
+                    height: "90%",
+                    alignSelf: "center",
+                  }}
+                  onClick={() => btncolorhandles("btn4")}
+                >
+                  <img
+                    className="BTNLOGO"
+                    src={btn === "btn4" ? Svg4 : ICON4}
+                    height="18px"
+                    width="18"
+                  />
+                  Live Shows
+                </button>
+                <button
+                  className="BTN-1"
+                  style={{
+                    background: btn === "btn5" ? "#344452" : "#13212D",
+                    padding: "10px",
+                    borderRadius: "30px",
+                    color: "white",
+                    border: btn === "btn5" ? "1px solid #11FFBD" : "0px",
+                    boxShadow: "none",
+                    width: "23%",
+                    display: "flex",
+                    justifyContent: "space-around",
+                    alignItems: "center",
+                    height: "90%",
+                    alignSelf: "center",
+                    marginRight: "-12px",
+                  }}
+                  onClick={() => btncolorhandles("btn5")}
+                >
+                  <img
+                    className="BTNLOGO"
+                    src={btn === "btn5" ? Svg5 : ICON5}
+                    height="18px"
+                    width="15"
+                  />
+                  Ultrafair Originals
+                </button>
+              </div>
+            </Row>
 
-                           <Customslider
-                              classnm="testclass11"
-                              classnm2="testclass12"
-                              title="Ultrafair Origianls"
-                           />
-                           <Customslider
-                              classnm="testclass31"
-                              classnm2="testclass32"
-                              title="Slots"
-                           />
-                           <CardSwiper
-                              classnm="testclass21"
-                              classnm1="testclass22"
-                              title="Providers"
-                           />
-                           <Customslider
-                              classnm="testclass41"
-                              classnm2="testclass42"
-                              title="Live Casino"
-                           />
-                           <Customslider
-                              classnm="testclass51"
-                              classnm2="testclass52"
-                              title="Table Games"
-                           />
-                           <Customslider
-                              classnm="testclass54"
-                              classnm2="testclass53"
-                              title="New Releases"
-                           />
-                        </Col>
-                     </Row>
+            <Customslider
+              classnm="testclass11"
+              classnm2="testclass12"
+              title="Ultrafair Origianls"
+            />
+            <Customslider
+              classnm="testclass31"
+              classnm2="testclass32"
+              title="Slots"
+            />
+            <CardSwiper
+              classnm="testclass21"
+              classnm1="testclass22"
+              title="Providers"
+            />
+            <Customslider
+              classnm="testclass41"
+              classnm2="testclass42"
+              title="Live Casino"
+            />
+            <Customslider
+              classnm="testclass51"
+              classnm2="testclass52"
+              title="Table Games"
+            />
+            <Customslider
+              classnm="testclass54"
+              classnm2="testclass53"
+              title="New Releases"
+            />
+          </Col>
+        </Row>
 
-                     {/* <Row>
+        {/* <Row>
                <Col sm="12">
                   <Card>
                      <Row>
@@ -1052,45 +1052,45 @@ const Dashbord = () => {
         onHide={() => setModalShow(false)}
       /> */}
 
-                  </Container>
-               </>
+         </Container>
+      </>
+   
 
-
-            </Row>
-
-            <Modal show={show} onHide={handleClose} size="lg"
-               aria-labelledby="contained-modal-title-vcenter"
-               centered
-               className="wallet-modal'"
-
-            >
-               <Modal.Header style={{ border: 'none' }}>
-                  <Modal.Title>
-                     <div style={{ marginLeft: 10 }}>
+            </Row> 
+            
+               <Modal show={show} onHide={handleClose} size="lg"
+                  aria-labelledby="contained-modal-title-vcenter"
+                  centered
+                  className="textclass wallet-modal'"
+                  
+               >
+                  <Modal.Header style={{ border: 'none' }}>
+                     <Modal.Title>
+                        <div style={{marginLeft: 10}}>
                         <WalletSVG />
                         <span style={{ fontSize: 15, color: "white", paddingLeft: 7 }}>Wallet</span>
-                     </div>
-                     <button
-                        type="button"
-                        class="close"
-                        aria-label="Close"
-                        style={{ color: "white", position: 'absolute', top: -1, right: 10 }}
-                        onClick={handleClose}
-                     >
-                        <span aria-hidden="true" style={{ fontSize: 33, fontWeight: 1 }}>&times;</span>
-                     </button>
-                  </Modal.Title>
-               </Modal.Header>
-               <Modal.Body>
-                  <Name />
-               </Modal.Body>
+                        </div>
+                        <button
+                           type="button"
+                           class="close"
+                           aria-label="Close"
+                           style={{ color: "white", position: 'absolute', top: -1, right: 10 }}
+                           onClick={handleClose}
+                        >
+                           <span aria-hidden="true" style={{ fontSize: 33, fontWeight: 1 }}>&times;</span>
+                        </button>
+                     </Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                     <Name />
+                  </Modal.Body>
 
-            </Modal>
-
-         </Container>
-
-      </>
-   );
+               </Modal>
+            
+      </Container>
+     
+    </>
+  );
 };
 
 export default Dashbord;
