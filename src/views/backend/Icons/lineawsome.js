@@ -2,12 +2,18 @@ import React from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import  Card from '../../../components/Card'
+import Customheader from '../../../components/Customheader'
 
 const LineAwsome = () => {
+  const SVG=<svg width="35" height="21" viewBox="0 0 35 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M9.66134 0.838613C3.82854 1.19855 -0.64507 6.58191 0.517993 12.7169C1.26008 16.6335 4.41892 19.7937 8.3369 20.5358C13.6639 21.5457 18.4152 18.3034 19.8126 13.6138H25.9211V15.0354C25.9211 16.6063 27.1935 17.8786 28.7644 17.8786C30.3353 17.8786 31.6076 16.6063 31.6076 15.0354V13.6138C33.1785 13.6138 34.4508 12.3414 34.4508 10.7705C34.4508 9.19963 33.1785 7.92728 31.6076 7.92728H19.807C18.7838 4.43472 15.8411 1.68923 12.2297 1.00521C11.3534 0.839057 10.4946 0.787193 9.66134 0.838613ZM10.2833 6.50566C12.6389 6.50566 14.5482 8.41489 14.5482 10.7705C14.5482 13.1261 12.6389 15.0354 10.2833 15.0354C7.92768 15.0354 6.01844 13.1261 6.01844 10.7705C6.01844 8.41489 7.92768 6.50566 10.2833 6.50566Z" fill="#B4E1FF"/>
+  </svg>
+  
+   
    return (
       <>
          <Container fluid>
-            <Row>
+            {/* <Row>
                <Col sm="12">
                   <Card>
                      <Card.Header className="d-flex justify-content-between">
@@ -151,7 +157,9 @@ const LineAwsome = () => {
                      </Card.Body>
                   </Card>
                </Col>
-            </Row>
+            </Row> */}
+
+           <Customheader title="Lockup" SVG={SVG} wid="15%" mt="8px" />
          </Container>
       </>
    )

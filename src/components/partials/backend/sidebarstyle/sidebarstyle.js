@@ -199,7 +199,7 @@ const SidebarStyle = (props) => {
                             </li>
                             <li style={{ border: '1px solid #344452', margin: "10px", background: '#344452' }}></li>
                             <li className={`${location.pathname === '/lockup' ? 'active' : ''} `}>
-                                <Link to="/lockup'" className="">
+                                <Link to="/lockup" className="">
                                     {/* <i className="las la-star-half-alt"></i> */}
                                     <LockupSVG />
                                     <span>Lockup </span>

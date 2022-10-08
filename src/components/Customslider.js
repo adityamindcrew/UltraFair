@@ -38,7 +38,7 @@ const Customslider = ({classnm,classnm2,title}) => {
                               nextEl: `.${classnm}`,
                            }}
                            breakpoints={{
-                              320: {   slidesPerView: 3},                
+                              320: {   slidesPerView: 1},                
                               550: { slidesPerView: 2 },
                               991: { slidesPerView: 3 },
                               1400: { slidesPerView: 4 },
