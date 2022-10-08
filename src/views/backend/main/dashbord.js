@@ -98,7 +98,7 @@ const Dashbord = () => {
               <SearchBar hg="5%" wd="399%" />
             </Row>
 
-            <Row xl="20" >
+            <Row xl="20" style={{overflow:"auto"}}>
               <div
                 className="iq-search-bar Searchit "
                 style={{
@@ -495,6 +495,7 @@ const Dashbord = () => {
                </Modal>
             </div>
       </Container>
+     
     </>
   );
 };

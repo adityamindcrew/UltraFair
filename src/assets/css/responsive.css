@@ -1201,11 +1201,32 @@ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 
 }
 @media screen and (min-width: 0px) and (max-width: 1000px){
-
+  .FilterBtn{
+    /* width: 35% !important; */
+     display: none !important;
+   
+  }
+  .Flexcenter{
+    justify-content: "center" !important;
+  }
+  .Providerr{
+    margin-top: 15%;
+  }
 	 .headertop{
 		margin-top: 21% !important;
 		height: 5% !important;
 	}
+  .Respo{
+    margin-top: 20% !important;
+   }
+}
+
+  @media screen and (min-width: 880px) and (max-width: 1000px){
+
+    .headertop{
+     margin-top: 8% !important;
+     height: 5% !important;
+   }
 	.LOGOO{
 		width: 7vw ;
 		height: 14vw;
@@ -1215,12 +1236,21 @@ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
     /* width: 35% !important; */
      display: none !important;
    
+
+  }
+ 
+  .Providerr{
+    margin-top: 15%;
   }
   .FILTERBTN{
     margin-top: 15% !important;
   }
   .Casinocards{
     margin: 10% !important;
+    margin-top: 20% !important;
+   }
+   .Cardcontain{
+    margin-top: 20% !important;
    }
 	}
 
@@ -1261,6 +1291,10 @@ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
     }
     .Responsivrbtn{
       padding: 23px 30px !important; 
+
+    }
+    .Flexcenter{
+      justify-content: center;
     }
 	}
 
@@ -1273,3 +1307,4 @@ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
  
   
    }
+  
