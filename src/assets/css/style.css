@@ -1621,7 +1621,7 @@ Top Menu
   width: calc(100% - 300px);
   display: inline-block;
   z-index: 99;
-  background: var(--iq-light-card);
+  background: #1E2C37;
   margin: 0;
   transition: all 0.45s ease 0s;
 }
@@ -5727,8 +5727,6 @@ h6 span {
     margin-left: 13px;
     margin-right: 10px;
   }
-
-
 }
 
 
