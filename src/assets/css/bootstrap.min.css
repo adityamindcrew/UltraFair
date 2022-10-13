@@ -513,6 +513,16 @@ mark {
 	height: auto;
 	width: 95%
 }
+.img-fluid1 {
+	max-width: 100%;
+	height: auto;
+	width: 10%
+}
+.img-fluid2 {
+	max-width: 100%;
+	height: auto;
+	width: 82%
+}
 
 .img-thumbnail {
 	padding: .25rem;
@@ -609,7 +619,7 @@ pre code {
 		max-width: 1140px
 	}
 }
-
+.container-fluid{max-width: 1200px;}
 .container-fluid,
 .container-lg,
 .container-md,
@@ -4312,7 +4322,7 @@ input[type=submit].btn-block {
 	width: 1rem;
 	height: 1rem;
 	margin-top: -.25rem;
-	background-color: #007bff;
+	background-color: #34ce57;
 	border: 0;
 	border-radius: 1rem;
 	-webkit-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;

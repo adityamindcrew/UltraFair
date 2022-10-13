@@ -12,7 +12,7 @@ import Showimg3 from '../assets/images/Show3.png'
 const Customslider = ({classnm,classnm2,title}) => {
   function handlemouse(id){
     setshow(id)
-    console.log("dfsdfsd",id)
+   //  console.log("dfsdfsd",id)
 
    }
 

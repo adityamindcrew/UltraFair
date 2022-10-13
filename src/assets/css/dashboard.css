@@ -178,11 +178,16 @@
   .Searchtext1 {
     display: none !important;
   }
+  .Vanish{
+    display: none !important;
+
+  }
   .DashborCards{
     flex-wrap: nowrap !important;
     overflow-x: scroll !important;
     
   }
+ 
 
 ::-webkit-scrollbar {display:none !important;}
 }

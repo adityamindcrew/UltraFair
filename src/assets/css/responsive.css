@@ -4,12 +4,19 @@ Author: iqonicthemes.in
 Design and Developed by: iqonicthemes.in
 NOTE: This file contains the styling for responsive Template.
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+  font-family: 'Montserrat', sans-serif;
+}
 @media (max-width: 1980px) {
   .iq-scrollable-block {
     overflow-x: hidden;
     overflow-y: scroll;
     height: 390px;
   }
+
 }
 @media (max-width: 1600px) {
   .iq-scrollable-block {
@@ -28,27 +35,31 @@ NOTE: This file contains the styling for responsive Template.
   }
 }
 @media (min-width: 1300px) {
-  body.sidebar-main .iq-sidebar {
+  body.sidebar-main .iq-sidebar  {
     width: 80px;
   }
+
   .logo-title {
     white-space: nowrap;
   }
   body.sidebar-main .iq-menu-bt {
     opacity: 0;
   }
-  body.sidebar-main .iq-sidebar:hover,
-  body.sidebar-main .iq-sidebar:hover .iq-sidebar-logo {
-    width: 300px;
+ 
+  body.sidebar-main .iq-sidebar .iq-sidebar-menu .iq-menu li  span
+  {
+    opacity: 0;
+    /* width: 300px; */
   }
   body.sidebar-main .iq-sidebar:hover .iq-sidebar-menu .iq-menu li a span,
   body.sidebar-main .iq-sidebar:hover .iq-sidebar-logo a span,
   body.sidebar-main .iq-sidebar:hover .iq-sidebar-logo a span p,
   body.sidebar-main .iq-sidebar:hover .iq-sidebar-menu .iq-menu li a .badge,
   body.sidebar-main .iq-sidebar:hover .iq-menu-bt {
-    opacity: 1;
+    opacity: 0;
     transition: all 0.3s ease 0s;
   }
+
   body.sidebar-main #sidebar-bottom {
     opacity: 0;
     transition: all 0.3s ease 0s;
@@ -57,6 +68,7 @@ NOTE: This file contains the styling for responsive Template.
   }
   body.sidebar-main .iq-sidebar:hover #sidebar-bottom {
     opacity: 1;
+    width: 80px;
     transition: all 0.3s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -1163,6 +1175,10 @@ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
     margin-top: 10px;
   }
 }
+
+::-webkit-input-placeholder {
+  color: red;
+}
 @media (max-width: 359px) {
   .iq-search-bar .searchbox {
     width: 160px;
@@ -1286,6 +1302,10 @@ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
     }
     .Responsivrbtn{
       padding: 23px 30px !important; 
+
+    }
+    .Flexcenter{
+      justify-content: center;
     }
     .Flexcenter{
       justify-content: center;
@@ -1302,3 +1322,309 @@ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
   
    }
   
+
+   .CARDTITLE{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+   margin: 5px 0px;
+
+    
+   }
+ 
+   .CENTERIT{
+    display:flex;
+    justify-content:space-between;
+    align-items:center
+   }
+   .Bckg{
+    background-color: #344452 ;
+    padding: 10px;
+   }
+   .smallfont{
+     color: #B3BAD1;
+     font-size: 11px;
+     font-weight: 400;
+    }
+    .largefont{
+      
+      color: white;
+    font-size: 29px;
+    font-weight: 600;
+   }
+   .DoCol{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 10px;
+   }
+   .progfont{
+    font: 21px ;
+    color: white;
+    font-weight: 500;
+   }
+   .Colmn{
+    display: flex;
+    flex-direction: column;
+   }
+   .w100{
+    font-weight: 100;
+   }
+   .wbold{
+    font-weight:bolder
+   }
+   .whit{
+    color: white;
+   }
+   .JUSTFLY{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    align-content: center;
+    align-items: center;
+    /* padding: 5px; */
+   }
+   .MR0a10{
+    margin: 0;
+    margin-top: 20px;
+   }
+   .GRN{
+    color: #11FFBD;
+   }
+   .GREY{
+    color: #B3BAD1;
+    font-size: 12px;
+   }
+   .INPUt{
+    background-color: #13212D;
+    border: 1px solid #13212D;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+
+   }
+   .CARDBTN{
+    background-color: #11FFBD;
+    border: 1px solid  #11FFBD;
+    width: 100%;
+    color: #13212D;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+
+
+   }
+   .CENTERTHAT{
+    position: absolute;
+    /* top: 50%;
+    left: 46%; */
+    background-color: #344452 ;
+    padding: 20px;
+    border-radius: 10px;
+   }
+   .Fontpopup{
+    font-size: 15px;
+    color: white;
+   }
+
+   .POPUPBTN{
+    background-color: #11FFBD;
+    padding: 10px 20px;
+    border: 1px solid #11FFBD;
+    margin: 10px;
+    width: fit-content;
+    border-radius: 10px;
+    align-self: center;
+    color: #13212D;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .SingBTN{
+    color: white;
+    background-color: #344452;
+    border: 1px solid #344452;
+    font-weight: 600;
+    font-size: 14px;
+   }
+   .BGR{
+    background: rgb(250,250,250);
+background: linear-gradient(140deg, rgba(250,250,250,1) 12%, rgba(17,255,189,1) 96%);
+   }
+   .BGR1{
+    background: rgb(250,250,250);
+background: linear-gradient(177deg, rgba(250,250,250,1) 12%, rgba(180,225,255,1) 96%);
+   }
+   .Contin{
+    padding:40px;
+    background:#263642;
+    border-radius:10px;
+    
+   }
+   .FooterCont{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 20px;
+    padding:10px;
+    background:#263642;
+    border-radius:10px;
+    justify-content: space-between;
+    /* width: 50%; */
+    align-items: flex-start;
+    width: 40%;
+
+   }
+   .EVENLY{
+    justify-content: space-evenly;
+   }
+   .Selected{
+    /* width: 20%; */
+    display: flex;
+    /* align-self: flex-end; */
+   }
+   .Extrawidth{
+    width: 65%;
+   }
+   
+.Flexstart{
+  justify-content: flex-start;
+}
+.fullwidth{
+  width: 100%;
+}
+.Extrapading{
+  padding: 30px 20px ;
+}
+.BLU{
+  color: #B4E1FF;
+}
+.BGBLU{
+  background-color: #B4E1FF;
+  border: 1px solid #B4E1FF;
+}
+
+
+.smolltext{
+  color: #B3BAD1;
+  font-size: 10px;
+}
+.BGPINK{
+  background-color: #D68FD6;
+  border: 1px solid #D68FD6;
+}
+.notsmollfont{
+  size: 16px;
+  color: #ffff;
+ 
+}
+.Grey{
+  color: #1E2C37;
+}
+.P8{
+  padding: 8 !important;
+}
+.BGCOLPINK{
+  background: rgb(250,250,250);
+background: linear-gradient(36deg, rgba(250,250,250,1) 12%, rgba(214,143,214,1) 96%);
+}
+.EXMR{
+  margin: 10px 20px;
+}
+.Alignstart{
+  align-self: flex-start;
+}
+.MR10{
+  margin-right: 10px;
+}
+.BGGrey{
+  background-color: #344452;
+}
+.MINWIDTH{
+  min-width: 610px;
+}
+.CARDTEXTS{
+  font-size: 16px;
+}
+
+.MainContainer{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  flex-direction: column;
+  align-self: center;
+  margin-bottom: 5%;
+}
+@media screen and (min-width: 0px) and (max-width: 650px) { 
+
+  .MINWIDTH{
+    min-width: 0px;
+  }
+  .Footerfont{
+    font-size: 15px !important;
+  }
+  .Contin{
+    padding: 10px;
+    margin-top: 15%;
+  }
+  .CARDTITLE{
+    padding: 0px;
+  }
+  .ICONCARD{
+    width: 20%;
+  }
+  .FLEXWRAP{
+    flex-wrap: wrap;
+  }
+  .FLX1{
+    flex: 1;
+  }
+  .largefont{
+    font-size: 20px;
+  }
+
+  .FooterCont{width: 100%;}
+  .UltrafairLogo{width: 60%; margin: 5px 10px;}
+  .UltrafairText{width: 40%;}
+  .CENTERIT{
+    justify-content: flex-start;
+  }
+  .CARDTEXTS{
+    font-size: 10px;
+  }
+  .UltrafairTextIcon{
+    width: 20%;
+  }
+  .SEARCHICON{
+    width: 50px;
+    height: 50px;
+  }
+  .Extrawidth{
+    align-self: flex-start;
+    width: 90%;
+  }
+  .SLIDER{
+    flex-direction: column;
+    align-self: flex-start;
+  }
+  .Tableresp{
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+}
+@media screen and (min-width: 1770px) and (max-width: 3080PX) { 
+  .MainContainer{
+    margin-top: 10%;
+  }
+
+}
+
+
+input.INPUt::placeholder{
+  color: white !important;
+  /* font-size: 43px; */
+}

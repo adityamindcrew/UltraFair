@@ -50,7 +50,7 @@ function CardSwiper({classnm,classnm1}) {
         </div>
       </Card.Header>
 
-      <Card.Body>
+      <Card.Body style={{padding:"15px"}}>
         <Swiper
           navigation={{
             prevEl: `.${classnm1}`,

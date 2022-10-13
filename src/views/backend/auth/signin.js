@@ -105,12 +105,12 @@ const SignIn = (props) => {
           </ul>
         </div>
       </div> */}
-      <div className="sign-in-page" style={{borderRadius: 20}}>
+      <div className="sign-in-page">
         {/* <section className="sign-in-page">
           <Container>
             <Row className="justify-content-center align-items-center height-self-center">
               <Col lg="5" md="12" className="align-self-center"> */}
-        <div className="sign-user_card" style={{borderRadius: 20}}>
+        <div className="sign-user_card">
           <button
             type="button"
             class="close"
@@ -154,8 +154,8 @@ const SignIn = (props) => {
                   </div>
                 </div>
                 <Form.Group>
-                  <Form.Label>Email or Username </Form.Label>
-                  <Form.Label style={{ color: "red", marginLeft: "7px" }}>
+                  <Form.Label>Email</Form.Label>
+                  <Form.Label style={{ color: "red", marginLeft: "5px" }}>
                     {" "}
                     *
                   </Form.Label>
@@ -171,7 +171,7 @@ const SignIn = (props) => {
                 </Form.Group>
                 <Form.Group>
                   <Form.Label>Password</Form.Label>
-                  <Form.Label style={{ color: "red", marginLeft: "7px" }}>
+                  <Form.Label style={{ color: "red", marginLeft: "5px" }}>
                     {" "}
                     *
                   </Form.Label>
