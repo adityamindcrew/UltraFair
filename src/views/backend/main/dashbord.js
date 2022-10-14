@@ -69,24 +69,50 @@ import Customslider from "../../../components/Customslider";
 import CardSwiper from "../../../Common/CardSwiper";
 import SearchBar from "../../../Common/SearchBar";
 
+import CurrentSelection from "../../../components/Modals/Wallet_Modals/CurrentSelection"
+
+import ProfileVerification from "../../../components/Modals/Wallet_Modals/ProfileVerification"
+
 SwiperCore.use([Navigation, Autoplay]);
 
 
 const Dashbord = () => {
+
+
+
+
    // const Navigation = () => {
    const [show, setShow] = useState(false);
 
    const handleClose = () => setShow(false);
    const handleShow = () => setShow(true);
 
+   const handleClose2 = () => setModalShow(false);
+
    const [tablebtn, settablebtn] = useState("")
    const [choice, setChoice] = useState();
    const [btn, setbtn] = useState("")
- const DashbordCard = [Pic1, Pic2, Pic3];
+   const DashbordCard = [Pic1, Pic2, Pic3];
+
    const btncolorhandles = (color) => {
       setbtn(color)
       handleShow()
       console.log('dsklfjsdl')
+   }
+
+   const btncolorhandles2 = (color) => {
+      setbtn(color)
+      setModalShow(true)
+   }
+
+   const [modalShow3, setModalShow3] = React.useState(false);
+   const btncolorhandles3 = (color) => {
+      setbtn(color)
+      setModalShow3(true)
+   }
+
+   const tablebtncolorhandles = (color) => {
+      settablebtn(color)
    }
    const options1 = [
       { value: 'today', label: 'Today' },
@@ -94,9 +120,7 @@ const Dashbord = () => {
       { value: 'this week', label: 'This Week' }
    ]
 
-   const tablebtncolorhandles = (color) => {
-      settablebtn(color)
-   }
+
    const options2 = [
       { value: '10', label: '10' },
       { value: '15', label: '15' },
@@ -223,256 +247,106 @@ const Dashbord = () => {
 
    const [modalShow, setModalShow] = React.useState(false);
 
+   const signUpCallback = (l) => {
+      console.log("func signup", l);
+      setModalShow(l);
+
+   };
+   const signUpCallback3 = (l) => {
+      console.log("func signup", l);
+      setModalShow3(l);
+
+   };
+
+   const CloseButton = () => {
+      setModalShow(false);
+   };
+   const CloseButton3 = () => {
+      setModalShow3(false);
+   };
+
+
+   function ModalViewSelection(props) {
+      return (
+
+         <Modal
+            {...props}
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+            className="textclass wallet-modal'"
+         >
+            <Modal.Header style={{ border: 'none' }}>
+               <Modal.Title>
+                  <div style={{ marginLeft: 10 }}>
+                     <WalletSVG />
+                     <span style={{ color: "white", paddingLeft: 7, }} className="wallet-header">Current Selection</span>
+                  </div>
+                  <button
+                     type="button"
+                     class="close"
+                     aria-label="Close"
+                     style={{ color: "white", position: 'absolute', top: -1, right: 10 }}
+                     onClick={CloseButton}
+                  >
+                     <span aria-hidden="true" style={{ fontSize: 33, fontWeight: 1 }}>&times;</span>
+                  </button>
+               </Modal.Title>
+            </Modal.Header>
+            <Modal.Body className="show-grid">
+               <CurrentSelection showModal={signUpCallback} close={CloseButton} />
+            </Modal.Body>
+
+         </Modal>
+
+
+      );
+   }
+
+   function UserVerification(props) {
+      return (
+
+         <Modal
+            {...props}
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+            className="textclass wallet-modal'"
+         >
+            <Modal.Header style={{ border: 'none' }}>
+               <Modal.Title>
+                  
+                  <button
+                     type="button"
+                     class="close"
+                     aria-label="Close"
+                     style={{ color: "white", position: 'absolute', top: -1, right: 10 }}
+                     onClick={CloseButton3}
+                  >
+                     <span aria-hidden="true" style={{ fontSize: 33, fontWeight: 1 }}>&times;</span>
+                  </button>
+               </Modal.Title>
+            </Modal.Header>
+            <Modal.Body className="show-grid modalbody">
+               <ProfileVerification showModal={signUpCallback3} close={CloseButton3} />
+            </Modal.Body>
+
+         </Modal>
+
+
+      );
+   }
+
+
+
 
    return (
       <>
          <Container fluid>
-          
-            {/* <Row>
-              <Col sm="12" lg="4">
-                 <Card className="iq-card-block iq-card-stretch iq-card-height">
-                    <Card.Header className="d-flex align-items-center justify-content-between">
-                       <Card.Header.Title>
-                          <h4 className="card-title">Categories</h4>
-                       </Card.Header.Title>
-                    </Card.Header>
-                    <Card.Body className="p-0">
-                    <Chart  options={chart2.options} series={chart2.series} type="bar" height="230"  />
-                    </Card.Body>
-                 </Card>
-              </Col>
-              <Col lg="8">
-                 <Card className="iq-card-block iq-card-stretch iq-card-height">
-                    <Card.Header className="align-items-center">
-                       <Card.Header.Title>
-                          <h4 className="card-title">Top Category</h4>
-                       </Card.Header.Title>
-                       <div className="iq-card-header-toolbar d-flex align-items-center seasons">
-                          <div className="iq-custom-select d-inline-block sea-epi s-margin">
-                              <Select options={options1} className="iq-select" />
-                          </div>
-                       </div>
-                    </Card.Header>
-                    <Card.Body className="row align-items-center">
-                       <Col lg="7">
-                          <Row className="list-unstyled mb-0 pb-0">
-                             <Col sm="6" md="4" lg="6" className="mb-3">
-                                <div className="iq-progress-bar progress-bar-vertical iq-bg-primary">
-                                   <span className="bg-primary" data-percent="100" style={{transition : "height 2s ease 0s", width: "100%", height: "40%",}}></span>
-                                </div>
-                                <div className="media align-items-center">
-                                   <div className="iq-icon-box-view rounded mr-3 iq-bg-primary"><i className="las la-film font-size-32"></i></div>
-                                   <div className="media-body text-white">
-                                      <h6 className="mb-0 font-size-14 line-height">Actions</h6>
-                                      <small className="text-primary mb-0">+34%</small>
-                                   </div>
-                                </div>
-                             </Col>
-                             <Col sm="6" md="4" lg="6" className="mb-3">
-                                <div className="iq-progress-bar progress-bar-vertical iq-bg-secondary">
-                                   <span className="bg-secondary" data-percent="100" style={{transition: "height 2s ease 0s", width: "100%", height: "70%"}}></span>
-                                </div>
-                                <div className="media align-items-center">
-                                   <div className="iq-icon-box-view rounded mr-3 iq-bg-secondary"><i className="las la-laugh-squint font-size-32"></i></div>
-                                   <div className="media-body text-white">
-                                      <p className="mb-0 font-size-14 line-height">Comedy</p>
-                                      <small className="text-secondary mb-0">+44%</small>
-                                   </div>
-                                </div>
-                             </Col>
-                             <Col sm="6" md="4" lg="6" className="mb-3">
-                                <div className="iq-progress-bar progress-bar-vertical iq-bg-info">
-                                   <span className="bg-info" data-percent="100" style={{transition : "height 2s ease 0s", width: "100%", height: "40%",}}></span>
-                                </div>
-                                <div className="media align-items-center">
-                                   <div className="iq-icon-box-view rounded mr-3 iq-bg-info"><i className="las la-skull-crossbones font-size-32"></i></div>
-                                   <div className="media-body text-white">
-                                      <p className="mb-0 font-size-14 line-height">Horror</p>
-                                      <small className="text-info mb-0">+56%</small>
-                                   </div>
-                                </div>
-                             </Col>
-                             <Col sm="6" md="4" lg="6" className="mb-3">
-                                <div className="iq-progress-bar progress-bar-vertical iq-bg-warning">
-                                   <span className="bg-warning" data-percent="100" style={{transition: "height 2s ease 0s", width: "100%", height: "40%"}}></span>
-                                </div>
-                                <div className="media align-items-center">
-                                   <div className="iq-icon-box-view rounded mr-3 iq-bg-warning"><i className="las la-theater-masks font-size-32"></i></div>
-                                   <div className="media-body text-white">
-                                      <p className="mb-0 font-size-14 line-height">Drama</p>
-                                      <small className="text-warning mb-0">+65%</small>
-                                   </div>
-                                </div>
-                             </Col>
-                             <Col sm="6" md="4" lg="6" className="mb-lg-0 mb-3">
-                                <div className="iq-progress-bar progress-bar-vertical iq-bg-success">
-                                   <span className="bg-success" data-percent="100" style={{transition: "height 2s ease 0s", width: "100%", height: "60%"}}></span>
-                                </div>
-                                <div className="media align-items-center mb-lg-0 mb-3">
-                                   <div className="iq-icon-box-view rounded mr-3 iq-bg-success"><i className="las la-child font-size-32"></i></div>
-                                   <div className="media-body text-white">
-                                      <p className="mb-0 font-size-14 line-height">Kids</p>
-                                      <small className="text-success mb-0">+74%</small>
-                                   </div>
-                                </div>
-                             </Col>
-                             <Col sm="6" md="4" lg="6" className="mb-lg-0 mb-3">
-                                <div className="iq-progress-bar progress-bar-vertical iq-bg-danger">
-                                   <span className="bg-danger" data-percent="100" style={{transition: "height 2s ease 0s", width: "100%", height: "80%"}}></span>
-                                </div>
-                                <div className="media align-items-center">
-                                   <div className="iq-icon-box-view rounded mr-3 iq-bg-danger"><i className="las la-grin-beam font-size-32"></i></div>
-                                   <div className="media-body text-white">
-                                      <p className="mb-0 font-size-14 line-height">Thrilled</p>
-                                      <small className="text-danger mb-0">+40%</small>
-                                   </div>
-                                </div>
-                             </Col>
-                          </Row>
-                       </Col>
-                       <Col lg="5">
-                           <Chart id="view-chart-02" options={chart3.options} series={chart3.series} type="donut" height="210" />
-                       </Col>
-                    </Card.Body>
-                 </Card>
-              </Col>
-              <Col sm="12">
-                 <Card>
-                    <Card.Header className="d-flex justify-content-between">
-                       <Card.Header.Title>
-                          <h4 className="card-title">Recently Viewed Items</h4>
-                       </Card.Header.Title>
-                       <div className="iq-card-header-toolbar d-flex align-items-center seasons">
-                          <div className="iq-custom-select d-inline-block sea-epi s-margin">
-                          <Select options={options2} />
-                          </div>
-                       </div>
-                    </Card.Header>
-                    <Card.Body>
-                       <div className="table-responsive">
-                          <table className="data-tables table movie_table" style={{width:"100%"}}>
-                             <thead>
-                                <tr>
-                                   <th style={{width:"20%"}}>Movie</th>
-                                   <th style={{width:"10%"}}>Rating</th>
-                                   <th style={{width:"20%"}}>Category</th>
-                                   <th style={{width:"10%"}}>Download/Views</th>
-                                   <th style={{width:"10%"}}>User</th>
-                                   <th style={{width:"20%"}}>Date</th>
-                                   <th style={{width:"10%"}}><i className="lar la-heart"></i></th>
-                                </tr>
-                             </thead>
-                             <tbody>
-                                <tr>
-                                   <td>
-                                      <div className="media align-items-center">
-                                         <div className="iq-movie">
-                                            <Link to="#;"><img src={mt07} className="img-border-radius avatar-40 img-fluid" alt=""/></Link>
-                                         </div>
-                                         <div className="media-body text-white text-left ml-3">
-                                            <p className="mb-0">Champions</p>
-                                            <small>1h 40m</small>
-                                         </div>
-                                      </div>
-                                   </td>
-                                   <td><i className="lar la-star mr-2"></i> 9.2</td>
-                                   <td>Horror</td>
-                                   <td>
-                                      <i className="lar la-eye "></i>
-                                   </td>
-                                   <td>Unsubcriber</td>
-                                   <td>21 July,2020</td>
-                                   <td><i className="las la-heart text-primary"></i></td>
-                                </tr>
-                                <tr>
-                                   <td >
-                                      <div className="media align-items-center">
-                                         <div className="iq-movie">
-                                            <Link to="#;"><img src={mt01} className="img-border-radius avatar-40 img-fluid" alt=""/></Link>
-                                         </div>
-                                         <div className="media-body text-white text-left ml-3">
-                                            <p className="mb-0">Last Race</p>
-                                         </div>
-                                      </div>
-                                   </td>
-                                   <td><i className="lar la-star mr-2"></i> 7.2</td>
-                                   <td>Horror</td>
-                                   <td>
-                                      <i className="lar la-eye "></i>
-                                   </td>
-                                   <td>subcriber</td>
-                                   <td>22 July,2020</td>
-                                   <td><i className="las la-heart text-primary"></i></td>
-                                </tr>
-                                <tr>
-                                   <td>
-                                      <div className="media align-items-center">
-                                         <div className="iq-movie">
-                                            <Link to="#;"><img src={mt01} className="img-border-radius avatar-40 img-fluid" alt=""/></Link>
-                                         </div>
-                                         <div className="media-body text-white text-left ml-3">
-                                            <p className="mb-0">Boop Bitty</p>
-                                         </div>
-                                      </div>
-                                   </td>
-                                   <td><i className="lar la-star mr-2"></i> 8.2</td>
-                                   <td>Thriller</td>
-                                   <td>
-                                      <i className="lar la-eye "></i>
-                                   </td>
-                                   <td>Unsubcriber</td>
-                                   <td>23 July,2020</td>
-                                   <td><i className="las la-heart text-primary"></i></td>
-                                </tr>
-                                <tr>
-                                   <td>
-                                      <div className="media align-items-center">
-                                         <div className="iq-movie">
-                                            <Link to="#;"><img src={mt05} className="img-border-radius avatar-40 img-fluid" alt=""/></Link>
-                                         </div>
-                                         <div className="media-body text-white text-left ml-3">
-                                            <p className="mb-0">Dino Land</p>
-                                         </div>
-                                      </div>
-                                   </td>
-                                   <td><i className="lar la-star mr-2"></i> 8.5</td>
-                                   <td>Action</td>
-                                   <td>
-                                      <i className="lar la-eye "></i>
-                                   </td>
-                                   <td>Unsubcriber</td>
-                                   <td>24 July,2020</td>
-                                   <td><i className="las la-heart text-primary"></i></td>
-                                </tr>
-                                <tr>
-                                   <td>
-                                      <div className="media align-items-center">
-                                         <div className="iq-movie">
-                                            <Link to="#;"><img src={mt04} className="img-border-radius avatar-40 img-fluid" alt=""/></Link>
-                                         </div>
-                                         <div className="media-body text-white text-left ml-3">
-                                            <p className="mb-0">The Last Breath</p>
-                                         </div>
-                                      </div>
-                                   </td>
-                                   <td><i className="lar la-star mr-2"></i> 8.9</td>
-                                   <td>Horror</td>
-                                   <td>
-                                      <i className="lar la-eye "></i>
-                                   </td>
-                                   <td>subcriber</td>
-                                   <td>25 July,2020</td>
-                                   <td><i className="las la-heart text-primary"></i></td>
-                                </tr>
-                             </tbody>
-                          </table>
-                       </div>
-                    </Card.Body>
-                 </Card>
-              </Col>
-           </Row> */}
+
+
             <Row>
-  {/* // const Navigation = () => {
+               {/* // const Navigation = () => {
   const [tablebtn, settablebtn] = useState("");
   const [choice, setChoice] = useState();
   const [btn, setbtn] = useState("");
@@ -633,211 +507,211 @@ const Dashbord = () => {
     },
     series: [44, 30, 20, 43, 22, 20],
   }; */}
-  {/* return ( */}
-    <>
-      <Container fluid>
-        <Row>
-          <Col lg="8" xl="12">
-            <Row xl="20" className="DashborCards">
-              {DashbordCard.map((e, i) => {
-                return (
-                  <Col sm="6" lg="6" xl="4" key={i}>
-                    <Card className="iq-card-block iq-card-stretch iq-card-height">
-                      <img src={e} style={{ borderRadius: "10px" }} />
-                    </Card>
-                  </Col>
-                );
-              })}
-            </Row>
-            <Row>
-              <SearchBar hg="5%" wd="325%" />
-            </Row>
+               {/* return ( */}
+               <>
+                  <Container fluid>
+                     <Row>
+                        <Col lg="8" xl="12">
+                           <Row xl="20" className="DashborCards">
+                              {DashbordCard.map((e, i) => {
+                                 return (
+                                    <Col sm="6" lg="6" xl="4" key={i}>
+                                       <Card className="iq-card-block iq-card-stretch iq-card-height">
+                                          <img src={e} style={{ borderRadius: "10px" }} />
+                                       </Card>
+                                    </Col>
+                                 );
+                              })}
+                           </Row>
+                           <Row>
+                              <SearchBar hg="5%" wd="325%" />
+                           </Row>
 
-            <Row xl="20">
-              <div
-                className="iq-search-bar Searchit"
-                style={{
-                  background: "#13212D",
-                  borderRadius: "30px",
-                  width: "67%",
-                  marginTop: "3%",
-                  marginBottom: "3%",
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  height: "14%",
-                  marginLeft:"14px"
-                }}
-              >
-                <button
-                  className="BTN-1 bbt"
-                  style={{
-                    background: btn === "btn1" ? "#344452" : "#13212D",
-                    padding: "10px",
-                    borderRadius: "30px",
-                    color: "white",
-                    border: btn === "btn1" ? "1px solid #11FFBD" : "0px",
-                    boxShadow: "none",
-                    width: "20%",
-                    display: "flex",
-                    justifyContent: "space-around",
-                    alignSelf: "flex-start",
-                    alignItems: "center",
-                    marginLeft: "-12px",
-                  }}
-                  onClick={() => btncolorhandles("btn1")}
-                >
-                  <img
-                    className="BTNLOGO"
-                    src={btn === "btn1" ? ICON1 : Svg1}
-                    height="18px"
-                    width="18"
-                  />
-                 Lobby
-                </button>
-                <button
-                  className="BTN-1"
-                  style={{
-                    background: btn === "btn2" ? "#344452" : "#13212D",
-                    padding: "10px",
-                    borderRadius: "30px",
-                    color: "white",
-                    border: btn === "btn2" ? "1px solid  #11FFBD" : "0px",
-                    boxShadow: "none",
-                    width: "20%",
-                    display: "flex",
-                    justifyContent: "space-around",
-                    alignItems: "center",
-                    height: "90%",
-                    alignSelf: "center",
-                  }}
-                  onClick={() => btncolorhandles("btn2")}
-                >
-                  {" "}
-                  <img
-                    className="BTNLOGO"
-                    src={btn === "btn2" ? Svg2 : ICON2}
-                    height="18px"
-                    width="18"
-                  />
-                  <span>Live Casino</span>
-                </button>
-                <button
-                  className="BTN-1"
-                  style={{
-                    background: btn === "btn3" ? "#344452" : "#13212D",
-                    padding: "10px",
-                    borderRadius: "23px",
-                    color: "white",
-                    border: btn === "btn3" ? "1px solid  #11FFBD" : "0px",
-                    boxShadow: "none",
-                    width: "22%",
-                    display: "flex",
-                    justifyContent: "space-around",
-                    alignItems: "center",
-                    height: "90%",
-                    alignSelf: "center",
-                  }}
-                  onClick={() => btncolorhandles("btn3")}
-                >
-                  {" "}
-                  <img
-                    className="BTNLOGO"
-                    src={btn === "btn3" ? Svg3 : ICON3}
-                    height="18px"
-                    width="18"
-                  />
-                  Featured slots
-                </button>
-                <button
-                  className="BTN-1"
-                  style={{
-                    background: btn === "btn4" ? "#344452" : "#13212D",
-                    padding: "10px",
-                    borderRadius: "30px",
-                    color: "white",
-                    border: btn === "btn4" ? "1px solid  #11FFBD" : "0px",
-                    boxShadow: "none",
-                    width: "20%",
-                    display: "flex",
-                    justifyContent: "space-around",
-                    alignItems: "center",
-                    height: "90%",
-                    alignSelf: "center",
-                  }}
-                  onClick={() => btncolorhandles("btn4")}
-                >
-                  <img
-                    className="BTNLOGO"
-                    src={btn === "btn4" ? Svg4 : ICON4}
-                    height="18px"
-                    width="18"
-                  />
-                  Live Shows
-                </button>
-                <button
-                  className="BTN-1"
-                  style={{
-                    background: btn === "btn5" ? "#344452" : "#13212D",
-                    padding: "10px",
-                    borderRadius: "30px",
-                    color: "white",
-                    border: btn === "btn5" ? "1px solid #11FFBD" : "0px",
-                    boxShadow: "none",
-                    width: "23%",
-                    display: "flex",
-                    justifyContent: "space-around",
-                    alignItems: "center",
-                    height: "90%",
-                    alignSelf: "center",
-                    marginRight: "-12px",
-                  }}
-                  onClick={() => btncolorhandles("btn5")}
-                >
-                  <img
-                    className="BTNLOGO"
-                    src={btn === "btn5" ? Svg5 : ICON5}
-                    height="18px"
-                    width="15"
-                  />
-                  Ultrafair Originals
-                </button>
-              </div>
-            </Row>
+                           <Row xl="20">
+                              <div
+                                 className="iq-search-bar Searchit"
+                                 style={{
+                                    background: "#13212D",
+                                    borderRadius: "30px",
+                                    width: "67%",
+                                    marginTop: "3%",
+                                    marginBottom: "3%",
+                                    display: "flex",
+                                    justifyContent: "flex-start",
+                                    height: "14%",
+                                    marginLeft: "14px"
+                                 }}
+                              >
+                                 <button
+                                    className="BTN-1 bbt"
+                                    style={{
+                                       background: btn === "btn1" ? "#344452" : "#13212D",
+                                       padding: "10px",
+                                       borderRadius: "30px",
+                                       color: "white",
+                                       border: btn === "btn1" ? "1px solid #11FFBD" : "0px",
+                                       boxShadow: "none",
+                                       width: "20%",
+                                       display: "flex",
+                                       justifyContent: "space-around",
+                                       alignSelf: "flex-start",
+                                       alignItems: "center",
+                                       marginLeft: "-12px",
+                                    }}
+                                    onClick={() => btncolorhandles("btn1")}
+                                 >
+                                    <img
+                                       className="BTNLOGO"
+                                       src={btn === "btn1" ? ICON1 : Svg1}
+                                       height="18px"
+                                       width="18"
+                                    />
+                                    Lobby
+                                 </button>
+                                 <button
+                                    className="BTN-1"
+                                    style={{
+                                       background: btn === "btn2" ? "#344452" : "#13212D",
+                                       padding: "10px",
+                                       borderRadius: "30px",
+                                       color: "white",
+                                       border: btn === "btn2" ? "1px solid  #11FFBD" : "0px",
+                                       boxShadow: "none",
+                                       width: "20%",
+                                       display: "flex",
+                                       justifyContent: "space-around",
+                                       alignItems: "center",
+                                       height: "90%",
+                                       alignSelf: "center",
+                                    }}
+                                    onClick={() => btncolorhandles2("btn2")}
+                                 >
+                                    {" "}
+                                    <img
+                                       className="BTNLOGO"
+                                       src={btn === "btn2" ? Svg2 : ICON2}
+                                       height="18px"
+                                       width="18"
+                                    />
+                                    <span>Live Casino</span>
+                                 </button>
+                                 <button
+                                    className="BTN-1"
+                                    style={{
+                                       background: btn === "btn3" ? "#344452" : "#13212D",
+                                       padding: "10px",
+                                       borderRadius: "23px",
+                                       color: "white",
+                                       border: btn === "btn3" ? "1px solid  #11FFBD" : "0px",
+                                       boxShadow: "none",
+                                       width: "22%",
+                                       display: "flex",
+                                       justifyContent: "space-around",
+                                       alignItems: "center",
+                                       height: "90%",
+                                       alignSelf: "center",
+                                    }}
+                                    onClick={() => btncolorhandles3("btn3")}
+                                 >
+                                    {" "}
+                                    <img
+                                       className="BTNLOGO"
+                                       src={btn === "btn3" ? Svg3 : ICON3}
+                                       height="18px"
+                                       width="18"
+                                    />
+                                    Featured slots
+                                 </button>
+                                 <button
+                                    className="BTN-1"
+                                    style={{
+                                       background: btn === "btn4" ? "#344452" : "#13212D",
+                                       padding: "10px",
+                                       borderRadius: "30px",
+                                       color: "white",
+                                       border: btn === "btn4" ? "1px solid  #11FFBD" : "0px",
+                                       boxShadow: "none",
+                                       width: "20%",
+                                       display: "flex",
+                                       justifyContent: "space-around",
+                                       alignItems: "center",
+                                       height: "90%",
+                                       alignSelf: "center",
+                                    }}
+                                    onClick={() => btncolorhandles("btn4")}
+                                 >
+                                    <img
+                                       className="BTNLOGO"
+                                       src={btn === "btn4" ? Svg4 : ICON4}
+                                       height="18px"
+                                       width="18"
+                                    />
+                                    Live Shows
+                                 </button>
+                                 <button
+                                    className="BTN-1"
+                                    style={{
+                                       background: btn === "btn5" ? "#344452" : "#13212D",
+                                       padding: "10px",
+                                       borderRadius: "30px",
+                                       color: "white",
+                                       border: btn === "btn5" ? "1px solid #11FFBD" : "0px",
+                                       boxShadow: "none",
+                                       width: "23%",
+                                       display: "flex",
+                                       justifyContent: "space-around",
+                                       alignItems: "center",
+                                       height: "90%",
+                                       alignSelf: "center",
+                                       marginRight: "-12px",
+                                    }}
+                                    onClick={() => btncolorhandles("btn5")}
+                                 >
+                                    <img
+                                       className="BTNLOGO"
+                                       src={btn === "btn5" ? Svg5 : ICON5}
+                                       height="18px"
+                                       width="15"
+                                    />
+                                    Ultrafair Originals
+                                 </button>
+                              </div>
+                           </Row>
 
-            <Customslider
-              classnm="testclass11"
-              classnm2="testclass12"
-              title="Ultrafair Origianls"
-            />
-            <Customslider
-              classnm="testclass31"
-              classnm2="testclass32"
-              title="Slots"
-            />
-            <CardSwiper
-              classnm="testclass21"
-              classnm1="testclass22"
-              title="Providers"
-            />
-            <Customslider
-              classnm="testclass41"
-              classnm2="testclass42"
-              title="Live Casino"
-            />
-            <Customslider
-              classnm="testclass51"
-              classnm2="testclass52"
-              title="Table Games"
-            />
-            <Customslider
-              classnm="testclass54"
-              classnm2="testclass53"
-              title="New Releases"
-            />
-          </Col>
-        </Row>
+                           <Customslider
+                              classnm="testclass11"
+                              classnm2="testclass12"
+                              title="Ultrafair Origianls"
+                           />
+                           <Customslider
+                              classnm="testclass31"
+                              classnm2="testclass32"
+                              title="Slots"
+                           />
+                           <CardSwiper
+                              classnm="testclass21"
+                              classnm1="testclass22"
+                              title="Providers"
+                           />
+                           <Customslider
+                              classnm="testclass41"
+                              classnm2="testclass42"
+                              title="Live Casino"
+                           />
+                           <Customslider
+                              classnm="testclass51"
+                              classnm2="testclass52"
+                              title="Table Games"
+                           />
+                           <Customslider
+                              classnm="testclass54"
+                              classnm2="testclass53"
+                              title="New Releases"
+                           />
+                        </Col>
+                     </Row>
 
-        {/* <Row>
+                     {/* <Row>
                <Col sm="12">
                   <Card>
                      <Row>
@@ -1052,45 +926,56 @@ const Dashbord = () => {
         onHide={() => setModalShow(false)}
       /> */}
 
-         </Container>
-      </>
-   
+                  </Container>
+               </>
 
-            </Row> 
-            
-               <Modal show={show} onHide={handleClose} size="lg"
-                  aria-labelledby="contained-modal-title-vcenter"
-                  centered
-                  className="textclass wallet-modal'"
-                  
-               >
-                  <Modal.Header style={{ border: 'none' }}>
-                     <Modal.Title>
-                        <div style={{marginLeft: 10}}>
+
+            </Row>
+
+            <Modal show={show} onHide={handleClose} size="lg"
+               aria-labelledby="contained-modal-title-vcenter"
+               centered
+               className="textclass wallet-modal'"
+
+
+            >
+               <Modal.Header style={{ border: 'none' }}>
+                  <Modal.Title>
+                     <div style={{ marginLeft: 10 }}>
                         <WalletSVG />
-                        <span style={{ fontSize: 15, color: "white", paddingLeft: 7 }}>Wallet</span>
-                        </div>
-                        <button
-                           type="button"
-                           class="close"
-                           aria-label="Close"
-                           style={{ color: "white", position: 'absolute', top: -1, right: 10 }}
-                           onClick={handleClose}
-                        >
-                           <span aria-hidden="true" style={{ fontSize: 33, fontWeight: 1 }}>&times;</span>
-                        </button>
-                     </Modal.Title>
-                  </Modal.Header>
-                  <Modal.Body>
-                     <Name />
-                  </Modal.Body>
+                        <span style={{ color: "white", paddingLeft: 7, }} className="wallet-header">Wallet</span>
+                     </div>
+                     <button
+                        type="button"
+                        class="close"
+                        aria-label="Close"
+                        style={{ color: "white", position: 'absolute', top: -1, right: 10 }}
+                        onClick={handleClose}
+                     >
+                        <span aria-hidden="true" style={{ fontSize: 33, fontWeight: 1 }}>&times;</span>
+                     </button>
+                  </Modal.Title>
+               </Modal.Header>
+               <Modal.Body>
+                  <Name />
+               </Modal.Body>
 
-               </Modal>
-            
-      </Container>
-     
-    </>
-  );
+            </Modal>
+
+            <ModalViewSelection
+               show={modalShow}
+               onHide={() => setModalShow(false)}
+            />
+
+            <UserVerification
+               show={modalShow3}
+               onHide={() => setModalShow3(false)}
+            />
+
+         </Container>
+
+      </>
+   );
 };
 
 export default Dashbord;
