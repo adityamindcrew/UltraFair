@@ -6106,3 +6106,9 @@ color: #f8f9fa !important;
 .meunview {
     display: none;
 }}
+
+@media screen and (min-width: 1900px) and (max-width: 4080px){
+  .Searchtext1{
+    margin-top: 15% !important;
+}
+}

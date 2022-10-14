@@ -80,7 +80,7 @@ const Dashbord = () => {
  
   return (
     <>
-      <Container fluid>
+      <Container fluid style={{maxWidth:"1200px" ,padding:0}}>
         <Row>
           <Col lg="" xl="12" className="Fullcontainer">
             <Row xl="20" className="DashborCards">
@@ -95,16 +95,16 @@ const Dashbord = () => {
               })}
             </Row>
             <Row>
-              <SearchBar hg="5%" wd="399%" />
+              <SearchBar hg="5%" notmt="notmt"/>
             </Row>
 
             <Row xl="20" style={{overflow:"auto"}}>
               <div
-                className="iq-search-bar Searchit "
+                className="iq-search-bar Searchit OVERWRITE " // Searchit
                 style={{
                   background: "#13212D",
                   borderRadius: "30px",
-                  width: "55%",
+                  width: "70%",
                   marginTop: "3%",
                   marginBottom: "3%",
                   display: "flex",
@@ -255,7 +255,7 @@ const Dashbord = () => {
             <Customslider
               classnm="testclass11"
               classnm2="testclass12"
-              title="Ultrafair Origianls"
+              title="Ultrafair Originals"
             />
             <Customslider
               classnm="testclass31"

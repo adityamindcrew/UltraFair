@@ -33,7 +33,7 @@ const UserProfileEdit = () => {
     <>
       <Container fluid>
         <Customheader Headercls="Headertitle" title="Live Casino" SVG={SVG} wid="14%" Img={Img1} />
-        <Customsearchbar hg="5%" wd="390%" />
+        <Customsearchbar hg="7%" wd="390%" />
         <Custombtn mr="2%" flx="flex-start" />
         <UltraFairCard />
         <CardSwiper classnm="AxC" classnm1="AxCD" />

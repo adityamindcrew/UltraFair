@@ -12,7 +12,7 @@ import Showimg3 from '../assets/images/Show3.png'
 const Customslider = ({classnm,classnm2,title}) => {
   function handlemouse(id){
     setshow(id)
-    console.log("dfsdfsd",id)
+   //  console.log("dfsdfsd",id)
 
    }
 
@@ -38,7 +38,7 @@ const Customslider = ({classnm,classnm2,title}) => {
                               nextEl: `.${classnm}`,
                            }}
                            breakpoints={{
-                              320: {   slidesPerView: 3},                
+                              320: {   slidesPerView: 1},                
                               550: { slidesPerView: 2 },
                               991: { slidesPerView: 3 },
                               1400: { slidesPerView: 4 },
