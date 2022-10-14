@@ -73,7 +73,7 @@ const FooterStyle = (props) => {
             <h1>Supports</h1>
             <ul>
               <li>Fairness</li>
-              <li>Afiliate</li>
+              <li>Affiliate</li>
               <li> <div className='d-flex flex-row'>Gamble Aware  <div className='ml-2'><img src={Vector} height="12px" width="12px" /></div></div></li>
               <li>Live Support</li>
               <li> <div className='d-flex flex-row'>Help Center  <div className='ml-2'><img src={Vector} height="12px" width="12px" /></div></div></li>

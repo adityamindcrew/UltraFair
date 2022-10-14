@@ -4,16 +4,22 @@ import smallLogo from "../../../../assets/images/sidebar/UltrafairSmallLogo.png"
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import { Navbar, Button, Form, Nav, Dropdown } from "react-bootstrap";
+import { BitcoinsSVG, EtheremcoinsSVG, TetherSVG, UsdcoinSVG, PlusSVG , WalletSVG } from "../headerstyle/headerIcons";
 
 //Modal
 import Modal from "react-bootstrap/Modal";
 import Signup from "../../../../views/backend/auth/signup";
 import Signin from "../../../../views/backend/auth/signin";
 
+//  Img
+
+import { CopySVG, NotificationSVG, ProfileSVG } from './headerIcons';
 
 const HeaderStyle1 = (props) => {
   const [signUpModalShow, setSignUpModalShow] = React.useState(false);
   const [loginModalShow, setLoginModalShow] = React.useState(false);
+  const [navShow, setNavShow] = React.useState(false);
+
   const minisidbar = () => {
     document.body.classList.toggle("sidebar-main");
   };
@@ -25,10 +31,10 @@ const HeaderStyle1 = (props) => {
         aria-labelledby="contained-modal-title-vcenter"
         centered
         className="registerModal "
-        style={{ justifyContent: "center"}}
+        style={{ justifyContent: "center" }}
       >
         {/* <Modal.Header closeButton></Modal.Header> */}
-        <Modal.Body style={{ padding: "0px"  }}>
+        <Modal.Body style={{ padding: "0px" }}>
           <Signup showModal={loginCallback} close={CloseButton} />
         </Modal.Body>
       </Modal>
@@ -41,7 +47,7 @@ const HeaderStyle1 = (props) => {
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
-        style={{ justifyContent: "center",}}
+        style={{ justifyContent: "center", }}
         className="signinModal"
       >
         {/* <Modal.Header closeButton></Modal.Header> */}
@@ -72,7 +78,7 @@ const HeaderStyle1 = (props) => {
   const registerHandler2 = () => {
     setSignUpModalShow(true);
   };
- 
+
   const loginHandler = () => {
     setLoginModalShow(true);
   };
@@ -80,7 +86,7 @@ const HeaderStyle1 = (props) => {
     <>
       <div className="iq-top-navbar p-2" >
         <div className="iq-navbar-custom" >
-          <Navbar className="" expand="sm">
+{navShow ?          <Navbar className="" expand="sm">
             <div className="iq-menu-bt d-flex align-items-center">
               <div className="wrapper-menu" onClick={minisidbar}>
                 <div className="main-circle meunview">
@@ -91,7 +97,7 @@ const HeaderStyle1 = (props) => {
                 <Link to="/" className="header-logo">
                   <img
                     src={logo}
-                    className="logoImg fullLogo img-fluid rounded-normal"
+                    className="logoImg fullLogo img-fluid1 rounded-normal"
                     alt=""
                   />
                   {/* <div className="logo-title">
@@ -135,6 +141,91 @@ const HeaderStyle1 = (props) => {
            
           
           </Navbar>
+:
+          <Navbar className="" expand="sm">
+            <div className="iq-menu-bt d-flex align-items-center">
+              <div className="wrapper-menu" onClick={minisidbar}>
+                <div className="main-circle meunview">
+                  <i className="las la-bars"></i>
+                </div>
+              </div>
+              {/* <div className="iq-navbar-logo d-flex justify-content-between">
+                <Link to="/" className="header-logo">
+                  <img
+                    src={logo}
+                    className="logoImg fullLogo img-fluid rounded-normal"
+                    alt=""
+                  />
+                  <img
+                    src={logo}
+                    className="logoImg collapsedLogo img-fluid rounded-normal"
+                    alt=""
+                  />
+                </Link>
+              </div> */}
+              <img src={smallLogo} className="img-view"/>
+            </div>
+            <Dropdown>
+                  <Dropdown.Toggle id="dropdown-basic" className="dropdown-navbar">
+                    &nbsp;  0.0000000&nbsp; <span ><BitcoinsSVG /></span>  &nbsp;
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    <Dropdown.Item href="#/action-1">1.44500000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span ><BitcoinsSVG /></span>&nbsp;&nbsp;  BTC</Dropdown.Item>
+                    <Dropdown.Item href="#/action-1">23.6670000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span ><EtheremcoinsSVG /></span>&nbsp;&nbsp;  ETH</Dropdown.Item>
+                    <Dropdown.Item href="#/action-1">50.6654000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span ><UsdcoinSVG /></span>&nbsp;&nbsp;  USDC</Dropdown.Item>
+                    <Dropdown.Item href="#/action-1">23.66500000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span><TetherSVG /></span>&nbsp;&nbsp;  USDT</Dropdown.Item>
+                    <hr className='dropdown-line-style' />
+                    <div className="addcurrenies"><PlusSVG /> <span>Add Currencies</span></div>
+
+                  </Dropdown.Menu>
+                </Dropdown>
+                <div className="dropdown-wallet-1 img-view"><WalletSVG /></div>
+                <div className="dropdown-wallet-1 text-view">wallet</div>
+            <div className="iq-search-bar ml-auto">
+
+            </div>
+
+            {/* <div className="navbar-list-hide mt-2">
+              <Nav as="ul" className=" navbar-list iq-header">
+                <Link className="navItem-hide" to="#" onClick={loginHandler}>
+                  Sign In
+                </Link>
+                <span
+                  className="navItem btnNavbar"
+                  type="button"
+                  variant=" btn-primary"
+                  onClick={registerHandler2}
+                  style={{backgroundColor:'#11ffbd', color: 'black', textAlign:'center', paddingTop:5,paddingRight: 20,paddingLeft: 20, borderRadius:7, marginTop:1, fontWeight:'bold', fontSize:15}}
+                >
+                  Register
+                </span>
+              </Nav>
+            </div>   */}
+            <div className=" mt-2">
+              <Nav as="ul" className=" navbar-list iq-header">
+               
+                <div className="d-flex">
+                  <div className="d-flex">
+                    {/* <div className="wallet-link">
+                      <span>334RfxXoT...334Tte</span>
+                    </div> */}
+
+                    {/* <div className="wallet-icons-1">
+                      <CopySVG />
+                    </div> */}
+                    <div class="vl hide-data"></div>
+                  </div>
+
+                  <div className="mr-4 d-flex">
+                    <ProfileSVG />
+                  </div>
+                  <div className="mr-4 hide-data">
+                    <NotificationSVG />
+                  </div>
+                </div>
+              </Nav>
+            </div>
+          </Navbar> }
         </div>
       </div>
       <SignUpModal

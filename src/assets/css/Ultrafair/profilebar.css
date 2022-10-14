@@ -1,0 +1,529 @@
+.profiletopbar {
+    width: 100%;
+    background-color: #1E2C37;
+    background: #1E2C37;
+    padding: 0px 20px 20px 20px;
+}
+
+.profile-list {
+    float: left;
+    margin: 10px;
+}
+
+.profile-list-item {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    margin-left: 40px;
+}
+
+.profilename {
+    display: flex;
+    justify-content: space-between;
+    font-size: 36px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+@media (max-Width : 501px) {
+    .profilename {
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+        font-weight: 500;
+        padding: 5px;
+    }
+
+
+    .hide-profile-text {
+        display: none;
+    }
+
+    .profile-list-item {
+        margin: 12px !important;
+    }
+}
+
+@media (min-Width : 502px) {
+    .content-page {
+        background: linear-gradient(180deg, #1f4949 0%, rgba(17, 255, 189, 0) 100%);
+        mix-blend-mode: normal;
+        overflow: hidden;
+        margin-left: 300px;
+        padding: 100px 15px 0 !important;
+        min-height: 100vh;
+        transition: all 0.3s ease-out 0s;
+    }
+
+    .col-md-4,
+    .col-md-8 {
+        position: relative;
+        width: 100%;
+        padding-right: 5px !important;
+        padding-left: 5px !important;
+        padding-top: -10px;
+    }
+}
+
+.card-box {
+    background: #263642;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.wallet-health-text {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 51px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    padding-right: 10px;
+    /* Ultrafair - Orange 100 */
+
+    color: #F7B32B;
+}
+
+.wallet-health-subtext {
+    margin-inline-start: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    padding-inline-start: 20px;
+    padding: 5px;
+
+    /* Ultrafair - Grey 100 */
+
+    color: #B3BAD1;
+}
+
+.profile-card-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #B3BAD1;
+}
+
+input.chone {
+    width: 18px;
+    height: 18px;
+}
+
+input[type=checkbox]:checked {
+    background-color: #a77e2d !important;
+    color: #ffffff !important;
+}
+
+.line-style {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    color: #CDD5DF !important;
+    border-color: #CDD5DF !important;
+    border: 0.5px solid #CDD5DF;
+}
+
+.card-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+
+.authentication-button {
+    background-color: #11FFBD;
+    margin-top: 20px;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    border-radius: 12px;
+    border-color: #11FFBD;
+    outline: none !important;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.profile-heading-text {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    margin-left: 20px;
+    word-spacing: 4px;
+}
+
+.profile-heading-sub-text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #B3BAD1;
+    margin-inline-start: 50px;
+}
+
+.profile-step {
+
+    background: #B3BAD1;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    color: black;
+    text-align: center;
+    vertical-align: middle !important;
+    justify-content: center;
+}
+
+.profile-step-number {
+    border-style: solid;
+    border-color: #B3BAD1;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border-color: 1px solid darkgray !important;
+    color: #B3BAD1;
+    text-align: center;
+    vertical-align: middle !important;
+    justify-content: center;
+}
+
+.dropdown-line-style {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 25px !important;
+    margin-right: 25px !important;
+    /* color: #CDD5DF !important; */
+    /* border-color: #CDD5DF !important; */
+    border: 0.5px solid #1E2C37;
+}
+
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.575rem 1.5rem !important;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 10px;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+/* CSS for Extra Large (xl) screen */
+@media only screen and (max-width: 1440px) {
+    /* Write your code here */
+
+}
+
+/* CSS for Extra Large (xl) screen */
+@media only screen and (max-width: 1366px) {
+    /* Write your code here */
+
+}
+
+/* CSS for Large (lg) screen */
+@media only screen and (max-width: 1280px) {
+    /* Write your code here */
+}
+
+/* CSS for Large (lg) screen */
+@media only screen and (max-width: 1152px) {
+    /* Write your code here */
+
+}
+
+/* CSS for Large (lg) screen */
+@media only screen and (max-width: 1024px) {
+    /* Write your code here */
+
+}
+
+
+/* CSS for Medium (md) screen */
+@media only screen and (max-width: 750px) {
+    .profile-list {
+        /* display: flex; */
+        float: left;
+        margin: 10px;
+    }
+
+    .profile-list-item {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #FFFFFF;
+        margin-left: 40px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .profiletopbar {
+        margin-top: -1px;
+        width: 100%;
+        background-color: #1E2C37;
+        background: #1E2C37;
+        padding: 0px 20px 20px 20px;
+    }
+}
+
+/* CSS for Medium (md) screen */
+@media only screen and (max-width: 500px) {
+
+    /* Write your code here */
+    .profile-list {
+        /* display: flex; */
+        float: left;
+        margin: 10px;
+    }
+
+    .profiletopbar {
+        margin-top: -4x;
+        width: 100%;
+        background-color: #1E2C37;
+        background: #1E2C37;
+        padding: 0px 20px 20px 20px;
+    }
+}
+
+/* CSS for Extra Small (xs) screen */
+@media only screen and (max-width: 480px) {
+
+    /* Write your code here */
+    .profile-list {
+        /* display: flex; */
+        float: left;
+        margin: 10px;
+    }
+
+    .profiletopbar {
+        margin-top: -10px;
+        width: 100%;
+        background-color: #1E2C37;
+        background: #1E2C37;
+        padding: 0px 20px 20px 20px;
+    }
+}
+
+
+/* CSS for Extra Small (xs) screen */
+@media only screen and (max-width: 320px) {
+
+    /* Write your code here */
+    .profile-list {
+        /* display: flex; */
+        float: left;
+        margin: 10px;
+    }
+
+    .profiletopbar {
+        margin-top: -10px;
+        width: 100%;
+        background-color: #1E2C37;
+        background: #1E2C37;
+        padding: 0px 20px 20px 20px;
+    }
+}
+
+/* CSS for Medium (md) screen */
+@media screen and (min-width: 751px) and (max-width: 990px) {
+
+    /* Write your code here */
+    .profile-list {
+        display: flex;
+        float: left;
+        margin: 10px;
+    }
+
+    .profile-list-item {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #FFFFFF;
+        margin-left: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .profiletopbar {
+        margin-top: -3px;
+        width: 100%;
+        background-color: #1E2C37;
+        background: #1E2C37;
+        padding: 0px 20px 20px 20px;
+    }
+}
+
+/* CSS for Medium (md) screen */
+@media screen and (min-width: 991px) and (max-width: 1400px) {
+
+    /* Write your code here */
+    .profiletopbar {
+        margin-top: -11px;
+        width: 100%;
+        background-color: #1E2C37;
+        background: #1E2C37;
+        padding: 0px 20px 20px 20px;
+    }
+
+    .profile-list {
+        display: flex;
+        float: left;
+        margin: 10px;
+    }
+
+    .profile-list-item {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #FFFFFF;
+        margin-left: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* CSS for Medium (md) screen */
+@media screen and (min-width: 1401px) and (max-width: 5000px) {
+
+    /* Write your code here */
+    .profile-list {
+        display: flex;
+        float: left;
+        margin: 20px;
+    }
+
+    .profile-list-item {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #FFFFFF;
+        margin-left: 40px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1401px) and (max-width: 1500px) {
+    .profiletopbar {
+        margin-top: -6px;
+        width: 100%;
+        background-color: #1E2C37;
+        background: #1E2C37;
+        padding: 0px 20px 20px 20px;
+    }
+}
+
+@media screen and (min-width: 1501px) and (max-width: 1650px) {
+    .profiletopbar {
+        margin-top: 0px;
+        width: 100%;
+        background-color: #1E2C37;
+        background: #1E2C37;
+        padding: 0px 20px 20px 20px;
+    }
+}
+
+@media screen and (min-width: 1650px) and (max-width: 1700px) {
+    .profiletopbar {
+        margin-top: 2px;
+        width: 100%;
+        background-color: #1E2C37;
+        background: #1E2C37;
+        padding: 0px 20px 20px 20px;
+    }
+}
+
+@media screen and (min-width: 1701px) and (max-width: 1880px) {
+    .profiletopbar {
+        margin-top: 8px;
+        width: 100%;
+        background-color: #1E2C37;
+        background: #1E2C37;
+        padding: 0px 20px 20px 20px;
+    }
+}
+
+@media screen and (min-width: 1881px) and (max-width: 2000px) {
+    .profiletopbar {
+        margin-top: 14px;
+        width: 100%;
+        background-color: #1E2C37;
+        background: #1E2C37;
+        padding: 0px 20px 20px 20px;
+    }
+}
+@media screen and (min-width: 2001px) and (max-width: 2120px) {
+    .profiletopbar {
+        margin-top: 18px;
+        width: 100%;
+        background-color: #1E2C37;
+        background: #1E2C37;
+        padding: 0px 20px 20px 20px;
+    }
+}
+
+@media screen and (min-width: 2121px) and (max-width: 2300px) {
+    .profiletopbar {
+        margin-top: 18px;
+        width: 100%;
+        background-color: #1E2C37;
+        background: #1E2C37;
+        padding: 0px 20px 20px 20px;
+    }
+}
+@media screen and (min-width: 2300px) and (max-width: 2400px) {
+    .profiletopbar {
+        margin-top: 30px;
+        width: 100%;
+        background-color: #1E2C37;
+        background: #1E2C37;
+        padding: 0px 20px 20px 20px;
+    }
+}
+@media screen and (min-width: 2401px) and (max-width: 2500px) {
+    .profiletopbar {
+        margin-top: 35px;
+        width: 100%;
+        background-color: #1E2C37;
+        background: #1E2C37;
+        padding: 0px 20px 20px 20px;
+    }
+}
+@media screen and (min-width: 2501px) and (max-width: 2800px) {
+    .profiletopbar {
+        margin-top: 45px;
+        width: 100%;
+        background-color: #1E2C37;
+        background: #1E2C37;
+        padding: 0px 20px 20px 20px;
+    }
+}
+@media screen and (min-width: 2801px) and (max-width: 3000px) {
+    .profiletopbar {
+        margin-top: 55px;
+        width: 100%;
+        background-color: #1E2C37;
+        background: #1E2C37;
+        padding: 0px 20px 20px 20px;
+    }
+}
+@media screen and (min-width: 3000px) and (max-width: 5000px) {
+    .profiletopbar {
+        margin-top: 65px;
+        width: 100%;
+        background-color: #1E2C37;
+        background: #1E2C37;
+        padding: 0px 20px 20px 20px;
+    }
+}
