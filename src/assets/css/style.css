@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 /*
 Template: Streamit  - Responsive Bootstrap 4 Admin Dashboard Template
 Author: iqonicthemes.in
@@ -1078,7 +1080,9 @@ body.sidebar-main .iq-sidebar .iq-menu li a[aria-expanded="false"].collapsed {
 .iq-sidebar-menu .iq-menu li.active>a::before {
   opacity: 1;
   height: 75%;
-} */
+}
+
+*/
 
 /*------------------------*/
 .iq-sidebar-menu .iq-menu li ul {
@@ -1546,7 +1550,9 @@ body.sidebar-main .iq-sidebar .iq-menu li a[aria-expanded="false"].collapsed {
 .iq-sidebar-menu .iq-menu li.active>a::before {
   opacity: 0;
   height: 75%;
-} */
+}
+
+*/
 
 /*------------------------*/
 .iq-sidebar-menu .iq-menu li ul {
@@ -1938,18 +1944,8 @@ div#lottie-fullscreen svg path {
   background-color: var(--iq-body-bg);
 }
 
-.walletTab {
-  /* background: "#13212D";
-  border-radius: "30px";
-  width: '100%';
-  padding: 5;
-  text-align: 'center';
-  margin-top: "3%";
-  margin-bottom: "3%";
-  display: "flex";
-  justify-content: "center" */
-     margin: 0vw 3vw; 
-}
+
+
 
 .iq-navbar-logo {
   padding: 20px;
@@ -5854,7 +5850,7 @@ h6 span {
   max-height: fit-content !important;
   border-radius: 10px; */
   position: relative;
-  
+
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   padding: 20px 25px;
@@ -5873,81 +5869,185 @@ h6 span {
 }
 
 .rc-anchor-alert {
-display: none !important;
+  display: none !important;
 }
-.wallet-address-deposit{
+
+.wallet-address-deposit {
   display: flex;
-  background-color: #344452;;
-  width:100%;
+  background-color: #344452;
+  ;
+  width: 100%;
   margin-bottom: 20px;
   border-radius: 4px;
   justify-content: center;
   padding: 5px;
-  
- }
-.wallet-link{
-  width:100%;
+
+}
+
+.wallet-link {
+  width: 100%;
   padding-left: 10px;
   justify-content: space-around;
-   align-items: center;
-   color:white;
- 
-   
+  align-items: center;
+  color: white;
+
+
 }
-.wallet-icons-1{
+
+.wallet-icons-1 {
 
   width: 10%;
- 
-  
+
+
 }
-.refresh-icon{
-   height: 17px;
-   width :17px; 
-   
+
+.refresh-icon {
+  height: 17px;
+  width: 17px;
+
 }
-.wallet-icons-2{
+
+.wallet-icons-2 {
   width: 10%;
   /* padding-right: 5px; */
 }
-.wallet-bitcoin{
+
+.wallet-bitcoin {
   background-color: orange;
   border-radius: 20px;
-  padding: 0px 4px;  
- 
+  padding: 0px 4px;
+
 }
-.wallet-Text{
+.walletBitcoin {
+  position: relative;
+    top: -1px;
+  padding-right: 1px;
+  padding-left: 4px;
+ 
+
+}
+.wallet-bitcoin-dropdown-1{
+  vertical-align:1px;
+}
+.wallet-bitcoin-dropdown-2{
+  vertical-align:2px;
+}
+
+.wallet-bitcoin-2 {
+  background-color: blue;
+  border-radius: 20px;
+  padding: 0px 4px;
+
+}
+
+.wallet-Text {
   text-align: left;
   width: 100%;
-  
+  font-family: 'Montserrat', sans-serif;
   position: relative;
-  left:-15px
+  left: -15px;
+  font-size: 13px;
 }
-.modal-content{
+
+.modal-content {
   border-radius: 12px;
-  
+
 }
+
+.row-wallet {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100% !important;
+}
+
+.wallet-header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+
+}
+
+.walletTab {
+
+  margin: 0vw 3vw;
+  background: #13212D;
+  border-radius: 30px;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  margin-top: 1%;
+  margin-bottom: 3%;
+  display: flex;
+}
+
+
+.WalletButtonText {
+
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+@media only screen and (min-width: 1026px) {
+  .wallet-QR-row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .WalletButtonText {
+    font-family: 'Montserrat', sans-serif;
+
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+  .row-wallet {
+    margin: 0vw 0vw;
+
+    text-align: center;
+
+  }
+
+
+}
+
+
 @media only screen and (max-width: 1026px) {
- 
-  .wallet-address-deposit{
-   
-    width:100%;
-   
-   }
-  .wallet-link{
+
+  .WalletButtonText-4 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .walletTab {
+    margin: 0vw 2vw;
+    width: 100%;
+    text-align: center;
+  }
+
+  .wallet-address-deposit {
+
+    width: 100%;
+
+  }
+
+  .wallet-link {
     /* width:80%; */
     padding-left: 10px;
     justify-content: space-around;
-     align-items: center;
-     color:white;
-     padding-right: 10px;
-     
+    align-items: center;
+    color: white;
+    padding-right: 10px;
+
   }
-  .wallet-icons-1{
+
+  .wallet-icons-1 {
     /* width: 10%; */
     padding-right: 10px;
-    
+
   }
-  .wallet-icons-2{
+
+  .wallet-icons-2 {
     /* width: 10%; */
     padding-right: 5px;
   }
@@ -5957,11 +6057,11 @@ display: none !important;
 }
 
 
-.dropdown-wallet{
-  
+.dropdown-wallet {
+
   border-color: #0D1D29;
   background: #0D1D29;
-  
+
   text-align: center;
   margin: 2.5px;
   /* margin-left: 15px !important; */
@@ -5970,35 +6070,144 @@ display: none !important;
   padding-right: 22px;
   padding-left: 22px;
 }
-.dropdown-wallet:hover{
-  background: #344452;
+
+.dropdown-wallet-2 {
   border-color: #344452;
-  border-top-left-radius: 27px !important;
-  border-bottom-left-radius: 27px !important;
-  border-top-right-radius: 27px !important;
-  border-bottom-right-radius: 27px !important;
+  background: #344452;
+  padding-top: 10px;
+
   text-align: center;
   margin: 2.5px;
   /* margin-left: 15px !important; */
   transition: none !important;
   translate: none !important;
+  padding-right: 22px;
+  padding-left: 5px;
 }
-.dropdown-wallet:focus{
-  background: #344452;
+
+.dropdown-wallet-3 {
   border-color: #344452;
-  border-top-left-radius: 27px !important;
-  border-bottom-left-radius: 27px !important;
-  border-top-right-radius: 27px !important;
-  border-bottom-right-radius: 27px !important;
+  background: #344452;
+  padding-top: 12px;
+
   text-align: center;
   margin: 2.5px;
   /* margin-left: 15px !important; */
   transition: none !important;
   translate: none !important;
+  padding-right: 18px;
+  padding-left: 2px;
+
+}
+.wallet-paragraph{
+  font-family: "Montserrat";
+  font-size: 11px;
+ 
+}
+.wallet-Button{
+  color: "black";
+  width: 100%;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  font-family:'Montserrat';
+}
+
+.wallet-Button:hover{
+ width:100%;
+  transition: none !important;
+  translate: none !important;
+  border-radius: 3px !important;
+  padding-top: 13px;
+  padding-bottom: 13px;
+
+}
+.wallet-Button:focus{
+  width:100%;
+   transition: none !important;
+   translate: none !important;
+   border-radius: 3px !important;
+   background-color: var(--iq-primary);
+  
+ }
+
+.dropdown-wallet:hover {
+  background: #0D1D29 !important;
+  border-color: #0D1D29 !important;
+  margin: 2.5px;
+  /* margin-left: 15px !important; */
+  transition: none !important;
+  translate: none !important;
+  border-radius: 4px !important;
 }
 
 
- /* .dropdown .dropdown-btn{
+.dropdown-wallet:focus {
+  background: #0D1D29 !important;
+  border-color: #0D1D29 !important;
+  margin: 2.5px;
+  /* margin-left: 15px !important; */
+  transition: none !important;
+  translate: none !important;
+  border-radius: 4px !important;
+}
+
+.dropdown-wallet-2:hover {
+  background: #344452 !important;
+  border-color: #344452 !important;
+  margin: 2.5px;
+  /* margin-left: 15px !important; */
+  transition: none !important;
+  translate: none !important;
+  border-radius: 4px !important;
+}
+
+
+.dropdown-wallet-2:focus {
+  background: #344452 !important;
+  border-color: #344452 !important;
+  margin: 2.5px;
+  /* margin-left: 15px !important; */
+  transition: none !important;
+  translate: none !important;
+  border-radius: 4px !important;
+}
+
+.dropdown-wallet-3:hover {
+  background: #344452 !important;
+  border-color: #344452 !important;
+  margin: 2.5px;
+  /* margin-left: 15px !important; */
+  transition: none !important;
+  translate: none !important;
+  border-radius: 4px !important;
+ 
+}
+
+
+.dropdown-wallet-3:focus {
+  background: #344452 !important;
+  border-color: #344452 !important;
+  margin: 2.5px;
+  /* margin-left: 15px !important; */
+  transition: none !important;
+  translate: none !important;
+  border-radius: 4px !important;
+}
+
+.dropdown-toggle::after {
+  display: none;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+
+
+/* .dropdown .dropdown-btn{
   padding: 10px;
   background-color: transparent;
   box-shadow: 3px 3px 10px 6px rgba(0,0,0, 0.06);
@@ -6026,6 +6235,158 @@ display: none !important;
 .dropdown-item li {
   list-style-type: none;
 } */
+
+
+/* .form-check-inline {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 1.5vw;
+
+  margin-right: 0.75rem;
+} */
+.checkbox-text{
+  font-family: 'Montserrat';
+}
+.check-box-icon {
+  position: relative;
+  bottom: 3px;
+  right: 9px;
+  background-color: orange;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  border-radius: 50%;
+
+}
+.checkbox-row{
+  margin-left: 7%;
+}
+@media only screen and (max-width: 1026px ) {
+   .checkbox-row{
+    margin-left: 10%;
+   }
+}
+.col-box {
+  position: relative;
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+/* The container */
+.container-checkbox {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  align-items: flex-start;
+
+}
+
+/* Hide the browser's default checkbox */
+.container-checkbox .checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+  border-radius: 10%;
+  border: 1px solid #eee
+}
+
+/* On mouse-over, add a grey background color */
+.container-checkbox:hover .checkbox-input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-checkbox .checkbox-input:checked~.checkmark {
+  /* background-color: #2196F3; */
+  background-color: #d1d0cf;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-checkbox .checkbox-input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-checkbox .checkmark:after {
+  left: 5px;
+  top: 0px;
+  width: 7px;
+  height: 13px;
+  border: solid rgb(6, 5, 5);
+  border-width: 0px 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+/* -----------------------------MODAL USER VERIFICATION------- */
+.modalbody{
+/* padding: 2rem 5rem; */
+}
+.form2-body{
+  padding: 1rem 4rem;
+}
+.form3-body{
+  padding: 1rem 3rem;
+}
+
+.user-verification h3{
+  font-family: 'Montserrat';
+  margin-bottom: 15px;
+}
+
+.user-verification p{
+  font-family: 'Montserrat';
+  margin-bottom: 25px;
+}
+
+.re-back{
+  position: absolute;
+  top:-25px;
+  left:10px;
+}
+
+.timer{
+  position: relative;
+  top:5px;
+}
+.email-text{
+  position: relative;
+  top:-30px;
+}
+
+.fileupload-user{
+  background-color: blue;
+}
 .img-fluid1 {
   max-width: 100%;
   height: auto;
