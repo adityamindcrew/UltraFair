@@ -82,7 +82,7 @@ const Pricing = ({ mr, flx }) => {
     }),
   };
 
-  console.log(Select);
+  // console.log(Select);
   const categoryGroup = [
     {
       label: "Please select the category",
@@ -135,7 +135,8 @@ const Pricing = ({ mr, flx }) => {
             </svg>
             Filter By
           </div>
-          <Select
+    <div className="Providerr">
+    <Select
             defaultValue={selectedCategory}
             styles={customStyles}
             // onChange={(e) => {
@@ -154,6 +155,7 @@ const Pricing = ({ mr, flx }) => {
               }
             }
           />
+    </div>
           {/* <div
             style={{
               display: "flex",

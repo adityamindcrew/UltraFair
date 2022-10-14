@@ -29,8 +29,8 @@ function CardSwiper({classnm,classnm1}) {
   ];
 
   return (
-    <div>
-      <Card.Header className="d-flex justify-content-between align-items-center">
+    <div className="Swiperresp">
+      <Card.Header className="d-flex justify-content-between align-items-center" style={{padding:0}}>
         <div>
           <h3 className="card-title m-0">Providers</h3>
         </div>
@@ -50,29 +50,30 @@ function CardSwiper({classnm,classnm1}) {
         </div>
       </Card.Header>
 
-      <Card.Body>
+      <Card.Body style={{padding:"15px"}}>
         <Swiper
           navigation={{
             prevEl: `.${classnm1}`,
             nextEl: `.${classnm}`,
           }}
+          Autoplay={true}
           breakpoints={{
             320: { slidesPerView: 1 },
             550: { slidesPerView: 2 },
             991: { slidesPerView: 3 },
             1400: { slidesPerView: 4 },
           }}
-          loop={true}
+          // loop={true}
           className="list-unstyled row top-rated-item mb-0 iq-rtl-direction"
         >
           {swiperImages.map((s, i) => {
             return (
-              <SwiperSlide className="col-sm-1 col-lg-2 col-xl-2 iq-rated-box" style={{padding:"0px"}}>
+              <SwiperSlide className="col-sm-1 col-lg-2 col-xl-2 iq-rated-box Swiper2" style={{padding:"0px"}}>
                 <div className="iq-thumb">
                   <Link to="/providers">
                     <img
                       src={s.img}
-                      className="img-fluid  img-border-radius"
+                      className="img-fluid119  img-border-radius"
                       width="200vw"
                       height="400vh"
                       alt=""

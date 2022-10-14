@@ -117,6 +117,7 @@ const SignUp = (props) => {
                   </div>
                 </div>
 
+                
                 <Col md="12">
                   <Form.Group>
                     <Form.Label>First Name </Form.Label>
@@ -155,6 +156,7 @@ const SignUp = (props) => {
                   </Form.Group>
                 </Col>
 
+               
                 <Col md="12">
                   <Form.Group>
                     <Form.Label>Email </Form.Label>

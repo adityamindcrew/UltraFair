@@ -624,6 +624,20 @@ Sign In
   /* background-color: rgba(0.07 0.13 0.18 1.0); */
   background-color: #0D1D29;
 }
+@media (max-width: 1076px) {
+  
+  .sign-user_card{
+    width:100% !important;
+    max-width: auto;
+  }
+  }
+  @media (max-width: 586px) {
+  
+    .sign-user_card{
+      width:100% !important;
+      max-width: auto;
+    }
+    }
 
 
 .sign-user_logo {
@@ -673,6 +687,21 @@ Sign In
 
 .f-link:hover {
   color: var(--iq-primary);
+}
+.reCaptcha {
+  /* margin: 20px auto; 
+ max-width: auto;
+ width:28vw; */
+  margin-top: 1.5vw
+}
+
+.reCaptcha-signup {
+  margin-top: 3vw
+}
+
+.checkbox-input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
 }
 
 .reCaptcha {
@@ -1106,17 +1135,17 @@ body.sidebar-main .iq-sidebar .iq-menu li a[aria-expanded="false"].collapsed {
   border-radius: 0;
 }
 
-.iq-sidebar-menu .iq-menu li.active-menu>a>svg>path {
+/* .iq-sidebar-menu .iq-menu li.active-menu>a>svg>path {
   fill: var(--iq-primary) !important;
-}
+} */
 
-.iq-sidebar-menu .iq-menu li a:hover>svg>path {
+/* .iq-sidebar-menu .iq-menu li a:hover>svg>path {
   fill: var(--iq-primary) !important;
-}
+} */
 
-.iq-sidebar-menu .iq-menu>li.active>a>svg>path {
+/* .iq-sidebar-menu .iq-menu>li.active>a>svg>path {
   fill: var(--iq-primary) !important;
-}
+} */
 
 .iq-sidebar-menu .iq-menu li.active .iq-submenu li.active>a>svg>path {
   fill: var(--iq-primary) !important;
@@ -1519,7 +1548,7 @@ body.sidebar-main .iq-sidebar .iq-menu li a[aria-expanded="false"].collapsed {
 }
 
 .iq-sidebar-menu .iq-menu li.active>a::before {
-  opacity: 1;
+  opacity: 0;
   height: 75%;
 }
 
@@ -1584,7 +1613,7 @@ Top Menu
   width: calc(100% - 300px);
   display: inline-block;
   z-index: 99;
-  background: var(--iq-light-card);
+  background: #1E2C37;
   margin: 0;
   transition: all 0.45s ease 0s;
 }
@@ -5523,7 +5552,6 @@ h6 span {
   background: #13212d;
   border-color: #13212d;
   border-radius: 27px;
-
 }
 
 .registerToggleOuter {
@@ -5568,7 +5596,7 @@ h6 span {
   border-bottom-right-radius: 27px !important;
   text-align: center;
   margin: 2.5px;
-  /* margin-left: 15px !important; */
+
   transition: none !important;
   translate: none !important;
 }
@@ -5751,6 +5779,31 @@ h6 span {
 
 }
 
+
+
+
+@media screen and (min-width: 1000px) and (max-width: 1650px){
+
+  
+.TEXTINPUT{
+  width: 260% !important;
+}
+
+}
+
+@media screen and (min-width: 990px) and (max-width: 1180px){
+
+  
+  .Fullcontainer{
+    max-width: 100% !important;
+  }
+  
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1550px){
+    .Searchit{
+    width: 70% !important
+    
+  }}
 .navItem-hide {
   font-size: 70px;
 }
@@ -5783,7 +5836,7 @@ h6 span {
   }
 
   .navbar-list-hide {
-    display: none;
+    /* display: none; */
   }
 
 
@@ -6333,4 +6386,90 @@ h6 span {
 
 .fileupload-user{
   background-color: blue;
+}
+.img-fluid1 {
+  max-width: 100%;
+  height: auto;
+  width: auto !important;
+}
+
+.rc-anchor-alert {
+  display: none !important;
+color: #f8f9fa !important;
+}
+
+
+  @media screen and (min-width: 990px) and (max-width: 1180px){  
+    .Fullcontainer{
+      max-width: 100% !important;
+    }  
+    }
+
+    @media screen and (min-width: 1200px) and (max-width: 1550px){
+      .Searchit{
+      width: 70% !important
+    }}
+
+    
+    @media screen and (min-width: 1000px) and (max-width: 1650px){
+      .TEXTINPUT{
+        width: 388% !important;
+      }
+      } 
+        
+    @media screen and (min-width: 1000px) and (max-width: 1610px){
+      .TEXTINPUT{
+        width: 375% !important;
+      }
+      } 
+      @media screen and (min-width: 1000px) and (max-width: 1570px){
+        .TEXTINPUT{
+          width: 350% !important;
+        }
+        } 
+        @media screen and (min-width: 1000px) and (max-width: 1490px){
+          .TEXTINPUT{
+            width: 330% !important;
+          }
+          } 
+          @media screen and (min-width: 1000px) and (max-width: 1430px){
+
+            .TEXTINPUT{
+              width: 310% !important;
+            }
+            }
+            
+            @media screen and (min-width: 1000px) and (max-width: 1360px){
+              .TEXTINPUT{
+                width: 290% !important;
+              }
+              } 
+              @media screen and (min-width: 1000px) and (max-width: 1300px){
+                .TEXTINPUT{
+                  width: 280% !important;
+                }
+                }   
+                @media screen and (min-width: 1700px) and (max-width: 2000px){
+
+.TEXTINPUT{
+  width: 310% !important;
+}
+                }
+                
+    @media (max-width: 480px) {
+    body.sidebar-main .iq-sidebar {
+        margin-top: 86px;
+        width: 100%!important;
+        left: 0;
+        z-index: 999;
+    }}
+    @media (max-width: 480px) {
+.meunview {
+    display: none;
+}}
+
+@media screen and (min-width: 1900px) and (max-width: 4080px){
+  .Searchtext1{
+    margin-top: 15% !important;
+}
 }

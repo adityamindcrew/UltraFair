@@ -182,7 +182,7 @@ const Timeline2 = () => {
                  <Customheader Headercls="Headertitle"   title="Providers" SVG={SVG} wid="14%" Img={Img1} />
         <Customsearchbar hg="5%" wd="390%" />
 
-                <UltraFairCard  disp="none" mr="2%"   wdd="150px"
+                <UltraFairCard Respo="Respp" disp="none" mr="4%" nmm="dfsd"  wdd="150px"
                       htt="70px" Images={Images}/>
             </Container>
         </>
