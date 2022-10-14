@@ -105,7 +105,7 @@ export const Form2 = ({ setFormModal }) => {
             {formModal2 === 'btnform3' ?
                 <Form3 setFormModal2={setFormModal2} />
 
-                : <div className="form2-body">
+                : <div className="form2-body ">
                     <div className="re-back" >
                         <span onClick={() => setFormModal('btnform')}><BackArrow /></span>
                     </div>
@@ -286,13 +286,13 @@ export const Form5 = ({ setFormModal4 }) => {
         <>
            
               
-                <div className="form3-body">
+                <div className="form3-body'">
                     <div className="re-back" >
                         <span onClick={() => setFormModal4('btnform4')}><BackArrow /></span>
                     </div>
                     <div className="text-center user-verification ">
 
-                        <h3>Scan This Code with Your <br/>Authentication App</h3>
+                        <h3>Scan This Code with Your Authentication App</h3>
                         <p>A verification email has been sent to </p> <span className="email-text">example@email.com</span>
 
                     </div>
