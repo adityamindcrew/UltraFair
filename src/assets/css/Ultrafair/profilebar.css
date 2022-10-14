@@ -2,7 +2,7 @@
     width: 100%;
     background-color: #1E2C37;
     background: #1E2C37;
-    padding: 0px 20px 20px 20px;
+    padding: 15px 20px 20px 20px;
 }
 
 .profile-list {
@@ -22,7 +22,8 @@
     display: flex;
     justify-content: space-between;
     font-size: 36px;
-    font-weight: 600;
+    font-weight: bold;
+    font-family: Montserrat;
     color: #FFFFFF;
 }
 
@@ -31,8 +32,9 @@
         display: flex;
         justify-content: space-between;
         font-size: 22px;
-        font-weight: 500;
         padding: 5px;
+        font-weight: bold;
+        font-family: Montserrat;
     }
 
 
@@ -75,26 +77,26 @@
 }
 
 .wallet-health-text {
-    font-weight: 700;
+    font-family: Montserrat;
+    font-weight: bold;
     font-size: 38px;
     line-height: 51px;
     display: flex;
     align-items: center;
     text-transform: uppercase;
     padding-right: 10px;
-    /* Ultrafair - Orange 100 */
-
     color: #F7B32B;
 }
 
 .wallet-health-subtext {
+    
     margin-inline-start: 20px;
-    font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 18px;
     padding-inline-start: 20px;
     padding: 5px;
-
+    font-family: 'Montserrat';
+    font-weight: 400;
     /* Ultrafair - Grey 100 */
 
     color: #B3BAD1;
@@ -105,6 +107,7 @@
     font-size: 18px;
     line-height: 22px;
     color: #B3BAD1;
+    font-family: Montserrat;
 }
 
 input.chone {
@@ -128,6 +131,7 @@ input[type=checkbox]:checked {
 }
 
 .card-text {
+    font-family: Montserrat;
     font-weight: 400;
     font-size: 14px;
     line-height: 23px;
@@ -150,20 +154,23 @@ input[type=checkbox]:checked {
 }
 
 .profile-heading-text {
-    font-weight: 800;
+    margin-bottom: 10px;
     font-size: 18px;
     line-height: 22px;
     color: #FFFFFF;
     margin-left: 20px;
     word-spacing: 4px;
+    font-weight: bold;
+    font-family: Montserrat;
 }
 
 .profile-heading-sub-text {
-    font-weight: 600;
+    font-weight: bold;
+    font-family: Montserrat;
     font-size: 16px;
     line-height: 20px;
     color: #B3BAD1;
-    margin-inline-start: 50px;
+    margin-inline-start: 56px;
 }
 
 .profile-step {
@@ -273,7 +280,7 @@ input[type=checkbox]:checked {
         width: 100%;
         background-color: #1E2C37;
         background: #1E2C37;
-        padding: 0px 20px 20px 20px;
+        padding: 15px 20px 20px 20px;
     }
 }
 
@@ -292,7 +299,7 @@ input[type=checkbox]:checked {
         width: 100%;
         background-color: #1E2C37;
         background: #1E2C37;
-        padding: 0px 20px 20px 20px;
+        padding: 15px 20px 20px 20px;
     }
 }
 
@@ -311,7 +318,7 @@ input[type=checkbox]:checked {
         width: 100%;
         background-color: #1E2C37;
         background: #1E2C37;
-        padding: 0px 20px 20px 20px;
+        padding: 15px 20px 20px 20px;
     }
 }
 
@@ -331,7 +338,7 @@ input[type=checkbox]:checked {
         width: 100%;
         background-color: #1E2C37;
         background: #1E2C37;
-        padding: 0px 20px 20px 20px;
+        padding: 15px 20px 20px 20px;
     }
 }
 
@@ -360,12 +367,12 @@ input[type=checkbox]:checked {
         width: 100%;
         background-color: #1E2C37;
         background: #1E2C37;
-        padding: 0px 20px 20px 20px;
+        padding: 15px 20px 20px 20px;
     }
 }
 
 /* CSS for Medium (md) screen */
-@media screen and (min-width: 991px) and (max-width: 1400px) {
+@media screen and (min-width: 991px) and (max-width: 1320px) {
 
     /* Write your code here */
     .profiletopbar {
@@ -373,7 +380,35 @@ input[type=checkbox]:checked {
         width: 100%;
         background-color: #1E2C37;
         background: #1E2C37;
-        padding: 0px 20px 20px 20px;
+        padding: 15px 20px 20px 20px;
+    }
+
+    .profile-list {
+        display: flex;
+        float: left;
+        margin: 10px;
+    }
+
+    .profile-list-item {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #FFFFFF;
+        margin-left: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1321px) and (max-width: 1400px) {
+
+    /* Write your code here */
+    .profiletopbar {
+        margin-top: -13px;
+        width: 100%;
+        background-color: #1E2C37;
+        background: #1E2C37;
+        padding: 15px 20px 20px 20px;
     }
 
     .profile-list {
@@ -420,7 +455,7 @@ input[type=checkbox]:checked {
         width: 100%;
         background-color: #1E2C37;
         background: #1E2C37;
-        padding: 0px 20px 20px 20px;
+        padding: 15px 20px 20px 20px;
     }
 }
 
@@ -430,7 +465,7 @@ input[type=checkbox]:checked {
         width: 100%;
         background-color: #1E2C37;
         background: #1E2C37;
-        padding: 0px 20px 20px 20px;
+        padding: 15px 20px 20px 20px;
     }
 }
 
@@ -440,7 +475,7 @@ input[type=checkbox]:checked {
         width: 100%;
         background-color: #1E2C37;
         background: #1E2C37;
-        padding: 0px 20px 20px 20px;
+        padding: 15px 20px 20px 20px;
     }
 }
 
@@ -450,7 +485,7 @@ input[type=checkbox]:checked {
         width: 100%;
         background-color: #1E2C37;
         background: #1E2C37;
-        padding: 0px 20px 20px 20px;
+        padding: 15px 20px 20px 20px;
     }
 }
 
@@ -460,16 +495,17 @@ input[type=checkbox]:checked {
         width: 100%;
         background-color: #1E2C37;
         background: #1E2C37;
-        padding: 0px 20px 20px 20px;
+        padding: 15px 20px 20px 20px;
     }
 }
+
 @media screen and (min-width: 2001px) and (max-width: 2120px) {
     .profiletopbar {
         margin-top: 18px;
         width: 100%;
         background-color: #1E2C37;
         background: #1E2C37;
-        padding: 0px 20px 20px 20px;
+        padding: 15px 20px 20px 20px;
     }
 }
 
@@ -479,51 +515,56 @@ input[type=checkbox]:checked {
         width: 100%;
         background-color: #1E2C37;
         background: #1E2C37;
-        padding: 0px 20px 20px 20px;
+        padding: 15px 20px 20px 20px;
     }
 }
+
 @media screen and (min-width: 2300px) and (max-width: 2400px) {
     .profiletopbar {
         margin-top: 30px;
         width: 100%;
         background-color: #1E2C37;
         background: #1E2C37;
-        padding: 0px 20px 20px 20px;
+        padding: 15px 20px 20px 20px;
     }
 }
+
 @media screen and (min-width: 2401px) and (max-width: 2500px) {
     .profiletopbar {
         margin-top: 35px;
         width: 100%;
         background-color: #1E2C37;
         background: #1E2C37;
-        padding: 0px 20px 20px 20px;
+        padding: 15px 20px 20px 20px;
     }
 }
+
 @media screen and (min-width: 2501px) and (max-width: 2800px) {
     .profiletopbar {
         margin-top: 45px;
         width: 100%;
         background-color: #1E2C37;
         background: #1E2C37;
-        padding: 0px 20px 20px 20px;
+        padding: 15px 20px 20px 20px;
     }
 }
+
 @media screen and (min-width: 2801px) and (max-width: 3000px) {
     .profiletopbar {
         margin-top: 55px;
         width: 100%;
         background-color: #1E2C37;
         background: #1E2C37;
-        padding: 0px 20px 20px 20px;
+        padding: 15px 20px 20px 20px;
     }
 }
+
 @media screen and (min-width: 3000px) and (max-width: 5000px) {
     .profiletopbar {
         margin-top: 65px;
         width: 100%;
         background-color: #1E2C37;
         background: #1E2C37;
-        padding: 0px 20px 20px 20px;
+        padding: 15px 20px 20px 20px;
     }
 }

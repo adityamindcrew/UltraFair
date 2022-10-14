@@ -3339,3 +3339,16 @@ Grid Boxes
 .ResponsiveHeader{
   padding: 0 !important;
 }
+
+.form-control-dropdown1 {
+  background-color: #0D1D29 !important;
+  /* border: 1px solid transparent; */
+  height: 46px;
+  position: relative;
+  color: white;
+  font-size: 14px;
+  width: 84%;
+  border-radius: 6px;
+  padding-bottom: 5px;
+  margin-inline-start: -5px !important;
+}

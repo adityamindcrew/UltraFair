@@ -109,7 +109,7 @@ const FooterStyle = (props) => {
                 <option>Hindi</option>
               </select></div></li>
               <li className='laguagetext'>Odds</li>
-              <li><div style={{ width: "100px", marginLeft: "0px" , padding : "0" }}><select style={{padding : "0"}} className="form-control" id="exampleFormControlSelect2">
+              <li><div style={{ width: "100px", marginLeft: "-5px", padding : "0" }}><select style={{padding : "0"  , marginInlineStart : "-5px !important"}} className="form-control" id="exampleFormControlSelect2">
                 <option >Decimal</option>
                 <option>Number</option>
               </select></div><div className='mr-2 pt-4'></div> </li>

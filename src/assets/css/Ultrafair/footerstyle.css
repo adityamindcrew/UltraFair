@@ -92,7 +92,7 @@
     }
 }
 
-@media only screen and (max-width: 1139px) {
+@media only screen and (max-width: 1280px) {
     .contain .social {
         width: 1000px;
         display: block;
@@ -161,7 +161,9 @@
 }
 
 .linedesign {
-    color: #999999 !important;
+    color: #999999 !important;   
+    border: 0.5px solid #999999;
+
 }
 
 .mainfootertext {

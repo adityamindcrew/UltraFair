@@ -26,7 +26,7 @@ const EditUserProfileName = () => {
                                     <Card.Body>
                                         <div className="d-flex justify-content-between">
                                             <h4 className="m-2  profile-card-title">Verification Status</h4>
-                                            <div><Button variant="outline-success"><span className='m-1'>Lavel 0</span></Button>{' '}</div>
+                                            <div><Button variant="outline-success"><span className='m-1'>Lavel 3</span></Button>{' '}</div>
                                         </div>
                                         <div className='m-2 mb-2'>
                                             <div className='d-flex mt-4'>
@@ -127,8 +127,8 @@ const EditUserProfileName = () => {
                                                 </div>
                                                 <div><Button variant="outline-success"><span className='m-1'>Change Password</span></Button>{' '}</div>
                                                 <hr className='line-style' />
-                                                <div className='card-text'>Two-Factor Authentication</div>
-                                                <button type="button" class="btn-sm authentication-button">Enable 2FA</button>
+                                                <div className='card-text mb-4'>Two-Factor Authentication</div>
+                                                <Button variant="outline-success"><span className='m-1'>Enable 2FA</span></Button>{' '}
                                             </div>
                                         </Card.Body>
                                     </Card>

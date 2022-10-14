@@ -1,10 +1,10 @@
 //img
 import logo from "../../../../../src/assets/images/sidebar/UltrafairLogo.png";
 import smallLogo from "../../../../assets/images/sidebar/UltrafairSmallLogo.png";
-import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useHistory ,useLocation } from "react-router-dom";
 import { Navbar, Button, Form, Nav, Dropdown } from "react-bootstrap";
-import { BitcoinsSVG, EtheremcoinsSVG, TetherSVG, UsdcoinSVG, PlusSVG , WalletSVG } from "../headerstyle/headerIcons";
+import { BitcoinsSVG, EtheremcoinsSVG, TetherSVG, UsdcoinSVG, PlusSVG , WalletSVG ,ProfileMenuSVG ,Transactions ,Logout} from "../headerstyle/headerIcons";
 
 //Modal
 import Modal from "react-bootstrap/Modal";
@@ -19,7 +19,26 @@ const HeaderStyle1 = (props) => {
   const [signUpModalShow, setSignUpModalShow] = React.useState(false);
   const [loginModalShow, setLoginModalShow] = React.useState(false);
   const [navShow, setNavShow] = React.useState(false);
+  const [profileMenu, setProfileMenu] = React.useState(false);
+  // var profileMenu = false;
+  const location = useLocation();
 
+  useEffect(() => {
+    document.addEventListener("click", setClicked, true);
+    return () => {
+      document.removeEventListener("click", setClicked, true);
+    };
+  }, []);
+
+  useEffect(() => {
+    const pathName = location.pathname;
+    console.log("location.pathname",pathName);
+    if(pathName == '/edit-user-profile-section' || pathName == '/user-profile-section' || pathName == '/lockup' || pathName == '/roulette'){
+      setNavShow(false)
+    }else{
+      setNavShow(true)
+    }
+  }, [location.pathname]);
   const minisidbar = () => {
     document.body.classList.toggle("sidebar-main");
   };
@@ -82,6 +101,16 @@ const HeaderStyle1 = (props) => {
   const loginHandler = () => {
     setLoginModalShow(true);
   };
+
+  const setClicked = () => {
+    setProfileMenu(false);
+  };
+
+  const profileClickHandler = () => {
+    // alert("called");
+    setProfileMenu(!profileMenu);
+  };
+
   return (
     <>
       <div className="iq-top-navbar p-2" >
@@ -173,14 +202,14 @@ const HeaderStyle1 = (props) => {
                     <Dropdown.Item href="#/action-1">1.44500000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span ><BitcoinsSVG /></span>&nbsp;&nbsp;  BTC</Dropdown.Item>
                     <Dropdown.Item href="#/action-1">23.6670000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span ><EtheremcoinsSVG /></span>&nbsp;&nbsp;  ETH</Dropdown.Item>
                     <Dropdown.Item href="#/action-1">50.6654000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span ><UsdcoinSVG /></span>&nbsp;&nbsp;  USDC</Dropdown.Item>
-                    <Dropdown.Item href="#/action-1">23.66500000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span><TetherSVG /></span>&nbsp;&nbsp;  USDT</Dropdown.Item>
+                    <Dropdown.Item href="#/action-1">23.66500000&nbsp;&nbsp;&nbsp;&nbsp; <span><TetherSVG /></span>&nbsp;&nbsp;  USDT</Dropdown.Item>
                     <hr className='dropdown-line-style' />
                     <div className="addcurrenies"><PlusSVG /> <span>Add Currencies</span></div>
 
                   </Dropdown.Menu>
                 </Dropdown>
                 <div className="dropdown-wallet-1 img-view"><WalletSVG /></div>
-                <div className="dropdown-wallet-1 text-view">wallet</div>
+                <div className="dropdown-wallet-1 text-view">Wallet</div>
             <div className="iq-search-bar ml-auto">
 
             </div>
@@ -217,7 +246,51 @@ const HeaderStyle1 = (props) => {
                   </div>
 
                   <div className="mr-4 d-flex">
-                    <ProfileSVG />
+                  <div className="mr-4 d-flex dropdown">
+                      <button
+                        style={{
+                          backgroundColor: "transparent",
+                          border: "0px",
+                        }}
+                        onClick={profileClickHandler}
+                        id="dropdown-basic"
+                        // className="dropdown-navbar"
+                      >
+                        <ProfileSVG />
+                      </button>
+                    </div>
+                    {profileMenu && (
+                      // <div className="dropdown">
+                      <div className="dropdown-content">
+                        <Link to="#">
+                          <div className="profileMenu-item ">
+                            <ProfileMenuSVG width={"18px"} height={"18px"} />{" "}
+                            <div className="profileMenu-list">My Profile</div>
+                          </div>
+                        </Link>
+                        <Link to="#">
+                          <div className="profileMenu-item ">
+                            <Transactions
+                              width={"18px"}
+                              height={"18px"}
+                              style={{ marginRight: "10px" }}
+                            />
+                            <div className="profileMenu-list">Transactions</div>
+                          </div>
+                        </Link>
+                        <Link to="#">
+                          <div className="profileMenu-item ">
+                            <Logout
+                              width={"18px"}
+                              height={"18px"}
+                              style={{ marginRight: "10px" }}
+                            />
+                            <div className="profileMenu-list">Logout</div>
+                          </div>
+                        </Link>
+                      </div>
+                      // </div>
+                    )}
                   </div>
                   <div className="mr-4 hide-data">
                     <NotificationSVG />

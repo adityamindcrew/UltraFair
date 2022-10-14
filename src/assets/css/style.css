@@ -6148,10 +6148,11 @@ Navbar
 --------------- */
 
 .dropdown-navbar {
-
+  font-family: Montserrat;
+  font-weight: bold;
   border-color: #11FFBD !important;
   border: 2px solid #0D1D29 !important;
-  background: #0D1D29;
+  background: #0D1D29 !important;
   text-align: center;
   margin: -0.5px;
   margin-left: 0px !important;
@@ -6161,11 +6162,14 @@ Navbar
   padding-left: 22px;
     transition: none !important;
     padding-top: 12px;
-    padding-bottom: 12px
+    padding-bottom: 12px;
+    margin-inline-start: 10px !important;
+    border-radius: 0px !important;
+
 }
 
 .dropdown-navbar:hover {
-  background: #344452;
+  background: #0D1D29 !important;
   border-color: #11FFBD !important;
   border: 2px solid #11FFBD !important; 
   text-align: center;
@@ -6190,11 +6194,12 @@ Navbar
 }
 
 .dropdown-item {
+  font-family: Montserrat;
+  font-weight: bold;
   display: block;
   width: 100%;
   padding: 0.25rem 1.5rem;
   clear: both;
-  font-weight: 400;
   background: #344452;
   border-radius: 6px;
   text-align: inherit;
@@ -6240,13 +6245,14 @@ hr {
   text-align: center;
   color: #B3BAD1;
   font-style: normal;
-  font-weight: 500;
   font-size: 16px;
+  font-family: Montserrat;
+  font-weight: bold;
 }
 
 .dropdown-wallet-1 {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   padding-left: 20px;
   padding-right: 20px;
     background-color: #11FFBD;
@@ -6255,6 +6261,8 @@ hr {
     border-bottom-right-radius: 12px;
     border-top-right-radius: 12px;
     -webkit-padding-before: none ;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .dropdown-item.active, .dropdown-item:active {
@@ -6300,4 +6308,57 @@ hr {
   .text-view {
     display: none;
   }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  top: 60px;
+  right: 0px;
+  display: inline-block;
+  position: absolute;
+  background-color: #344452;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1100;
+  border-radius: 6px;
+
+}
+
+.dropdown-content a {
+  color: #ffffff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+}
+.dropdown-content:active {
+  display: block;
+}
+.dropdown-content a:hover {
+  color: #11ffbd;
+}
+
+.dropdown:active .dropdown-content {
+  display: block;
+}
+.profileMenu-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+}
+.profileMenu-item:hover {
+  color: #11ffbd;
+}
+.profileMenu-list {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Montserrat";
+}
+input[type="checkbox"] {
+  border: 2px solid red;
 }
