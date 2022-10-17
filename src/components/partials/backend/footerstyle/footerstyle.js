@@ -73,7 +73,7 @@ const FooterStyle = (props) => {
             <h1>Supports</h1>
             <ul>
               <li>Fairness</li>
-              <li>Afiliate</li>
+              <li>Affiliate</li>
               <li> <div className='d-flex flex-row'>Gamble Aware  <div className='ml-2'><img src={Vector} height="12px" width="12px" /></div></div></li>
               <li>Live Support</li>
               <li> <div className='d-flex flex-row'>Help Center  <div className='ml-2'><img src={Vector} height="12px" width="12px" /></div></div></li>
@@ -109,7 +109,7 @@ const FooterStyle = (props) => {
                 <option>Hindi</option>
               </select></div></li>
               <li className='laguagetext'>Odds</li>
-              <li><div style={{ width: "100px", marginLeft: "0px" , padding : "0" }}><select style={{padding : "0"}} className="form-control" id="exampleFormControlSelect2">
+              <li><div style={{ width: "100px", marginLeft: "-5px", padding : "0" }}><select style={{padding : "0"  , marginInlineStart : "-5px !important"}} className="form-control" id="exampleFormControlSelect2">
                 <option >Decimal</option>
                 <option>Number</option>
               </select></div><div className='mr-2 pt-4'></div> </li>

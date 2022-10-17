@@ -153,7 +153,7 @@ a:hover {
 }
 
 hr {
-    border: 1px solid #344452;
+    border: solid #1E2C37;
 }
 a {
   color: var(--iq-primary);
@@ -162,7 +162,7 @@ a:hover {
   color: var(--iq-primary-hover);
 }
 hr {
-  border-color: var(--iq-border-light);
+  border-color: #1E2C37;
 } 
 h1,
 h2,
@@ -2948,13 +2948,13 @@ Buttons
 }
 
 .btn-outline-secondary {
-    color: var(--iq-secondary);
-    border-color: var(--iq-secondary);
+    color: #B3BAD1 !important;
+    border-color: #B3BAD1 !important;
 }
 
 .btn-outline-success {
-    color: var(--iq-success);
-    border-color: var(--iq-success);
+    color: #11FFBD !important;
+    border-color: #11FFBD !important;
 }
 
 .btn-outline-danger {
@@ -2996,9 +2996,9 @@ Buttons
 }
 
 .btn-outline-success:hover {
-    color: var(--iq-white);
-    background-color: var(--iq-success);
-    border-color: var(--iq-success);
+    color: var(--iq-white) !important;
+    background-color: #11FFBD !important ;
+    border-color: #11FFBD !important;
 }
 
 .btn-outline-danger:hover {
@@ -3338,4 +3338,17 @@ Grid Boxes
 .iq-card-transpare{}
 .ResponsiveHeader{
   padding: 0 !important;
+}
+
+.form-control-dropdown1 {
+  background-color: #0D1D29 !important;
+  /* border: 1px solid transparent; */
+  height: 46px;
+  position: relative;
+  color: white;
+  font-size: 14px;
+  width: 84%;
+  border-radius: 6px;
+  padding-bottom: 5px;
+  margin-inline-start: -5px !important;
 }

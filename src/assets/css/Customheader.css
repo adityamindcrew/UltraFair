@@ -5,7 +5,7 @@
 .headertop{
     margin-top: "17%"!important;
     height: "5%"!important;
-
+    z-index: 98  !important;
 }
 .Freespace{
     /* display: none;; */
@@ -88,6 +88,15 @@
 
                 .headertop{
                     margin-top: 6.5% !important;
+                    z-index: 98 !important;
+
+                }
+            }
+            @media screen and (min-width: 1280px) and (max-width: 10000px){
+
+                .headertop{
+                    z-index: 98 !important;
+
                 }
             }
 
