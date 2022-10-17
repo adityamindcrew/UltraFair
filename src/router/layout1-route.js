@@ -10,9 +10,11 @@ import Pricing from '../views/backend/main/pricing';
 
 //App
 import UserProfile from '../views/backend/app/usermanagement/userprofile'
+import UserProfileName from '../views/backend/app/usermanagement/userprofilename'
 import UserPrivacySetting from '../views/backend/app/usermanagement/userprivacysetting'
 import UserAccountSettingList from '../views/backend/app/usermanagement/useraccountsetting'
 import UserProfileEdit from '../views/backend/app/usermanagement/userprofileedit'
+import EditUserProfileName from '../views/backend/app/usermanagement/edituserprofilename';
 
 //Form
 import Checkbox from '../views/backend/forms/formcontrols/checkbox'
@@ -21,7 +23,6 @@ import Radio from '../views/backend/forms/formcontrols/radio'
 import FromSwitch from '../views/backend/forms/formcontrols/switch'
 import Validations from '../views/backend/forms/formcontrols/validations'
 import Invoiceview from '../views/backend/pages/invoiceview';
-
 
 //Extrapages
 import Timeline1 from '../views/backend/pages/timeline/timeline1'
@@ -123,6 +124,8 @@ const Layout1Route = () => {
                     <Route path="/user-privacy-setting" component={UserPrivacySetting} />
                     <Route path="/user-account-setting" component={UserAccountSettingList} />
                     <Route path="/user-profile-edit" component={UserProfileEdit} />
+                    <Route path="/user-profile-section" component={UserProfileName} />
+                    <Route path="/edit-user-profile-section" component={EditUserProfileName} />
 
                     {/* Form  */}
                     <Route path="/form-chechbox" component={Checkbox} />

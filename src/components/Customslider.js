@@ -23,7 +23,7 @@ const Customslider = ({classnm,classnm2,title}) => {
         <Card id="slider1" >
                     <Card.Header className="d-flex justify-content-between align-items-center Cardresponsive ResponsiveHeader">
                            <div>
-                              <h3 className="card-title m-0">{title}</h3>
+                              <span className="card-title m-0" style={{fontSize:"18px",fontWeight:'600',color:'white'}}>{title}</span>
                            </div>
                                 <div className="" id="swiper">
                               <div className={`swiper-button swiper-button-prev Responsivrbtn ${classnm}`} style={{background:"#344452",padding: '23px 30px' }}>Previous</div>
@@ -60,7 +60,7 @@ const Customslider = ({classnm,classnm2,title}) => {
                                     <div style={{display:show==i?"flex":"none",background:'#11FFBD',position:"absolute",top:0,left:0,width:"100%",height:"100%",borderRadius:'10px',opacity:0.9,justifyContent:"center",alignItems:"center",flexDirection:"column"}}>
                                     <svg width="30" height="30" viewBox="0 0 32 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0 3.31249V35.6875C0 38.1562 2.71875 39.6562 4.8125 38.3125L30.25 22.125C32.1875 20.9062 32.1875 18.0937 30.25 16.8437L4.8125 0.687495C2.71875 -0.656255 0 0.843745 0 3.31249Z" fill="#263642"/>
-</svg><span style={{color:'black',fontSize:"10px",fontWeight:"bold"}}>{title}</span>
+</svg><span style={{color:'black',fontSize:"10px",fontWeight:"bold",textAlign:'center'}}>{title}</span>
 
 
     
