@@ -160,7 +160,7 @@ const HeaderStyle1 = (props) => {
                   type="button"
                   variant=" btn-primary"
                   onClick={registerHandler2}
-                  style={{ backgroundColor: '#11ffbd', color: 'black', textAlign: 'center', paddingTop: 5, paddingRight: 20, paddingLeft: 20, borderRadius: 7, marginTop: 1, fontWeight: 'bold', fontSize: 15 }}
+                  style={{paddingTop:4}}
                 >
                   Register
                 </span>
