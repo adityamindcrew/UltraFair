@@ -54,17 +54,6 @@ import BitcionLogo from '../../../assets/images/Ultrafair/Bitcoin-logo.png'
 import Ellipse from '../../../assets/images/Ultrafair/Ellipse.png'
 import Name from '../../../components/Modals/Wallet_Modals'
 import { BitCoinSVG, WalletSVG } from './dashboardIcons'
-
-// import mt01 from "../../../assets/images/movie-thumb/01.jpg";
-// import mt04 from "../../../assets/images/movie-thumb/04.jpg";
-// import mt05 from "../../../assets/images/movie-thumb/05.jpg";
-// import mt07 from "../../../assets/images/movie-thumb/07.jpg";
-
-// import Blackjack from "../../../assets/images/Ultrafair/Blackjack.svg";
-// import SweetBon from "../../../assets/images/Ultrafair/Sweetbon.svg";
-// import Bitcion from "../../../assets/images/Ultrafair/Bitcion.svg";
-// import BitcionLogo from "../../../assets/images/Ultrafair/Bitcoin-logo.png";
-// import Ellipse from "../../../assets/images/Ultrafair/Ellipse.png";
 import Customslider from "../../../components/Customslider";
 import CardSwiper from "../../../Common/CardSwiper";
 import SearchBar from "../../../Common/SearchBar";
@@ -353,21 +342,21 @@ const Dashbord = () => {
                            <Row xl="20" className="DashborCards">
                               {DashbordCard.map((e, i) => {
                                  return (
-                                    <Col sm="6" lg="6" xl="4" key={i}>
-                                       <Card className="iq-card-block iq-card-stretch iq-card-height">
-                                          <img src={e} style={{ borderRadius: "10px" }} />
+                                    <Col sm="6" lg="6" xl="4" key={i} className="SAFARIRESPp">
+                                       <Card className="iq-card-block iq-card-stretch iq-card-height SAFARIRESP">
+                                          <img src={e} style={{ borderRadius: "10px" ,}} className="SAFARIRESPr" />
                                        </Card>
                                     </Col>
                                  );
                               })}
                            </Row>
                            <Row>
-                              <SearchBar hg="5%" wd="325%" />
+                              <SearchBar hg="5%" wd="325%" notmt="Mquery" />
                            </Row>
 
-                           <Row xl="20">
+                           <Row xl="20" className="SCROLL">
                               <div
-                                 className="iq-search-bar Searchit"
+                                 className="iq-search-bar Searchit Mquery"
                                  style={{
                                     background: "#13212D",
                                     borderRadius: "30px",
@@ -391,10 +380,11 @@ const Dashbord = () => {
                                        boxShadow: "none",
                                        width: "20%",
                                        display: "flex",
-                                       justifyContent: "space-around",
+                                       justifyContent: "space-evenly",
                                        alignSelf: "flex-start",
                                        alignItems: "center",
                                        marginLeft: "-12px",
+                                       height:'50px'
                                     }}
                                     onClick={() => btncolorhandles("btn1")}
                                  >
@@ -519,7 +509,7 @@ const Dashbord = () => {
                            <Customslider
                               classnm="testclass11"
                               classnm2="testclass12"
-                              title="Ultrafair Origianls"
+                              title="Ultrafair Originals"
                            />
                            <Customslider
                               classnm="testclass31"
