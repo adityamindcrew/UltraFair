@@ -106,14 +106,14 @@ const SidebarStyle = (props) => {
                                     <span>Roulette</span>
                                 </Link>
                             </li>
-                            <li style={{ border: '1px solid #344452', margin: "10px", background: '#344452' }}></li>
+                            <li style={{ border: '1px solid #344452', margin: "10px", marginLeft : "30px",marginRight : "30px", background: '#344452' }}></li>
                             <li className={`${location.pathname === '/lockup' ? 'active' : ''} `}>
                                 <Link to="/lockup" className="" onClick={scrollToTop}>
                                     <LockupSVG />
                                     <span>Lockup </span>
                                 </Link>
                             </li>
-                            <li style={{ border: '1px solid #344452', margin: "10px", background: '#344452' }}></li>
+                            <li style={{ border: '1px solid #344452', margin: "10px", marginLeft : "30px",marginRight : "30px", background: '#344452' }}></li>
 
                             <li className={`${location.pathname === '/blog' ? 'active' : ''} `}>
                                 <Link to="/blog" className="iq-waves-effect" onClick={scrollToTop}>
