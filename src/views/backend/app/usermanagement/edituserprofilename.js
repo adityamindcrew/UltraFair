@@ -26,7 +26,7 @@ const EditUserProfileName = () => {
                                     <Card.Body>
                                         <div className="d-flex justify-content-between">
                                             <h4 className="m-2  profile-card-title">Verification Status</h4>
-                                            <div><Button variant="outline-success"><span className='m-1'>Lavel 3</span></Button>{' '}</div>
+                                            <div><Button variant="outline-success"><span className='m-1'>Level 3</span></Button>{' '}</div>
                                         </div>
                                         <div className='m-2 mb-2'>
                                             <div className='d-flex mt-4'>
@@ -39,7 +39,7 @@ const EditUserProfileName = () => {
                                             <div className='profile-heading-sub-text'>Create a profile using your personal details.</div>
                                         </div>
 
-                                        <div className='m-2 mb-2'>
+                              <div className='m-2 mb-2'>
                                             <div className='d-flex mt-4'>
                                                 <div>
                                                     <SuccessIconSVG />
@@ -47,7 +47,7 @@ const EditUserProfileName = () => {
                                                 <div className='profile-heading-text'>Level 1 - <span style={{ color: '#11FFBD' }}>Complete</span></div>
 
                                             </div>
-                                            <div className='profile-heading-sub-text'>Trade up to a total amount of Rs 15000</div>
+                                            <div className='profile-heading-sub-text'>Trade up to a total amount of R15 000</div>
                                         </div>
 
 
@@ -124,7 +124,7 @@ const EditUserProfileName = () => {
                                             <label class="container-checkbox">
                                 <span style={{ position: "relative", bottom: 4 ,fontFamily: 'Montserrat'}}>Keep me signed in</span>
                                 <input type="checkbox" className="checkbox-input" />
-                                <span class="new-checkmark"></span>
+                            <span class="checkmark new-checkmark" style={{ border: "2px solid #B3BAD1 !important"}}></span>
                             </label>
 
                                                 {/* <div className='d-flex mb-2'>
@@ -134,7 +134,7 @@ const EditUserProfileName = () => {
                                                 <div><Button variant="outline-success"><span className='m-1'>Change Password</span></Button>{' '}</div>
                                                 <hr className='line-style' />
                                                 <div className='card-text mb-4'>Two-Factor Authentication</div>
-                                                <Button variant="outline-success"><span className='m-1'>Enable 2FA</span></Button>{' '}
+                                                <Button variant="outline-success"><span className='m-1'>Disable 2FA</span></Button>{' '}
                                             </div>
                                         </Card.Body>
                                     </Card>

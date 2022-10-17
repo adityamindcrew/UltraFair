@@ -2,10 +2,10 @@
 import logo from "../../../../../src/assets/images/sidebar/UltrafairLogo.png";
 import smallLogo from "../../../../assets/images/sidebar/UltrafairSmallLogo.png";
 import React, { useEffect } from "react";
-import { Link, useHistory ,useLocation } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import { Navbar, Button, Form, Nav, Dropdown } from "react-bootstrap";
-import { BitcoinsSVG, EtheremcoinsSVG, TetherSVG, UsdcoinSVG, PlusSVG , WalletSVG ,ProfileMenuSVG ,Transactions ,Logout} from "../headerstyle/headerIcons";
-
+import { BitcoinsSVG, EtheremcoinsSVG, TetherSVG, UsdcoinSVG, PlusSVG, WalletSVG, ProfileMenuSVG, Transactions, Logout } from "../headerstyle/headerIcons";
+import { DownArrow } from "../../../../views/backend/main/dashboardIcons";
 //Modal
 import Modal from "react-bootstrap/Modal";
 import Signup from "../../../../views/backend/auth/signup";
@@ -32,10 +32,10 @@ const HeaderStyle1 = (props) => {
 
   useEffect(() => {
     const pathName = location.pathname;
-    console.log("location.pathname",pathName);
-    if(pathName == '/edit-user-profile-section' || pathName == '/user-profile-section' || pathName == '/lockup' || pathName == '/roulette'){
+    console.log("location.pathname", pathName);
+    if (pathName == '/edit-user-profile-section' || pathName == '/user-profile-section' || pathName == '/lockup' || pathName == '/roulette') {
       setNavShow(false)
-    }else{
+    } else {
       setNavShow(true)
     }
   }, [location.pathname]);
@@ -115,7 +115,7 @@ const HeaderStyle1 = (props) => {
     <>
       <div className="iq-top-navbar p-2" >
         <div className="iq-navbar-custom" >
-{navShow ?          <Navbar className="" expand="sm">
+          {navShow ? <Navbar className="" expand="sm">
             <div className="iq-menu-bt d-flex align-items-center">
               <div className="wrapper-menu" onClick={minisidbar}>
                 <div className="main-circle meunview">
@@ -160,145 +160,109 @@ const HeaderStyle1 = (props) => {
                   type="button"
                   variant=" btn-primary"
                   onClick={registerHandler2}
-                  style={{backgroundColor:'#11ffbd', color: 'black', textAlign:'center', paddingTop:5,paddingRight: 20,paddingLeft: 20, borderRadius:7, marginTop:1, fontWeight:'bold', fontSize:15}}
+                  style={{ backgroundColor: '#11ffbd', color: 'black', textAlign: 'center', paddingTop: 5, paddingRight: 20, paddingLeft: 20, borderRadius: 7, marginTop: 1, fontWeight: 'bold', fontSize: 15 }}
                 >
                   Register
                 </span>
               </Nav>
             </div>
 
-           
-          
+
+
           </Navbar>
-:
-          <Navbar className="" expand="sm">
-            <div className="iq-menu-bt d-flex align-items-center">
-              <div className="wrapper-menu" onClick={minisidbar}>
-                <div className="main-circle meunview">
-                  <i className="las la-bars"></i>
+            :
+            <Navbar className="" expand="sm">
+              <div className="iq-menu-bt d-flex align-items-center">
+                <div className="wrapper-menu" onClick={minisidbar}>
+                  <div className="main-circle meunview">
+                    <i className="las la-bars"></i>
+                  </div>
                 </div>
-              </div>
-              {/* <div className="iq-navbar-logo d-flex justify-content-between">
-                <Link to="/" className="header-logo">
-                  <img
-                    src={logo}
-                    className="logoImg fullLogo img-fluid rounded-normal"
-                    alt=""
-                  />
-                  <img
-                    src={logo}
-                    className="logoImg collapsedLogo img-fluid rounded-normal"
-                    alt=""
-                  />
-                </Link>
-              </div> */}
-              <img src={smallLogo} className="img-view"/>
-            </div>
-            <Dropdown>
-                  <Dropdown.Toggle id="dropdown-basic" className="dropdown-navbar">
-                    &nbsp;  0.0000000&nbsp; <span ><BitcoinsSVG /></span>  &nbsp;
-                  </Dropdown.Toggle>
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">1.44500000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span ><BitcoinsSVG /></span>&nbsp;&nbsp;  BTC</Dropdown.Item>
-                    <Dropdown.Item href="#/action-1">23.6670000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span ><EtheremcoinsSVG /></span>&nbsp;&nbsp;  ETH</Dropdown.Item>
-                    <Dropdown.Item href="#/action-1">50.6654000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span ><UsdcoinSVG /></span>&nbsp;&nbsp;  USDC</Dropdown.Item>
-                    <Dropdown.Item href="#/action-1">23.66500000&nbsp;&nbsp;&nbsp;&nbsp; <span><TetherSVG /></span>&nbsp;&nbsp;  USDT</Dropdown.Item>
-                    <hr className='dropdown-line-style' />
-                    <div className="addcurrenies"><PlusSVG /> <span>Add Currencies</span></div>
-
-                  </Dropdown.Menu>
-                </Dropdown>
-                <div className="dropdown-wallet-1 img-view"><WalletSVG /></div>
-                <div className="dropdown-wallet-1 text-view">Wallet</div>
-            <div className="iq-search-bar ml-auto">
-
-            </div>
-
-            {/* <div className="navbar-list-hide mt-2">
-              <Nav as="ul" className=" navbar-list iq-header">
-                <Link className="navItem-hide" to="#" onClick={loginHandler}>
-                  Sign In
-                </Link>
-                <span
-                  className="navItem btnNavbar"
-                  type="button"
-                  variant=" btn-primary"
-                  onClick={registerHandler2}
-                  style={{backgroundColor:'#11ffbd', color: 'black', textAlign:'center', paddingTop:5,paddingRight: 20,paddingLeft: 20, borderRadius:7, marginTop:1, fontWeight:'bold', fontSize:15}}
-                >
-                  Register
-                </span>
-              </Nav>
-            </div>   */}
-            <div className=" mt-2">
-              <Nav as="ul" className=" navbar-list iq-header">
                
-                <div className="d-flex">
+                <img src={smallLogo} className="img-view" />
+              </div>
+              <Dropdown>
+                <Dropdown.Toggle id="dropdown-basic" className="dropdown-navbar">
+                  &nbsp;  0.0000000&nbsp; <span ><BitcoinsSVG /></span>  &nbsp;&nbsp; <DownArrow />
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  <Dropdown.Item href="#/action-1">1.44500000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span ><BitcoinsSVG /></span>&nbsp;&nbsp;  BTC</Dropdown.Item>
+                  <Dropdown.Item href="#/action-1">23.6670000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span ><EtheremcoinsSVG /></span>&nbsp;&nbsp;  ETH</Dropdown.Item>
+                  <Dropdown.Item href="#/action-1">50.6654000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span ><UsdcoinSVG /></span>&nbsp;&nbsp;  USDC</Dropdown.Item>
+                  <Dropdown.Item href="#/action-1">23.66500000&nbsp;&nbsp;&nbsp;&nbsp; <span><TetherSVG /></span>&nbsp;&nbsp;  USDT</Dropdown.Item>
+                  <hr className='dropdown-line-style' />
+                  <div className="addcurrenies"><PlusSVG /> <span>Add Currencies</span></div>
+
+                </Dropdown.Menu>
+              </Dropdown>
+              <div className="dropdown-wallet-1 img-view"><WalletSVG /></div>
+              <div className="dropdown-wallet-1 text-view">Wallet</div>
+              <div className="iq-search-bar ml-auto">
+
+              </div>
+              <div className=" mt-2">
+                <Nav as="ul" className=" navbar-list iq-header">
+
                   <div className="d-flex">
-                    {/* <div className="wallet-link">
-                      <span>334RfxXoT...334Tte</span>
-                    </div> */}
-
-                    {/* <div className="wallet-icons-1">
-                      <CopySVG />
-                    </div> */}
-                    <div class="vl hide-data"></div>
-                  </div>
-
-                  <div className="mr-4 d-flex">
-                  <div className="mr-4 d-flex dropdown">
-                      <button
-                        style={{
-                          backgroundColor: "transparent",
-                          border: "0px",
-                        }}
-                        onClick={profileClickHandler}
-                        id="dropdown-basic"
-                        // className="dropdown-navbar"
-                      >
-                        <ProfileSVG />
-                      </button>
+                    <div className="d-flex">
+                      <div class="vl hide-data"></div>
                     </div>
-                    {profileMenu && (
-                      // <div className="dropdown">
-                      <div className="dropdown-content">
-                        <Link to="/user-profile-section">
-                          <div className="profileMenu-item ">
-                            <ProfileMenuSVG width={"18px"} height={"18px"} />{" "}
-                            <div className="profileMenu-list">My Profile</div>
-                          </div>
-                        </Link>
-                        <Link to="#">
-                          <div className="profileMenu-item ">
-                            <Transactions
-                              width={"18px"}
-                              height={"18px"}
-                              style={{ marginRight: "10px" }}
-                            />
-                            <div className="profileMenu-list">Transactions</div>
-                          </div>
-                        </Link>
-                        <Link to="#">
-                          <div className="profileMenu-item ">
-                            <Logout
-                              width={"18px"}
-                              height={"18px"}
-                              style={{ marginRight: "10px" }}
-                            />
-                            <div className="profileMenu-list">Logout</div>
-                          </div>
-                        </Link>
+
+                    <div className="mr-4 d-flex">
+                      <div className="mr-4 d-flex dropdown">
+                        <button
+                          style={{
+                            backgroundColor: "transparent",
+                            border: profileMenu ? "2px solid #11FFBD" : "none",
+                            borderRadius: profileMenu ? "6px" : "none",
+                          }}
+                          onClick={profileClickHandler}
+                          id="dropdown-basic"
+                        // className="dropdown-navbar"
+                        >
+                          <ProfileSVG />
+                        </button>
                       </div>
-                      // </div>
-                    )}
+                      {profileMenu && (
+                        // <div className="dropdown">
+                        <div className="dropdown-content">
+                          <Link to="/user-profile-section">
+                            <div className="profileMenu-item ">
+                              <ProfileMenuSVG width={"18px"} height={"18px"} />{" "}
+                              <div className="profileMenu-list">My Profile</div>
+                            </div>
+                          </Link>
+                          <Link to="#">
+                            <div className="profileMenu-item ">
+                              <Transactions
+                                width={"18px"}
+                                height={"18px"}
+                                style={{ marginRight: "10px" }}
+                              />
+                              <div className="profileMenu-list">Transactions</div>
+                            </div>
+                          </Link>
+                          <Link to="#">
+                            <div className="profileMenu-item ">
+                              <Logout
+                                width={"18px"}
+                                height={"18px"}
+                                style={{ marginRight: "10px" }}
+                              />
+                              <div className="profileMenu-list">Logout</div>
+                            </div>
+                          </Link>
+                        </div>
+                        // </div>
+                      )}
+                    </div>
+                    <div className="mr-4 mt-2 hide-data">
+                      <NotificationSVG />
+                    </div>
                   </div>
-                  <div className="mr-4 mt-2 hide-data">
-                    <NotificationSVG />
-                  </div>
-                </div>
-              </Nav>
-            </div>
-          </Navbar> }
+                </Nav>
+              </div>
+            </Navbar>}
         </div>
       </div>
       <SignUpModal

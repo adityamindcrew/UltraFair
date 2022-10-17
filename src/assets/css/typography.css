@@ -576,7 +576,7 @@ div.dataTables_wrapper div.dataTables_filter label {
     /* border: 1px solid transparent; */
     height: 46px;
     position: relative;
-    color: white;
+    color: white !important;
     font-size: 14px;
     width: 84%;
     border-radius: 6px;

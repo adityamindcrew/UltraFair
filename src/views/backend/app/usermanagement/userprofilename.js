@@ -45,19 +45,19 @@ const UserProfileName = () => {
                                                 <div className='profile-step'>
                                                     <div className='m-1'>1</div>
                                                 </div>
-                                                <div className='profile-heading-text'>Level 1 - <span style={{ color: '#ff0000' }}>Incomplete</span></div>
+                                                <div className='profile-heading-text'>Level 1 - <span style={{ color: '#EF5B5B' }}>Incomplete</span></div>
 
                                             </div>
-                                            <div className='profile-heading-sub-text' style={{ color: '#FFFFFF' }}>Trade up to a total amount of Rs 15000</div>
+                                            <div className='profile-heading-sub-text' style={{ color: '#FFFFFF' }}>Trade up to a total amount of R15 000</div>
                                             <button type="button" class="btn-sm authentication-button" style={{marginLeft : '3.5rem'}}>Complete Level 1</button>
                                         </div>
 
                                         <div className='m-2 mb-2'>
                                             <div className='d-flex mt-4'>
                                                 <div className='profile-step-number'>
-                                                    <div className='m-1'>2</div>
+                                                    <div className=''>2</div>
                                                 </div>
-                                                <div className='profile-heading-text'>Level 2 - <span style={{ color: '#B3BAD1', fontWeight: '600' }}>Complete Level 1 first</span></div>
+                                                <div className='profile-heading-text-blur'>Level 2 - <span style={{ color: '#B3BAD1', fontWeight: '600' }}>Complete Level 1 first</span></div>
 
                                             </div>
                                             <div className='profile-heading-sub-text'>Deposit or withdraw up to R50 000 per month.</div>
@@ -67,9 +67,9 @@ const UserProfileName = () => {
                                         <div className='m-2 mb-2'>
                                             <div className='d-flex mt-4'>
                                                 <div className='profile-step-number'>
-                                                    <div className='m-1'>3</div>
+                                                    <div className=''>3</div>
                                                 </div>
-                                                <div className='profile-heading-text'>Level 3 - <span style={{ color: '#B3BAD1', fontWeight: '600' }}>Complete Level 2 first</span></div>
+                                                <div className='profile-heading-text-blur'>Level 3 - <span style={{ color: '#B3BAD1', fontWeight: '600' }}>Complete Level 2 first</span></div>
 
                                             </div>
                                             <div className='profile-heading-sub-text'>Trade, deposit, withdraw without any limits.</div>
@@ -128,7 +128,7 @@ const UserProfileName = () => {
                                             <label class="container-checkbox">
                                 <span style={{ position: "relative", bottom: 4 ,fontFamily: 'Montserrat'}}>Keep me signed in</span>
                                 <input type="checkbox" className="checkbox-input" />
-                                <span class="new-checkmark"></span>
+                                <span class="checkmark new-checkmark"></span>
                             </label>
                                                 <div><Button variant="outline-success"><span className='m-1'>Change Password</span></Button>{' '}</div>
                                                 <hr className='line-style' />
