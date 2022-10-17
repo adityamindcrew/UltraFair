@@ -6557,10 +6557,97 @@ vertical-align: top;
 
 .rc-anchor-alert {
   display: none !important;
+
+color: #f8f9fa !important;
+}
+.SCROLL{
+  overflow: auto;
+}
+@media not all and (min-resolution:.001dpcm) { 
+  @supports (-webkit-appearance:none) {
+    .SAFARIRESPr{
+      height: 210px;
+    }
+    .SAFARIRESP{
+      height: 210px;
+    }
+    .SAFARIRESPp{
+      height: 210px;
+    }
+
+  }
+}
+  @media screen and (min-width: 990px) and (max-width: 1180px){  
+    .Fullcontainer{
+      max-width: 100% !important;
+    }  
+    }
+
+    @media screen and (min-width: 1200px) and (max-width: 1550px){
+      .Searchit{
+      width: 80% !important
+    }}
+
+    
+    @media screen and (min-width: 1000px) and (max-width: 1650px){
+      .TEXTINPUT{
+        width: 388% !important;
+      }
+      } 
+        
+    @media screen and (min-width: 1000px) and (max-width: 1610px){
+      .TEXTINPUT{
+        width: 375% !important;
+      }
+      } 
+      @media screen and (min-width: 1000px) and (max-width: 1570px){
+        .TEXTINPUT{
+          width: 350% !important;
+        }
+        } 
+        @media screen and (min-width: 1000px) and (max-width: 1490px){
+          .TEXTINPUT{
+            width: 330% !important;
+          }
+          } 
+          @media screen and (min-width: 1000px) and (max-width: 1430px){
+
+            .TEXTINPUT{
+              width: 310% !important;
+            }
+            }
+            
+            @media screen and (min-width: 1000px) and (max-width: 1360px){
+              .TEXTINPUT{
+                width: 290% !important;
+              }
+              } 
+              @media screen and (min-width: 1000px) and (max-width: 1300px){
+                .TEXTINPUT{
+                  width: 280% !important;
+                }
+                }   
+                @media screen and (min-width: 1700px) and (max-width: 2000px){
+
+.TEXTINPUT{
+  width: 310% !important;
+}
+                }
+                
+    @media (max-width: 480px) {
+    body.sidebar-main .iq-sidebar {
+        margin-top: 86px;
+        width: 100%!important;
+        left: 0;
+        z-index: 999;
+    }}
+    @media (max-width: 480px) {
+.meunview {
+
   color: #f8f9fa !important;
 }
 
-
+    }`
 @media screen and (min-width: 990px) and (max-width: 1180px) {
   .Fullcontainer {
     max-width: 100% !important;
@@ -6635,6 +6722,7 @@ vertical-align: top;
 
 @media (max-width: 480px) {
   .meunview {
+
     display: none;
   }
 }
@@ -6648,7 +6736,8 @@ vertical-align: top;
 /* ---------------
 Navbar
 --------------- */
-
+@media only screen and (max-width: 400px) {
+  /* Write your code here */
 .dropdown-navbar {
   font-family: Montserrat;
   font-weight: bold;
@@ -6660,16 +6749,54 @@ Navbar
   margin-left: 0px !important;
   transition: none !important;
   translate: none !important;
-  padding-right: 22px;
-  padding-left: 22px;
+  padding-right: 12px !important;
+  padding-left: 12px !important;
     transition: none !important;
     padding-top: 12px;
     padding-bottom: 12px;
     margin-inline-start: 10px !important;
     border-radius: 0px !important;
 
+} }
+
+@media screen and (min-width: 401px) and (max-width: 5000px) {
+  /* Write your code here */
+.dropdown-navbar {
+  font-family: Montserrat;
+  font-weight: bold;
+  border-color: #11FFBD !important;
+  border: 2px solid #0D1D29 !important;
+  background: #0D1D29 !important;
+  text-align: center;
+  margin: -0.5px;
+  margin-left: 0px !important;
+  transition: none !important;
+  translate: none !important;
+  padding-right: 22px !important;
+  padding-left: 22px !important;
+    transition: none !important;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-inline-start: 10px !important;
+    border-radius: 0px !important;
+
+} }
+
+
+@media screen and (min-width: 1900px) and (max-width: 4080px){
+  .Mquery{
+    margin-top: 0% !important;
 }
 
+}
+
+
+#BOLDPLACEHOLDER::placeholder {
+
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 600;
+}
 .dropdown-navbar:hover {
   background: #0D1D29 !important;
   border-color: #11FFBD !important;
@@ -6950,7 +7077,9 @@ select {
   font-size: 11px;
 }
   }
+
 }
+
 
 
 

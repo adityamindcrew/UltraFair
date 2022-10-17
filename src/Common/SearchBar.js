@@ -30,9 +30,9 @@ function SearchBar({notmt}) {
     //   </Form>
     // </div>
 
-      <div className={`iq-search-bar ml-auto Vanish ${notmt?"":"Searchtext1"}`} style={{width:"100%",marginTop:"2%",padding:10,margin:10}}   >
+      <div className={`iq-search-bar ml-auto Vanish ${notmt?"":"Searchtext1"}  `} style={{width:"100%",marginTop:"2%",padding:10,margin:10}}   >
     <Form action="#" className={`searchbox ${notmt?"":"Searchtext1"}`} style={{backgroundRadius:"25px",width:"100%",}} >
-        <input type="text" className="text search-input " style={{width:"100%",background:"#13212D",borderRadius:"25px",height:"44px",}} placeholder="Search your game"/>
+        <input type="text" className="text search-input " id="BOLDPLACEHOLDER" style={{width:"100%",background:"#13212D",borderRadius:"25px",height:"44px",}} placeholder="Search your game"/>
         <Link className="search-link" to="#"><i className="ri-search-line" style={{color:"#5B6F84",}}></i></Link>
     </Form>
 </div>
