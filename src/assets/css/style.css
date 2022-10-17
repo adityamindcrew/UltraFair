@@ -8,6 +8,7 @@ Design and Developed by: iqonicthemes.in
 NOTE: This file contains the styling for responsive Template.
 */
 
+
 /*================================================
 [  Table of contents  ]
 ================================================
@@ -5872,6 +5873,45 @@ h6 span {
   border-radius: 10px;
 }
 
+.wallet-modal2 {
+  /* max-width: auto; 
+  
+  width: 28vw;
+  max-height: fit-content !important;
+  border-radius: 10px; */
+  position: relative;
+
+ 
+  padding: 20px 25px;
+  
+  max-width: auto;
+
+  width: 90% !important;
+  max-height: fit-content !important;
+  border-radius: 10px;
+}
+
+.user-modal{
+  position: relative;
+
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 20px 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* display: block; */
+  /* margin: 25px auto; */
+  max-width: 60%;
+
+  width: 100% !important;
+  max-height: fit-content !important;
+  border-radius: 10px;
+ 
+}
+
 .rc-anchor-alert {
   display: none !important;
 }
@@ -5932,10 +5972,34 @@ h6 span {
 }
 .wallet-bitcoin-dropdown-1{
   vertical-align:1px;
+  
 }
 .wallet-bitcoin-dropdown-2{
   vertical-align:2px;
 }
+
+.wallet-bitcoin-dropdown-1:hover{
+  vertical-align:1px;
+  background: #0D1D29 !important;
+  border-color: #0D1D29 !important;
+  margin: 2.5px;
+  /* margin-left: 15px !important; */
+  transition: none !important;
+  translate: none !important;
+  border-radius: 4px !important;
+}
+.wallet-bitcoin-dropdown-1:focus{
+  vertical-align:1px;
+  background: #0D1D29 !important;
+  border-color: #0D1D29 !important;
+  margin: 2.5px;
+  /* margin-left: 15px !important; */
+  transition: none !important;
+  translate: none !important;
+  border-radius: 4px !important;
+}
+
+
 
 .wallet-bitcoin-2 {
   background-color: blue;
@@ -5991,6 +6055,28 @@ h6 span {
   letter-spacing: 0.5px;
 }
 
+.wallet-linl-text{
+  
+}
+@media only screen and (min-width: 0px) and (max-width:600px){
+
+  .WalletButtonText {
+
+    font-size: 11px;
+
+  }
+  
+     /* .buycrypto-text{
+        font-size: 10px!important;  
+    } */
+    .wallet-linl-text{
+      font-size: 12px;
+    }
+  
+   
+
+}
+
 @media only screen and (min-width: 1026px) {
   .wallet-QR-row {
     margin-left: 0px;
@@ -5999,7 +6085,7 @@ h6 span {
 
   .WalletButtonText {
     font-family: 'Montserrat', sans-serif;
-
+    
   }
 
 }
@@ -6352,20 +6438,71 @@ h6 span {
 
 
 
-/* -----------------------------MODAL USER VERIFICATION------- */
+/* -----------------------------MODAL USER VERIFICATION/ Aditya ------- */
 .modalbody{
 /* padding: 2rem 5rem; */
 }
 .form2-body{
-  padding: 1rem 4rem;
+  /* padding: 1rem 4rem; */
+}
+@media only screen and (max-width: 1026px) {
+  .form2-body{
+    padding: 1px 1px;
+  }
 }
 .form3-body{
   padding: 1rem 3rem;
+}
+@media only screen and (max-width: 1026px) {
+  .form3-body{
+    padding: 1px 1px;
+  }
+}
+
+.form5-body{
+  /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
+   
 }
 
 .user-verification h3{
   font-family: 'Montserrat';
   margin-bottom: 15px;
+}
+.user-verification-5{
+  
+  /* max-width:80%;
+  width: 100%;
+  text-align: center;
+  font-size: 20px; */
+  /* position: relative;
+  left:30px; */
+
+  /* max-width: 80%; */
+   width:500px;
+  font-weight: 600;
+  font-size: 30px;
+  color: white;
+  word-break: normal;
+}
+.user-verification-5 p{
+  /* width:500px;
+  font-weight: 600;
+  font-size: 30px;
+  color: white;
+  word-break: normal; */
+  font-family: "Montserrat";
+font-size: 26px;
+line-height: 32px;
+line-height: 100%;
+text-align: center;
+vertical-align: top;
+
+}
+
+.user-sub-5{
+  max-width: 80%;
 }
 
 .user-verification p{
@@ -6378,6 +6515,27 @@ h6 span {
   top:-25px;
   left:10px;
 }
+/* .manual-code h3{
+  color: var(--iq-primary);
+} */
+.manual-code-text{
+  color: var(--iq-primary);
+  font-size: 35px;
+}
+
+/* -----------------------------MODAL USER VERIFICATION/ Aditya ------- */
+
+
+
+
+
+
+
+
+
+
+
+
 
 .timer{
   position: relative;
@@ -6756,5 +6914,43 @@ select {
   -webkit-appearance: listbox !important
 
 }
+
+
+
+
+.navItem{
+  background-color:#11ffbd;
+   color: black;
+   text-align:center;
+  
+   padding-right: 20px;
+   padding-left: 20px;
+    border-radius:7px;
+     margin-top:1px;
+      font-weight:bold; 
+      font-size:14px;
+ }
+
+
+
+
+/* SAFARI CSS RESPONSIVE SCREEN- ADITYA  */
+
+@media not all and (min-resolution:.001dpcm) { 
+  @supports (-webkit-appearance:none) {
+    .row-wallet {
+      margin: 0vw 0vw;
+
+      text-align: center;
+    }
+    .WalletButtonText{
+      font-size: 10px;
+    }
+.wallet-linl-text{
+  font-size: 11px;
+}
+  }
+}
+
 
 

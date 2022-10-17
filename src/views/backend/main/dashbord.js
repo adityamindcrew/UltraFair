@@ -275,6 +275,7 @@ const Dashbord = () => {
             aria-labelledby="contained-modal-title-vcenter"
             centered
             className="textclass wallet-modal'"
+            
          >
             <Modal.Header style={{ border: 'none' }}>
                <Modal.Title>
@@ -311,7 +312,7 @@ const Dashbord = () => {
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
-            className="textclass wallet-modal'"
+            className="textclass user-modal'"
          >
             <Modal.Header style={{ border: 'none' }}>
                <Modal.Title>
@@ -361,6 +362,7 @@ const Dashbord = () => {
                                  );
                               })}
                            </Row>
+                           
                            <Row>
                               <SearchBar hg="5%" wd="325%" />
                            </Row>
@@ -572,10 +574,10 @@ const Dashbord = () => {
                         type="button"
                         class="close"
                         aria-label="Close"
-                        style={{ color: "white", position: 'absolute', top: -1, right: 10 }}
+                        style={{ color: "white", position: 'absolute', top: 9, right: 13 }}
                         onClick={handleClose}
                      >
-                        <span aria-hidden="true" style={{ fontSize: 33, fontWeight: 1 }}>&times;</span>
+                        <span aria-hidden="true" style={{ fontSize: 18, fontWeight: 1 }}>X</span>
                      </button>
                   </Modal.Title>
                </Modal.Header>
