@@ -6705,3 +6705,27 @@ hr {
 input[type="checkbox"] {
   border: 2px solid red;
 }
+
+
+.new-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: transparent;
+  border-radius: 10%;
+  border: 2px solid #eee;
+}
+
+/* .new-container-checkbox {
+  display: inline-block;
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  padding-top: -5px !important;
+  -webkit-user-select: none;
+  user-select: none;
+  align-items: flex-start;
+} */

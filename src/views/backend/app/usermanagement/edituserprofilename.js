@@ -121,10 +121,16 @@ const EditUserProfileName = () => {
                                         </Card.Header>
                                         <Card.Body>
                                             <div className='p-2 mb-4'>
-                                                <div className='d-flex mb-2'>
+                                            <label class="container-checkbox">
+                                <span style={{ position: "relative", bottom: 4 ,fontFamily: 'Montserrat'}}>Keep me signed in</span>
+                                <input type="checkbox" className="checkbox-input" />
+                                <span class="new-checkmark"></span>
+                            </label>
+
+                                                {/* <div className='d-flex mb-2'>
                                                     <input class="chone" type="checkbox" id="value1" name="value1" value="value1" />
-                                                    <div style={{ marginTop: "-2px" }}><label style={{ marginLeft: "20px" }} for="value1">Keep me signed in</label></div>
-                                                </div>
+                                                    <div style={{ marginTop: "-2px" }}><label style={{ marginLeft: "20px" }} for="value1">Keep me signed in</label></div> */}
+                                                {/* </div> */}
                                                 <div><Button variant="outline-success"><span className='m-1'>Change Password</span></Button>{' '}</div>
                                                 <hr className='line-style' />
                                                 <div className='card-text mb-4'>Two-Factor Authentication</div>
