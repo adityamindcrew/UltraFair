@@ -89,7 +89,7 @@
 }
 
 .wallet-health-subtext {
-    
+
     margin-inline-start: 20px;
     font-size: 12px;
     line-height: 18px;
@@ -580,3 +580,5 @@ input[type=checkbox]:checked {
         padding: 15px 20px 20px 20px;
     }
 }
+
+

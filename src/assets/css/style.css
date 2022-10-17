@@ -113,6 +113,8 @@ a:hover {
   background-color: var(--iq-light-primary);
 }
 
+
+
 #sidebar-scrollbar {
   overflow-y: auto;
   scrollbar-color: var(--iq-primary) var(--iq-light-primary);
@@ -6760,6 +6762,7 @@ hr {
   position: relative;
   display: inline-block;
 }
+@media screen and (min-width: 200px) and (max-width: 499px) {
 
 .dropdown-content {
   top: 60px;
@@ -6771,6 +6774,20 @@ hr {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1100;
   border-radius: 6px;
+}
+}
+@media screen and (min-width: 500px) and (max-width: 2000px) {
+  .dropdown-content {
+      top: 76px;
+      right: 45px;
+      display: inline-block;
+      position: absolute;
+      background-color: #344452;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+      z-index: 1100;
+      border-radius: 6px;
+  }
 }
 
 .dropdown-content a {
