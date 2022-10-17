@@ -6593,6 +6593,7 @@ hr {
 }
 
 .dropdown-wallet-1 {
+  margin-left: -1px;
   padding-top: 9px;
   padding-bottom: 9px;
   padding-left: 20px;
@@ -6711,14 +6712,14 @@ input[type="checkbox"] {
   position: absolute;
   top: 0;
   left: 0;
-  height: 16px;
-  width: 16px;
+  height: 18px;
+  width: 18px;
   background-color: transparent;
   border-radius: 10%;
-  border: 2px solid #eee;
+  border: 2px solid #B3BAD1 !important;
 }
 
-/* .new-container-checkbox {
+.new-container-checkbox {
   display: inline-block;
   position: relative;
   padding-left: 32px;
@@ -6728,4 +6729,15 @@ input[type="checkbox"] {
   -webkit-user-select: none;
   user-select: none;
   align-items: flex-start;
-} */
+}
+
+select {
+  /*webkit browsers */
+  /*Firefox */
+  /* modern browsers */
+  border-radius: 0;
+  -webkit-appearance: listbox !important
+
+}
+
+

@@ -164,6 +164,17 @@ input[type=checkbox]:checked {
     font-family: Montserrat;
 }
 
+.profile-heading-text-blur {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #B3BAD1;
+    margin-left: 20px;
+    word-spacing: 4px;
+    font-weight: bold;
+    font-family: Montserrat;
+}
+
 .profile-heading-sub-text {
     font-weight: bold;
     font-family: Montserrat;
@@ -174,7 +185,7 @@ input[type=checkbox]:checked {
 }
 
 .profile-step {
-
+    font-weight: bold;
     background: #B3BAD1;
     height: 35px;
     width: 35px;
@@ -186,10 +197,11 @@ input[type=checkbox]:checked {
 }
 
 .profile-step-number {
+    font-weight: bold !important;
     border-style: solid;
     border-color: #B3BAD1;
-    height: 35px;
-    width: 35px;
+    height: 32px;
+    width: 32px;
     border-radius: 50%;
     border-color: 1px solid darkgray !important;
     color: #B3BAD1;
