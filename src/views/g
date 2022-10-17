@@ -1191,6 +1191,8 @@ NOTE: This file contains the styling for responsive Template.
 	 .headertop{
 		margin-top: 17% !important;
 		height: 5% !important;
+    z-index: 98;
+
 	}
 	.LOGOicon{
 		width: 7vw ;
