@@ -99,3 +99,19 @@
 
                 }
             }
+
+            @media screen and (min-width: 2000px) and (max-width: 4080px){
+
+                .headertop{
+                    margin-top: 4.5% !important;
+                }
+                .Searchit{
+                    margin-top: 15% !important;
+                }
+                .OVERWRITE{
+                    margin: 5px !important;
+                  }
+                  .DashborCards{
+                    margin-top: 5% !important;
+                  }
+            }

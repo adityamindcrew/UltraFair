@@ -82,7 +82,7 @@ const Pricing = ({ mr, flx }) => {
     }),
   };
 
-  console.log(Select);
+  // console.log(Select);
   const categoryGroup = [
     {
       label: "Please select the category",
