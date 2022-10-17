@@ -34,7 +34,7 @@ const LineAwsome = () => {
                   <span className="MR10">  {ICON}</span>
                     {ICON1}{" "}
                   </div>
-                  <div>
+                  <div className="questionmark">
                     <i
                       class="ri-question-line"
                       style={{ color: "black", fontSize: "22px" }}
@@ -60,12 +60,12 @@ const LineAwsome = () => {
                   </div>
                 </div>
                 <div className="JUSTFLY SLIDER">
-                  <span className="prog_font">LOCK FOR PERIOD OF (WEEKS)</span>
-                  <span className="prog_font GRN">1 WEEK = 1% BOOST</span>
+                  <span className="prog_font whit">LOCK FOR PERIOD OF (WEEKS)</span>
+                  <span className="prog_font GRN ALIG">1 WEEK = 1% BOOST</span>
                 </div>
                 <input
                   type="range"
-                  class="form-range"
+                  class="form-range Fire"
                   id="customRange1"
                 ></input>
                 <div className="JUSTFLY">
@@ -92,11 +92,11 @@ const LineAwsome = () => {
                 </div>
                 <div>
                   <div className="JUSTFLY MR0a10">
-                    <span className="prog_font whit">UnlOCK</span>
+                    <span className="prog_font whit">UNlOCK</span>
                  <span> <span className="GRN w100">BALANCE </span> <span className="prog_font GRN wbold">6.22</span></span>
                   </div>
-                  <input type="text" className="INPUt" placeholderTextColor="#fff"  placeholder="$ 0.00" />
-                  <button className="CARDBTN" onClick={()=>setShow(true)}>UnLock</button>
+                  <input type="text" className="INPUt " placeholderTextColor="#fff"  placeholder="$ 0.00" />
+                  <button className="CARDBTN" onClick={()=>setShow(true)}>Unlock</button>
                 </div>
               </div>
             ) : btn == "btn2" ? (
@@ -107,7 +107,7 @@ const LineAwsome = () => {
                     <span className="MR10">  {ICON}</span>
                       {SearchiconBoost}{" "}
                     </div>
-                    <div>
+                    <div className="questionmark">
                       <i
                         class="ri-question-line"
                         style={{ color: "black", fontSize: "22px" }}
@@ -125,6 +125,7 @@ const LineAwsome = () => {
                     </div>
 
                   </div>
+                 <span className="prog_font whit EXPD">Your Current Boost</span> 
                   <div className="CARDTITLE Bckg Extrapading ">
                     <input
                       type="range"
@@ -139,18 +140,18 @@ const LineAwsome = () => {
                       {ICONCARD}
                       {ICON3}{" "}
                     </div>
-                    <div>
+                    <div className="questionmark">
                       <i
                         class="ri-question-line"
                         style={{ color: "black", fontSize: "22px" }}
                       ></i>{" "}
                     </div>
                   </div>
-                  <div className="JUSTFLY">
-                    <span className="prog_font">
+                  <div className="JUSTFLY SLIDER">
+                    <span className="prog_font whit">
                       LOCK FOR PERIOD OF (WEEKS)
                     </span>
-                    <span className="prog_font BLU">1 WEEK = 1% BOOST</span>
+                    <span className="prog_font BLU ALIG">1 WEEK = 1% BOOST</span>
                   </div>
                   <input
                     type="range"
@@ -185,7 +186,7 @@ const LineAwsome = () => {
                  <span>  <span className="BLU w100">BALANCE </span> <span className="prog_font BLU wbold">6.22</span></span>
                     </div>
                     <input type="text" className="INPUt" placeholder="$ 0.00"  />
-                    <button className="CARDBTN BGBLU"  onClick={()=>setShow(true)}>Add to Lockeup</button>
+                    <button className="CARDBTN BGBLU"  onClick={()=>setShow(true)}>Add to Lockup</button>
                   </div>
                 </div>
               </div>
@@ -197,7 +198,7 @@ const LineAwsome = () => {
                     <span className="MR10">  {ICON}</span>
                       {ICON4}{" "}
                     </div>
-                    <div>
+                    <div className="questionmark">
                       <i
                         class="ri-question-line"
                         style={{ color: "black", fontSize: "22px" }}
@@ -258,7 +259,7 @@ const LineAwsome = () => {
                       </div>
                     </div>
 
-                    <button className="CARDBTN BGPINK" onClick={()=>setShow(true)}>Claim Rewards</button>
+                    <button className="CARDBTN BGPINK BTNRESP" onClick={()=>setShow(true)}>Claim Rewards</button>
                     {/* <span className='Grey'>levels s shown are for lockup only. Please note that staking while</span> */}
                   </div>
                 </div>
@@ -266,8 +267,8 @@ const LineAwsome = () => {
             )}
           </div>
 
-          <div className="FooterCont MINWIDTH">
-            <div className="Selected">
+          <div className="FooterCont MINWIDTH REPOS">
+            <div className="Selected ENDD">
               <Select
                 defaultValue={selectedCategory}
                 styles={customStyles}
@@ -290,7 +291,7 @@ const LineAwsome = () => {
             </div>
             <div className="JUSTFLY EVENLY Extrawidth">
               <span className="progfont">{Searchicon}</span>
-              <span className="GRN Footerfont" style={{fontSize:"21px"}}>ADDITIONAL INFORMATION</span>
+              <span className="GRN Footerfont " style={{fontSize:"21px",color:'white'}}>ADDITIONAL INFORMATION</span>
             </div>
           </div>
         </div>
@@ -298,7 +299,7 @@ const LineAwsome = () => {
 {show?<div className="CENTERTHAT Colmn">
   <span className="Fontpopup">Register an account or Log <br/> In to use this feature.</span>
   <button className="POPUPBTN" onClick={()=>setShow(false)}>Register</button>
-  <button className="SingBTN" onClick={()=>setShow(false)}>Sign up</button>
+  <button className="SingBTN" onClick={()=>setShow(false)}>Sign in</button>
 </div>:""}
        
       </Container>
@@ -326,6 +327,7 @@ const CutomBtn = ({ title, name, setbtn, btn }) => {
 };
 const SVG = (
   <svg
+  className="HEDerLOGO"
     width="35"
     height="21"
     viewBox="0 0 35 21"
