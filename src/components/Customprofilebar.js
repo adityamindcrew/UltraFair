@@ -1,6 +1,8 @@
 import React from 'react'
 
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col , Form, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
+
 
 // import Img1 from "../assets/images/Customheader/Headerimg44.png"
 import { EmailBoxIconSVG, PhoneIconSVG, BrowserIconSVG, EditIconSVG } from '../views/backend/app/usermanagement/userprofileIcon';
@@ -14,7 +16,7 @@ const Customprofilebar = () => {
                     <div>
                     </div>
                     <div style={{ display: "flex", flexDirection: "row", justifyContent: 'space-between', alignItems: "center", width: "" }}>
-                        <Button variant="outline-secondary"><EditIconSVG /> <span className='hide-profile-text m-1'>Edit Details</span></Button>{' '}
+                     <Link to="/edit-user-profile-section"><Button variant="outline-secondary"><EditIconSVG /> <span className='hide-profile-text m-1'>Edit Details</span></Button>{' '}</Link>
                     </div>
                 </div>
                 <div className='profile-list'>

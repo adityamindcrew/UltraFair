@@ -1617,6 +1617,7 @@ Top Menu
   background: #1E2C37;
   margin: 0;
   transition: all 0.45s ease 0s;
+  box-shadow: 0px 5px 10px rgb(0 0 0 / 30%);
 }
 
 body.sidebar-main .iq-top-navbar {
@@ -2568,8 +2569,7 @@ content Page
 -----------------------------------------------------------------------*/
 
 .content-page {
-  background: linear-gradient(180deg, #11FFBD 0%, rgba(17, 255, 189, 0) 100%);
-  mix-blend-mode: normal;
+  background: linear-gradient(180deg,#1f4949,rgba(17,255,189,0));  mix-blend-mode: normal;
   overflow: hidden;
   margin-left: 300px;
   padding: 117px 15px 0;
@@ -6314,6 +6314,7 @@ hr {
   position: relative;
   display: inline-block;
 }
+
 .dropdown-content {
   top: 60px;
   right: 0px;
@@ -6324,7 +6325,6 @@ hr {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1100;
   border-radius: 6px;
-
 }
 
 .dropdown-content a {
@@ -6359,6 +6359,7 @@ hr {
   font-weight: 600;
   font-family: "Montserrat";
 }
+
 input[type="checkbox"] {
   border: 2px solid red;
 }

@@ -24,7 +24,6 @@ import FromSwitch from '../views/backend/forms/formcontrols/switch'
 import Validations from '../views/backend/forms/formcontrols/validations'
 import Invoiceview from '../views/backend/pages/invoiceview';
 
-
 //Extrapages
 import Timeline1 from '../views/backend/pages/timeline/timeline1'
 import Invoice from '../views/backend/pages/invoice'

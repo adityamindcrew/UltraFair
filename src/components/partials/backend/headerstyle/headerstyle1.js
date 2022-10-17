@@ -262,7 +262,7 @@ const HeaderStyle1 = (props) => {
                     {profileMenu && (
                       // <div className="dropdown">
                       <div className="dropdown-content">
-                        <Link to="#">
+                        <Link to="/user-profile-section">
                           <div className="profileMenu-item ">
                             <ProfileMenuSVG width={"18px"} height={"18px"} />{" "}
                             <div className="profileMenu-list">My Profile</div>
@@ -292,7 +292,7 @@ const HeaderStyle1 = (props) => {
                       // </div>
                     )}
                   </div>
-                  <div className="mr-4 hide-data">
+                  <div className="mr-4 mt-2 hide-data">
                     <NotificationSVG />
                   </div>
                 </div>

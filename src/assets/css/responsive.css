@@ -1204,6 +1204,8 @@ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 	 .headertop{
 		margin-top: 24% !important;
 		height: 5% !important;
+    z-index: 98 !important;
+
 	}
 }
 
@@ -1211,6 +1213,8 @@ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
   .headertop{
    margin-top: 22% !important;
    height: 5% !important;
+   z-index: 98 !important;
+
  }
 }
 @media screen and (min-width: 0px) and (max-width: 1000px){
@@ -1235,6 +1239,8 @@ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
     .headertop{
      margin-top: 8% !important;
      height: 5% !important;
+     z-index: 98 !important;
+
    }
 	.LOGOO{
 		width: 7vw ;
@@ -1268,6 +1274,8 @@ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
     .headertop{
      margin-top: 12.2% !important;
      height: 5% !important;
+     z-index: 98 !important;
+
    }
    .LOGOO{
      width: 7vw ;
@@ -1280,6 +1288,8 @@ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
     .headertop{
      margin-top: 11.5% !important;
      height: 5% !important;
+     z-index: 98 !important;
+
    }
  
   
@@ -1290,6 +1300,8 @@ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
     .headertop{
      margin-top: 18.4% !important;
      height: 5% !important;
+     z-index: 98 !important;
+
    }
  
   
@@ -1312,6 +1324,7 @@ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
     .headertop{
      margin-top: 8.8% !important;
      /* height: 5% !important; */
+     z-index: 98 !important;
    }
  
   
