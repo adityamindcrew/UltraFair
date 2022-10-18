@@ -5592,7 +5592,33 @@ h6 span {
   translate: none !important;
 } */
 
-/* .selected {
+.registerToggle:hover {
+  background: #344452;
+  border-color: #344452;
+  border-top-left-radius: 18px !important;
+  border-bottom-left-radius: 18px !important;
+  border-top-right-radius: 18px !important;
+  border-bottom-right-radius: 18px !important;
+  text-align: center;
+  margin: 2.5px;
+  /* / margin-left: 15px !important; / */
+  transition: none !important;
+  translate: none !important;
+}
+
+.registerToggle:focus {
+  background: #344452;
+  border-color: #344452;
+  border-top-left-radius: 18px !important;
+  border-bottom-left-radius: 18px !important;
+  border-top-right-radius: 18px !important;
+  border-bottom-right-radius: 18px !important;
+  text-align: center;
+  margin: 2.5px;
+  transition: none !important;
+  translate: none !important;
+}
+.selected {
   background: #344452;
   border-color: #344452;
   border-top-left-radius: 27px !important;
@@ -5604,7 +5630,8 @@ h6 span {
 
   transition: none !important;
   translate: none !important;
-} */
+}
+
 
 /* .btn:focus {
   background: #344452;
@@ -6647,7 +6674,7 @@ color: #f8f9fa !important;
   color: #f8f9fa !important;
 }
 
-    }`
+    }
 @media screen and (min-width: 990px) and (max-width: 1180px) {
   .Fullcontainer {
     max-width: 100% !important;
@@ -6736,7 +6763,8 @@ color: #f8f9fa !important;
 /* ---------------
 Navbar
 --------------- */
-
+@media only screen and (max-width: 400px) {
+  /* Write your code here */
 .dropdown-navbar {
   font-family: Montserrat;
   font-weight: bold;
@@ -6748,15 +6776,38 @@ Navbar
   margin-left: 0px !important;
   transition: none !important;
   translate: none !important;
-  padding-right: 22px;
-  padding-left: 22px;
+  padding-right: 12px !important;
+  padding-left: 12px !important;
     transition: none !important;
     padding-top: 12px;
     padding-bottom: 12px;
     margin-inline-start: 10px !important;
     border-radius: 0px !important;
 
-}
+} }
+
+@media screen and (min-width: 401px) and (max-width: 5000px) {
+  /* Write your code here */
+.dropdown-navbar {
+  font-family: Montserrat;
+  font-weight: bold;
+  border-color: #11FFBD !important;
+  border: 2px solid #0D1D29 !important;
+  background: #0D1D29 !important;
+  text-align: center;
+  margin: -0.5px;
+  margin-left: 0px !important;
+  transition: none !important;
+  translate: none !important;
+  padding-right: 22px !important;
+  padding-left: 22px !important;
+    transition: none !important;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-inline-start: 10px !important;
+    border-radius: 0px !important;
+
+} }
 
 
 @media screen and (min-width: 1900px) and (max-width: 4080px){

@@ -74,7 +74,7 @@ const FooterStyle = (props) => {
             <ul>
               <li>Fairness</li>
               <li>Affiliate</li>
-              <li> <div className='d-flex flex-row'>Gamble Aware  <div className='ml-2'><img src={Vector} height="12px" width="12px" /></div></div></li>
+              <li> <div className='d-flex flex-row'>Gamble Aware  <div style={{marginLeft : "5px"}}><img src={Vector} height="12px" width="12px" /></div></div></li>
               <li>Live Support</li>
               <li> <div className='d-flex flex-row'>Help Center  <div className='ml-2'><img src={Vector} height="12px" width="12px" /></div></div></li>
             </ul>
@@ -97,19 +97,19 @@ const FooterStyle = (props) => {
               <li>Privacy Policy</li>
               <li>Licenses</li>
               <li>AML Policy</li>
-              <li>Terms of Service</li>
+              <Link to='/terms-and-conditions'><li>Terms of Service</li></Link>
               <li>Self Exclusion</li>
             </ul>
           </div>
           <div class="col col-hide" >
             <h1>Language</h1>
             <ul>
-              <li> <div className='d-flex flex-row '><div className='pt-1 mt-1'><img src={Flag} height="25px" width="25px" /></div>         <select className="form-control" id="exampleFormControlSelect2">
+              <li> <div className='d-flex flex-row '><div className='pt-1 mt-1'><img src={Flag} height="25px" width="25px" /></div>         <select className="form-control" style={{width : "110px !important"}} id="exampleFormControlSelect2">
                 <option >English</option>
                 <option>Hindi</option>
               </select></div></li>
               <li className='laguagetext'>Odds</li>
-              <li><div style={{ width: "114px", marginLeft: "-5px", padding : "0" }}><select style={{padding : "0"  , marginInlineStart : "-5px !important"}} className="form-control" id="exampleFormControlSelect2">
+              <li><div style={{ width: "114px", marginLeft: "-5px", padding : "0" }}><select style={{padding : "0"  , marginInlineStart : "-5px !important" ,width : "110px !important"}} className="form-control" id="exampleFormControlSelect2">
                 <option >Decimal</option>
                 <option>Number</option>
               </select></div><div className='mr-2 pt-4'></div> </li>

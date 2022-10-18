@@ -15,7 +15,7 @@ import UserPrivacySetting from '../views/backend/app/usermanagement/userprivacys
 import UserAccountSettingList from '../views/backend/app/usermanagement/useraccountsetting'
 import UserProfileEdit from '../views/backend/app/usermanagement/userprofileedit'
 import EditUserProfileName from '../views/backend/app/usermanagement/edituserprofilename';
-
+import TermsAndConditions from '../views/backend/app/usermanagement/termsandconditions';
 //Form
 import Checkbox from '../views/backend/forms/formcontrols/checkbox'
 import Elements from '../views/backend/forms/formcontrols/elements'
@@ -118,7 +118,8 @@ const Layout1Route = () => {
                     <Route path="/comment" exact component={Comment} />
                     <Route path="/user" exact component={User} />
                     <Route path="/pages-pricing" exact component={Pricing} />
-
+                    <Route path="/terms-and-conditions" exact component={TermsAndConditions} />
+                    
                     {/* App */}
                     <Route path="/user-profile" component={UserProfile} />
                     <Route path="/user-privacy-setting" component={UserPrivacySetting} />
