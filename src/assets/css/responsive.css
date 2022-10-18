@@ -1245,7 +1245,6 @@ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 		margin-top: 21% !important;
 		height: 5% !important;
 	}
-=======
 
   .Respo{
     margin-top: 20% !important;
@@ -1321,8 +1320,6 @@ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
      z-index: 98 !important;
 
    }
- 
-  
    }
 	@media screen and (min-width: 0px) and (max-width: 1000px){
 		.Cardresponsive{
