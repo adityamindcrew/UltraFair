@@ -92,7 +92,7 @@ const LineAwsome = () => {
                 </div>
                 <div>
                   <div className="JUSTFLY MR0a10">
-                    <span className="prog_font whit">UNlOCK</span>
+                    <span className="prog_font whit">UNLOCK</span>
                  <span> <span className="GRN w100">BALANCE </span> <span className="prog_font GRN wbold">6.22</span></span>
                   </div>
                   <input type="text" className="INPUt " placeholderTextColor="#fff"  placeholder="$ 0.00" />
