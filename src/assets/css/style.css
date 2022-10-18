@@ -5592,7 +5592,33 @@ h6 span {
   translate: none !important;
 } */
 
-/* .selected {
+.registerToggle:hover {
+  background: #344452;
+  border-color: #344452;
+  border-top-left-radius: 18px !important;
+  border-bottom-left-radius: 18px !important;
+  border-top-right-radius: 18px !important;
+  border-bottom-right-radius: 18px !important;
+  text-align: center;
+  margin: 2.5px;
+  /* / margin-left: 15px !important; / */
+  transition: none !important;
+  translate: none !important;
+}
+
+.registerToggle:focus {
+  background: #344452;
+  border-color: #344452;
+  border-top-left-radius: 18px !important;
+  border-bottom-left-radius: 18px !important;
+  border-top-right-radius: 18px !important;
+  border-bottom-right-radius: 18px !important;
+  text-align: center;
+  margin: 2.5px;
+  transition: none !important;
+  translate: none !important;
+}
+.selected {
   background: #344452;
   border-color: #344452;
   border-top-left-radius: 27px !important;
@@ -5604,7 +5630,8 @@ h6 span {
 
   transition: none !important;
   translate: none !important;
-} */
+}
+
 
 /* .btn:focus {
   background: #344452;

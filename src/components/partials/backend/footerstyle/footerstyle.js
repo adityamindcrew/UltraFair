@@ -97,7 +97,7 @@ const FooterStyle = (props) => {
               <li>Privacy Policy</li>
               <li>Licenses</li>
               <li>AML Policy</li>
-              <li>Terms of Service</li>
+              <Link to='/terms-and-conditions'><li>Terms of Service</li></Link>
               <li>Self Exclusion</li>
             </ul>
           </div>
