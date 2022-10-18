@@ -129,7 +129,7 @@ export const Form2 = ({ setFormModal, close }) => {
                             height: '4vw',
                             textAlign: 'center',
                             margin:5,
-                            fontSize: 23,
+                            fontSize:'15%',
                             backgroundColor:'#0D1D29',
                             border:'none',
                             borderRadius:5,

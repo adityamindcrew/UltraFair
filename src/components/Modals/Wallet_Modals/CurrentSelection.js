@@ -123,7 +123,7 @@ const CurrentSelection = (props) => {
                         </Col>
                         <Col xs={6} md={3} className="col-box">
                             <label class="container-checkbox">
-                                <span style={{ position: "relative", bottom: 4 }}>MATIC <CurvedaotokenSVG2 /></span>
+                                <span style={{ position: "relative", bottom: 4 }}>MATIC </span>
                                 <input type="checkbox" className="checkbox-input" />
                                 <span class="checkmark"></span>
                             </label>
