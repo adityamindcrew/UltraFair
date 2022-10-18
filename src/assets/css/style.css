@@ -7175,6 +7175,7 @@ select { -webkit-appearance: menu; }
     }
     }
 
+
     .container-checkbox-new {
       display: inline-block;
       position: relative;
@@ -7186,6 +7187,7 @@ select { -webkit-appearance: menu; }
       user-select: none;
       align-items: flex-start;
   }
+
 
 
 
