@@ -147,7 +147,7 @@ const UserProfileName = () => {
                                         <Card.Body>
                                             <div className='p-2 mb-4'>
                                                 <label class="container-checkbox">
-                                                    <span style={{ position: "relative", bottom: 4, fontFamily: 'Montserrat' }}>Keep me signed in</span>
+                                                    <span style={{ position: "relative", bottom: 4, fontFamily: 'Montserrat', fontSize: "16px" ,fontWeight : "400" ,marginLeft : "10px"}}>Keep me signed in</span>
                                                     <input type="checkbox" className="checkbox-input" />
                                                     <span class="checkmark new-checkmark"></span>
                                                 </label>
