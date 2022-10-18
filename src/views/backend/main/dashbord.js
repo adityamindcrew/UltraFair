@@ -558,7 +558,7 @@ const Dashbord = () => {
                   <Modal.Title>
                      <div style={{ marginLeft: 10 }}>
                         <WalletSVG />
-                        <span style={{ color: "white", paddingLeft: 7, }} className="wallet-header">let</span>
+                        <span style={{ color: "white", paddingLeft: 7, }} className="wallet-header">Wallet</span>
                      </div>
                      <button
                         type="button"

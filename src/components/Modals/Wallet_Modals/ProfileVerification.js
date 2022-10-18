@@ -33,17 +33,18 @@ const ProfileVerification = ({ close }) => {
         console.log("form", formModal)
     }
     return (
-
-        <div className="container">
-
+        <>
             {formModal === 'btnform2' ?
                 <Form2 setFormModal={setFormModal} close={close} />
 
-                : <div>
-                    <div>
+                :
+                <div className="container">
+
+
+                    <div className="container">
                         <div className="text-center user-verification ">
                             <h3>Enter Mobile Number</h3>
-                            <p>Please enter your mobile so that we can verify your account. </p>
+                            <p>Please enter your mobile so that we can<br /> verify your account. </p>
                         </div>
 
                         <div className="mobileForm">
@@ -72,7 +73,7 @@ const ProfileVerification = ({ close }) => {
                                 style={{
                                     color: "black",
                                     width: '100%',
-                                    fontWeight:'bold'
+                                    fontWeight: 'bold'
 
                                 }}
                                 onClick={() => userBtn('btnform2')}
@@ -82,14 +83,14 @@ const ProfileVerification = ({ close }) => {
 
                         </div>
 
+
                     </div>
+
                 </div>}
 
-        </div>
 
 
-
-
+        </>
     );
 };
 
@@ -109,32 +110,32 @@ export const Form2 = ({ setFormModal, close }) => {
             {formModal2 === 'btnform3' ?
                 <Form3 setFormModal2={setFormModal2} close={close} />
 
-                : <div className="form2-body">
+                : <div className="form2-body container">
                     <div className="re-back" >
                         <span onClick={() => setFormModal('btnform')}><BackArrow /></span>
                     </div>
                     <div className="text-center user-verification ">
 
                         <h3>Verify Mobile Number</h3>
-                        <p>We have sent a verification to<br/> +124376598.</p>
+                        <p>We have sent a verification to<br /> +124376598.</p>
                     </div>
 
                     <div className="text-center">
-                        <p style={{letterSpacing:1}}>Please enter the code below to continue</p>
+                        <p style={{ letterSpacing: 1 }}>Please enter the code below to continue</p>
                     </div>
 
-                   
+
                     <OTPInput value={OTP} onChange={setOTP} autoFocus OTPLength={4} otpType="number" disabled={false} style={{ display: 'flex', justifyContent: 'center' }}
                         inputStyles={{
-                            width: '9%',
-                            height: '4vw',
-                            textAlign: 'center',
-                            margin:5,
-                            fontSize:'15%',
-                            backgroundColor:'#0D1D29',
-                            border:'none',
-                            borderRadius:5,
-                            color:'white'}} />
+                            width: 56,
+                            height: 56, textAlign: 'center',
+                            margin: 5,
+                            fontSize: 29,
+                            backgroundColor: '#0D1D29',
+                            border: 'none',
+                            borderRadius: 5,
+                            color: 'white'
+                        }} />
 
 
                     <div className="mt-3">
