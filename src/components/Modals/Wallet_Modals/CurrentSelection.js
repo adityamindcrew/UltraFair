@@ -11,7 +11,11 @@ import Line from "../../../assets/images/social/line.png";
 import Chat from "../../../assets/images/social/chat.png";
 import ReCAPTCHA from "react-google-recaptcha";
 
-import { BitCoinSVG, QRSVG, DownArrow, BitcoinsSVG2, EtheremcoinsSVG2, UsdcoinSVG2, TetherSVG2, DailogoSVG2, CurvedaotokenSVG2 } from "../../../views/backend/main/dashboardIcons";
+import { BitcoinsSVG4, QRSVG, DownArrow, BitcoinsSVG2, EtheremcoinsSVG2,
+    EtheremcoinsSVG4, UsdcoinSVG2,UsdcoinSVG3, TetherSVG2,TetherSVG4, DailogoSVG2, CurvedaotokenSVG2, Group199, Group202, Group203, DailogoSVG4 } from "../../../views/backend/main/dashboardIcons";
+
+import Manicback from "../../../assets/images/Manic-back.png"
+import Manic from "../../../assets/images/Manic.png"
 
 
 const CurrentSelection = (props) => {
@@ -41,66 +45,24 @@ const CurrentSelection = (props) => {
 
     return (
 
-        <div className="container">
+        <div className="mb-4">
 
-            <div className="">
-                <span className="checkbox-text">Please select the preferred currencies that you would like to use.</span>
+            <div className="container">
+                <span className="currency-text">Please select the preferred currencies that you would like to use.</span>
 
-                {/* <Form className="text-left mt-4 " >
-                      
-
-                    </Form> */}
-
-                {/* <div className="form-checkbox text-center">
-
-                        <label class="container-checkbox" style={{ marginRight: '8%' }}>
-                            <span style={{ position: "relative", bottom: 4 }}>BTC <BitcoinsSVG2 /></span>
-                            <input type="checkbox" className="checkbox-input" />
-                            <span class="checkmark"></span>
-                        </label>
-
-                        <label class="container-checkbox" style={{ marginRight: '8%' }}>
-                            <span style={{ position: "relative", bottom: 4 }}>ETC</span>
-                            <input type="checkbox" className="checkbox-input" />
-                            <span class="checkmark"></span>
-                        </label>
-
-                        <label class="container-checkbox" style={{ marginRight: '8%' }}>
-                            <span style={{ position: "relative", bottom: 4 }}>USDC</span>
-                            <input type="checkbox" className="checkbox-input" />
-                            <span class="checkmark"></span>
-                        </label>
-
-                        <label class="container-checkbox">
-                            <span style={{ position: "relative", bottom: 4 }}>USDT</span>
-                            <input type="checkbox" className="checkbox-input" />
-                            <span class="checkmark"></span>
-                        </label>
-
-                    </div> */}
-
-
-
+            
                 <div className="form-checkbox mt-3">
                     <Row className="checkbox-row">
                         <Col xs={6} md={3} className="col-box">
                             <label class="container-checkbox">
-                                <span style={{ position: "relative", bottom: 4 }}>BTC <BitcoinsSVG2 /></span>
+                                <span style={{ position: "relative", bottom:3, }}>BTC <BitcoinsSVG4 /></span>
                                 <input type="checkbox" className="checkbox-input" />
                                 <span class="checkmark"></span>
                             </label>
                         </Col>
                         <Col xs={6} md={3} className="col-box">
                             <label class="container-checkbox">
-                                <span style={{ position: "relative", bottom: 4 }}>ETH <EtheremcoinsSVG2 /></span>
-                                <input type="checkbox" className="checkbox-input" />
-                                <span class="checkmark"></span>
-                            </label>
-
-                        </Col>
-                        <Col xs={6} md={3} className="col-box">
-                            <label class="container-checkbox">
-                                <span style={{ position: "relative", bottom: 4 }}>USDC <UsdcoinSVG2 /></span>
+                                <span style={{ position: "relative", bottom: 3 }}>ETH <EtheremcoinsSVG4 /></span>
                                 <input type="checkbox" className="checkbox-input" />
                                 <span class="checkmark"></span>
                             </label>
@@ -108,14 +70,7 @@ const CurrentSelection = (props) => {
                         </Col>
                         <Col xs={6} md={3} className="col-box">
                             <label class="container-checkbox">
-                                <span style={{ position: "relative", bottom: 4 }}>USDT <TetherSVG2 /></span>
-                                <input type="checkbox" className="checkbox-input" />
-                                <span class="checkmark"></span>
-                            </label>
-                        </Col>
-                        <Col xs={6} md={3} className="col-box">
-                            <label class="container-checkbox">
-                                <span style={{ position: "relative", bottom: 4 }}>DAI <DailogoSVG2 /></span>
+                                <span style={{ position: "relative", bottom: 3 }}>USDC <UsdcoinSVG3 /></span>
                                 <input type="checkbox" className="checkbox-input" />
                                 <span class="checkmark"></span>
                             </label>
@@ -123,7 +78,14 @@ const CurrentSelection = (props) => {
                         </Col>
                         <Col xs={6} md={3} className="col-box">
                             <label class="container-checkbox">
-                                <span style={{ position: "relative", bottom: 4 }}>MATIC </span>
+                                <span style={{ position: "relative", bottom: 3 }}>USDT <TetherSVG4 /></span>
+                                <input type="checkbox" className="checkbox-input" />
+                                <span class="checkmark"></span>
+                            </label>
+                        </Col>
+                        <Col xs={6} md={3} className="col-box">
+                            <label class="container-checkbox">
+                                <span style={{ position: "relative", bottom: 3 }}>DAI <DailogoSVG4 /></span>
                                 <input type="checkbox" className="checkbox-input" />
                                 <span class="checkmark"></span>
                             </label>
@@ -131,7 +93,9 @@ const CurrentSelection = (props) => {
                         </Col>
                         <Col xs={6} md={3} className="col-box">
                             <label class="container-checkbox">
-                                <span style={{ position: "relative", bottom: 4 }}>CRO <BitcoinsSVG2 /></span>
+                                <span style={{ position: "relative", bottom: 3 }}>MATIC <Group203 />
+                                   
+                                </span>
                                 <input type="checkbox" className="checkbox-input" />
                                 <span class="checkmark"></span>
                             </label>
@@ -139,7 +103,15 @@ const CurrentSelection = (props) => {
                         </Col>
                         <Col xs={6} md={3} className="col-box">
                             <label class="container-checkbox">
-                                <span style={{ position: "relative", bottom: 4 }}>LINK <DailogoSVG2 /></span>
+                                <span style={{ position: "relative", bottom: 3 }}>CRO  <Group202 /></span>
+                                <input type="checkbox" className="checkbox-input" />
+                                <span class="checkmark"></span>
+                            </label>
+
+                        </Col>
+                        <Col xs={6} md={3} className="col-box">
+                            <label class="container-checkbox">
+                                <span style={{ position: "relative", bottom: 3 }}>LINK  <Group199 /></span>
                                 <input type="checkbox" className="checkbox-input" />
                                 <span class="checkmark"></span>
                             </label>
@@ -153,7 +125,7 @@ const CurrentSelection = (props) => {
 
             </div>
 
-            <div className="wallet-info text-center mt-4">
+            <div className="wallet-info text-center mt-4 container">
                 <Button
                     type="button"
                     variant="btn btn-primary"
@@ -161,17 +133,18 @@ const CurrentSelection = (props) => {
                     style={{
                         color: "black",
                         width: '100%',
-                        paddingTop:12,
-                        paddingBottom:12,
-                        fontFamily:'Montserrat',
+                        paddingTop: 12,
+                        paddingBottom: 12,
+                        fontFamily: 'Montserrat',
+                        fontWeight:'bold',
                     }} >
                     Save
                 </Button>
 
             </div>
-            <div className="" style={{marginTop:10}}>
-            <span className="checkbox-text">This selection can be updated at anytime.</span>
-            </div>
+            <div className=" container" style={{ marginTop: 20 }}>
+                <span className="checkbox-text">This selection can be updated at any time.</span>
+            </div> 
         </div>
 
 

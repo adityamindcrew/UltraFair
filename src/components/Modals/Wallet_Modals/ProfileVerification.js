@@ -65,13 +65,14 @@ const ProfileVerification = ({ close }) => {
                             </Form.Group>
                         </div>
 
-                        <div className="wallet-info text-center mt-4">
+                        <div className="wallet-info text-center mt-4 mb-4">
                             <Button
                                 type="button"
                                 variant="btn btn-primary"
                                 style={{
                                     color: "black",
                                     width: '100%',
+                                    fontWeight:'bold'
 
                                 }}
                                 onClick={() => userBtn('btnform2')}

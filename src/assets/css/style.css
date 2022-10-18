@@ -705,10 +705,10 @@ Sign In
   margin-top: 3vw
 }
 
-.checkbox-input {
+/* .checkbox-input {
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
-}
+} */
 
 .reCaptcha {
   /* margin: 20px auto; 
@@ -6044,7 +6044,7 @@ h6 span {
 
 .wallet-header {
   font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.5px;
 
 }
@@ -6396,15 +6396,17 @@ h6 span {
 .container-checkbox {
   display: inline-block;
   position: relative;
-  padding-left: 25px;
+  padding-left: 22px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 12px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   align-items: flex-start;
+  font-weight: bold;
+  color: white;
 
 }
 
@@ -6422,8 +6424,8 @@ h6 span {
   position: absolute;
   top: 0;
   left: 0;
-  height: 18px;
-  width: 18px;
+  height: 16px;
+  width: 16px;
   background-color: transparent;
   border-radius: 10%;
   border: 1px solid #eee
@@ -6454,16 +6456,27 @@ h6 span {
 
 /* Style the checkmark/indicator */
 .container-checkbox .checkmark:after {
-  left: 5px;
-  top: 0px;
-  width: 7px;
-  height: 13px;
+  left: 4px;
+  top: -1px;
+  width: 6px;
+  height: 12px;
   border: solid rgb(6, 5, 5);
   border-width: 0px 2px 2px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+@media screen and (min-width: 0px) and (max-width: 760px){
+  .currency-text{
+    width: 100%;
+    padding-right: 15px;
+    /* padding-left: 15px; */
+    margin-right: auto;
+    margin-left: auto;
+}
+}
+
 
 
 
@@ -7097,10 +7110,10 @@ select {
 
 
 .navItem{
-  background-color:#11ffbd;
+  background-color:#11ffbd !important;
    color: black;
    text-align:center;
-  
+  border: none;
    padding-right: 20px;
    padding-left: 20px;
     border-radius:7px;
@@ -7127,9 +7140,26 @@ select {
 .wallet-linl-text{
   font-size: 11px;
 }
+.navItem{ 
+
+  color:black; 
+  background-color:#11ffbd; 
+  border: none;
+}
   }
 
 }
+
+@media not all and (min-resolution:.001dpcm) { 
+
+  /* .navItem{ 
+
+      color:black; 
+      background-color:#11ffbd; 
+      border: none;
+  } */
+}
+
 
 
 

@@ -270,16 +270,16 @@ const Dashbord = () => {
                <Modal.Title>
                   <div style={{ marginLeft: 10 }}>
                      <WalletSVG />
-                     <span style={{ color: "white", paddingLeft: 7, }} className="wallet-header">Current Selection</span>
+                     <span style={{ color: "white", paddingLeft: 7, }} className="wallet-header">Currency Selection</span>
                   </div>
                   <button
                      type="button"
                      class="close"
                      aria-label="Close"
-                     style={{ color: "white", position: 'absolute', top: -1, right: 10 }}
+                     style={{ color: "white", position: 'absolute', top: 9, right: 20 }}
                      onClick={CloseButton}
                   >
-                     <span aria-hidden="true" style={{ fontSize: 33, fontWeight: 1 }}>&times;</span>
+                     <span aria-hidden="true" style={{ fontSize: 22, fontWeight: 1 }}>x</span>
                   </button>
                </Modal.Title>
             </Modal.Header>

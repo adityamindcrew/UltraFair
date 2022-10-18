@@ -155,15 +155,15 @@ const HeaderStyle1 = (props) => {
                 <Link className="navItem-hide" to="#" onClick={loginHandler}>
                   Sign In
                 </Link>
-                <span
+                <button
                   className="navItem btnNavbar"
                   type="button"
-                  variant=" btn-primary"
+                
                   onClick={registerHandler2}
-                  style={{paddingTop:4}}
+                  style={{paddingTop:2}}
                 >
                   Register
-                </span>
+                </button>
               </Nav>
             </div>
 
