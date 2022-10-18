@@ -1353,7 +1353,7 @@ body.sidebar-main .iq-top-navbar {
   text-align: center;
   line-height: 35px;
   margin: 2.5px;
-  padding: 0px 8px;
+  padding: 8px 20px;
 }
 
 #sidebar-scrollbar {
@@ -6576,8 +6576,8 @@ vertical-align: top;
 .fileupload-user{
   background-color: blue;
 }
-.img-fluid1 {
-  max-width: 100%;
+.img-fluid-one {
+  max-width: none;
   height: auto;
   width: auto !important;
 }
@@ -7069,6 +7069,7 @@ select {
 
 }
 
+select { -webkit-appearance: menu; }
 
 
 

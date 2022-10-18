@@ -513,8 +513,8 @@ mark {
 	height: auto;
 	width: 95%
 }
-.img-fluid1 {
-	max-width: 100%;
+.img-fluid-one{
+	max-width: none;
 	height: auto;
 	width: 10%
 }
