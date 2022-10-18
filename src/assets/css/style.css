@@ -7175,7 +7175,17 @@ select { -webkit-appearance: menu; }
     }
     }
 
-
+    .container-checkbox-new {
+      display: inline-block;
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 15px;
+      -webkit-user-select: none;
+      user-select: none;
+      align-items: flex-start;
+  }
 
 
 
