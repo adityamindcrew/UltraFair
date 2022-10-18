@@ -27,7 +27,7 @@ const UserProfileName = () => {
                                     <Card.Body>
                                         <div className="d-flex justify-content-between">
                                             <h4 className="m-2  profile-card-title">Verification Status</h4>
-                                            <div><Button variant="outline-success"><span className='m-1'>Lavel 0</span></Button>{' '}</div>
+                                            <div><Button variant="outline-success"><span className='m-1'>Level 0</span></Button>{' '}</div>
                                         </div>
                                         <div className='m-2 mb-2'>
                                             <div className='d-flex mt-4'>
