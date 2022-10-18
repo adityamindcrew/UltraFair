@@ -6211,12 +6211,12 @@ h6 span {
   padding-top: 12px;
 
   text-align: center;
-  margin: 2.5px;
+  /* margin: 2.5px; */
   /* margin-left: 15px !important; */
   transition: none !important;
   translate: none !important;
   padding-right: 18px;
-  padding-left: 2px;
+  padding-left: 0px;
 
 }
 .wallet-paragraph{
@@ -6508,7 +6508,7 @@ h6 span {
 }
 
 .form2-body{
-  /* padding: 1rem 4rem; */
+   padding: 1rem 4rem; 
 }
 @media only screen and (max-width: 1026px) {
   .form2-body{
@@ -6587,6 +6587,24 @@ vertical-align: top;
   color: var(--iq-primary);
   font-size: 35px;
 }
+
+
+.upload-file-row{
+  /* flex-direction: row; */
+  display: flex;
+  /* padding: 5px; */
+  position: relative;
+ 
+}
+.form-upload{
+  margin: 10px;
+}
+.form-upload-status{
+  position: relative;
+  top:8px;
+}
+
+
 
 /* -----------------------------MODAL USER VERIFICATION/ Aditya ------- */
 
@@ -7098,14 +7116,7 @@ input[type="checkbox"] {
   align-items: flex-start;
 }
 
-select {
-  /*webkit browsers */
-  /*Firefox */
-  /* modern browsers */
-  border-radius: 0;
-  -webkit-appearance: listbox !important
 
-}
 
 
 
@@ -7147,8 +7158,17 @@ select {
   background-color:#11ffbd; 
   border: none;
 }
-  }
 
+/* .form-control {
+  background-color: #0d1d29!important;
+  color: #fff!important;
+  width: 84%;
+  border-radius: 6px;
+  padding-bottom: 5px;
+  width: 100%;
+  } */
+
+}
 }
 
 @media not all and (min-resolution:.001dpcm) { 

@@ -44,7 +44,7 @@ const ProfileVerification = ({ close }) => {
                     <div className="container">
                         <div className="text-center user-verification ">
                             <h3>Enter Mobile Number</h3>
-                            <p>Please enter your mobile so that we can<br /> verify your account. </p>
+                            <p>Please enter your mobile so that we can verify your account. </p>
                         </div>
 
                         <div className="mobileForm">
@@ -110,7 +110,7 @@ export const Form2 = ({ setFormModal, close }) => {
             {formModal2 === 'btnform3' ?
                 <Form3 setFormModal2={setFormModal2} close={close} />
 
-                : <div className="form2-body container">
+                : <div className="form2-body">
                     <div className="re-back" >
                         <span onClick={() => setFormModal('btnform')}><BackArrow /></span>
                     </div>
@@ -241,12 +241,54 @@ export const Form4 = ({ setFormModal3, close }) => {
                         <p>Upload Selfie</p>
                     </div>
 
-                    <div>
+                    {/* <div>
                         <Form.Group controlId="formFileMultiple" className="mb-3">
                             <Form.Label>Multiple files input example</Form.Label>
                             <Form.Control type="file" multiple className="fileupload-user" />
 
                         </Form.Group>
+                    </div> */}
+
+                    <div className="upload-file-row">
+                        <div className="form-upload">
+                            <Button
+                                type="button"
+                                variant="btn btn-primary"
+                                style={{
+                                    color: "black",
+                                    width: '100%',
+                                    fontWeight: 'bold',
+                                      }}
+                               
+
+                            >
+                                + upload file
+                            </Button>
+
+                        </div>
+                        <div className="form-upload">
+                            <Button
+                                type="button"
+                                variant="btn btn-primary"
+                                style={{
+                                    color: "black",
+                                    width: '100%',
+                                    fontWeight: 'bold'       
+                                  }}
+                               
+
+                            >
+                                - remove file
+                            </Button>
+
+                        </div>
+                        <div className="form-upload">
+                            <span className="form-upload-status"> no file selected</span>
+
+                        </div>
+                    </div>
+                    <div className="">
+                       <span> no older than 24 hours</span>
                     </div>
                     <Button
                         type="button"
@@ -263,16 +305,7 @@ export const Form4 = ({ setFormModal3, close }) => {
                         continue
                     </Button>
 
-                    {/* <div>
-                <InputGroup className="mb-3">
-                    <Button variant="outline-secondary">
-                    <Form.Control type="file" multiple />
-                       + </Button>
-                    <Button variant="outline-secondary">- remove file</Button>
-                    <Form.Control aria-label="Example text with two button addons" />
-                </InputGroup>
-
-            </div> */}
+                   
 
 
 
