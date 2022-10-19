@@ -126,7 +126,7 @@ const HeaderStyle1 = (props) => {
                 <Link to="/" className="header-logo">
                   <img
                     src={logo}
-                    className="logoImg fullLogo img-fluid1 rounded-normal"
+                    className="logoImg fullLogo img-fluid-one rounded-normal"
                     alt=""
                   />
                   {/* <div className="logo-title">
@@ -155,15 +155,15 @@ const HeaderStyle1 = (props) => {
                 <Link className="navItem-hide" to="#" onClick={loginHandler}>
                   Sign In
                 </Link>
-                <span
+                <button
                   className="navItem btnNavbar"
                   type="button"
-                  variant=" btn-primary"
+                
                   onClick={registerHandler2}
-                  style={{paddingTop:4}}
+                  style={{paddingTop:2}}
                 >
                   Register
-                </span>
+                </button>
               </Nav>
             </div>
 
@@ -232,7 +232,7 @@ const HeaderStyle1 = (props) => {
                               <div className="profileMenu-list">My Profile</div>
                             </div>
                           </Link>
-                          <Link to="#">
+                          <Link to="/transactions">
                             <div className="profileMenu-item ">
                               <Transactions
                                 width={"18px"}
@@ -242,7 +242,7 @@ const HeaderStyle1 = (props) => {
                               <div className="profileMenu-list">Transactions</div>
                             </div>
                           </Link>
-                          <Link to="#">
+                          <Link to="/">
                             <div className="profileMenu-item ">
                               <Logout
                                 width={"18px"}

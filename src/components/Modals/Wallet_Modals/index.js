@@ -139,8 +139,8 @@ export const form2 = (props) => {
                 </Button>
 
             </div>
-            <div className=" text-left mt-3 wallet-paragraph">
-                <span style={{textAlign:'center'}}>Minimum Withdrawal is 0.00020000 <BitcoinsSVG4/> .
+            <div className="mt-3 wallet-paragraph">
+                <span style={{fontWeight:'bold'}}>Minimum Withdrawal is 0.00020000 <BitcoinsSVG4/> .
                 Your withdrawal will have <br/> 0.00007000 <BitcoinsSVG4/> subtracted from your remaining balance to cover <br/>the required to process the transaction.</span>
 
             </div>

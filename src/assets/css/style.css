@@ -705,10 +705,10 @@ Sign In
   margin-top: 3vw
 }
 
-.checkbox-input {
+/* .checkbox-input {
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
-}
+} */
 
 .reCaptcha {
   /* margin: 20px auto; 
@@ -1353,7 +1353,7 @@ body.sidebar-main .iq-top-navbar {
   text-align: center;
   line-height: 35px;
   margin: 2.5px;
-  padding: 0px 8px;
+  padding: 8px 20px;
 }
 
 #sidebar-scrollbar {
@@ -5662,13 +5662,13 @@ h6 span {
   margin: 2.5px;
 }
 
-.btn1:hover {
+.registerToggle:hover {
   background: #344452;
   border-color: #344452;
-  border-top-left-radius: 6px !important;
-  border-bottom-left-radius: 6px !important;
-  border-top-right-radius: 6px !important;
-  border-bottom-right-radius: 6px !important;
+  border-top-left-radius: 18px !important;
+  border-bottom-left-radius: 18px !important;
+  border-top-right-radius: 18px !important;
+  border-bottom-right-radius: 18px !important;
   text-align: center;
   margin: 2.5px;
   /* margin-left: 15px !important; */
@@ -5676,13 +5676,13 @@ h6 span {
   translate: none !important;
 }
 
-.btn1:focus {
+.registerToggle:focus {
   background: #344452;
   border-color: #344452;
-  border-top-left-radius: 6px !important;
-  border-bottom-left-radius: 6px !important;
-  border-top-right-radius: 6px !important;
-  border-bottom-right-radius: 6px !important;
+  border-top-left-radius: 18px !important;
+  border-bottom-left-radius: 18px !important;
+  border-top-right-radius: 18px !important;
+  border-bottom-right-radius: 18px !important;
   text-align: center;
   margin: 2.5px;
   transition: none !important;
@@ -5862,6 +5862,13 @@ h6 span {
 
 }
 
+
+
+.head-wallet-body{
+
+}
+
+
 @media only screen and (min-width: 1600px) {
   .mobile {
     display: none;
@@ -5918,26 +5925,6 @@ h6 span {
   border-radius: 10px;
 }
 
-.user-modal{
-  position: relative;
-
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  padding: 20px 25px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /* display: block; */
-  /* margin: 25px auto; */
-  max-width: 60%;
-
-  width: 100% !important;
-  max-height: fit-content !important;
-  border-radius: 10px;
- 
-}
 
 .rc-anchor-alert {
   display: none !important;
@@ -6057,7 +6044,7 @@ h6 span {
 
 .wallet-header {
   font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.5px;
 
 }
@@ -6083,7 +6070,8 @@ h6 span {
 }
 
 .wallet-linl-text{
-  
+  font-size: 13px;
+  font-weight: bold;
 }
 @media only screen and (min-width: 0px) and (max-width:600px){
 
@@ -6093,17 +6081,22 @@ h6 span {
 
   }
   
-     /* .buycrypto-text{
-        font-size: 10px!important;  
-    } */
     .wallet-linl-text{
-      font-size: 12px;
+      font-size: 11px;
     }
   
+    
    
 
 }
 
+@media only screen and (min-width: 0px) and (max-width: 600px){
+.walletTab {
+    margin: 0vw 1vw;
+    width: 100%;
+    text-align: center;
+}
+}
 @media only screen and (min-width: 1026px) {
   .wallet-QR-row {
     margin-left: 0px;
@@ -6114,6 +6107,11 @@ h6 span {
     font-family: 'Montserrat', sans-serif;
     
   }
+  /* .walletTab {
+    margin: 0vw 2vw;
+    width: 100%;
+    text-align: center;
+  } */
 
 }
 
@@ -6142,19 +6140,15 @@ h6 span {
     text-align: center;
   }
 
-  .wallet-address-deposit {
-
-    width: 100%;
-
-  }
+  
 
   .wallet-link {
-    /* width:80%; */
+    width:100%;
     padding-left: 10px;
     justify-content: space-around;
     align-items: center;
     color: white;
-    padding-right: 10px;
+    /* padding-right: 10px; */
 
   }
 
@@ -6164,10 +6158,19 @@ h6 span {
 
   }
 
+  .wallet-address-deposit {  
+    /* jdjnjncd */
+
+    width: 100%;
+
+
+  }
+
   .wallet-icons-2 {
     /* width: 10%; */
     padding-right: 5px;
   }
+
 
 
 
@@ -6394,15 +6397,17 @@ h6 span {
 .container-checkbox {
   display: inline-block;
   position: relative;
-  padding-left: 25px;
+  padding-left: 22px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 12px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   align-items: flex-start;
+  font-weight: bold;
+  color: white;
 
 }
 
@@ -6420,8 +6425,8 @@ h6 span {
   position: absolute;
   top: 0;
   left: 0;
-  height: 18px;
-  width: 18px;
+  height: 16px;
+  width: 16px;
   background-color: transparent;
   border-radius: 10%;
   border: 1px solid #eee
@@ -6452,10 +6457,10 @@ h6 span {
 
 /* Style the checkmark/indicator */
 .container-checkbox .checkmark:after {
-  left: 5px;
-  top: 0px;
-  width: 7px;
-  height: 13px;
+  left: 4px;
+  top: -1px;
+  width: 6px;
+  height: 12px;
   border: solid rgb(6, 5, 5);
   border-width: 0px 2px 2px 0;
   -webkit-transform: rotate(45deg);
@@ -6463,12 +6468,45 @@ h6 span {
   transform: rotate(45deg);
 }
 
+@media screen and (min-width: 0px) and (max-width: 760px){
+  .currency-text{
+    width: 100%;
+    padding-right: 15px;
+    /* padding-left: 15px; */
+    margin-right: auto;
+    margin-left: auto;
+}
+}
+
+
 
 
 /* -----------------------------MODAL USER VERIFICATION/ Aditya ------- */
 .modalbody{
 /* padding: 2rem 5rem; */
 }
+
+.user-modal{
+  position: relative;
+
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 20px 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* display: block; */
+  /* margin: 25px auto; */
+  max-width: 60%;
+
+  width: 100% !important;
+  max-height: fit-content !important;
+  border-radius: 10px;
+ 
+}
+
 .form2-body{
   /* padding: 1rem 4rem; */
 }
@@ -6576,8 +6614,8 @@ vertical-align: top;
 .fileupload-user{
   background-color: blue;
 }
-.img-fluid1 {
-  max-width: 100%;
+.img-fluid-one {
+  max-width: none;
   height: auto;
   width: auto !important;
 }
@@ -7069,14 +7107,15 @@ select {
 
 }
 
+select { -webkit-appearance: menu; }
 
 
 
 .navItem{
-  background-color:#11ffbd;
+  background-color:#11ffbd !important;
    color: black;
    text-align:center;
-  
+  border: none;
    padding-right: 20px;
    padding-left: 20px;
     border-radius:7px;
@@ -7098,10 +7137,16 @@ select {
       text-align: center;
     }
     .WalletButtonText{
-      font-size: 10px;
+      font-size: 9px;
     }
 .wallet-linl-text{
   font-size: 11px;
+}
+.navItem{ 
+
+  color:black; 
+  background-color:#11ffbd; 
+  border: none;
 }
   }
   
@@ -7112,7 +7157,39 @@ select {
 
 }
 
+
 }
+=======
+@media not all and (min-resolution:.001dpcm) { 
+
+  /* .navItem{ 
+
+      color:black; 
+      background-color:#11ffbd; 
+      border: none;
+  } */
+}
+  @media screen  and (min-width:0px) and (max-width:600px){
+    .wallet-head{
+    padding:2vw
+    }
+    }
+    
+    .container-checkbox-new {
+      display: inline-block;
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 15px;
+      -webkit-user-select: none;
+      user-select: none;
+      align-items: flex-start;
+  }
+
+
+
+
 
 
 @media screen and (min-width: 1850px) and (max-width: 3000px) {
@@ -7127,3 +7204,48 @@ select {
   }
   
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
