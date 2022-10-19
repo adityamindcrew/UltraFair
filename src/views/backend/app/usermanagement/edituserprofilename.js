@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { Col, Row, Container, ProgressBar, Button, Dropdown } from 'react-bootstrap'
 import Card from '../../../../components/Card'
 
@@ -46,7 +46,7 @@ const EditUserProfileName = () => {
                                             <div className='profile-heading-sub-text'>Create a profile using your personal details.</div>
                                         </div>
 
-                              <div className='m-2 mb-2'>
+                                        <div className='m-2 mb-2'>
                                             <div className='d-flex mt-4'>
                                                 <div>
                                                     <SuccessIconSVG />
@@ -83,7 +83,7 @@ const EditUserProfileName = () => {
                                 </Card>
                             </Col>
                             <Col md="4">
-                            <div>
+                                <div>
                                     <Card className="iq-card-block iq-card-stretch iq-card-height card-box">
                                         <Card.Header className="d-flex justify-content-between align-items-center mb-0">
                                             <div className="iq-header-title">
@@ -142,11 +142,11 @@ const EditUserProfileName = () => {
                                         </Card.Header>
                                         <Card.Body>
                                             <div className='p-2 mb-4'>
-                                            <label class="container-checkbox">
-                                            <span style={{ position: "relative", bottom: 4, fontFamily: 'Montserrat', fontSize: "16px" ,fontWeight : "400" ,marginLeft : "10px"}}>Keep me signed in</span>
-                                <input type="checkbox" className="checkbox-input" />
-                            <span class="checkmark new-checkmark" style={{ border: "2px solid #B3BAD1 !important"}}></span>
-                            </label>
+                                                <label class="container-checkbox">
+                                                    <span style={{ position: "relative", bottom: 4, fontFamily: 'Montserrat', fontSize: "16px", fontWeight: "400", marginLeft: "10px" }}>Keep me signed in</span>
+                                                    <input type="checkbox" className="checkbox-input" />
+                                                    <span class="checkmark new-checkmark" style={{ border: "2px solid #B3BAD1 !important" }}></span>
+                                                </label>
 
                                                 {/* <div className='d-flex mb-2'>
                                                     <input class="chone" type="checkbox" id="value1" name="value1" value="value1" />
