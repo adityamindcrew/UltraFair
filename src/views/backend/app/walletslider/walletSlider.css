@@ -9,11 +9,11 @@
   justify-content: center;
 } */
 .firstDiv {
-  font-family: sans-serif;
-  text-align: center;
-}
-.slider-parent {
-  /* top: 50vh;
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .slider-parent {
+    /* top: 50vh;
       left: 50%; */
   position: relative;
 }
