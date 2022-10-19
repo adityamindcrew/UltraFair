@@ -1,0 +1,47 @@
+.MainContainerTerm {
+  margin-top: 10%;
+}
+.Textcontainer {
+  display: flex;
+  flex-direction: column;
+}
+.Header {
+  font-family: "Montserrat";
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+
+  font-variant: small-caps;
+  color: #b3bad1;
+  margin-bottom: 10px;
+}
+.NormalTEXTa {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+
+  color: #ffffff;
+}
+.MRG-30 {
+  margin-bottom: 30px;
+}
+.MT_40 {
+    margin-top: 40px;
+}
+.MB_45{
+    margin-bottom: 50px;
+
+}
+.BGGRAD{
+ 
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 700px) {
+    .MainContainerTerm {
+        margin-top: 20%;
+      }
+}

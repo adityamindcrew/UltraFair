@@ -7094,9 +7094,25 @@ select {
       border: none;
     }
   }
+
+  
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .UltrafairLogo {
+    width: auto !important;
+  }
+
+}
+
+
+}
+=======
+@media not all and (min-resolution:.001dpcm) { 
+
+=======
 }
 
 @media not all and (min-resolution: 0.001dpcm) {
+
   /* .navItem{ 
 
       color:black; 
@@ -7123,6 +7139,69 @@ select {
   }
 
 
+
+
+
+
+
+@media screen and (min-width: 1850px) and (max-width: 3000px) {
+.Searchtext1{
+  margin-top: 20%;
+}
+
+}
+@media screen and (min-width: 3001px) and (max-width: 5000px) {
+  .Searchtext1{
+    margin-top: 30%;
+  }
+  
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+=======
 .container-checkbox-new {
   display: inline-block;
   position: relative;
