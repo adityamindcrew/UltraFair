@@ -7104,9 +7104,26 @@ select {
   font-size: 11px;
 }
   }
+  
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .UltrafairLogo {
+    width: auto !important;
+  }
+
+}
 
 }
 
 
+@media screen and (min-width: 1850px) and (max-width: 3000px) {
+.Searchtext1{
+  margin-top: 20%;
+}
 
-
+}
+@media screen and (min-width: 3001px) and (max-width: 5000px) {
+  .Searchtext1{
+    margin-top: 30%;
+  }
+  
+  }

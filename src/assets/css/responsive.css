@@ -1245,7 +1245,6 @@ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 		margin-top: 21% !important;
 		height: 5% !important;
 	}
-=======
 
   .Respo{
     margin-top: 20% !important;
@@ -1594,7 +1593,9 @@ background: linear-gradient(36deg, rgba(250,250,250,1) 12%, rgba(214,143,214,1) 
 @media screen and (min-width: 0px) and (max-width: 650px) { 
 .ALIG{
   align-self: flex-start;
-}
+} 
+
+
 .REPOS{
   flex-direction: column;
 }
@@ -1636,7 +1637,7 @@ background: linear-gradient(36deg, rgba(250,250,250,1) 12%, rgba(214,143,214,1) 
   }
 
   .FooterCont{width: 100%;}
-  .UltrafairLogo{width: 60%; margin: 5px 10px;}
+  .UltrafairLogo{width: 40%; margin: 5px 10px;}
   .UltrafairText{width: 40%;}
   .CENTERIT{
     justify-content: flex-start;
@@ -1689,4 +1690,24 @@ input[type="range"] .Fire {
 }
 
 
+
+
+@media not all and (min-resolution:.001dpcm) { 
+  .UltrafairLogo{
+    width: auto
+  }
+  
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .SAF {
+    width: 15%;
+  }
+
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #053a5f;
+  height: 0.5rem;
+}
+
+}
 
