@@ -85,6 +85,7 @@ import ShowList from "../views/backend/show/show-list";
 import SimpleWizard from "../views/backend/form-wizard/simple-wizard";
 import ValidateWizard from "../views/backend/form-wizard/validate-wizard";
 import VerticalWizard from "../views/backend/form-wizard/vertical-wizard";
+import Chat from "../components/Chat/chat";
 
 const Layout1Route = () => {
   let location = useLocation();
@@ -121,6 +122,7 @@ const Layout1Route = () => {
             component={TermsAndConditions}
           />
           <Route path="/transactions" exact component={Transactions} />
+          <Route path="/chat" exact component={Chat} />
 
           {/* App */}
           <Route path="/user-profile" component={UserProfile} />

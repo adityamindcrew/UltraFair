@@ -15,12 +15,12 @@ import {
   Transactions,
   Logout,
 } from "../headerstyle/headerIcons";
+
 import { DownArrow } from "../../../../views/backend/main/dashboardIcons";
 //Modal
 import Modal from "react-bootstrap/Modal";
 import Signup from "../../../../views/backend/auth/signup";
 import Signin from "../../../../views/backend/auth/signin";
-
 //  Img
 
 import { CopySVG, NotificationSVG, ProfileSVG } from "./headerIcons";
@@ -30,6 +30,7 @@ const HeaderStyle1 = (props) => {
   const [loginModalShow, setLoginModalShow] = React.useState(false);
   const [navShow, setNavShow] = React.useState(false);
   const [profileMenu, setProfileMenu] = React.useState(false);
+  const [chatModal, setChatModal] = React.useState(false);
   // var profileMenu = false;
   const location = useLocation();
 
@@ -122,8 +123,10 @@ const HeaderStyle1 = (props) => {
   };
 
   const profileClickHandler = () => {
-    // alert("called");
     setProfileMenu(!profileMenu);
+  };
+  const chatClickHandler = () => {
+    history.push("/chat");
   };
 
   return (
@@ -301,7 +304,11 @@ const HeaderStyle1 = (props) => {
                         // </div>
                       )}
                     </div>
-                    <div className="mr-4 mt-2 hide-data">
+                    <div
+                      style={{ cursor: "pointer" }}
+                      className="mr-4 mt-2 hide-data"
+                      onClick={chatClickHandler}
+                    >
                       <NotificationSVG />
                     </div>
                   </div>
