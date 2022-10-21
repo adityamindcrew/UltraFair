@@ -8,11 +8,10 @@ import Bottombarstyle from '../../components/partials/backend/bottombarstyle/bot
 import '../../../src/assets/css/Ultrafair/bottombarstyle.css'
 // Router Component
 import Layout1Route from '../../router/layout1-route'
-
+import Chat from '../../components/Chat/chat';
 import chat from '../../assets/images/Ultrafair/chat.svg'
 import search from '../../assets/images/Ultrafair/search.svg'
 import toggle from '../../assets/images/Ultrafair/toggle.svg'
-
 
 const Layout1 = () => {
     const minisidbar = () => {
@@ -24,7 +23,6 @@ const Layout1 = () => {
          <div className="wrapper">
             <SidebarStyle />
             <HeaderStyle1 />
-            
             <div className="content-page" id="content-page">
                 <Layout1Route />
             </div>
@@ -41,7 +39,7 @@ const Layout1 = () => {
                             <div>
                             Search</div>
                             </div>
-                            <div className='m-2'>
+                            <div className='m-2' onclick = "fun()">
                             <img src={chat} />
                              <div>
                                Chat</div>
