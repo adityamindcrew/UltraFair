@@ -1,12 +1,12 @@
-import { Switch, Route, useLocation } from 'react-router-dom'
+import { Switch, Route, useLocation } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 //main
-import Dashbord from '../views/backend/main/dashbord'
-import Rating from '../views/backend/main/rating';
-import Comment from '../views/backend/main/comment';
-import User from '../views/backend/main/user';
-import Pricing from '../views/backend/main/pricing';
+import Dashbord from "../views/backend/main/dashbord";
+import Rating from "../views/backend/main/rating";
+import Comment from "../views/backend/main/comment";
+import User from "../views/backend/main/user";
+import Pricing from "../views/backend/main/pricing";
 
 //App
 import UserProfile from '../views/backend/app/usermanagement/userprofile'
@@ -20,72 +20,72 @@ import Transactions from '../views/backend/app/usermanagement/transactions';
 import Chat from '../components/Chat/chat';
 
 //Form
-import Checkbox from '../views/backend/forms/formcontrols/checkbox'
-import Elements from '../views/backend/forms/formcontrols/elements'
-import Radio from '../views/backend/forms/formcontrols/radio'
-import FromSwitch from '../views/backend/forms/formcontrols/switch'
-import Validations from '../views/backend/forms/formcontrols/validations'
-import Invoiceview from '../views/backend/pages/invoiceview';
+import Checkbox from "../views/backend/forms/formcontrols/checkbox";
+import Elements from "../views/backend/forms/formcontrols/elements";
+import Radio from "../views/backend/forms/formcontrols/radio";
+import FromSwitch from "../views/backend/forms/formcontrols/switch";
+import Validations from "../views/backend/forms/formcontrols/validations";
+import Invoiceview from "../views/backend/pages/invoiceview";
 
 //Extrapages
-import Timeline1 from '../views/backend/pages/timeline/timeline1'
-import Invoice from '../views/backend/pages/invoice'
-import FAQ from '../views/backend/pages/faq'
-import BlankPage from '../views/backend/pages/blankpage'
-import TermsOfUse from '../views/backend/pages/extrapages/termsOfUse'
-import PrivacyPolicy from '../views/backend/pages/extrapages/privacyPolicy'
+import Timeline1 from "../views/backend/pages/timeline/timeline1";
+import Invoice from "../views/backend/pages/invoice";
+import FAQ from "../views/backend/pages/faq";
+import BlankPage from "../views/backend/pages/blankpage";
+import TermsOfUse from "../views/backend/pages/extrapages/termsOfUse";
+import PrivacyPolicy from "../views/backend/pages/extrapages/privacyPolicy";
 
 //Table
-import BasicTable from '../views/backend/table/basictable'
-import DataTable from '../views/backend/table/datatable'
-import EditTable from '../views/backend/table/edittable'
+import BasicTable from "../views/backend/table/basictable";
+import DataTable from "../views/backend/table/datatable";
+import EditTable from "../views/backend/table/edittable";
 
 //ui
-import UiAlerts from '../views/backend/ui/UiAlerts'
-import UiBadges from '../views/backend/ui/UiBadges'
-import UiBreadcrumbs from '../views/backend/ui/UiBreadcrumbs'
-import UiButtons from '../views/backend/ui/UiButtons'
-import UiCards from '../views/backend/ui/UiCards'
-import UiCarousels from '../views/backend/ui/UiCarousels'
-import UiColors from '../views/backend/ui/UiColors'
-import UiEmbed from '../views/backend/ui/UiEmbed'
-import UiGrids from '../views/backend/ui/UiGrids'
-import UiImages from '../views/backend/ui/UiImages'
-import UiListGroups from '../views/backend/ui/UiListGroups'
-import UiMediaObjects from '../views/backend/ui/UiMediaObjects'
-import UiModals from '../views/backend/ui/UiModals'
-import UiNotifications from '../views/backend/ui/UiNotifications'
-import UiPaginations from '../views/backend/ui/UiPaginations'
-import UiPopOvers from '../views/backend/ui/UiPopOvers'
-import UiProgressBars from '../views/backend/ui/UiProgressBars'
-import UiTabs from '../views/backend/ui/UiTabs'
-import UiTooltips from '../views/backend/ui/UiTooltips'
-import UiTypography from '../views/backend/ui/UiTypography'
+import UiAlerts from "../views/backend/ui/UiAlerts";
+import UiBadges from "../views/backend/ui/UiBadges";
+import UiBreadcrumbs from "../views/backend/ui/UiBreadcrumbs";
+import UiButtons from "../views/backend/ui/UiButtons";
+import UiCards from "../views/backend/ui/UiCards";
+import UiCarousels from "../views/backend/ui/UiCarousels";
+import UiColors from "../views/backend/ui/UiColors";
+import UiEmbed from "../views/backend/ui/UiEmbed";
+import UiGrids from "../views/backend/ui/UiGrids";
+import UiImages from "../views/backend/ui/UiImages";
+import UiListGroups from "../views/backend/ui/UiListGroups";
+import UiMediaObjects from "../views/backend/ui/UiMediaObjects";
+import UiModals from "../views/backend/ui/UiModals";
+import UiNotifications from "../views/backend/ui/UiNotifications";
+import UiPaginations from "../views/backend/ui/UiPaginations";
+import UiPopOvers from "../views/backend/ui/UiPopOvers";
+import UiProgressBars from "../views/backend/ui/UiProgressBars";
+import UiTabs from "../views/backend/ui/UiTabs";
+import UiTooltips from "../views/backend/ui/UiTooltips";
+import UiTypography from "../views/backend/ui/UiTypography";
 
 // icon-heroicon
-import Heroicons from '../views/backend/Icons/Heroicons ';
-import Dripicons from '../views/backend/Icons/dripicons';
-import FontAwsome from '../views/backend/Icons/fontawsome';
-import LineAwsome from '../views/backend/Icons/lineawsome';
-import Remixicons from '../views/backend/Icons/remixicons';
-import Unicons from '../views/backend/Icons/unicons'
+import Heroicons from "../views/backend/Icons/Heroicons ";
+import Dripicons from "../views/backend/Icons/dripicons";
+import FontAwsome from "../views/backend/Icons/fontawsome";
+import LineAwsome from "../views/backend/Icons/lineawsome";
+import Remixicons from "../views/backend/Icons/remixicons";
+import Unicons from "../views/backend/Icons/unicons";
 
 //Category
-import AddCategory from '../views/backend/category/add-category';
-import CategoryList from '../views/backend/category/category-list';
+import AddCategory from "../views/backend/category/add-category";
+import CategoryList from "../views/backend/category/category-list";
 
 //Movie
-import AddMovie from '../views/backend/movie/add-movie';
-import MovieList from '../views/backend/movie/movie-list';
+import AddMovie from "../views/backend/movie/add-movie";
+import MovieList from "../views/backend/movie/movie-list";
 
 //Show
-import AddShow from '../views/backend/show/add-show';
-import ShowList from '../views/backend/show/show-list';
+import AddShow from "../views/backend/show/add-show";
+import ShowList from "../views/backend/show/show-list";
 
 //form-wizard
-import SimpleWizard from '../views/backend/form-wizard/simple-wizard';
-import ValidateWizard from '../views/backend/form-wizard/validate-wizard';
-import VerticalWizard from '../views/backend/form-wizard/vertical-wizard';
+import SimpleWizard from "../views/backend/form-wizard/simple-wizard";
+import ValidateWizard from "../views/backend/form-wizard/validate-wizard";
+import VerticalWizard from "../views/backend/form-wizard/vertical-wizard";
 
 const Layout1Route = () => {
 

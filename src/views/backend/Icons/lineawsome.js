@@ -31,7 +31,7 @@ const LineAwsome = () => {
               <div className="Colmn">
                 <div className="CARDTITLE BGR">
                   <div className="CENTERIT">
-                  <span className="MR10">  {ICON}</span>
+                  <span className="MR10 SAF">  {ICON}</span>
                     {ICON1}{" "}
                   </div>
                   <div className="questionmark">
