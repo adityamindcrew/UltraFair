@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Col, Row, Container, ProgressBar, Button } from 'react-bootstrap'
 import Card from '../../../../components/Card'
 
 import Customprofilebar from '../../../../components/Customprofilebar'
-
+import WalletSlider from '../walletslider/walletSlider'
 
 import { SuccessIconSVG } from './userprofileIcon'
 
@@ -12,6 +12,12 @@ import { SuccessIconSVG } from './userprofileIcon'
 import '../../../../assets/css/Ultrafair/profilebar.css'
 
 const UserProfileName = () => {
+    const [walletHealthPercentage, setWalletHealthPercentage] = useState(0);
+
+    const sliderValue = (value) => {
+        console.log("vvvv==>", value);
+        return setWalletHealthPercentage(value);
+    };
     return (
         <>
 
@@ -49,7 +55,7 @@ const UserProfileName = () => {
 
                                             </div>
                                             <div className='profile-heading-sub-text' style={{ color: '#FFFFFF' }}>Trade up to a total amount of R15 000</div>
-                                            <button type="button" class="btn-sm authentication-button" style={{marginLeft : '3.5rem'}}>Complete Level 1</button>
+                                            <button type="button" class="btn-sm authentication-button" style={{ marginLeft: '3.5rem' }}>Complete Level 1</button>
                                         </div>
 
                                         <div className='m-2 mb-2'>
@@ -61,7 +67,7 @@ const UserProfileName = () => {
 
                                             </div>
                                             <div className='profile-heading-sub-text'>Deposit or withdraw up to R50 000 per month.</div>
-                                            <button type="button" class="btn-sm authentication-button" style={{marginLeft : '3.5rem'}}>Complete Level 2</button>
+                                            <button type="button" class="btn-sm authentication-button" style={{ marginLeft: '3.5rem',opacity : '0.5'}}>Complete Level 2</button>
                                         </div>
 
                                         <div className='m-2 mb-2'>
@@ -73,7 +79,7 @@ const UserProfileName = () => {
 
                                             </div>
                                             <div className='profile-heading-sub-text'>Trade, deposit, withdraw without any limits.</div>
-                                            <button type="button" class="btn-sm authentication-button" style={{marginLeft : '3.5rem'}}>Complete Level 3</button>
+                                            <button type="button" class="btn-sm authentication-button"  style={{ marginLeft: '3.5rem' ,opacity : '0.5'}}>Complete Level 3</button>
                                         </div>
 
                                     </Card.Body>
@@ -84,36 +90,51 @@ const UserProfileName = () => {
                                     <Card className="iq-card-block iq-card-stretch iq-card-height card-box">
                                         <Card.Header className="d-flex justify-content-between align-items-center mb-0">
                                             <div className="iq-header-title">
-                                                <h4 className="card-title mb-0 profile-card-title">Wallet Health</h4>
+                                                <h4 className="card-title mb-0 profile-card-title">
+                                                    Wallet Health
+                                                </h4>
                                             </div>
                                         </Card.Header>
                                         <Card.Body>
                                             <ul className="list-inline p-0 mb-0">
                                                 <li>
                                                     <div className="iq-details mb-2">
-                                                        <div className="percentage float-right text-primary">95 <span>%</span></div>
-                                                        <div className="iq-progress-bar-linear d-inline-block w-100">
-                                                            <ProgressBar>
-                                                                <ProgressBar now={20} animated striped variant="success" label={`Ok`} key={1} />
-                                                                <ProgressBar now={20} animated striped variant="info" label={`Bit High`} key={2} />
-                                                                <ProgressBar now={20} animated striped variant="warning" label={`Going High`} key={3} />
-                                                                <ProgressBar now={18} animated striped variant="danger" label={`Alert!!!`} key={4} />
-                                                            </ProgressBar>
+                                                        <div>
+                                                            <WalletSlider percentageValue={sliderValue} />
                                                         </div>
                                                     </div>
                                                 </li>
                                             </ul>
-                                            <Row className='p-2'>
-                                                <Col className='col-3 wallet-health-text'>
-                                                 <b>76%</b>
+                                            <Row
+                                                className="p-2"
+                                                style={{ justifyContent: "space-around" }}
+                                            >
+                                                <Col
+                                                    className="col-3 wallet-health-text"
+                                                    style={{ paddingLeft: "0px" }}
+                                                >
+                                                    <b>{`${walletHealthPercentage}%`}</b>
                                                 </Col>
-                                                <Col className='col-8 wallet-health-subtext'>
-                                                    To improve your wallet health, click <a href='' style={{ textDecoration: "underline" }}>here</a> to find out more.
+                                                <Col
+                                                    className="col-8 wallet-health-subtext"
+                                                    style={{
+                                                        marginLeft: "0px",
+                                                        fontSize: "12px",
+                                                        fontFamily: "Montserrat",
+                                                        fontWeight: "400",
+                                                    }}
+                                                >
+                                                    To improve your wallet health, click{" "}
+                                                    <a href="" style={{ textDecoration: "underline" }}>
+                                                        here
+                                                    </a>{" "}
+                                                    to find out more.
                                                 </Col>
                                             </Row>
                                         </Card.Body>
                                     </Card>
                                 </div>
+
 
                                 <div>
                                     <Card className="iq-card-block iq-card-stretch iq-card-height card-box">
@@ -125,11 +146,11 @@ const UserProfileName = () => {
                                         </Card.Header>
                                         <Card.Body>
                                             <div className='p-2 mb-4'>
-                                            <label class="container-checkbox">
-                                <span style={{ position: "relative", bottom: 4 ,fontFamily: 'Montserrat'}}>Keep me signed in</span>
-                                <input type="checkbox" className="checkbox-input" />
-                                <span class="checkmark new-checkmark"></span>
-                            </label>
+                                                <label class="container-checkbox">
+                                                    <span style={{ position: "relative", bottom: 4, fontFamily: 'Montserrat', fontSize: "16px" ,fontWeight : "400" ,marginLeft : "10px"}}>Keep me signed in</span>
+                                                    <input type="checkbox" className="checkbox-input" />
+                                                    <span class="checkmark new-checkmark"></span>
+                                                </label>
                                                 <div><Button variant="outline-success"><span className='m-1'>Change Password</span></Button>{' '}</div>
                                                 <hr className='line-style' />
                                                 <div className='card-text mb-2'>Two-Factor Authentication</div>
