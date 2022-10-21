@@ -17,6 +17,7 @@ import UserProfileEdit from '../views/backend/app/usermanagement/userprofileedit
 import EditUserProfileName from '../views/backend/app/usermanagement/edituserprofilename';
 import TermsAndConditions from '../views/backend/app/usermanagement/termsandconditions';
 import Transactions from '../views/backend/app/usermanagement/transactions';
+import Chat from '../components/Chat/chat';
 
 //Form
 import Checkbox from '../views/backend/forms/formcontrols/checkbox'
@@ -122,9 +123,8 @@ const Layout1Route = () => {
                     <Route path="/pages-pricing" exact component={Pricing} />
                     <Route path="/terms-and-conditions" exact component={TermsAndConditions} />
                     <Route path="/transactions" exact component={Transactions} />
+                    <Route path="/chat" exact component={Chat} />
 
-                    
-                    
                     {/* App */}
                     <Route path="/user-profile" component={UserProfile} />
                     <Route path="/user-privacy-setting" component={UserPrivacySetting} />
