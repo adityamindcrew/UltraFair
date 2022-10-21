@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { WhiteiconSVG, YellowiconSVG, SaveiconSVG } from './chatIcon';
 import Flag from '../../assets/images/Ultrafair/flag.png'
+
 import Crossicon from '../../assets/images/Ultrafair/cross-icon.svg'
 import '../Chat/chat.css'
 const Chat = () => {
