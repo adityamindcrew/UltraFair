@@ -1260,9 +1260,9 @@ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 
    }
 	.LOGOO{
-		width: 7vw ;
-		height: 14vw;
-		display: none;
+		width: auto ;
+		height: auto;
+		/* display: none; */
 	}
   .FilterBtn{
     /* width: 35% !important; */
@@ -1295,9 +1295,9 @@ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 
    }
    .LOGOO{
-     width: 7vw ;
-     height: 14vw;
-     display: none !important;
+     width: auto ;
+     height: auto;
+     /* display: none !important; */
    }
    }
    @media screen and (min-width: 829px) and (max-width: 913px){
@@ -1673,7 +1673,7 @@ background: linear-gradient(36deg, rgba(250,250,250,1) 12%, rgba(214,143,214,1) 
 .EXPD{
   padding: 5px;
 }
-@media screen and (min-width: 1770px) and (max-width: 3080px) { 
+@media screen and (min-width: 1770px) and (max-width: 4000px) { 
   .MainContainer{
     margin-top: 10%;
   }
