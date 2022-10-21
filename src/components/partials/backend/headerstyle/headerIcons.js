@@ -273,8 +273,9 @@ export const Logout = (props) => {
     </svg>
   );
 };
-export const transactionSvg = () => {
-  <svg
+export const TransactionSvg = () => {
+
+ return  <svg
     width="97"
     height="100"
     viewBox="0 0 97 100"
