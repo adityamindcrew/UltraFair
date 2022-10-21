@@ -7105,10 +7105,8 @@ select {
 
 
 }
-=======
 @media not all and (min-resolution:.001dpcm) { 
 
-=======
 }
 
 @media not all and (min-resolution: 0.001dpcm) {
@@ -7203,7 +7201,6 @@ select {
 
 
     
-=======
 .container-checkbox-new {
   display: inline-block;
   position: relative;

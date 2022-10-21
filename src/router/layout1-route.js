@@ -16,7 +16,7 @@ import UserAccountSettingList from '../views/backend/app/usermanagement/useracco
 import UserProfileEdit from '../views/backend/app/usermanagement/userprofileedit'
 import EditUserProfileName from '../views/backend/app/usermanagement/edituserprofilename';
 import TermsAndConditions from '../views/backend/app/usermanagement/termsandconditions';
-import Transactions from '../views/backend/app/usermanagement/transactions';
+import Transactions from '../views/backend/app/usermanagement//transaction/transactions';
 import Chat from '../components/Chat/chat';
 
 //Form

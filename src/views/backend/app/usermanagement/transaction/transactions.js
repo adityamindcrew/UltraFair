@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import Select from "react-select";
 import "./transaction.css";
-import { transactionSvg } from "../../../../../components/partials/backend/headerstyle/headerIcons";
+import { TransactionSvg } from "../../../../../components/partials/backend/headerstyle/headerIcons";
 
 const Transactions = () => {
   const customStyles = {
@@ -61,7 +61,7 @@ const Transactions = () => {
             <br />
             <br />
             <div>
-              <transactionSvg />
+              <TransactionSvg />
             </div>
           </div>
         </div>
