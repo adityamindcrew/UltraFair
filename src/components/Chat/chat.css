@@ -24,7 +24,7 @@
 }
 
 .chat_card {
-    position: relative;
+    position: fixed;
     background: #1E2C37;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -35,11 +35,9 @@
     -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: block;
-    /* margin: 25px auto; */
-    max-width: auto;
-    max-height: fit-content !important;
-    width: 91%;
-    margin: 20px;
+    height: 100%;
+    width: 100%;
+  
 }
 
 .chat-innertext {
