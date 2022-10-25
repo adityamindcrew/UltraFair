@@ -11,6 +11,7 @@ import Layout1Route from "../../router/layout1-route";
 import chat from "../../assets/images/Ultrafair/chat.svg";
 import search from "../../assets/images/Ultrafair/search.svg";
 import toggle from "../../assets/images/Ultrafair/toggle.svg";
+import Chat from "../../components/Chat/chat";
 
 const Layout1 = () => {
   const minisidbar = () => {
@@ -20,9 +21,9 @@ const Layout1 = () => {
   return (
     <>
       <div className="wrapper">
+        {/* <Chat /> */}
         <SidebarStyle />
         <HeaderStyle1 />
-
         <div className="content-page" id="content-page">
           <Layout1Route />
         </div>

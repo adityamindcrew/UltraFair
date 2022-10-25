@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import Select from "react-select";
 import "./transaction.css";
 import { TransactionSvg } from "../../../../../components/partials/backend/headerstyle/headerIcons";
 
 const Transactions = () => {
+  const [depositToggle, setDepositToggle] = useState(false);
   const customStyles = {
     singleValue: (provided, state) => ({
       ...provided,
@@ -36,17 +37,48 @@ const Transactions = () => {
       ],
     },
   ];
+  const withdrawalClickHandler = () => {
+    setDepositToggle(true);
+  };
+
+  const depositClickHandler = () => {
+    setDepositToggle(false);
+  };
+
+  var depositSelected = depositToggle ? "" : "active";
+  var withdrawalSelected = depositToggle ? "active" : "";
+
   return (
     <>
       <Container fluid>
         <div className="transaction-container">
           <div className="transaction-option_card ">
-            {/* <div className="transactionToggleOuter mb-2"> */}
-            <div class=" transactionToggleOuter mb-2">Deposits</div>
-            {/* </div> */}
-            {/* <div className="transactionToggleOuter "> */}
-            <div class=" transactionToggleOuter">Withdrawals</div>
-            {/* </div> */}
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <div
+                class={`transactionToggleOuter-${depositSelected}`}
+                onClick={depositClickHandler}
+              >
+                Deposits
+              </div>
+              {depositToggle ? (
+                <div />
+              ) : (
+                <div className="optionsUnderlineMobile" />
+              )}
+            </div>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <div
+                class={`transactionToggleOuter-${withdrawalSelected}`}
+                onClick={withdrawalClickHandler}
+              >
+                Withdrawals
+              </div>
+              {depositToggle ? (
+                <div className="optionsUnderlineMobile" />
+              ) : (
+                <div />
+              )}
+            </div>
           </div>
 
           <div className="transaction-type_card ">
@@ -66,13 +98,19 @@ const Transactions = () => {
             >
               <TransactionSvg />
               <br />
-              <p className="textBelowIcon">No Deposits</p>
+              <p className="textBelowIcon">
+                {depositToggle ? "No Withdrawals" : "No Deposits"}
+              </p>
               <div className="navigationButton">
                 <div>{"< Previous"}</div>
                 <div>{"Next >"}</div>
               </div>
               <br />
-              <div className="buttonBelowIcon">Download all Deposits</div>
+              <div className="buttonBelowIcon">
+                {depositToggle
+                  ? "Download all Withdrawals"
+                  : "Download all Deposits"}
+              </div>
             </div>
           </div>
         </div>

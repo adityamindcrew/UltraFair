@@ -3,7 +3,15 @@ import logo from "../../../../../src/assets/images/sidebar/UltrafairLogo.png";
 import smallLogo from "../../../../assets/images/sidebar/UltrafairSmallLogo.png";
 import React, { useEffect } from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
-import { Navbar, Button, Form, Nav, Dropdown } from "react-bootstrap";
+import {
+  Navbar,
+  Button,
+  Form,
+  Nav,
+  Dropdown,
+  ModalBody,
+} from "react-bootstrap";
+import "../../../Chat/ChatWeb/ChatWeb";
 import {
   BitcoinsSVG,
   EtheremcoinsSVG,
@@ -24,6 +32,7 @@ import Signin from "../../../../views/backend/auth/signin";
 //  Img
 
 import { CopySVG, NotificationSVG, ProfileSVG } from "./headerIcons";
+import ChatWeb from "../../../Chat/ChatWeb/ChatWeb";
 
 const HeaderStyle1 = (props) => {
   const [signUpModalShow, setSignUpModalShow] = React.useState(false);
@@ -33,6 +42,10 @@ const HeaderStyle1 = (props) => {
   const [chatModal, setChatModal] = React.useState(false);
   // var profileMenu = false;
   const location = useLocation();
+  const [show, setShow] = React.useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   useEffect(() => {
     document.addEventListener("click", setClicked, true);
@@ -126,7 +139,8 @@ const HeaderStyle1 = (props) => {
     setProfileMenu(!profileMenu);
   };
   const chatClickHandler = () => {
-    history.push("/chat");
+    setChatModal(!chatModal);
+    setShow(true);
   };
 
   return (
@@ -311,6 +325,7 @@ const HeaderStyle1 = (props) => {
                     >
                       <NotificationSVG />
                     </div>
+                    {chatModal && <ChatWeb show={true} />}
                   </div>
                 </Nav>
               </div>
