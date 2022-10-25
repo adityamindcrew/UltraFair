@@ -67,6 +67,9 @@ const HeaderStyle1 = (props) => {
     } else {
       setNavShow(true);
     }
+    if(pathName != "/chat"){
+      localStorage.setItem('pathname', pathName);  
+      }
   }, [location.pathname]);
   const minisidbar = () => {
     document.body.classList.toggle("sidebar-main");
