@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Col, Row, Container, ProgressBar, Button, Dropdown } from 'react-bootstrap'
 import Card from '../../../../components/Card'
 
 import Customprofilebar from '../../../../components/Customprofilebar'
+import WalletSlider from '../walletslider/walletSlider'
 
 import { SuccessIconSVG } from './userprofileIcon'
 
@@ -11,6 +12,12 @@ import { SuccessIconSVG } from './userprofileIcon'
 import '../../../../assets/css/Ultrafair/profilebar.css'
 
 const EditUserProfileName = () => {
+    const [walletHealthPercentage, setWalletHealthPercentage] = useState(0);
+
+    const sliderValue = (value) => {
+        console.log("vvvv==>", value);
+        return setWalletHealthPercentage(value);
+    };
     return (
         <>
 
@@ -39,7 +46,7 @@ const EditUserProfileName = () => {
                                             <div className='profile-heading-sub-text'>Create a profile using your personal details.</div>
                                         </div>
 
-                              <div className='m-2 mb-2'>
+                                        <div className='m-2 mb-2'>
                                             <div className='d-flex mt-4'>
                                                 <div>
                                                     <SuccessIconSVG />
@@ -80,31 +87,45 @@ const EditUserProfileName = () => {
                                     <Card className="iq-card-block iq-card-stretch iq-card-height card-box">
                                         <Card.Header className="d-flex justify-content-between align-items-center mb-0">
                                             <div className="iq-header-title">
-                                                <h4 className="card-title mb-0 profile-card-title">Wallet Health</h4>
+                                                <h4 className="card-title mb-0 profile-card-title">
+                                                    Wallet Health
+                                                </h4>
                                             </div>
                                         </Card.Header>
                                         <Card.Body>
                                             <ul className="list-inline p-0 mb-0">
                                                 <li>
                                                     <div className="iq-details mb-2">
-                                                        <div className="percentage float-right text-primary">95 <span>%</span></div>
-                                                        <div className="iq-progress-bar-linear d-inline-block w-100">
-                                                            <ProgressBar>
-                                                                <ProgressBar now={20} animated striped variant="success" label={`Ok`} key={1} />
-                                                                <ProgressBar now={20} animated striped variant="info" label={`Bit High`} key={2} />
-                                                                <ProgressBar now={20} animated striped variant="warning" label={`Going High`} key={3} />
-                                                                <ProgressBar now={18} animated striped variant="danger" label={`Alert!!!`} key={4} />
-                                                            </ProgressBar>
+                                                        <div>
+                                                            <WalletSlider percentageValue={sliderValue} />
                                                         </div>
                                                     </div>
                                                 </li>
                                             </ul>
-                                            <Row className='p-2'>
-                                                <Col className='col-3 wallet-health-text'>
-                                                    76%
+                                            <Row
+                                                className="p-2"
+                                                style={{ justifyContent: "space-around" }}
+                                            >
+                                                <Col
+                                                    className="col-3 wallet-health-text"
+                                                    style={{ paddingLeft: "0px" }}
+                                                >
+                                                    <b>{`${walletHealthPercentage}%`}</b>
                                                 </Col>
-                                                <Col className='col-8 wallet-health-subtext'>
-                                                    To improve your wallet health, click <a href='' style={{textDecoration :"underline"}}>here</a> to find out more.
+                                                <Col
+                                                    className="col-8 wallet-health-subtext"
+                                                    style={{
+                                                        marginLeft: "0px",
+                                                        fontSize: "12px",
+                                                        fontFamily: "Montserrat",
+                                                        fontWeight: "400",
+                                                    }}
+                                                >
+                                                    To improve your wallet health, click{" "}
+                                                    <a href="" style={{ textDecoration: "underline" }}>
+                                                        here
+                                                    </a>{" "}
+                                                    to find out more.
                                                 </Col>
                                             </Row>
                                         </Card.Body>
@@ -121,11 +142,11 @@ const EditUserProfileName = () => {
                                         </Card.Header>
                                         <Card.Body>
                                             <div className='p-2 mb-4'>
-                                            <label class="container-checkbox">
-                                <span style={{ position: "relative", bottom: 4 ,fontFamily: 'Montserrat'}}>Keep me signed in</span>
-                                <input type="checkbox" className="checkbox-input" />
-                            <span class="checkmark new-checkmark" style={{ border: "2px solid #B3BAD1 !important"}}></span>
-                            </label>
+                                                <label class="container-checkbox">
+                                                    <span style={{ position: "relative", bottom: 4, fontFamily: 'Montserrat', fontSize: "16px", fontWeight: "400", marginLeft: "10px" }}>Keep me signed in</span>
+                                                    <input type="checkbox" className="checkbox-input" />
+                                                    <span class="checkmark new-checkmark" style={{ border: "2px solid #B3BAD1 !important" }}></span>
+                                                </label>
 
                                                 {/* <div className='d-flex mb-2'>
                                                     <input class="chone" type="checkbox" id="value1" name="value1" value="value1" />

@@ -513,8 +513,8 @@ mark {
 	height: auto;
 	width: 95%
 }
-.img-fluid1 {
-	max-width: 100%;
+.img-fluid-one{
+	max-width: none;
 	height: auto;
 	width: 10%
 }
@@ -758,8 +758,8 @@ pre code {
 .col-xl-auto {
 	position: relative;
 	width: 100%;
-	padding-right: 15px;
-	padding-left: 15px
+	padding-right: 5px !important;
+	padding-left: 5ppx !important;
 }
 
 .col {
