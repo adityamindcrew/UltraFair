@@ -1,13 +1,13 @@
+import React, { useState, createContext } from "react";
+
 //router
-import LayoutsRoute from './router/layouts-route';
+import LayoutsRoute from "./router/layouts-route";
 
 //scss files
-import './assets/css/bootstrap.min.css'
-import './assets/css/typography.css'
-import './assets/css/style.css';
-import './assets/css/responsive.css'
-
-
+import "./assets/css/bootstrap.min.css";
+import "./assets/css/typography.css";
+import "./assets/css/style.css";
+import "./assets/css/responsive.css";
 // import  './assets/css/custom.css';
 
 function App() {

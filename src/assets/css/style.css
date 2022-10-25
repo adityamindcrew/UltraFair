@@ -7095,22 +7095,17 @@ select {
     }
   }
 
-  
-@media screen and (min-width: 0px) and (max-width: 500px) {
-  .UltrafairLogo {
-    width: auto !important;
+  @media screen and (min-width: 0px) and (max-width: 500px) {
+    .UltrafairLogo {
+      width: auto !important;
+    }
   }
-
-}
-
-
-}
-@media not all and (min-resolution:.001dpcm) { 
-
 }
 
 @media not all and (min-resolution: 0.001dpcm) {
+}
 
+@media not all and (min-resolution: 0.001dpcm) {
   /* .navItem{ 
 
       color:black; 
@@ -7118,89 +7113,35 @@ select {
       border: none;
   } */
 }
-  @media screen  and (min-width:0px) and (max-width:600px){
-    .wallet-head{
-    padding:2vw
-    }
-    }
-
-    .container-checkbox-new {
-      display: inline-block;
-      position: relative;
-      padding-left: 25px;
-      margin-bottom: 12px;
-      cursor: pointer;
-      font-size: 15px;
-      -webkit-user-select: none;
-      user-select: none;
-      align-items: flex-start;
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  .wallet-head {
+    padding: 2vw;
   }
+}
 
-
-
- 
-
-
-
-
+.container-checkbox-new {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  user-select: none;
+  align-items: flex-start;
+}
 
 @media screen and (min-width: 1850px) and (max-width: 3000px) {
-.Searchtext1{
-  margin-top: 20%;
-}
-
+  .Searchtext1 {
+    margin-top: 20%;
+  }
 }
 @media screen and (min-width: 3001px) and (max-width: 5000px) {
-  .Searchtext1{
+  .Searchtext1 {
     margin-top: 30%;
   }
-  
-  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 .container-checkbox-new {
   display: inline-block;
   position: relative;
