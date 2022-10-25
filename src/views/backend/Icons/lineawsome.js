@@ -65,7 +65,7 @@ const LineAwsome = () => {
                 </div>
                 <input
                   type="range"
-                  class="form-range Fire"
+                  class="form-range Fire lockUp-slider"
                   id="customRange1"
                 ></input>
                 <div className="JUSTFLY">

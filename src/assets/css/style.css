@@ -7153,3 +7153,9 @@ select {
   user-select: none;
   align-items: flex-start;
 }
+/* .lockup-slider{
+  background:linear-gradient(to right,red,green)
+}
+.lockup-slider::-webkit-slider-thumb{
+  background-color: red !important
+} */

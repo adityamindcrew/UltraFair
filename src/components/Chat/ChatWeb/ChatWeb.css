@@ -193,3 +193,6 @@ input::placeholder {
     border-radius: 6px;
   }
 }
+.modal-backdrop.show {
+  opacity: 0 !important;
+}

@@ -15,9 +15,10 @@ const ChatWeb = (props) => {
       show={show}
       onHide={handleClose}
       animation={true}
-      // backdrop={"static"}
+      backdrop={"static"}
       className={"modal right fade"}
       scrollable={true}
+      class={"float-end"}
     >
       <Modal.Header closeButton>
         {
