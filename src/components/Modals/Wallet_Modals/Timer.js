@@ -81,7 +81,7 @@ const Timer = ({setFormModal2, setFormModal3}) => {
                         onClick={userBtn4}>Resend</button>
                 </Col>
                 <Col xs={6} md={6} className="col-box">
-                    <span className="timer">{timer}</span>
+                    <span className="timer pl-2">{timer}</span>
                 </Col>
 
 
