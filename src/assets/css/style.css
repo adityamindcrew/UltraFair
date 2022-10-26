@@ -6196,13 +6196,12 @@ h6 span {
   padding-top: 12px;
 
   text-align: center;
-  /* margin: 2.5px; */
+  margin: 2.5px;
   /* margin-left: 15px !important; */
   transition: none !important;
   translate: none !important;
   padding-right: 18px;
-  padding-left: 0px;
-
+  padding-left: 2px;
 }
 .wallet-paragraph {
   font-family: "Montserrat";
@@ -6476,31 +6475,24 @@ h6 span {
   border-radius: 10px;
 }
 
-.form2-body{
-   padding: 1rem 4rem; 
+.form2-body {
+  /* padding: 1rem 4rem; */
 }
 @media only screen and (max-width: 1026px) {
   .form2-body {
     padding: 1px 1px;
   }
 }
-.form3-body{
-  padding: 1rem 5rem;
+.form3-body {
+  padding: 1rem 3rem;
 }
-/* .form4-body{
-  padding: 1rem 5rem;
-} */
-
-
-
 @media only screen and (max-width: 1026px) {
   .form3-body {
     padding: 1px 1px;
   }
 }
 
-
-.form5-body{
+.form5-body {
   /* display: flex;
     justify-content: center;
     flex-direction: column; */
@@ -6561,216 +6553,22 @@ h6 span {
   font-size: 35px;
 }
 
-
-.upload-file-row{
-  /* flex-direction: row; */
-  display: flex;
-  /* padding: 5px; */
-  
- 
-}
-.form-upload{
-  margin: 10px;
-}
-.form-upload-status{
-  position: relative;
-  top:8px;
-}
-.form-upload-status-2{
-  position: fixed;
-    right: 31px;
-    margin-top: 9px;
-
-}
-.timer-button{
-  position: relative;
-  right:24px;
- background-color: #11FFBD;
- border: none;
- border-radius: 5px;
- padding: 3px 18px 3px 18px;
- font-family: 'Montserrat';
- font-weight: 'bold';
- font-size: 12px ;
-}
-
-
-.timer{
-  position: relative;
-  top:1px;
-  right:20px;
-  font-weight: 'bold';
-  color:white;
-  
-}
-.timer-2{
-  /* position: relative;
-  top:1px;
-  left:10px; */
-  font-weight: 'bold';
-  color:white;
-  /* margin-left: 20px; */
-  
-}
-
-.timer-layout{
-  display: flex;
-  justify-content: center;
-}
-
-.timer-button-2{
- 
- background-color: #11FFBD;
- border: none;
- border-radius: 5px;
- padding: 3px 22px 3px 22px;
- font-family: 'Montserrat';
- font-weight: 'bold';
- font-size: 12px ;
-}
-.email-text{
-  position: relative;
-  top:-30px;
-}
-
-.fileupload-user{
-  background-color: blue;
-}
-
-.success-text{
- font-family: 'Montserrat';
-  font-weight: 'bold';
-  font-size: 25px;
-}
-.form7-body{
-  padding: 1rem 7rem;
-  margin-bottom: 50px;
-}
-.form-5-button{
-  padding: 2px 17px 2px 17px;
-}
-@media screen and (min-width: 0px) and (max-width: 900px){
-  .form7-body{
-    padding: 1rem 1rem;
-   
-  }
-  
-  .form7-button{
-     text-align: center;
-    
-  }
-  .mobile-button-7{
-    display: block;
-  }
-  .form7-button{
-    display: none;
-  }
-  .form-5-button{
-    display: none;
-  }
-  .mobile-button-5{
-    display: block;
-  }
-  .form-4-button{
-    display: none;
-  }
-  .upload-file-row{
-    display: flex;
-    
-  
-  }
-  .form4-body{
-    padding:0px;
-  } 
-
-  .upload-file-row{
-    display: none;
-  }
-  
-  
-
-
-}
-
-@media screen and (min-width: 901px) and (max-width: 1624px) {
-    
-  .mobile-button-7{
-    display: none;
-  }
-  .form7-button{
-    display: block;
-  }
-  .mobile-button-5{
-    display: none;
-  }
-  .mobile-4-button{
-    display: none;
-  }
-  .no-older{
-    position: relative;
-    right:46px;
-    bottom: 10px; 
-  }
-  .upload-selfie{
-    position: relative;
-    right:46px;
-   
-  }
-  .upload-file-row{
-    position: relative;
-    right:56px;
-    bottom: 10px; 
-  
-  }
-  .form4-body{
-    padding: 1rem 5rem;
-  } 
-  .upload-file-row-mobile{
-    display: none;
-  }
-  
- 
-
-  
-}
-/* .mobile-button-7{
-  display: none;
-} */
-
-.form7-fotter{
-  float:right;
-  background-color: #1f4949;
-}
-.form7-Button{
-  background-color: #11FFBD;
- border: none;
- border-radius: 5px;
- padding: 3px 22px 3px 22px;
- /* font-family: 'Montserrat'; */
- font-weight: 200;
- font-size: 12px ;
- color:black;
-
- /* position:relative;
- left:77px; */
-}
 /* -----------------------------MODAL USER VERIFICATION/ Aditya ------- */
 
+.timer {
+  position: relative;
+  top: 5px;
+}
+.email-text {
+  position: relative;
+  top: -30px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-.img-fluid1 {
-  max-width: 100%;
+.fileupload-user {
+  background-color: blue;
+}
+.img-fluid-one {
+  max-width: none;
   height: auto;
   width: auto !important;
 }
@@ -7287,32 +7085,32 @@ select {
     .WalletButtonText {
       font-size: 9px;
     }
-.wallet-linl-text{
-  font-size: 11px;
-}
-.navItem{ 
+    .wallet-linl-text {
+      font-size: 11px;
+    }
+    .navItem {
+      color: black;
+      background-color: #11ffbd;
+      border: none;
+    }
+  }
 
-  color:black; 
-  background-color:#11ffbd; 
-  border: none;
-}
-
-/* .form-control {
-  background-color: #0d1d29!important;
-  color: #fff!important;
-  width: 84%;
-  border-radius: 6px;
-  padding-bottom: 5px;
-  width: 100%;
-  } */
+  
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .UltrafairLogo {
+    width: auto !important;
+  }
 
 }
+
+
+}
+@media not all and (min-resolution:.001dpcm) { 
+
 }
 
 @media not all and (min-resolution: 0.001dpcm) {
-}
 
-@media not all and (min-resolution: 0.001dpcm) {
   /* .navItem{ 
 
       color:black; 
@@ -7320,31 +7118,40 @@ select {
       border: none;
   } */
 }
-@media screen and (min-width: 0px) and (max-width: 600px) {
-  .wallet-head {
-    padding: 2vw;
-  }
-}
+  @media screen  and (min-width:0px) and (max-width:600px){
+    .wallet-head{
+    padding:2vw
+    }
+    }
 
-.container-checkbox-new {
-  display: inline-block;
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 15px;
-  -webkit-user-select: none;
-  user-select: none;
-  align-items: flex-start;
-}
+    .container-checkbox-new {
+      display: inline-block;
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 15px;
+      -webkit-user-select: none;
+      user-select: none;
+      align-items: flex-start;
+  }
+
+
+
+ 
+
+
+
+
 
 @media screen and (min-width: 1850px) and (max-width: 3000px) {
-  .Searchtext1 {
-    margin-top: 20%;
-  }
+.Searchtext1{
+  margin-top: 20%;
+}
+
 }
 @media screen and (min-width: 3001px) and (max-width: 5000px) {
-  .Searchtext1 {
+  .Searchtext1{
     margin-top: 30%;
   }
   
