@@ -144,3 +144,4 @@ const FooterStyle = (props) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(FooterStyle)
+
