@@ -42,7 +42,14 @@ const FooterStyle = (props) => {
       props.rtlModeAction(rtlMode);
     }
   });
-
+  const scrollToTop = () =>{
+    window.scrollTo({
+      top: 0, 
+      behavior: 'smooth'
+      /* you can also use 'auto' behaviour
+         in place of 'smooth' */
+    });
+  };
   return (
     <>
       <div className={`rtl-box ${show === true ? 'show' : ''}`} >
@@ -97,7 +104,7 @@ const FooterStyle = (props) => {
               <li>Privacy Policy</li>
               <li>Licenses</li>
               <li>AML Policy</li>
-              <Link to='/terms-and-conditions'><li>Terms of Service</li></Link>
+              <Link to='/terms-and-conditions' onClick={scrollToTop}><li>Terms of Service</li></Link>
               <li>Self Exclusion</li>
             </ul>
           </div>
