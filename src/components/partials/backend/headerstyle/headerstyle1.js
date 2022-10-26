@@ -33,13 +33,17 @@ import Signin from "../../../../views/backend/auth/signin";
 
 import { CopySVG, NotificationSVG, ProfileSVG } from "./headerIcons";
 import ChatWeb from "../../../Chat/ChatWeb/ChatWeb";
+import { useState } from "react";
 
 const HeaderStyle1 = (props) => {
+  var scrnWidth;
   const [signUpModalShow, setSignUpModalShow] = React.useState(false);
   const [loginModalShow, setLoginModalShow] = React.useState(false);
   const [navShow, setNavShow] = React.useState(false);
   const [profileMenu, setProfileMenu] = React.useState(false);
   const [chatModal, setChatModal] = React.useState(false);
+  const [openModal, setOpenModal] = React.useState(true);
+
   // var profileMenu = false;
   const location = useLocation();
   const [show, setShow] = React.useState(false);
@@ -67,9 +71,9 @@ const HeaderStyle1 = (props) => {
     } else {
       setNavShow(true);
     }
-    if(pathName != "/chat"){
-      localStorage.setItem('pathname', pathName);  
-      }
+    if (pathName != "/chat") {
+      localStorage.setItem("pathname", pathName);
+    }
   }, [location.pathname]);
   const minisidbar = () => {
     document.body.classList.toggle("sidebar-main");
@@ -145,6 +149,14 @@ const HeaderStyle1 = (props) => {
     setChatModal(!chatModal);
     setShow(true);
   };
+  scrnWidth = JSON.parse(localStorage.getItem("screenWidth"));
+  useEffect(() => {
+    console.log("screenWidthB==>", typeof scrnWidth, scrnWidth);
+    if (scrnWidth < "1024") {
+      console.log("scrnWidth==>", scrnWidth);
+      setOpenModal(false);
+    }
+  }, [scrnWidth]);
 
   return (
     <>
@@ -328,12 +340,17 @@ const HeaderStyle1 = (props) => {
                     >
                       <NotificationSVG />
                     </div>
-                    {chatModal && <ChatWeb show={true} />}
                   </div>
                 </Nav>
               </div>
             </Navbar>
           )}
+          <div style={{ display: "none" }}>
+            {
+              (console.log("closebefore==>", openModal),
+              chatModal && <ChatWeb show={true} />)
+            }{" "}
+          </div>
         </div>
       </div>
       <SignUpModal
