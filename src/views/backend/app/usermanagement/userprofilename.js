@@ -67,7 +67,7 @@ const UserProfileName = () => {
 
                                             </div>
                                             <div className='profile-heading-sub-text'>Deposit or withdraw up to R50 000 per month.</div>
-                                            <button type="button" class="btn-sm authentication-button" style={{ marginLeft: '3.5rem',opacity : '0.5'}}>Complete Level 2</button>
+                                            <button type="button" class="btn-sm authentication-button" style={{ marginLeft: '3.5rem', opacity: '0.5' }}>Complete Level 2</button>
                                         </div>
 
                                         <div className='m-2 mb-2'>
@@ -79,7 +79,7 @@ const UserProfileName = () => {
 
                                             </div>
                                             <div className='profile-heading-sub-text'>Trade, deposit, withdraw without any limits.</div>
-                                            <button type="button" class="btn-sm authentication-button"  style={{ marginLeft: '3.5rem' ,opacity : '0.5'}}>Complete Level 3</button>
+                                            <button type="button" class="btn-sm authentication-button" style={{ marginLeft: '3.5rem', opacity: '0.5' }}>Complete Level 3</button>
                                         </div>
 
                                     </Card.Body>
@@ -147,7 +147,7 @@ const UserProfileName = () => {
                                         <Card.Body>
                                             <div className='p-2 mb-4'>
                                                 <label class="container-checkbox">
-                                                    <span style={{ position: "relative", bottom: 4, fontFamily: 'Montserrat', fontSize: "16px" ,fontWeight : "400" ,marginLeft : "10px"}}>Keep me signed in</span>
+                                                    <span style={{ position: "relative", bottom: 4, fontFamily: 'Montserrat', fontSize: "16px", fontWeight: "400", marginLeft: "10px" }}>Keep me signed in</span>
                                                     <input type="checkbox" className="checkbox-input" />
                                                     <span class="checkmark new-checkmark"></span>
                                                 </label>

@@ -237,7 +237,7 @@ const SidebarStyle = (props) => {
                                 <Link to="" className="">
                                     <img src={Flag} height="30px" width="30px" />
                                     {/* <i className="las la-user-friends"></i> */}
-                                    <div><select className="form-control-dropdown" id="exampleFormControlSelect2">
+                                    <div><select className="form-control-dropdown-side-bar" id="exampleFormControlSelect2">
                                         <option style={{fontSize: "12px !important"}}>English</option>
                                         <option>Hindi</option>
                                     </select></div>

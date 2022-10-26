@@ -47,11 +47,17 @@ const HeaderStyle1 = (props) => {
       pathName == "/edit-user-profile-section" ||
       pathName == "/user-profile-section" ||
       pathName == "/lockup" ||
-      pathName == "/roulette"
+      pathName == "/roulette" ||
+      (localStorage.getItem('pathname') == "/edit-user-profile-section" && pathName == "/chat") || (localStorage.getItem('pathname') == "/user-profile-section" && pathName == "/chat") ||
+      (localStorage.getItem('pathname') == "/lockup" && pathName == "/chat") ||
+      (localStorage.getItem('pathname') == "/roulette" && pathName == "/chat")
     ) {
       setNavShow(false);
     } else {
       setNavShow(true);
+    }
+    if (pathName != "/chat") {
+      localStorage.setItem('pathname', pathName);
     }
   }, [location.pathname]);
   const minisidbar = () => {
@@ -261,7 +267,7 @@ const HeaderStyle1 = (props) => {
                           }}
                           onClick={profileClickHandler}
                           id="dropdown-basic"
-                          // className="dropdown-navbar"
+                        // className="dropdown-navbar"
                         >
                           <ProfileSVG />
                         </button>

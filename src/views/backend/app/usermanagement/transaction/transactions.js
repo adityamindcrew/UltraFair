@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import Select from "react-select";
 import "./transaction.css";
-import { transactionSvg } from "../../../../../components/partials/backend/headerstyle/headerIcons";
+import { TransactionSvg } from "../../../../../components/partials/backend/headerstyle/headerIcons";
 
 const Transactions = () => {
   const customStyles = {
@@ -41,16 +41,8 @@ const Transactions = () => {
       <Container fluid>
         <div className="transaction-container">
           <div className="transaction-option_card ">
-            {/* <div className="transactionToggleOuter mb-2"> */}
-            <button type="button" class=" transactionToggleOuter mb-2">
-              Deposits
-            </button>
-            {/* </div> */}
-            {/* <div className="transactionToggleOuter "> */}
-            <button type="button" class=" transactionToggleOuter">
-              Withdrawals
-            </button>
-            {/* </div> */}
+            <div class=" transactionToggleOuter mb-2">Deposits</div>
+            <div class=" transactionToggleOuter">Withdrawals</div>
           </div>
 
           <div className="transaction-type_card ">
@@ -60,8 +52,23 @@ const Transactions = () => {
             </div>
             <br />
             <br />
-            <div>
-              <transactionSvg />
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <TransactionSvg />
+              <br />
+              <p className="textBelowIcon">No Deposits</p>
+              <div className="navigationButton">
+                <div>{"< Previous"}</div>
+                <div>{"Next >"}</div>
+              </div>
+              <br />
+              <div className="buttonBelowIcon">Download all Deposits</div>
             </div>
           </div>
         </div>

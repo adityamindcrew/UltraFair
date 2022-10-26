@@ -71,7 +71,7 @@ const SignUp = (props) => {
     <>
       
       <div className="sign-in-page">
-       
+
         <div className="sign-user_card" >
           <div className="sign-in-page-data">
             <button

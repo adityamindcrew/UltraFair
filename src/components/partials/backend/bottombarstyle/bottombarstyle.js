@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../../../assets/css/Ultrafair/bottombarstyle.css'
-
+import Chat from '../../../Chat/chat'
 const bottombarstyle = () => {
     return (
                 <div className="iq-sidebar">

@@ -9,14 +9,15 @@ import User from "../views/backend/main/user";
 import Pricing from "../views/backend/main/pricing";
 
 //App
-import UserProfile from "../views/backend/app/usermanagement/userprofile";
-import UserProfileName from "../views/backend/app/usermanagement/userprofilename";
-import UserPrivacySetting from "../views/backend/app/usermanagement/userprivacysetting";
-import UserAccountSettingList from "../views/backend/app/usermanagement/useraccountsetting";
-import UserProfileEdit from "../views/backend/app/usermanagement/userprofileedit";
-import EditUserProfileName from "../views/backend/app/usermanagement/edituserprofilename";
-import TermsAndConditions from "../views/backend/app/usermanagement/termsandconditions";
-import Transactions from "../views/backend/app/usermanagement/transaction/transactions";
+import UserProfile from '../views/backend/app/usermanagement/userprofile'
+import UserProfileName from '../views/backend/app/usermanagement/userprofilename'
+import UserPrivacySetting from '../views/backend/app/usermanagement/userprivacysetting'
+import UserAccountSettingList from '../views/backend/app/usermanagement/useraccountsetting'
+import UserProfileEdit from '../views/backend/app/usermanagement/userprofileedit'
+import EditUserProfileName from '../views/backend/app/usermanagement/edituserprofilename';
+import TermsAndConditions from '../views/backend/app/usermanagement/termsandconditions';
+import Transactions from '../views/backend/app/usermanagement//transaction/transactions';
+import Chat from '../components/Chat/chat';
 
 //Form
 import Checkbox from "../views/backend/forms/formcontrols/checkbox";
@@ -87,126 +88,124 @@ import ValidateWizard from "../views/backend/form-wizard/validate-wizard";
 import VerticalWizard from "../views/backend/form-wizard/vertical-wizard";
 
 const Layout1Route = () => {
-  let location = useLocation();
 
-  return (
-    <TransitionGroup>
-      <CSSTransition key={location.key} classNames="fade" timeout={300}>
-        <Switch location={location}>
-          <Route path="/" exact component={Dashbord} />
-          <Route path="/cassino/add-category" exact component={Comment} />
-          <Route path="/cassino/category-list" exact component={User} />
-          <Route path="/challanges" exact component={Pricing} />
-          <Route path="/ultrafair-originals" component={UserProfile} />
-          <Route path="/ultrafair-exclusive" component={UserPrivacySetting} />
-          <Route path="/slots" component={UserAccountSettingList} />
-          <Route path="/live-casino" component={UserProfileEdit} />
-          <Route path="/game-shows" component={Checkbox} />
-          <Route path="/new-release" component={Elements} />
-          <Route path="/feature-buy" component={Radio} />
-          <Route path="/table-games" component={FromSwitch} />
-          <Route path="/blackjack" component={Validations} />
-          <Route path="/baccarat" component={Heroicons} />
-          <Route path="/roulette" component={Dripicons} />
-          <Route path="/live-support" component={LineAwsome} />
-          <Route path="/blog" component={FontAwsome} />
-          <Route path="/lockup" component={LineAwsome} />
-          <Route path="/rating" exact component={Rating} />
-          <Route path="/comment" exact component={Comment} />
-          <Route path="/user" exact component={User} />
-          <Route path="/pages-pricing" exact component={Pricing} />
-          <Route
-            path="/terms-and-conditions"
-            exact
-            component={TermsAndConditions}
-          />
-          <Route path="/transactions" exact component={Transactions} />
+    let location = useLocation();
 
-          {/* App */}
-          <Route path="/user-profile" component={UserProfile} />
-          <Route path="/user-privacy-setting" component={UserPrivacySetting} />
-          <Route
-            path="/user-account-setting"
-            component={UserAccountSettingList}
-          />
-          <Route path="/user-profile-edit" component={UserProfileEdit} />
-          <Route path="/user-profile-section" component={UserProfileName} />
-          <Route
-            path="/edit-user-profile-section"
-            component={EditUserProfileName}
-          />
+    return (
+        <TransitionGroup>
+            <CSSTransition
+                key={location.key}
+                classNames="fade"
+                timeout={300}
+            >
+                <Switch location={location}>
+                    <Route path="/" exact component={Dashbord} />
+                    <Route path="/cassino/add-category" exact component={Comment} />
+                    <Route path="/cassino/category-list" exact component={User} />
+                    <Route path="/challanges" exact component={Pricing} />
+                    <Route path="/ultrafair-originals" component={UserProfile} />
+                    <Route path="/ultrafair-exclusive" component={UserPrivacySetting} />
+                    <Route path="/slots" component={UserAccountSettingList} />
+                    <Route path="/live-casino" component={UserProfileEdit} />
+                    <Route path="/game-shows" component={Checkbox} />
+                    <Route path="/new-release" component={Elements} />
+                    <Route path="/feature-buy" component={Radio} />
+                    <Route path="/table-games" component={FromSwitch} />
+                    <Route path="/blackjack" component={Validations} />
+                    <Route path="/baccarat" component={Heroicons} />
+                    <Route path="/roulette" component={Dripicons} />
+                    <Route path="/live-support" component={LineAwsome} />
+                    <Route path="/blog" component={FontAwsome} />
+                    <Route path="/lockup" component={LineAwsome} />
+                    <Route path="/rating" exact component={Rating} />
+                    <Route path="/comment" exact component={Comment} />
+                    <Route path="/user" exact component={User} />
+                    <Route path="/pages-pricing" exact component={Pricing} />
+                    <Route path="/terms-and-conditions" exact component={TermsAndConditions} />
+                    <Route path="/transactions" exact component={Transactions} />
+                    <Route path="/chat" exact component={Chat} />
 
-          {/* Form  */}
-          <Route path="/form-chechbox" component={Checkbox} />
-          <Route path="/form-layout" component={Elements} />
-          <Route path="/form-radio" component={Radio} />
-          <Route path="/form-switch" component={FromSwitch} />
-          <Route path="/form-validation" component={Validations} />
+                    {/* App */}
+                    <Route path="/user-profile" component={UserProfile} />
+                    <Route path="/user-privacy-setting" component={UserPrivacySetting} />
+                    <Route path="/user-account-setting" component={UserAccountSettingList} />
+                    <Route path="/user-profile-edit" component={UserProfileEdit} />
+                    <Route path="/user-profile-section" component={UserProfileName} />
+                    <Route path="/edit-user-profile-section" component={EditUserProfileName} />
 
-          {/* Icon */}
-          <Route path="/icon-heroicon" component={Heroicons} />
-          <Route path="/icon-dripicons" component={Dripicons} />
-          <Route path="/icon-fontawesome-5" component={FontAwsome} />
-          <Route path="/icon-lineawesome" component={LineAwsome} />
-          <Route path="/icon-remixicon" component={Remixicons} />
-          <Route path="/icon-unicons" component={Unicons} />
+                    {/* Form  */}
+                    <Route path="/form-chechbox" component={Checkbox} />
+                    <Route path="/form-layout" component={Elements} />
+                    <Route path="/form-radio" component={Radio} />
+                    <Route path="/form-switch" component={FromSwitch} />
+                    <Route path="/form-validation" component={Validations} />
 
-          {/* Extrapages */}
-          <Route path="/providers" component={Timeline1} />
-          <Route path="/pages-invoice" component={Invoice} />
-          <Route path="/pages-faq" component={FAQ} />
-          <Route path="/blank-page" component={BlankPage} />
-          <Route path="/terms-of-service" component={TermsOfUse} />
-          <Route path="/privacy-policy" component={PrivacyPolicy} />
-          <Route path="/invoice-view" component={Invoiceview} />
 
-          {/* Table */}
-          <Route path="/tables-basic" component={BasicTable} />
-          <Route path="/data-table" component={DataTable} />
-          <Route path="/table-editable" component={EditTable} />
+                    {/* Icon */}
+                    <Route path="/icon-heroicon" component={Heroicons} />
+                    <Route path="/icon-dripicons" component={Dripicons} />
+                    <Route path="/icon-fontawesome-5" component={FontAwsome} />
+                    <Route path="/icon-lineawesome" component={LineAwsome} />
+                    <Route path="/icon-remixicon" component={Remixicons} />
+                    <Route path="/icon-unicons" component={Unicons} />
 
-          {/* Ui */}
-          <Route path="/ui-alerts" component={UiAlerts} />
-          <Route path="/ui-badges" component={UiBadges} />
-          <Route path="/ui-breadcrumb" component={UiBreadcrumbs} />
-          <Route path="/ui-buttons" component={UiButtons} />
-          <Route path="/ui-cards" component={UiCards} />
-          <Route path="/ui-carousel" component={UiCarousels} />
-          <Route path="/ui-colors" component={UiColors} />
-          <Route path="/ui-embed-video" component={UiEmbed} />
-          <Route path="/ui-grid" component={UiGrids} />
-          <Route path="/ui-images" component={UiImages} />
-          <Route path="/ui-list-group" component={UiListGroups} />
-          <Route path="/ui-media-object" component={UiMediaObjects} />
-          <Route path="/ui-modal" component={UiModals} />
-          <Route path="/ui-notifications" component={UiNotifications} />
-          <Route path="/ui-pagination" component={UiPaginations} />
-          <Route path="/ui-popovers" component={UiPopOvers} />
-          <Route path="/ui-progressbars" component={UiProgressBars} />
-          <Route path="/ui-tabs" component={UiTabs} />
-          <Route path="/ui-tooltips" component={UiTooltips} />
-          <Route path="/ui-typography" component={UiTypography} />
+                    {/* Extrapages */}
+                    <Route path="/providers" component={Timeline1} />
+                    <Route path="/pages-invoice" component={Invoice} />
+                    <Route path="/pages-faq" component={FAQ} />
+                    <Route path="/blank-page" component={BlankPage} />
+                    <Route path="/terms-of-service" component={TermsOfUse} />
+                    <Route path="/privacy-policy" component={PrivacyPolicy} />
+                    <Route path="/invoice-view" component={Invoiceview} />
 
-          {/* Category */}
-          <Route path="/add-category" component={AddCategory} />
-          <Route path="/category-list" component={CategoryList} />
+                    {/* Table */}
+                    <Route path="/tables-basic" component={BasicTable} />
+                    <Route path="/data-table" component={DataTable} />
+                    <Route path="/table-editable" component={EditTable} />
 
-          {/* Movie */}
-          <Route path="/add-movie" component={AddMovie} />
-          <Route path="/movie-list" component={MovieList} />
+                    {/* Ui */}
+                    <Route path="/ui-alerts" component={UiAlerts} />
+                    <Route path="/ui-badges" component={UiBadges} />
+                    <Route path="/ui-breadcrumb" component={UiBreadcrumbs} />
+                    <Route path="/ui-buttons" component={UiButtons} />
+                    <Route path="/ui-cards" component={UiCards} />
+                    <Route path="/ui-carousel" component={UiCarousels} />
+                    <Route path="/ui-colors" component={UiColors} />
+                    <Route path="/ui-embed-video" component={UiEmbed} />
+                    <Route path="/ui-grid" component={UiGrids} />
+                    <Route path="/ui-images" component={UiImages} />
+                    <Route path="/ui-list-group" component={UiListGroups} />
+                    <Route path="/ui-media-object" component={UiMediaObjects} />
+                    <Route path="/ui-modal" component={UiModals} />
+                    <Route path="/ui-notifications" component={UiNotifications} />
+                    <Route path="/ui-pagination" component={UiPaginations} />
+                    <Route path="/ui-popovers" component={UiPopOvers} />
+                    <Route path="/ui-progressbars" component={UiProgressBars} />
+                    <Route path="/ui-tabs" component={UiTabs} />
+                    <Route path="/ui-tooltips" component={UiTooltips} />
+                    <Route path="/ui-typography" component={UiTypography} />
 
-          {/* Show */}
-          <Route path="/add-show" component={AddShow} />
-          <Route path="/show-list" component={ShowList} />
+                    {/* Category */}
+                    <Route path="/add-category" component={AddCategory} />
+                    <Route path="/category-list" component={CategoryList} />
 
-          {/* Form-wizard */}
-          <Route path="/form-wizard" component={SimpleWizard} />
-          <Route path="/form-wizard-validate" component={ValidateWizard} />
-          <Route path="/form-wizard-vertical" component={VerticalWizard} />
-        </Switch>
-      </CSSTransition>
-    </TransitionGroup>
-  );
-};
+                    {/* Movie */}
+                    <Route path="/add-movie" component={AddMovie} />
+                    <Route path="/movie-list" component={MovieList} />
 
-export default Layout1Route;
+                    {/* Show */}
+                    <Route path="/add-show" component={AddShow} />
+                    <Route path="/show-list" component={ShowList} />
+
+                    {/* Form-wizard */}
+                    <Route path="/form-wizard" component={SimpleWizard} />
+                    <Route path="/form-wizard-validate" component={ValidateWizard} />
+                    <Route path="/form-wizard-vertical" component={VerticalWizard} />
+
+                </Switch>
+            </CSSTransition>
+        </TransitionGroup>
+    )
+}
+
+export default Layout1Route
