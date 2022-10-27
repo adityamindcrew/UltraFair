@@ -325,11 +325,6 @@ export const Form3 = ({ setFormModal2, close, prop }) => {
                             <span className="timer-2">{timer}</span>
                         </div>
                     </div>
-
-
-
-
-
                 </div>}
         </>
     )
@@ -338,7 +333,14 @@ export const Form3 = ({ setFormModal2, close, prop }) => {
 
 export const Form4 = ({ setFormModal3, close }) => {
     const [formModal4, setFormModal4] = useState()
+    const [fileUpload, setFileUpload] = useState("No file Selected ")
 
+    const handleChange = (e) => {
+        const fileValue = e.target.value.split("\\", 3)
+        setFileUpload(fileValue[2])
+        console.log("event", fileUpload)
+
+    }
     return (
         <>
             {formModal4 === 'btnform5' ?
@@ -367,17 +369,28 @@ export const Form4 = ({ setFormModal3, close }) => {
 
                         <div className="upload-file-row">
                             <div className="form-upload">
-                            
+
                                 <Button
-                                    type="file"
+
                                     variant="btn btn-primary"
                                     style={{
                                         color: "black",
                                         width: '100%',
                                         fontWeight: 'bold',
                                     }}  >
-                                   + Upload File
+                                    <label className="custom-file-upload">
+                                        <input type="file" onChange={(e) => handleChange(e)} />
+                                        + Upload File
+                                    </label>
                                 </Button>
+
+                                {/* <Button>
+                                <label className="custom-file-upload">
+                                    <input type="file" />
+                                    + Upload File
+                                </label>
+                                </Button> */}
+
 
                             </div>
                             <div className="form-upload">
@@ -390,6 +403,7 @@ export const Form4 = ({ setFormModal3, close }) => {
                                         width: '100%',
                                         fontWeight: 'bold'
                                     }}
+                                    onClick={()=>setFileUpload("No File Selected")}
 
 
                                 >
@@ -398,7 +412,10 @@ export const Form4 = ({ setFormModal3, close }) => {
 
                             </div>
                             <div className="form-upload">
-                                <span className="form-upload-status"> no file selected</span>
+                                {fileUpload === " " ?
+                                    <span className="form-upload-status"> no file selected</span> :
+                                    <span className="form-upload-status"> {fileUpload}</span>}
+
 
                             </div>
                         </div>
@@ -414,8 +431,13 @@ export const Form4 = ({ setFormModal3, close }) => {
                                                 color: "black",
                                                 width: '100%',
                                                 fontWeight: 'bold',
-                                            }}  >
-                                            + Upload File
+                                            }} 
+                                          >
+                                            <label className="custom-file-upload">
+                                        <input type="file" onChange={(e) => handleChange(e)} />
+                                        + Upload File
+                                    </label>
+                                         
                                         </Button>
 
                                     </div>
@@ -432,7 +454,7 @@ export const Form4 = ({ setFormModal3, close }) => {
                                                 fontWeight: 'bold'
                                             }}
 
-
+                                            onClick={()=>setFileUpload("No File Selected")}
                                         >
                                             - Remove File
                                         </Button>
@@ -441,7 +463,9 @@ export const Form4 = ({ setFormModal3, close }) => {
                                 </Col>
                                 <Col xs={4} md={6}>
                                     <div className="form-upload">
-                                        <span className="form-upload-status-2"> no file selected</span>
+                                        {fileUpload === " "?
+                                        <span className="form-upload-status-2">No file selected</span>:
+                                        <span className="form-upload-status-2">{fileUpload}</span>}
 
                                     </div>
                                 </Col>
@@ -468,12 +492,6 @@ export const Form4 = ({ setFormModal3, close }) => {
                         >
                             Continue
                         </Button>
-
-
-
-
-
-
                     </div>
 
                     <div>
@@ -484,9 +502,6 @@ export const Form4 = ({ setFormModal3, close }) => {
                                 color: "black",
                                 float: 'right',
                                 fontWeight: 'bold',
-
-
-
                             }}
                             className="form-4-button"
                             onClick={() => setFormModal4('btnform5')}
@@ -507,8 +522,8 @@ export const Form5 = ({ setFormModal4, close }) => {
         <>
             {formModal5 == 'btnform6' ?
                 <Form6 setFormModal5={setFormModal5} close={close} /> :
-                <div>
-                    <div className="form3-body container">
+                <div className="">
+                    <div className="form5-body container mb-3">
                         <div className="re-back ml-2" >
                             <span onClick={() => setFormModal4('btnform4')}><BackArrow /></span>
                         </div>
@@ -676,7 +691,7 @@ export const Form7 = ({ close }) => {
 
                     }}
                     className="mobile-button-7"
-                    onClick={()=>{close()}}
+                    onClick={() => { close() }}
                 >
                     Done
 
@@ -693,7 +708,7 @@ export const Form7 = ({ close }) => {
 
                         fontWeight: 'bold',
                     }}
-                  onClick={()=>{close()}}
+                    onClick={() => { close() }}
                 >
                     Done
                 </Button>
