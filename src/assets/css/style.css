@@ -6131,13 +6131,12 @@ h6 span {
   padding-top: 12px;
 
   text-align: center;
-  /* margin: 2.5px; */
+  margin: 2.5px;
   /* margin-left: 15px !important; */
   transition: none !important;
   translate: none !important;
   padding-right: 18px;
-  padding-left: 0px;
-
+  padding-left: 2px;
 }
 
 .wallet-paragraph {
@@ -6420,6 +6419,7 @@ h6 span {
 
 .form2-body {
   padding: 1rem 4rem;
+  
 }
 
 @media only screen and (max-width: 1026px) {
@@ -6427,23 +6427,14 @@ h6 span {
     padding: 1px 1px;
   }
 }
-
 .form3-body {
-  padding: 1rem 5rem;
+  padding: 1rem 3rem;
 }
-
-/* .form4-body{
-  padding: 1rem 5rem;
-} */
-
-
-
 @media only screen and (max-width: 1026px) {
   .form3-body {
     padding: 1px 1px;
   }
 }
-
 
 .form5-body {
   /* display: flex;
@@ -6509,6 +6500,7 @@ h6 span {
   font-size: 35px;
 }
 
+/* -----------------------------MODAL USER VERIFICATION/ Aditya ------- */
 
 .upload-file-row {
   /* flex-direction: row; */
@@ -7350,6 +7342,7 @@ select {
 @media not all and (min-resolution: 0.001dpcm) {}
 
 @media not all and (min-resolution: 0.001dpcm) {
+
   /* .navItem{ 
 
       color:black; 
@@ -7362,32 +7355,20 @@ select {
   .wallet-head {
     padding: 2vw;
   }
-}
-
-.container-checkbox-new {
-  display: inline-block;
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 15px;
-  -webkit-user-select: none;
-  user-select: none;
-  align-items: flex-start;
-}
 
 @media screen and (min-width: 1850px) and (max-width: 3000px) {
-  .Searchtext1 {
-    margin-top: 20%;
-  }
+.Searchtext1{
+  margin-top: 20%;
+}
+
 }
 
 @media screen and (min-width: 3001px) and (max-width: 5000px) {
-  .Searchtext1 {
+  .Searchtext1{
     margin-top: 30%;
   }
-}
-
+  
+  }    
 .container-checkbox-new {
   display: inline-block;
   position: relative;
@@ -7398,4 +7379,20 @@ select {
   -webkit-user-select: none;
   user-select: none;
   align-items: flex-start;
+}
+
+.form-control-dropdown-side-bar {
+      background-color: #191919 !important;
+      border: none !important;
+      /* background: #191919 !important; */
+      height: 46px;
+      position: relative;
+      color: white;
+      /* background: ##191919; */
+      font-size: 14px;
+      outline: none;
+      border-radius: 6px;
+      padding-bottom: 2px;
+      -webkit-margin-start: 5px;
+      margin-inline-start: 5px;
 }

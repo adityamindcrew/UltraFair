@@ -3,15 +3,7 @@ import logo from "../../../../../src/assets/images/sidebar/UltrafairLogo.png";
 import smallLogo from "../../../../assets/images/sidebar/UltrafairSmallLogo.png";
 import React, { useEffect } from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
-import {
-  Navbar,
-  Button,
-  Form,
-  Nav,
-  Dropdown,
-  ModalBody,
-} from "react-bootstrap";
-import "../../../Chat/ChatWeb/ChatWeb";
+import { Navbar, Button, Form, Nav, Dropdown } from "react-bootstrap";
 import {
   BitcoinsSVG,
   EtheremcoinsSVG,
@@ -23,29 +15,23 @@ import {
   Transactions,
   Logout,
 } from "../headerstyle/headerIcons";
-
 import { DownArrow } from "../../../../views/backend/main/dashboardIcons";
 //Modal
 import Modal from "react-bootstrap/Modal";
 import Signup from "../../../../views/backend/auth/signup";
 import Signin from "../../../../views/backend/auth/signin";
+
 //  Img
 
 import { CopySVG, NotificationSVG, ProfileSVG } from "./headerIcons";
-import ChatWeb from "../../../Chat/ChatWeb/ChatWeb";
 
 const HeaderStyle1 = (props) => {
   const [signUpModalShow, setSignUpModalShow] = React.useState(false);
   const [loginModalShow, setLoginModalShow] = React.useState(false);
   const [navShow, setNavShow] = React.useState(false);
   const [profileMenu, setProfileMenu] = React.useState(false);
-  const [chatModal, setChatModal] = React.useState(false);
   // var profileMenu = false;
   const location = useLocation();
-  const [show, setShow] = React.useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   useEffect(() => {
     document.addEventListener("click", setClicked, true);
@@ -61,15 +47,18 @@ const HeaderStyle1 = (props) => {
       pathName == "/edit-user-profile-section" ||
       pathName == "/user-profile-section" ||
       pathName == "/lockup" ||
-      pathName == "/roulette"
+      pathName == "/roulette" ||
+      (localStorage.getItem('pathname') == "/edit-user-profile-section" && pathName == "/chat") || (localStorage.getItem('pathname') == "/user-profile-section" && pathName == "/chat") ||
+      (localStorage.getItem('pathname') == "/lockup" && pathName == "/chat") ||
+      (localStorage.getItem('pathname') == "/roulette" && pathName == "/chat")
     ) {
       setNavShow(false);
     } else {
       setNavShow(true);
     }
-    if(pathName != "/chat"){
-      localStorage.setItem('pathname', pathName);  
-      }
+    if (pathName != "/chat") {
+      localStorage.setItem('pathname', pathName);
+    }
   }, [location.pathname]);
   const minisidbar = () => {
     document.body.classList.toggle("sidebar-main");
@@ -139,11 +128,8 @@ const HeaderStyle1 = (props) => {
   };
 
   const profileClickHandler = () => {
+    // alert("called");
     setProfileMenu(!profileMenu);
-  };
-  const chatClickHandler = () => {
-    setChatModal(!chatModal);
-    setShow(true);
   };
 
   return (
@@ -281,7 +267,7 @@ const HeaderStyle1 = (props) => {
                           }}
                           onClick={profileClickHandler}
                           id="dropdown-basic"
-                          // className="dropdown-navbar"
+                        // className="dropdown-navbar"
                         >
                           <ProfileSVG />
                         </button>
@@ -321,14 +307,9 @@ const HeaderStyle1 = (props) => {
                         // </div>
                       )}
                     </div>
-                    <div
-                      style={{ cursor: "pointer" }}
-                      className="mr-4 mt-2 hide-data"
-                      onClick={chatClickHandler}
-                    >
+                    <div className="mr-4 mt-2 hide-data">
                       <NotificationSVG />
                     </div>
-                    {chatModal && <ChatWeb show={true} />}
                   </div>
                 </Nav>
               </div>

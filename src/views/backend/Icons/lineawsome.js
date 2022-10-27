@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Button,Modal } from "react-bootstrap";
+import { Container, Row, Col, Button, Modal } from "react-bootstrap";
 import Customheader from "../../../components/Customheader";
 import Select from "react-select";
 const LineAwsome = () => {
@@ -12,14 +12,21 @@ const LineAwsome = () => {
 
   return (
     <>
-      <Container fluid   style={{display:show?"flex":"",alignItems:'center',justifyContent:'center'}} >
- 
-
+      <Container
+        fluid
+        style={{
+          display: show ? "flex" : "",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <Customheader title="Lockup" SVG={SVG} wid="15%" mt="8px" />
         <div
-     className="MainContainer"
-     style={{ 
-      opacity: show? 0.2:1}}>
+          className="MainContainer"
+          style={{
+            opacity: show ? 0.2 : 1,
+          }}
+        >
           <div className="Contin MINWIDTH">
             <div>
               <CutomBtn name="btn1" title="Lockup" setbtn={setbtn} btn={btn} />
@@ -31,7 +38,7 @@ const LineAwsome = () => {
               <div className="Colmn">
                 <div className="CARDTITLE BGR">
                   <div className="CENTERIT">
-                  <span className="MR10 SAF">  {ICON}</span>
+                    <span className="MR10 SAF"> {ICON}</span>
                     {ICON1}{" "}
                   </div>
                   <div className="questionmark">
@@ -41,7 +48,7 @@ const LineAwsome = () => {
                     ></i>{" "}
                   </div>
                 </div>
-                <div className="CARDTITLE Bckg FLEXWRAP" >
+                <div className="CARDTITLE Bckg FLEXWRAP">
                   <div className="DoCol">
                     <span className="smallfont">Your Loked Assets</span>
                     <span className="largefont">6.22</span>
@@ -60,21 +67,57 @@ const LineAwsome = () => {
                   </div>
                 </div>
                 <div className="JUSTFLY SLIDER">
-                  <span className="prog_font whit">LOCK FOR PERIOD OF (WEEKS)</span>
+                  <span className="prog_font whit">
+                    LOCK FOR PERIOD OF (WEEKS)
+                  </span>
                   <span className="prog_font GRN ALIG">1 WEEK = 1% BOOST</span>
                 </div>
-                <input
-                  type="range"
-                  class="form-range Fire"
-                  id="customRange1"
-                ></input>
+                <div className="Green">
+                  <input
+                    type="range"
+                    class="form-range Fire Green"
+                    id="customRange1"
+                  ></input>{" "}
+                </div>
                 <div className="JUSTFLY">
-                  <span className="GREY">4</span>
-                  <span className="GREY">8</span>
+                 
+                <div className="Flex1">  <span className="GREY">1</span>
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY smallline">|</span>
+                  {/* <span className="GREY smallline">|</span> */}
+                  <span className="GREY smallline">|</span>
                   <span className="GREY">16</span>
+                  <span className="GREY smallline">|</span>
+                  {/* <span className="GREY smallline">|</span> */}
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY smallline">|</span>
                   <span className="GREY">32</span>
+
+                  {/* <span className="GREY smallline">|</span> */}
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY">48</span>
+
+                  <span className="GREY smallline">|</span>
+                  {/* </div>
+                 <div className="Flex1">  */}
+                 {/* <span className="GREY smallline">|</span> */}
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY smallline">|</span>
                   <span className="GREY">64</span>
-                  <span className="GREY">100</span>
+
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY smallline">|</span>
+
+                  <span className="GREY">84</span>
+                  {/* <span className="GREY smallline">|</span> */}
+
+                 <span className="GREY smallline">|</span>
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY">100</span> </div>
                 </div>
                 <div>
                   <span className="GRN">
@@ -85,18 +128,35 @@ const LineAwsome = () => {
                 <div>
                   <div className="JUSTFLY MR0a10">
                     <span className="prog_font whit">LOCK</span>
-                    <span> <span className="GRN w100">BALANCE </span> <span className="prog_font GRN wbold">6.22</span></span>
+                    <span>
+                      {" "}
+                      <span className="GRN w100">BALANCE </span>{" "}
+                      <span className="prog_font GRN wbold">6.22</span>
+                    </span>
                   </div>
-                  <input type="text" className="INPUt" placeholder="$ 0.00"  />
-                  <button className="CARDBTN" onClick={()=>setShow(true)}>Lock</button>
+                  <input type="text" className="INPUt" placeholder="$ 0.00" />
+                  <button className="CARDBTN" onClick={() => setShow(true)}>
+                    Lock
+                  </button>
                 </div>
                 <div>
                   <div className="JUSTFLY MR0a10">
                     <span className="prog_font whit">UNLOCK</span>
-                 <span> <span className="GRN w100">BALANCE </span> <span className="prog_font GRN wbold">6.22</span></span>
+                    <span>
+                      {" "}
+                      <span className="GRN w100">BALANCE </span>{" "}
+                      <span className="prog_font GRN wbold">6.22</span>
+                    </span>
                   </div>
-                  <input type="text" className="INPUt " placeholderTextColor="#fff"  placeholder="$ 0.00" />
-                  <button className="CARDBTN" onClick={()=>setShow(true)}>Unlock</button>
+                  <input
+                    type="text"
+                    className="INPUt "
+                    placeholderTextColor="#fff"
+                    placeholder="$ 0.00"
+                  />
+                  <button className="CARDBTN" onClick={() => setShow(true)}>
+                    Unlock
+                  </button>
                 </div>
               </div>
             ) : btn == "btn2" ? (
@@ -104,7 +164,7 @@ const LineAwsome = () => {
                 <div className="Colmn">
                   <div className="CARDTITLE BGR1">
                     <div className="CENTERIT">
-                    <span className="MR10">  {ICON}</span>
+                      <span className="MR10"> {ICON}</span>
                       {SearchiconBoost}{" "}
                     </div>
                     <div className="questionmark">
@@ -123,16 +183,19 @@ const LineAwsome = () => {
                       <span className="smallfont">My XBE Locked</span>
                       <span className="largefont">0%</span>
                     </div>
-
                   </div>
-                 <span className="prog_font whit EXPD">Your Current Boost</span> 
-                  <div className="CARDTITLE Bckg Extrapading ">
-                    <input
-                      type="range"
-                      class="form-range fullwidth "
-                      id="customRange1"
-                      background="orange"
-                    ></input>
+                  <span className="prog_font whit EXPD">
+                    Your Current Boost
+                  </span>
+                  <div className="CARDTITLE Bckg  ">
+                    <div className="Blue fullwidth">
+                      <input
+                        type="range"
+                        class="form-range fullwidth Fire"
+                        id="customRange1"
+                        background="orange"
+                      ></input>{" "}
+                    </div>
                   </div>
 
                   <div className="CARDTITLE BGR1">
@@ -151,20 +214,56 @@ const LineAwsome = () => {
                     <span className="prog_font whit">
                       LOCK FOR PERIOD OF (WEEKS)
                     </span>
-                    <span className="prog_font BLU ALIG">1 WEEK = 1% BOOST</span>
+                    <span className="prog_font BLU ALIG">
+                      1 WEEK = 1% BOOST
+                    </span>
                   </div>
-                  <input
-                    type="range"
-                    class="form-range "
-                    id="customRange1"
-                  ></input>
+                  <div className="Blue">
+                    {" "}
+                    <input
+                      type="range"
+                      class="form-range Fire Blue"
+                      id="customRange1"
+                    ></input>{" "}
+                  </div>
                   <div className="JUSTFLY">
-                    <span className="GREY">4</span>
-                    <span className="GREY">8</span>
-                    <span className="GREY">16</span>
-                    <span className="GREY">32</span>
-                    <span className="GREY">64</span>
-                    <span className="GREY">100</span>
+                 <div className="Flex1">  <span className="GREY">1</span>
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY smallline">|</span>
+                  {/* <span className="GREY smallline">|</span> */}
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY">16</span>
+                  <span className="GREY smallline">|</span>
+                  {/* <span className="GREY smallline">|</span> */}
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY">32</span>
+
+                  {/* <span className="GREY smallline">|</span> */}
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY">48</span>
+
+                  <span className="GREY smallline">|</span>
+                  {/* </div>
+                 <div className="Flex1">  */}
+                 {/* <span className="GREY smallline">|</span> */}
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY">64</span>
+
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY smallline">|</span>
+
+                  <span className="GREY">84</span>
+                  {/* <span className="GREY smallline">|</span> */}
+
+                 <span className="GREY smallline">|</span>
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY smallline">|</span>
+                  <span className="GREY">100</span> </div>
                   </div>
                   <div className="Colmn">
                     <span className="BLU">
@@ -177,16 +276,29 @@ const LineAwsome = () => {
                   </div>
 
                   <div>
-   
-                    <button className="CARDBTN BGBLU" onClick={()=>setShow(true)}>Add to Boost</button>
+                    <button
+                      className="CARDBTN BGBLU"
+                      onClick={() => setShow(true)}
+                    >
+                      Add to Boost
+                    </button>
                   </div>
                   <div>
                     <div className="JUSTFLY MR0a10">
                       <span className="prog_font whit">LOCKUP</span>
-                 <span>  <span className="BLU w100">BALANCE </span> <span className="prog_font BLU wbold">6.22</span></span>
+                      <span>
+                        {" "}
+                        <span className="BLU w100">BALANCE </span>{" "}
+                        <span className="prog_font BLU wbold">6.22</span>
+                      </span>
                     </div>
-                    <input type="text" className="INPUt" placeholder="$ 0.00"  />
-                    <button className="CARDBTN BGBLU"  onClick={()=>setShow(true)}>Add to Lockup</button>
+                    <input type="text" className="INPUt" placeholder="$ 0.00" />
+                    <button
+                      className="CARDBTN BGBLU"
+                      onClick={() => setShow(true)}
+                    >
+                      Add to Lockup
+                    </button>
                   </div>
                 </div>
               </div>
@@ -195,7 +307,7 @@ const LineAwsome = () => {
                 <div className="Colmn">
                   <div className="CARDTITLE BGCOLPINK">
                     <div className="CENTERIT">
-                    <span className="MR10">  {ICON}</span>
+                      <span className="MR10"> {ICON}</span>
                       {ICON4}{" "}
                     </div>
                     <div className="questionmark">
@@ -229,37 +341,79 @@ const LineAwsome = () => {
                         <span className="smolltext">VALUE</span>
                       </div>
                       <div className="JUSTFLY ">
-                        <span className="notsmollfont Tableresp" style={{display:'flex',flex:1,alignItems:'center'}}>
-                          <span style={{ padding: 8, }} className="CARDTEXTS">{CARDICON1}</span>
-                          <span>USDC
-                          Earned</span>
+                        <span
+                          className="notsmollfont Tableresp"
+                          style={{
+                            display: "flex",
+                            flex: 1,
+                            alignItems: "center",
+                          }}
+                        >
+                          <span style={{ padding: 8 }} className="CARDTEXTS">
+                            {CARDICON1}
+                          </span>
+                          <span>USDC Earned</span>
                         </span>
-                        <span className="notsmollfont" style={{display:'flex',flex:1}}>0.00</span>
+                        <span
+                          className="notsmollfont"
+                          style={{ display: "flex", flex: 1 }}
+                        >
+                          0.00
+                        </span>
                         <span className="notsmollfont">$0.00</span>
                       </div>
                       <div className="JUSTFLY ">
-                        <span className="notsmollfont Tableresp" style={{display:'flex',flex:1,alignItems:'center'}}>
-                          <span style={{ padding: 8,}}  className="CARDTEXTS">{CARDICON2}</span><span>
-                          USDT
-                          Earned
+                        <span
+                          className="notsmollfont Tableresp"
+                          style={{
+                            display: "flex",
+                            flex: 1,
+                            alignItems: "center",
+                          }}
+                        >
+                          <span style={{ padding: 8 }} className="CARDTEXTS">
+                            {CARDICON2}
                           </span>
+                          <span>USDT Earned</span>
                         </span>
-                        <span className="notsmollfont" style={{display:'flex',flex:1}}>0.00</span>
+                        <span
+                          className="notsmollfont"
+                          style={{ display: "flex", flex: 1 }}
+                        >
+                          0.00
+                        </span>
                         <span className="notsmollfont">$0.00</span>
                       </div>
                       <div className="JUSTFLY ">
-                        <span className="notsmollfont Tableresp" style={{display:'flex',flex:1,alignItems:'center'}}>
-                          <span style={{ padding: 8 ,}}  className="CARDTEXTS">{CARDICON3}</span><span>
-                          ETH
-                          Earned
+                        <span
+                          className="notsmollfont Tableresp"
+                          style={{
+                            display: "flex",
+                            flex: 1,
+                            alignItems: "center",
+                          }}
+                        >
+                          <span style={{ padding: 8 }} className="CARDTEXTS">
+                            {CARDICON3}
                           </span>
+                          <span>ETH Earned</span>
                         </span>
-                        <span className="notsmollfont" style={{display:'flex',flex:1}}>0.00</span>
+                        <span
+                          className="notsmollfont"
+                          style={{ display: "flex", flex: 1 }}
+                        >
+                          0.00
+                        </span>
                         <span className="notsmollfont">$0.00</span>
                       </div>
                     </div>
 
-                    <button className="CARDBTN BGPINK BTNRESP" onClick={()=>setShow(true)}>Claim Rewards</button>
+                    <button
+                      className="CARDBTN BGPINK BTNRESP"
+                      onClick={() => setShow(true)}
+                    >
+                      Claim Rewards
+                    </button>
                     {/* <span className='Grey'>levels s shown are for lockup only. Please note that staking while</span> */}
                   </div>
                 </div>
@@ -291,17 +445,31 @@ const LineAwsome = () => {
             </div>
             <div className="JUSTFLY EVENLY Extrawidth">
               <span className="progfont">{Searchicon}</span>
-              <span className="GRN Footerfont " style={{fontSize:"21px",color:'white'}}>ADDITIONAL INFORMATION</span>
+              <span
+                className="GRN Footerfont "
+                style={{ fontSize: "21px", color: "white" }}
+              >
+                ADDITIONAL INFORMATION
+              </span>
             </div>
           </div>
         </div>
 
-{show?<div className="CENTERTHAT Colmn">
-  <span className="Fontpopup">Register an account or Log <br/> In to use this feature.</span>
-  <button className="POPUPBTN" onClick={()=>setShow(false)}>Register</button>
-  <button className="SingBTN" onClick={()=>setShow(false)}>Sign in</button>
-</div>:""}
-       
+        {show ? (
+          <div className="CENTERTHAT Colmn">
+            <span className="Fontpopup">
+              Register an account or Log <br /> In to use this feature.
+            </span>
+            <button className="POPUPBTN" onClick={() => setShow(false)}>
+              Register
+            </button>
+            <button className="SingBTN" onClick={() => setShow(false)}>
+              Sign in
+            </button>
+          </div>
+        ) : (
+          ""
+        )}
       </Container>
     </>
   );
@@ -327,7 +495,7 @@ const CutomBtn = ({ title, name, setbtn, btn }) => {
 };
 const SVG = (
   <svg
-  className="HEDerLOGO"
+    className="HEDerLOGO"
     width="35"
     height="21"
     viewBox="0 0 35 21"
@@ -381,7 +549,7 @@ const categoryGroup = [
 ];
 const CARDICON1 = (
   <svg
-  // className="UltrafairTextIcon"
+    // className="UltrafairTextIcon"
     width="40"
     height="40"
     viewBox="0 0 40 40"
@@ -405,7 +573,7 @@ const CARDICON1 = (
 
 const CARDICON2 = (
   <svg
-  // className="UltrafairTextIcon"
+    // className="UltrafairTextIcon"
     width="40"
     height="36"
     viewBox="0 0 40 36"
@@ -428,8 +596,8 @@ const CARDICON2 = (
 );
 
 const CARDICON3 = (
-   <svg
-  //  className="UltrafairTextIcon"
+  <svg
+    //  className="UltrafairTextIcon"
     width="40"
     height="40"
     viewBox="0 0 40 40"
@@ -522,7 +690,7 @@ const ICONWhite = (
 );
 const ICON = (
   <svg
-  className="UltrafairLogo"
+    className="UltrafairLogo"
     width="28"
     height="60"
     viewBox="0 0 28 60"
@@ -575,62 +743,62 @@ const ICON = (
 );
 
 const ICONCARD = (
-   <svg
-   className="ICONCARD"
-     width="28"
-     height="60"
-     viewBox="0 0 28 60"
-     fill="white"
-     xmlns="http://www.w3.org/2000/svg"
-   >
-     <path
-       d="M14.9321 0H13.0625L7.13672 12.4473L14.273 27.4296H28.0005L14.9321 0Z"
-       fill="#13212D"
-     />
-     <path
-       d="M0 27.4299H9.9502L4.9751 16.9854L0 27.4299Z"
-       fill="url(#paint0_linear_466_1031)"
-     />
-     <path
-       d="M13.062 59.1562H14.9316L20.8637 46.7089L13.7275 31.7202H0L13.062 59.1562Z"
-       fill="#13212D"
-     />
-     <path
-       d="M28 31.7202H18.0498L23.0249 42.1711L28 31.7202Z"
-       fill="url(#paint1_linear_466_1031)"
-     />
-     <defs>
-       <linearGradient
-         id="paint0_linear_466_1031"
-         x1="-4.12407"
-         y1="30.6787"
-         x2="12.1269"
-         y2="18.7988"
-         gradientUnits="userSpaceOnUse"
-       >
-         <stop stop-color="#00ABE7" />
-         <stop offset="0.3324" stop-color="#0FB599" />
-         <stop offset="0.7179" stop-color="#81C14B" />
-         <stop offset="1" stop-color="#8AC33D" />
-       </linearGradient>
-       <linearGradient
-         id="paint1_linear_466_1031"
-         x1="27.0398"
-         y1="33.5197"
-         x2="18.7463"
-         y2="37.8906"
-         gradientUnits="userSpaceOnUse"
-       >
-         <stop stop-color="#9A0000" />
-         <stop offset="1" stop-color="#FF0000" />
-       </linearGradient>
-     </defs>
-   </svg>
- );
- 
+  <svg
+    className="ICONCARD"
+    width="28"
+    height="60"
+    viewBox="0 0 28 60"
+    fill="white"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M14.9321 0H13.0625L7.13672 12.4473L14.273 27.4296H28.0005L14.9321 0Z"
+      fill="#13212D"
+    />
+    <path
+      d="M0 27.4299H9.9502L4.9751 16.9854L0 27.4299Z"
+      fill="url(#paint0_linear_466_1031)"
+    />
+    <path
+      d="M13.062 59.1562H14.9316L20.8637 46.7089L13.7275 31.7202H0L13.062 59.1562Z"
+      fill="#13212D"
+    />
+    <path
+      d="M28 31.7202H18.0498L23.0249 42.1711L28 31.7202Z"
+      fill="url(#paint1_linear_466_1031)"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_466_1031"
+        x1="-4.12407"
+        y1="30.6787"
+        x2="12.1269"
+        y2="18.7988"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#00ABE7" />
+        <stop offset="0.3324" stop-color="#0FB599" />
+        <stop offset="0.7179" stop-color="#81C14B" />
+        <stop offset="1" stop-color="#8AC33D" />
+      </linearGradient>
+      <linearGradient
+        id="paint1_linear_466_1031"
+        x1="27.0398"
+        y1="33.5197"
+        x2="18.7463"
+        y2="37.8906"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#9A0000" />
+        <stop offset="1" stop-color="#FF0000" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
 const ICON1 = (
   <svg
-  className="UltrafairText"
+    className="UltrafairText"
     width="268"
     height="16"
     viewBox="0 0 268 16"
@@ -645,7 +813,7 @@ const ICON1 = (
 );
 const Searchicon = (
   <svg
-  className="SEARCHICON"
+    className="SEARCHICON"
     width="66"
     height="66"
     viewBox="0 0 66 66"
@@ -777,7 +945,7 @@ const Searchicon = (
 
 const SearchiconBoost = (
   <svg
-  className="UltrafairText"
+    className="UltrafairText"
     width="236"
     height="16"
     viewBox="0 0 236 16"
@@ -792,7 +960,7 @@ const SearchiconBoost = (
 );
 const ICON3 = (
   <svg
-  className="UltrafairText"
+    className="UltrafairText"
     width="305"
     height="40"
     viewBox="0 0 305 40"
@@ -807,7 +975,7 @@ const ICON3 = (
 );
 const ICON4 = (
   <svg
-  className="UltrafairText"
+    className="UltrafairText"
     width="234"
     height="16"
     viewBox="0 0 234 16"
