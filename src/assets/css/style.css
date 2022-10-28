@@ -6517,7 +6517,8 @@ h6 span {
   }
 }
 
-.form5-body {
+
+.form5-body{
   /* display: flex;
     justify-content: center;
     flex-direction: column; */
@@ -6648,6 +6649,13 @@ h6 span {
   font-weight: "bold";
   font-size: 12px;
 }
+.form-upload-status-2{
+  position: fixed;
+    right: 31px;
+    margin-top: 9px;
+
+}
+
 
 .timer {
   position: relative;
@@ -6705,10 +6713,6 @@ h6 span {
   font-size: 25px;
 }
 
-.form7-body {
-  padding: 0rem 7rem;
-  margin-bottom: 10px;
-}
 
 .form-5-button {
   padding: 2px 17px 2px 17px;
@@ -6805,11 +6809,6 @@ h6 span {
   display: none;
 } */
 
-.form7-fotter {
-  float: right;
-  background-color: #1f4949;
-  margin-bottom: 20px;
-}
 
 .form7-Button {
   background-color: #11ffbd;
@@ -6842,6 +6841,147 @@ input[type="file"] {
   text-align: center;
 }
 
+.timer-layout{
+  display: flex;
+  justify-content: center;
+}
+
+.timer-button-2{
+ 
+ background-color: #11FFBD;
+ border: none;
+ border-radius: 5px;
+ padding: 3px 22px 3px 22px;
+ font-family: 'Montserrat';
+ font-weight: 'bold';
+ font-size: 12px ;
+}
+.email-text{
+  position: relative;
+  top:-30px;
+}
+
+.fileupload-user{
+  background-color: blue;
+}
+
+.success-text{
+ font-family: 'Montserrat';
+  font-weight: 'bold';
+  font-size: 25px;
+}
+.form7-body{
+  padding: 1rem 7rem;
+  margin-bottom: 10px;
+}
+.form-5-button{
+  padding: 2px 17px 2px 17px;
+}
+@media screen and (min-width: 0px) and (max-width: 900px){
+  .form7-body{
+    padding: 1rem 1rem;
+   
+  }
+  
+  .form7-button{
+     text-align: center;
+    
+  }
+  .mobile-button-7{
+    display: block;
+  }
+  .form7-button{
+    display: none;
+  }
+  .form-5-button{
+    display: none;
+  }
+  .mobile-button-5{
+    display: block;
+  }
+  .form-4-button{
+    display: none;
+  }
+  .upload-file-row{
+    display: flex;
+    
+  
+  }
+  .form4-body{
+    padding:0px;
+  } 
+
+  .upload-file-row{
+    display: none;
+  }
+  
+  
+
+
+}
+
+@media screen and (min-width: 901px) and (max-width: 1624px) {
+    
+  .mobile-button-7{
+    display: none;
+  }
+  .form7-button{
+    display: block;
+  }
+  .mobile-button-5{
+    display: none;
+  }
+  .mobile-4-button{
+    display: none;
+  }
+  .no-older{
+    position: relative;
+    right:46px;
+    bottom: 10px; 
+  }
+  .upload-selfie{
+    position: relative;
+    right:46px;
+   
+  }
+  .upload-file-row{
+    position: relative;
+    right:56px;
+    bottom: 10px; 
+  
+  }
+  .form4-body{
+    padding: 1rem 5rem;
+  } 
+  .upload-file-row-mobile{
+    display: none;
+  }
+  
+ 
+
+  
+}
+/* .mobile-button-7{
+  display: none;
+} */
+
+.form7-fotter{
+  float:right;
+  background-color: #1f4949;
+}
+.form7-Button{
+  background-color: #11FFBD;
+ border: none;
+ border-radius: 5px;
+ padding: 3px 22px 3px 22px;
+ /* font-family: 'Montserrat'; */
+ font-weight: 200;
+ font-size: 12px ;
+ color:black;
+
+ /* position:relative;
+ left:77px; */
+}
 /* -----------------------------MODAL USER VERIFICATION/ Aditya ------- */
 .img-fluid-one {
   max-width: none;
