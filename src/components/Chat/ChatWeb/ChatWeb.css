@@ -145,7 +145,7 @@ input::placeholder {
 }
 
 .chat-Web-topbar {
-  height: 45px;
+  min-height: 78px;
   width: 33vw;
   right: 0px;
   top: 0px;
@@ -156,7 +156,7 @@ input::placeholder {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-.form-control-dropdown-topbar {
+.form-control-dropdown-topbar-web {
   /* background-color: #191919 !important;  */
   border: none !important;
   /* background: #191919 !important;  */
@@ -164,7 +164,8 @@ input::placeholder {
   position: relative;
   color: white;
   background: #1e2c37;
-  font-size: 14px;
+  width: 10vw;
+  font-size: 18px;
   outline: none;
   border-radius: 6px;
   padding-bottom: 2px;
@@ -234,7 +235,11 @@ input::placeholder {
 }
 .ant-modal-close {
   color: #ffffff !important;
+  padding-top: 10px !important;
 }
 .ant-modal-wrap {
   overflow-x: hidden !important;
+}
+.ant-modal-body {
+  height: 100vh !important;
 }
