@@ -7644,3 +7644,8 @@ select {
   -webkit-margin-start: 5px;
   margin-inline-start: 5px;
 }
+.content-page {
+
+  background: rgb(30,44,55);
+background: linear-gradient(0deg, rgba(30,44,55,1) 15%, rgba(31,73,73,1) 76%);
+}

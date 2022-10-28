@@ -20,7 +20,10 @@ const LineAwsome = () => {
           justifyContent: "center",
         }}
       >
+   
+
         <Customheader title="Lockup" SVG={SVG} wid="15%" mt="8px" />
+
         <div
           className="MainContainer"
           style={{
@@ -315,7 +318,7 @@ const LineAwsome = () => {
                   <div className="CARDTITLE BGGrey Flexstart Colmn">
                     <div className="Alignstart JUSTFLY">
                       <span className="MR10">{ICONWhite}</span>
-                      <h4>Protocol Profits</h4>
+                      <h4 style={{color:'white'}}>Protocol Profits</h4>
                     </div>
 
                     <div className="JUSTFLY Alignstart">
