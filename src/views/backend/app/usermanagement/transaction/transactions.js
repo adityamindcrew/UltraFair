@@ -83,7 +83,7 @@ const Transactions = () => {
 
           <div className="transaction-type_card ">
             <div>
-              <p className="labelType">Type</p>
+              <span className="labelType">Type</span>
               <Select options={categoryGroup} styles={customStyles} />
             </div>
             <br />

@@ -164,8 +164,8 @@ input::placeholder {
   position: relative;
   color: white;
   background: #1e2c37;
-  width: 10vw;
-  font-size: 18px;
+  width: 90px;
+  font-size: 16px;
   outline: none;
   border-radius: 6px;
   padding-bottom: 2px;
@@ -189,15 +189,33 @@ input::placeholder {
   display: flex !important;
   flex-direction: column !important;
 }
-@media (max-width: 800px) {
+@media (max-width: 825px) {
   .ant-modal-content {
     width: 100vw !important;
-    height: 80vh;
-    top: 20vh;
+    height: 100vh;
+    top: 10vh;
     float: right !important;
     background-color: #13212d !important;
     display: flex !important;
     flex-direction: column !important;
+  }
+}
+@media (max-width: 1080px) {
+  .form-control-dropdown-topbar-web {
+    /* background-color: #191919 !important;  */
+    border: none !important;
+    /* background: #191919 !important;  */
+    height: 46px;
+    position: relative;
+    color: white;
+    background: #1e2c37;
+    width: 90px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 6px;
+    padding-bottom: 2px;
+    -webkit-margin-start: 5px;
+    margin-inline-start: 5px;
   }
 }
 
@@ -232,10 +250,14 @@ input::placeholder {
 .ant-modal-footer {
   background-color: #263642 !important;
   border-top-color: #1e2c37 !important;
+  position: sticky !important;
+  bottom: 0 !important;
+  width: 100% !important;
 }
 .ant-modal-close {
   color: #ffffff !important;
   padding-top: 10px !important;
+  padding-right: 18px !important;
 }
 .ant-modal-wrap {
   overflow-x: hidden !important;

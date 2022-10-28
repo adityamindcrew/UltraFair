@@ -6,7 +6,7 @@ import IndianFlag from "../../../assets/images/Ultrafair/Indian_Flag.png";
 import Crossicon from "../../../assets/images/Ultrafair/cross-icon.svg";
 import "./ChatWeb.css";
 
- import { Modal } from "antd";
+import { Modal } from "antd";
 
 const ChatWeb = (props) => {
   const [lng, setLng] = useState(false);
@@ -17,7 +17,7 @@ const ChatWeb = (props) => {
   const handleShow = () => setShow(true);
 
   const lngChangeHandler = () => {
-    setLng(true);
+    setLng(!lng);
   };
 
   return (

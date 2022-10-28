@@ -172,7 +172,8 @@ h6 {
   font-weight: 500;
   margin: 0px;
   line-height: 1.5;
-  color: var(--iq-title-text);
+  /* color: var(--iq-title-text); */
+  color: #fff !important;
 }
 
 h1 a,
