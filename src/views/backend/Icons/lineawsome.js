@@ -20,8 +20,6 @@ const LineAwsome = () => {
           justifyContent: "center",
         }}
       >
-   
-
         <Customheader title="Lockup" SVG={SVG} wid="15%" mt="8px" />
 
         <div
@@ -31,7 +29,7 @@ const LineAwsome = () => {
           }}
         >
           <div className="Contin MINWIDTH">
-            <div>
+            <div style={{ display: "flex" }}>
               <CutomBtn name="btn1" title="Lockup" setbtn={setbtn} btn={btn} />
               <CutomBtn name="btn2" title="Boost" setbtn={setbtn} btn={btn} />
               <CutomBtn name="btn3" title="Claim" setbtn={setbtn} btn={btn} />
@@ -318,7 +316,7 @@ const LineAwsome = () => {
                   <div className="CARDTITLE BGGrey Flexstart Colmn">
                     <div className="Alignstart JUSTFLY">
                       <span className="MR10">{ICONWhite}</span>
-                      <h4 style={{color:'white'}}>Protocol Profits</h4>
+                      <h4 style={{ color: "white" }}>Protocol Profits</h4>
                     </div>
 
                     <div className="JUSTFLY Alignstart">
