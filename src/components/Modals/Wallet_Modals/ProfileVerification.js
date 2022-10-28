@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Container, Col, Row, Button, Form, Card, Dropdown, InputGroup } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import { connect } from "react-redux";
@@ -11,11 +11,12 @@ import Line from "../../../assets/images/social/line.png";
 import Chat from "../../../assets/images/social/chat.png";
 import ReCAPTCHA from "react-google-recaptcha";
 
-import { BitCoinSVG, QRSVG, DownArrow, BitcoinsSVG2, EtheremcoinsSVG2, UsdcoinSVG2, TetherSVG2, DailogoSVG2, CurvedaotokenSVG2, BackArrow } from "../../../views/backend/main/dashboardIcons";
+import { BitCoinSVG, QRSVG, DownArrow, BitcoinsSVG2, EtheremcoinsSVG2, UsdcoinSVG2, TetherSVG2, DailogoSVG2, CurvedaotokenSVG2, BackArrow, Success } from "../../../views/backend/main/dashboardIcons";
 
 import OTPInput, { ResendOTP } from "otp-input-react";
 
 import QRCode from "../../../assets/images/QR.jpg"
+import Timer from "./Timer"
 
 
 
@@ -44,7 +45,7 @@ const ProfileVerification = ({ close }) => {
                     <div className="container">
                         <div className="text-center user-verification ">
                             <h3>Enter Mobile Number</h3>
-                            <p>Please enter your mobile so that we can<br /> verify your account. </p>
+                            <p>Please enter your mobile so that we can verify your account. </p>
                         </div>
 
                         <div className="mobileForm">
@@ -98,19 +99,30 @@ export default ProfileVerification;
 
 
 
-export const Form2 = ({ setFormModal, close }) => {
+export const Form2 = ({ setFormModal, close, prop }) => {
     const [formModal2, setFormModal2] = useState()
     const backmodal = () => {
 
         console.log("bjsbjsdbjs")
     }
     const [OTP, setOTP] = useState("");
+
+
+
+    const userBtn2 = () => {
+        // clearTimer(getDeadTime());
+        setFormModal2('btnform3')
+
+    }
+
+
+
     return (
         <>
             {formModal2 === 'btnform3' ?
                 <Form3 setFormModal2={setFormModal2} close={close} />
 
-                : <div className="form2-body container">
+                : <div className="form2-body">
                     <div className="re-back" >
                         <span onClick={() => setFormModal('btnform')}><BackArrow /></span>
                     </div>
@@ -138,15 +150,17 @@ export const Form2 = ({ setFormModal, close }) => {
                         }} />
 
 
-                    <div className="mt-3">
+                    {/* <div className="mt-3">
+
                         <Row className="">
-                            <Col xs={6} md={6} className="">
+                            <Col xs={6} md={6} className="text-center">
                                 <Button
                                     type="button"
                                     variant="btn btn-primary"
                                     style={{
                                         color: "black",
-                                        width: '100%',
+                                        fontWeight: 'bold',
+                                        width:'100%'
 
                                     }}
                                     onClick={() => setFormModal2('btnform3')}
@@ -159,8 +173,9 @@ export const Form2 = ({ setFormModal, close }) => {
                                 <span className="timer">02:35</span>
                             </Col>
                         </Row>
-                    </div>
+                    </div> */}
 
+                    <Timer setFormModal2={userBtn2} />
 
 
                 </div>}
@@ -168,9 +183,69 @@ export const Form2 = ({ setFormModal, close }) => {
     )
 }
 
-export const Form3 = ({ setFormModal2, close }) => {
+export const Form3 = ({ setFormModal2, close, prop }) => {
     const [formModal3, setFormModal3] = useState()
 
+    const Ref = useRef(null);
+
+
+    const [timer, setTimer] = useState('00:00');
+
+
+    const getTimeRemaining = (e) => {
+        const total = Date.parse(e) - Date.parse(new Date());
+        const seconds = Math.floor((total / 1000) % 60);
+        const minutes = Math.floor((total / 1000 / 60) % 60);
+        const hours = Math.floor((total / 1000 / 60 / 60) % 24);
+        return {
+            total, hours, minutes, seconds
+        };
+    }
+
+
+    const startTimer = (e) => {
+        let { total, hours, minutes, seconds }
+            = getTimeRemaining(e);
+        if (total >= 0) {
+            setTimer(
+                // (hours > 9 ? hours : '0' + hours) + ':' +
+                (minutes > 9 ? minutes : '0' + minutes) + ':'
+                + (seconds > 9 ? seconds : '0' + seconds)
+            )
+        }
+    }
+
+
+    const clearTimer = (e) => {
+
+
+        setTimer('00:00');
+
+
+        if (Ref.current) clearInterval(Ref.current);
+        const id = setInterval(() => {
+            startTimer(e);
+        }, 1000)
+        Ref.current = id;
+    }
+
+    const getDeadTime = () => {
+        let deadline = new Date();
+        deadline.setSeconds(deadline.getSeconds() + 147);
+        return deadline;
+    }
+
+    useEffect(() => {
+        clearTimer(getDeadTime());
+    }, []);
+
+    const userBtn3 = () => {
+        clearTimer(getDeadTime());
+        setFormModal3('btnform4')
+
+        // setFormModal2(color)
+
+    }
     return (
         <>
             {formModal3 === 'btnform4' ?
@@ -189,7 +264,7 @@ export const Form3 = ({ setFormModal2, close }) => {
                     <div className="text-center">
                         <p>Please follow the link to verify your email address.</p>
                     </div>
-                    <div className="mt-3">
+                    {/* <div className="mt-3">
                         <Row className="">
                             <Col xs={6} md={6} className="">
                                 <Button
@@ -208,13 +283,48 @@ export const Form3 = ({ setFormModal2, close }) => {
                                 </Button>
                             </Col>
                             <Col xs={6} md={6} className="col-box">
-                                <span className="timer">02:35</span>
+                                <span className="time">02:35</span>
                             </Col>
                         </Row>
+                    </div> */}
+
+                    <div className="App mt-3 container text-center timer-layout">
+                        {/* <Row className="mt-3">
+                            <Col xs={6} md={6} className="">
+                                <button type="button"
+                                    className='timer-button-2 '
+                                    style={{
+                                        color: "black",
+                                        fontWeight: 'bold',
+                                        // fontSize:'77%',
+                                       
+
+                                    }}
+                                    onClick={userBtn3}>Resend</button>
+                            </Col>
+                            <Col xs={6} md={6} className="col-box">
+                                <span className="timer">{timer}</span>
+                            </Col>
+
+
+                        </Row> */}
+
+                        <div>
+                            <button type="button"
+                                className='timer-button-2 '
+                                style={{
+                                    color: "black",
+                                    fontWeight: 'bold',
+                                    // fontSize:'77%',
+
+
+                                }}
+                                onClick={userBtn3}>Resend</button>
+                        </div>
+                        <div className="ml-3">
+                            <span className="timer-2">{timer}</span>
+                        </div>
                     </div>
-
-
-
                 </div>}
         </>
     )
@@ -223,60 +333,182 @@ export const Form3 = ({ setFormModal2, close }) => {
 
 export const Form4 = ({ setFormModal3, close }) => {
     const [formModal4, setFormModal4] = useState()
+    const [fileUpload, setFileUpload] = useState("No file Selected ")
 
+    const handleChange = (e) => {
+        const fileValue = e.target.value.split("\\", 3)
+        setFileUpload(fileValue[2])
+        console.log("event", fileUpload)
+
+    }
     return (
         <>
             {formModal4 === 'btnform5' ?
                 <Form5 setFormModal4={setFormModal4} close={close} /> :
-                <div className="form3-body container">
-                    <div className="re-back" >
-                        <span onClick={() => setFormModal3('btnform3')}><BackArrow /></span>
-                    </div>
-                    <div className="text-center user-verification ">
+                <div>
+                    <div className="form4-body container">
+                        <div className="re-back" >
+                            <span onClick={() => setFormModal3('btnform3')}><BackArrow /></span>
+                        </div>
+                        <div className="text-center user-verification ">
 
-                        <h3>Level 1 Verification</h3>
-                    </div>
+                            <h3>Level 1 Verification</h3>
+                        </div>
 
-                    <div className="">
-                        <p>Upload Selfie</p>
-                    </div>
+                        <div className="">
+                            <p style={{ fontWeight: 'bold', color: 'white' }} className="upload-selfie">Upload Selfie</p>
+                        </div>
 
-                    <div>
+                        {/* <div>
                         <Form.Group controlId="formFileMultiple" className="mb-3">
                             <Form.Label>Multiple files input example</Form.Label>
                             <Form.Control type="file" multiple className="fileupload-user" />
 
                         </Form.Group>
+                    </div> */}
+
+                        <div className="upload-file-row">
+                            <div className="form-upload">
+
+                                <Button
+
+                                    variant="btn btn-primary"
+                                    style={{
+                                        color: "black",
+                                        width: '100%',
+                                        fontWeight: 'bold',
+                                    }}  >
+                                    <label className="custom-file-upload">
+                                        <input type="file" onChange={(e) => handleChange(e)} />
+                                        + Upload File
+                                    </label>
+                                </Button>
+
+                                {/* <Button>
+                                <label className="custom-file-upload">
+                                    <input type="file" />
+                                    + Upload File
+                                </label>
+                                </Button> */}
+
+
+                            </div>
+                            <div className="form-upload">
+                                <Button
+                                    type="button"
+                                    variant="outline-primary"
+
+                                    style={{
+
+                                        width: '100%',
+                                        fontWeight: 'bold'
+                                    }}
+                                    onClick={()=>setFileUpload("No File Selected")}
+
+
+                                >
+                                    - Remove File
+                                </Button>
+
+                            </div>
+                            <div className="form-upload">
+                                {fileUpload === " " ?
+                                    <span className="form-upload-status"> no file selected</span> :
+                                    <span className="form-upload-status"> {fileUpload}</span>}
+
+
+                            </div>
+                        </div>
+
+                        <div className="upload-file-row-mobile">
+                            <Row>
+                                <Col xs={8} md={4}>
+                                    <div className="form-upload">
+                                        <Button
+                                            type="file"
+                                            variant="btn btn-primary"
+                                            style={{
+                                                color: "black",
+                                                width: '100%',
+                                                fontWeight: 'bold',
+                                            }} 
+                                          >
+                                            <label className="custom-file-upload">
+                                        <input type="file" onChange={(e) => handleChange(e)} />
+                                        + Upload File
+                                    </label>
+                                         
+                                        </Button>
+
+                                    </div>
+                                </Col>
+                                <Col xs={8} md={4}>
+                                    <div className="form-upload">
+                                        <Button
+                                            type="button"
+                                            variant="outline-primary"
+
+                                            style={{
+
+                                                width: '100%',
+                                                fontWeight: 'bold'
+                                            }}
+
+                                            onClick={()=>setFileUpload("No File Selected")}
+                                        >
+                                            - Remove File
+                                        </Button>
+
+                                    </div>
+                                </Col>
+                                <Col xs={4} md={6}>
+                                    <div className="form-upload">
+                                        {fileUpload === " "?
+                                        <span className="form-upload-status-2">No file selected</span>:
+                                        <span className="form-upload-status-2">{fileUpload}</span>}
+
+                                    </div>
+                                </Col>
+
+                            </Row>
+                        </div>
+
+                        <div className="no-older">
+                            <span> No older than 24 hours</span>
+                        </div>
+                        <Button
+                            type="button"
+                            variant="btn btn-primary"
+                            style={{
+                                color: "black",
+                                // float: 'right',
+                                fontWeight: 'bold',
+                                width: '100%',
+
+
+                            }}
+                            className="mobile-4-button"
+                            onClick={() => setFormModal4('btnform5')}
+                        >
+                            Continue
+                        </Button>
                     </div>
-                    <Button
-                        type="button"
-                        variant="btn btn-primary"
-                        style={{
-                            color: "black",
-                            width: '100%',
-                            float: 'right'
 
-                        }}
-                        onClick={() => setFormModal4('btnform5')}
-
-                    >
-                        continue
-                    </Button>
-
-                    {/* <div>
-                <InputGroup className="mb-3">
-                    <Button variant="outline-secondary">
-                    <Form.Control type="file" multiple />
-                       + </Button>
-                    <Button variant="outline-secondary">- remove file</Button>
-                    <Form.Control aria-label="Example text with two button addons" />
-                </InputGroup>
-
-            </div> */}
-
-
-
-
+                    <div>
+                        <Button
+                            type="button"
+                            variant="btn btn-primary"
+                            style={{
+                                color: "black",
+                                float: 'right',
+                                fontWeight: 'bold',
+                            }}
+                            className="form-4-button"
+                            onClick={() => setFormModal4('btnform5')}
+                        >
+                            Continue
+                        </Button>
+                    </div>
                 </div>}
         </>
     )
@@ -290,58 +522,84 @@ export const Form5 = ({ setFormModal4, close }) => {
         <>
             {formModal5 == 'btnform6' ?
                 <Form6 setFormModal5={setFormModal5} close={close} /> :
-                <div className="form3-body container">
-                    <div className="re-back" >
-                        <span onClick={() => setFormModal4('btnform4')}><BackArrow /></span>
+                <div className="">
+                    <div className="form5-body container mb-3">
+                        <div className="re-back ml-2" >
+                            <span onClick={() => setFormModal4('btnform4')}><BackArrow /></span>
+                        </div>
+
+                        <div className="text-center user-verification-5- ">
+                            <h3>Scan This Code With Your<br />Authenticatior App</h3>
+
+                        </div>
+
+                        <div className=" text-center user-sub-5' mt-4">
+                            <p>Link your Authenticator app to your Yield Guru account by scanning the code<br /> below. When you’re done, press the next button to continue.</p>
+                        </div>
+
+                        <div className="img-responsive text-center mt-2" style={{ justifyContent: 'center', alignItems: 'center', justifyItems: 'center' }}>
+
+                            <img variant="top" className="img-responsive mb-3" src={QRCode} style={{ width: '11rem', backgroundColor: 'white', padding: 5, borderRadius: 8 }} />
+
+
+                        </div>
+
+                        <div className=" mt-1 text-center">
+                            <span> Or enter this code manually.</span>
+                        </div>
+
+                        <div className=" mt-2 text-center manual-code">
+                            <span className="manual-code-text">XBE-7B9-10A7</span>
+                        </div>
+
+                        <div>
+                            <Button
+                                type="button"
+                                variant="btn btn-primary"
+                                className="form-5-button"
+                                style={{
+                                    color: "black",
+                                    fontWeight: 'bold',
+                                    float: 'right',
+                                    marginTop: 20,
+
+                                }}
+                                onClick={() => setFormModal5('btnform6')}
+
+
+                            >
+                                Next
+                            </Button>
+                        </div>
+
+
+
+
+
                     </div>
-
-                    <div className="text-center user-verification-5- ">
-                        <h3>Scan This Code with Your<br />Authenticatior App</h3>
-
-                    </div>
-
-                    <div className=" text-center user-sub-5' mt-4">
-                        <p>Link your Authenticator app to your Yield Guru account by scanning the code<br /> below. When you’re done, press the next button to continue.</p>
-                    </div>
-
-                    <div className="img-responsive text-center mt-2" style={{ justifyContent: 'center', alignItems: 'center', justifyItems: 'center' }}>
-
-                        <img variant="top" className="img-responsive mb-3" src={QRCode} style={{ width: '11rem', backgroundColor: 'white', padding: 5, borderRadius: 8 }} />
-
-
-                    </div>
-
-                    <div className=" mt-1 text-center">
-                        <span> Or enter this code manually.</span>
-                    </div>
-
-                    <div className=" mt-2 text-center manual-code">
-                        <span className="manual-code-text">XBE-7B9-10A7</span>
-                    </div>
-
                     <div>
                         <Button
                             type="button"
                             variant="btn btn-primary"
                             style={{
                                 color: "black",
-                                width: '20%',
-                                float: 'right',
-                                marginTop: 20,
-                            }}
-                            onClick={() => setFormModal5('btnform6')}
+                                width: '100%',
+                                fontWeight: 'bold'
 
+                            }}
+                            className="mobile-button-5"
+                            onClick={() => setFormModal5('btnform6')}
 
                         >
                             Next
+
                         </Button>
+
                     </div>
+                </div>
 
 
-
-
-
-                </div>}
+            }
         </>
     )
 }
@@ -350,6 +608,7 @@ export const Form5 = ({ setFormModal4, close }) => {
 export const Form6 = ({ setFormModal5, close }) => {
 
     const [formModal6, setFormModal6] = useState()
+    const [OTP, setOTP] = useState("");
     return (
         <>
             {formModal6 == 'btnform7' ?
@@ -367,29 +626,26 @@ export const Form6 = ({ setFormModal5, close }) => {
                     <div className=" text-center user-sub-5' mt-4">
                         <p>Enter the verification code from your Authenticator app.</p>
                     </div>
-                    <div className="mobileForm">
-                        <Form.Group>
-
-
-                            <Form.Control
-                                type="email"
-                                className="mb-0"
-                                id="exampleInputEmail1"
-                                placeholder=""
-                                autoComplete="off"
-                                required
-                                style={{ width: '100%' }}
-                            />
-                        </Form.Group>
-                    </div>
+                    <OTPInput value={OTP} onChange={setOTP} autoFocus OTPLength={5} otpType="number" disabled={false} style={{ display: 'flex', justifyContent: 'center' }}
+                        inputStyles={{
+                            width: 56,
+                            height: 56, textAlign: 'center',
+                            margin: 5,
+                            fontSize: 29,
+                            backgroundColor: '#0D1D29',
+                            border: 'none',
+                            borderRadius: 5,
+                            color: 'white'
+                        }} />
                     <div>
                         <Button
                             type="button"
                             variant="btn btn-primary"
                             style={{
                                 color: "black",
-                                width: '20%',
+
                                 float: 'right',
+                                fontWeight: 'bold',
                                 marginTop: 20,
 
 
@@ -398,11 +654,6 @@ export const Form6 = ({ setFormModal5, close }) => {
                             Next
                         </Button>
                     </div>
-
-
-
-
-
                 </div>}
         </>
     )
@@ -413,14 +664,14 @@ export const Form7 = ({ close }) => {
 
 
     return (
-        <>
-            <div className="form3-body container">
-                <div className="re-back" >
-
+        <div className="">
+            <div className=" form7-body container">
+                <div className="Success-icon text-center mb-2" >
+                    <Success />
                 </div>
 
-                <div className="text-center user-verification-5- ">
-                    <h3>Success</h3>
+                <div className="text-center">
+                    <h2 className="success-text">Success</h2>
 
                 </div>
 
@@ -428,24 +679,41 @@ export const Form7 = ({ close }) => {
                     <p>Your Two-factor authentication is now enabled.</p>
                 </div>
 
-                <div>
-                    <Button
-                        type="button"
-                        variant="btn btn-primary"
-                        style={{
-                            color: "black",
-                            width: '20%',
-                            float: 'right',
-                            marginTop: 20,
-                        }}
-                        onClick={() => close()}
-                    >
 
-                        Done
-                    </Button>
-                </div>
+
+                <Button
+                    type="button"
+                    variant="btn btn-primary"
+                    style={{
+                        color: "black",
+                        width: '100%',
+                        fontWeight: 'bold'
+
+                    }}
+                    className="mobile-button-7"
+                    onClick={() => { close() }}
+                >
+                    Done
+
+                </Button>
+
             </div>
-        </>
+            <div className=" form7-fotter">
+                <Button
+                    type="button"
+                    variant="btn btn-primary"
+                    className="form7-button"
+                    style={{
+                        color: "black",
+
+                        fontWeight: 'bold',
+                    }}
+                    onClick={() => { close() }}
+                >
+                    Done
+                </Button>
+            </div>
+        </div>
     )
 }
 
