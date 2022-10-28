@@ -5686,6 +5686,11 @@ h6 span {
 
 .modal.show .modal-dialog {
   justify-content: center !important;
+  /* margin-right: 0px !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  width: 30vw;
+  height: 100vh !important; */
 }
 
 .passwordBtn {
@@ -6419,7 +6424,6 @@ h6 span {
 
 .form2-body {
   padding: 1rem 4rem;
-  
 }
 
 @media only screen and (max-width: 1026px) {
@@ -6428,8 +6432,12 @@ h6 span {
   }
 }
 .form3-body {
-  padding: 1rem 3rem;
+  padding: 1rem 5rem;
 }
+/* .form4-body{
+  padding: 1rem 5rem;
+} */
+
 @media only screen and (max-width: 1026px) {
   .form3-body {
     padding: 1px 1px;
@@ -6500,7 +6508,34 @@ h6 span {
   font-size: 35px;
 }
 
-/* -----------------------------MODAL USER VERIFICATION/ Aditya ------- */
+.upload-file-row {
+  /* flex-direction: row; */
+  display: flex;
+  /* padding: 5px; */
+}
+.form-upload {
+  margin: 10px;
+}
+.form-upload-status {
+  position: relative;
+  top: 8px;
+}
+.form-upload-status-2 {
+  position: fixed;
+  right: 31px;
+  margin-top: 9px;
+}
+.timer-button {
+  position: relative;
+  right: 24px;
+  background-color: #11ffbd;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 18px 3px 18px;
+  font-family: "Montserrat";
+  font-weight: "bold";
+  font-size: 12px;
+}
 
 .upload-file-row {
   /* flex-direction: row; */
@@ -6549,24 +6584,31 @@ h6 span {
   position: relative;
   top: 1px;
   right: 20px;
-  font-weight: 'bold';
+  font-weight: "bold";
   color: white;
-
 }
-
 .timer-2 {
   /* position: relative;
   top:1px;
   left:10px; */
-  font-weight: 'bold';
+  font-weight: "bold";
   color: white;
   /* margin-left: 20px; */
-
 }
 
 .timer-layout {
   display: flex;
   justify-content: center;
+}
+
+.timer-button-2 {
+  background-color: #11ffbd;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 22px 3px 22px;
+  font-family: "Montserrat";
+  font-weight: "bold";
+  font-size: 12px;
 }
 
 .timer-button-2 {
@@ -6693,22 +6735,14 @@ h6 span {
     position: relative;
     right: 56px;
     bottom: 10px;
-
   }
-
   .form4-body {
     padding: 1rem 5rem;
   }
-
   .upload-file-row-mobile {
     display: none;
   }
-
-
-
-
 }
-
 /* .mobile-button-7{
   display: none;
 } */
@@ -6753,22 +6787,8 @@ input[type="file"] {
 }
 
 /* -----------------------------MODAL USER VERIFICATION/ Aditya ------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .img-fluid1 {
-  max-width: 100%;
+  max-width: none;
   height: auto;
   width: auto !important;
 }
@@ -7326,23 +7346,19 @@ select {
       background-color: #11ffbd;
       border: none;
     }
+  }
 
-    /* .form-control {
-  background-color: #0d1d29!important;
-  color: #fff!important;
-  width: 84%;
-  border-radius: 6px;
-  padding-bottom: 5px;
-  width: 100%;
-  } */
-
+  @media screen and (min-width: 0px) and (max-width: 500px) {
+    .UltrafairLogo {
+      width: auto !important;
+    }
   }
 }
 
-@media not all and (min-resolution: 0.001dpcm) {}
+@media not all and (min-resolution: 0.001dpcm) {
+}
 
 @media not all and (min-resolution: 0.001dpcm) {
-
   /* .navItem{ 
 
       color:black; 
@@ -7350,25 +7366,35 @@ select {
       border: none;
   } */
 }
-
 @media screen and (min-width: 0px) and (max-width: 600px) {
   .wallet-head {
     padding: 2vw;
   }
 }
-@media screen and (min-width: 1850px) and (max-width: 3000px) {
-.Searchtext1{
-  margin-top: 20%;
+
+.container-checkbox-new {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  user-select: none;
+  align-items: flex-start;
 }
 
+@media screen and (min-width: 1850px) and (max-width: 3000px) {
+  .Searchtext1 {
+    margin-top: 20%;
+  }
 }
 
 @media screen and (min-width: 3001px) and (max-width: 5000px) {
-  .Searchtext1{
+  .Searchtext1 {
     margin-top: 30%;
   }
-  
-  }    
+}
 .container-checkbox-new {
   display: inline-block;
   position: relative;
@@ -7382,17 +7408,17 @@ select {
 }
 
 .form-control-dropdown-side-bar {
-      background-color: #191919 !important;
-      border: none !important;
-      /* background: #191919 !important; */
-      height: 46px;
-      position: relative;
-      color: white;
-      /* background: ##191919; */
-      font-size: 14px;
-      outline: none;
-      border-radius: 6px;
-      padding-bottom: 2px;
-      -webkit-margin-start: 5px;
-      margin-inline-start: 5px;
+  background-color: #191919 !important;
+  border: none !important;
+  /* background: #191919 !important; */
+  height: 46px;
+  position: relative;
+  color: white;
+  /* background: ##191919; */
+  font-size: 14px;
+  outline: none;
+  border-radius: 6px;
+  padding-bottom: 2px;
+  -webkit-margin-start: 5px;
+  margin-inline-start: 5px;
 }

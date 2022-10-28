@@ -80,44 +80,41 @@ const LineAwsome = () => {
                   ></input>{" "}
                 </div>
                 <div className="JUSTFLY">
-                 
-                <div className="Flex1">  <span className="GREY">1</span>
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY smallline">|</span>
-                  {/* <span className="GREY smallline">|</span> */}
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY">16</span>
-                  <span className="GREY smallline">|</span>
-                  {/* <span className="GREY smallline">|</span> */}
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY">32</span>
-
-                  {/* <span className="GREY smallline">|</span> */}
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY">48</span>
-
-                  <span className="GREY smallline">|</span>
-                  {/* </div>
+                  <div className="Flex1">
+                    {" "}
+                    <span className="GREY">1</span>
+                    <span className="GREY smallline">|</span>
+                    <span className="GREY smallline">|</span>
+                    {/* <span className="GREY smallline">|</span> */}
+                    <span className="GREY smallline">|</span>
+                    <span className="GREY">16</span>
+                    <span className="GREY smallline">|</span>
+                    {/* <span className="GREY smallline">|</span> */}
+                    <span className="GREY smallline">|</span>
+                    <span className="GREY smallline">|</span>
+                    <span className="GREY">32</span>
+                    {/* <span className="GREY smallline">|</span> */}
+                    <span className="GREY smallline">|</span>
+                    <span className="GREY smallline">|</span>
+                    <span className="GREY smallline">|</span>
+                    <span className="GREY">48</span>
+                    <span className="GREY smallline">|</span>
+                    {/* </div>
                  <div className="Flex1">  */}
-                 {/* <span className="GREY smallline">|</span> */}
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY">64</span>
-
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY smallline">|</span>
-
-                  <span className="GREY">84</span>
-                  {/* <span className="GREY smallline">|</span> */}
-
-                 <span className="GREY smallline">|</span>
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY">100</span> </div>
+                    {/* <span className="GREY smallline">|</span> */}
+                    <span className="GREY smallline">|</span>
+                    <span className="GREY smallline">|</span>
+                    <span className="GREY">64</span>
+                    <span className="GREY smallline">|</span>
+                    <span className="GREY smallline">|</span>
+                    <span className="GREY smallline">|</span>
+                    <span className="GREY">84</span>
+                    {/* <span className="GREY smallline">|</span> */}
+                    <span className="GREY smallline">|</span>
+                    <span className="GREY smallline">|</span>
+                    <span className="GREY smallline">|</span>
+                    <span className="GREY">100</span>{" "}
+                  </div>
                 </div>
                 <div>
                   <span className="GRN">
@@ -227,43 +224,41 @@ const LineAwsome = () => {
                     ></input>{" "}
                   </div>
                   <div className="JUSTFLY">
-                 <div className="Flex1">  <span className="GREY">1</span>
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY smallline">|</span>
-                  {/* <span className="GREY smallline">|</span> */}
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY">16</span>
-                  <span className="GREY smallline">|</span>
-                  {/* <span className="GREY smallline">|</span> */}
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY">32</span>
-
-                  {/* <span className="GREY smallline">|</span> */}
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY">48</span>
-
-                  <span className="GREY smallline">|</span>
-                  {/* </div>
+                    <div className="Flex1">
+                      {" "}
+                      <span className="GREY">1</span>
+                      <span className="GREY smallline">|</span>
+                      <span className="GREY smallline">|</span>
+                      {/* <span className="GREY smallline">|</span> */}
+                      <span className="GREY smallline">|</span>
+                      <span className="GREY">16</span>
+                      <span className="GREY smallline">|</span>
+                      {/* <span className="GREY smallline">|</span> */}
+                      <span className="GREY smallline">|</span>
+                      <span className="GREY smallline">|</span>
+                      <span className="GREY">32</span>
+                      {/* <span className="GREY smallline">|</span> */}
+                      <span className="GREY smallline">|</span>
+                      <span className="GREY smallline">|</span>
+                      <span className="GREY smallline">|</span>
+                      <span className="GREY">48</span>
+                      <span className="GREY smallline">|</span>
+                      {/* </div>
                  <div className="Flex1">  */}
-                 {/* <span className="GREY smallline">|</span> */}
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY">64</span>
-
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY smallline">|</span>
-
-                  <span className="GREY">84</span>
-                  {/* <span className="GREY smallline">|</span> */}
-
-                 <span className="GREY smallline">|</span>
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY smallline">|</span>
-                  <span className="GREY">100</span> </div>
+                      {/* <span className="GREY smallline">|</span> */}
+                      <span className="GREY smallline">|</span>
+                      <span className="GREY smallline">|</span>
+                      <span className="GREY">64</span>
+                      <span className="GREY smallline">|</span>
+                      <span className="GREY smallline">|</span>
+                      <span className="GREY smallline">|</span>
+                      <span className="GREY">84</span>
+                      {/* <span className="GREY smallline">|</span> */}
+                      <span className="GREY smallline">|</span>
+                      <span className="GREY smallline">|</span>
+                      <span className="GREY smallline">|</span>
+                      <span className="GREY">100</span>{" "}
+                    </div>
                   </div>
                   <div className="Colmn">
                     <span className="BLU">

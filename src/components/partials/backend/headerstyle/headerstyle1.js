@@ -24,12 +24,18 @@ import Signin from "../../../../views/backend/auth/signin";
 //  Img
 
 import { CopySVG, NotificationSVG, ProfileSVG } from "./headerIcons";
+import ChatWeb from "../../../Chat/ChatWeb/ChatWeb";
+import { useState } from "react";
 
 const HeaderStyle1 = (props) => {
+  var scrnWidth;
   const [signUpModalShow, setSignUpModalShow] = React.useState(false);
   const [loginModalShow, setLoginModalShow] = React.useState(false);
   const [navShow, setNavShow] = React.useState(false);
   const [profileMenu, setProfileMenu] = React.useState(false);
+  const [chatModal, setChatModal] = React.useState(false);
+  const [openModal, setOpenModal] = React.useState(true);
+
   // var profileMenu = false;
   const location = useLocation();
 
@@ -48,16 +54,19 @@ const HeaderStyle1 = (props) => {
       pathName == "/user-profile-section" ||
       pathName == "/lockup" ||
       pathName == "/roulette" ||
-      (localStorage.getItem('pathname') == "/edit-user-profile-section" && pathName == "/chat") || (localStorage.getItem('pathname') == "/user-profile-section" && pathName == "/chat") ||
-      (localStorage.getItem('pathname') == "/lockup" && pathName == "/chat") ||
-      (localStorage.getItem('pathname') == "/roulette" && pathName == "/chat")
+      (localStorage.getItem("pathname") == "/edit-user-profile-section" &&
+        pathName == "/chat") ||
+      (localStorage.getItem("pathname") == "/user-profile-section" &&
+        pathName == "/chat") ||
+      (localStorage.getItem("pathname") == "/lockup" && pathName == "/chat") ||
+      (localStorage.getItem("pathname") == "/roulette" && pathName == "/chat")
     ) {
       setNavShow(false);
     } else {
       setNavShow(true);
     }
     if (pathName != "/chat") {
-      localStorage.setItem('pathname', pathName);
+      localStorage.setItem("pathname", pathName);
     }
   }, [location.pathname]);
   const minisidbar = () => {
@@ -131,6 +140,18 @@ const HeaderStyle1 = (props) => {
     // alert("called");
     setProfileMenu(!profileMenu);
   };
+  const chatClickHandler = () => {
+    setChatModal(!chatModal);
+    // setShow(true);
+  };
+  scrnWidth = JSON.parse(localStorage.getItem("screenWidth"));
+  useEffect(() => {
+    console.log("screenWidthB==>", typeof scrnWidth, scrnWidth);
+    if (scrnWidth < "1024") {
+      console.log("scrnWidth==>", scrnWidth);
+      setOpenModal(false);
+    }
+  }, [scrnWidth]);
 
   return (
     <>
@@ -267,7 +288,7 @@ const HeaderStyle1 = (props) => {
                           }}
                           onClick={profileClickHandler}
                           id="dropdown-basic"
-                        // className="dropdown-navbar"
+                          // className="dropdown-navbar"
                         >
                           <ProfileSVG />
                         </button>
@@ -307,7 +328,11 @@ const HeaderStyle1 = (props) => {
                         // </div>
                       )}
                     </div>
-                    <div className="mr-4 mt-2 hide-data">
+                    <div
+                      style={{ cursor: "pointer" }}
+                      className="mr-4 mt-2 hide-data"
+                      onClick={chatClickHandler}
+                    >
                       <NotificationSVG />
                     </div>
                   </div>
@@ -315,6 +340,12 @@ const HeaderStyle1 = (props) => {
               </div>
             </Navbar>
           )}
+          <div style={{ display: "none" }}>
+            {
+              (console.log("closebefore==>", openModal),
+              chatModal && <ChatWeb show={true} />)
+            }{" "}
+          </div>
         </div>
       </div>
       <SignUpModal
