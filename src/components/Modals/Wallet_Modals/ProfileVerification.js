@@ -126,7 +126,7 @@ export const Form2 = ({ setFormModal, close, prop }) => {
                     </div>
 
                     <div className="text-center">
-                        <p style={{ letterSpacing: 1 }}>Please enter the code below to continue</p>
+                        <p style={{ letterSpacing: 1, color:'white' }}>Please enter the code below to continue</p>
                     </div>
 
 
@@ -228,7 +228,7 @@ export const Form3 = ({ setFormModal2, close, prop }) => {
 
                     </div>
 
-                    <div className="text-center">
+                    <div className="text-center" style={{color:'white'}}>
                         <p>Please follow the link to verify your email address.</p>
                     </div>
                    
@@ -454,12 +454,12 @@ export const Form5 = ({ setFormModal4, close }) => {
                             <span onClick={() => setFormModal4('btnform4')}><BackArrow /></span>
                         </div>
 
-                        <div className="text-center user-verification-5- ">
+                        <div className="text-center user-verification-5-header ">
                             <h3>Scan This Code With Your<br />Authenticatior App</h3>
 
                         </div>
 
-                        <div className=" text-center user-sub-5' mt-4">
+                        <div className=" text-center user-sub-5' mt-4" style={{color:'white'}}>
                             <p>Link your Authenticator app to your Yield Guru account by scanning the code<br /> below. When you’re done, press the next button to continue.</p>
                         </div>
 
@@ -470,7 +470,7 @@ export const Form5 = ({ setFormModal4, close }) => {
 
                         </div>
 
-                        <div className=" mt-1 text-center">
+                        <div className=" mt-1 text-center" style={{color:'white'}}>
                             <span> Or enter this code manually.</span>
                         </div>
 
@@ -536,12 +536,12 @@ export const Form6 = ({ setFormModal5, close }) => {
                     </div>
 
                     <div className="text-center user-verification-5- ">
-                        <h3>Enter Verification Code</h3>
+                        <h3 style={{color:'white'}}>Enter Verification Code</h3>
 
                     </div>
 
                     <div className=" text-center user-sub-5' mt-4">
-                        <p>Enter the verification code from your Authenticator app.</p>
+                        <p style={{color:'white'}}>Enter the verification code from your Authenticator app.</p>
                     </div>
                     <OTPInput value={OTP} onChange={setOTP} autoFocus OTPLength={5} otpType="number" disabled={false} style={{ display: 'flex', justifyContent: 'center' }}
                         inputStyles={{
@@ -593,7 +593,7 @@ export const Form7 = ({ close }) => {
                 </div>
 
                 <div className=" text-center user-sub-5' mt-4">
-                    <p>Your Two-factor authentication is now enabled.</p>
+                    <p style={{color:'white'}}>Your Two-factor authentication is now enabled.</p>
                 </div>
 
 

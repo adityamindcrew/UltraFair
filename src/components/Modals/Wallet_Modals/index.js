@@ -58,8 +58,8 @@ export const form1 = () => {
 
 
             </div>
-            <div className="text-center">
-                <p>Only send BTC to this address, 1 confirmation required</p>
+            <div className="text-center" style={{color:'lightgrey', fontWeight:'bold',fontSize:12}}>
+                <p>Only send BTC to this address, 1 confirmation required.</p>
 
             </div>
 
@@ -131,6 +131,7 @@ export const form2 = (props) => {
                         paddingTop:13,
                         paddingBottom:13,
                         fontFamily:'Montserrat',
+                        fontWeight:'bold'
 
                     }}
 
@@ -213,7 +214,9 @@ export const form3 = () => {
                     variant="btn btn-primary"
                     className="wallet-Button"
                     style={{
-                       color:'black'
+                       color:'black',
+                       fontWeight:'bold'
+                       
 
                     }}
 
@@ -306,6 +309,7 @@ export const form4 = () => {
                             paddingTop:12,
                             paddingBottom:12,
                             fontFamily:'Montserrat',
+                            fontWeight:'bold'
                         }}>
                         Send Tip
                     </Button>
