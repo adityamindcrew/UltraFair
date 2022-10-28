@@ -1865,7 +1865,13 @@ NOTE: This file contains the styling for responsive Template.
 
 /* here is Input css  */
 
-input[type="range"] {
+ .Green input[type="range"] {
+  height: 43px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+.Blue input[type="range"] {
   height: 43px;
   -webkit-appearance: none;
   margin: 10px 0;
@@ -1896,7 +1902,18 @@ input[type="range"]:focus {
 
   border: 1px solid #11ffbd;
 }
-input[type="range"]::-webkit-slider-thumb {
+.Green input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #ffff;
+  border: 1px solid #ffffff;
+  height: 35px;
+  width: 35px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -13.5px;
+}
+.Blue input[type="range"]::-webkit-slider-thumb {
   box-shadow: 1px 1px 1px #ffff;
   border: 1px solid #ffffff;
   height: 35px;
@@ -1920,7 +1937,16 @@ input[type="range"]::-moz-range-track {
   border-radius: 5px;
   border: 1px solid #11ffbd;
 }
-input[type="range"]::-moz-range-thumb {
+.Green input[type="range"]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #ffff;
+  border: 1px solid #ffffff;
+  height: 35px;
+  width: 35px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+}
+.Blue input[type="range"]::-moz-range-thumb {
   box-shadow: 1px 1px 1px #ffff;
   border: 1px solid #ffffff;
   height: 35px;

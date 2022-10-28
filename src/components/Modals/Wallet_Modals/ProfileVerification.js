@@ -455,7 +455,7 @@ export const Form5 = ({ setFormModal4, close }) => {
                         </div>
 
                         <div className="text-center user-verification-5-header ">
-                            <h3>Scan This Code With Your<br />Authenticatior App</h3>
+                            <h3>Scan This Code With Your<br />Authenticator App</h3>
 
                         </div>
 

@@ -7541,7 +7541,13 @@ select {
       background-color: #11ffbd;
       border: none;
     }
+    .wallet-paragraph{
+      font-family: "Montserrat";
+      font-size: 8px;
+      color:whitesmoke;
+    }
   }
+
 
   @media screen and (min-width: 0px) and (max-width: 500px) {
     .UltrafairLogo {
@@ -7616,4 +7622,9 @@ select {
   padding-bottom: 2px;
   -webkit-margin-start: 5px;
   margin-inline-start: 5px;
+}
+.content-page {
+
+  background: rgb(30,44,55);
+background: linear-gradient(0deg, rgba(30,44,55,1) 15%, rgba(31,73,73,1) 76%);
 }
