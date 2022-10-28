@@ -6055,6 +6055,9 @@ h6 span {
   position: relative;
   left: -15px;
   font-size: 13px;
+  color: lightgrey;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .modal-content {
@@ -6220,6 +6223,7 @@ h6 span {
 .wallet-paragraph {
   font-family: "Montserrat";
   font-size: 11px;
+  color:whitesmoke;
 }
 
 .wallet-Button {
@@ -6356,6 +6360,7 @@ h6 span {
 } */
 .checkbox-text {
   font-family: "Montserrat";
+  color: white;
 }
 
 .check-box-icon {
@@ -6459,6 +6464,9 @@ h6 span {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+.currency-text{
+  color:white;
+}
 
 @media screen and (min-width: 0px) and (max-width: 760px) {
   .currency-text {
@@ -6527,6 +6535,10 @@ h6 span {
 .user-verification h3 {
   font-family: "Montserrat";
   margin-bottom: 15px;
+  color: white;
+}
+.user-verification-5-header h3{
+  color: white;
 }
 
 .user-verification-5 {
@@ -6566,6 +6578,7 @@ h6 span {
 .user-verification p {
   font-family: "Montserrat";
   margin-bottom: 25px;
+  color: white;
 }
 
 .re-back {
@@ -6593,11 +6606,13 @@ h6 span {
 .form-upload-status {
   position: relative;
   top: 8px;
+  color:white;
 }
 .form-upload-status-2 {
   position: fixed;
   right: 31px;
   margin-top: 9px;
+  color: white;
 }
 .timer-button {
   position: relative;
@@ -6701,6 +6716,7 @@ h6 span {
 .email-text {
   position: relative;
   top: -30px;
+  color:white;
 }
 
 .fileupload-user {
@@ -6711,6 +6727,7 @@ h6 span {
   font-family: "Montserrat";
   font-weight: "bold";
   font-size: 25px;
+  color: white;
 }
 
 
@@ -6786,6 +6803,7 @@ h6 span {
     position: relative;
     right: 46px;
     bottom: 10px;
+    color: white;
   }
 
   .upload-selfie {
@@ -6938,6 +6956,7 @@ input[type="file"] {
     position: relative;
     right:46px;
     bottom: 10px; 
+    color: white;
   }
   .upload-selfie{
     position: relative;

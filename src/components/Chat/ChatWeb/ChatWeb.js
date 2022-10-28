@@ -5,7 +5,7 @@ import Flag from "../../../assets/images/Ultrafair/flag.png";
 import Crossicon from "../../../assets/images/Ultrafair/cross-icon.svg";
 import "./ChatWeb.css";
 
-import { Modal } from "antd";
+ import { Modal } from "antd";
 
 const ChatWeb = (props) => {
   const [show, setShow] = useState(props.show);
