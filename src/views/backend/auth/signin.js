@@ -30,26 +30,25 @@ const SignIn = (props) => {
 
   useEffect(() => {
     const rtlMode = sessionStorage.getItem("rtl-mode");
-   
+
     if (rtlMode === null) {
       props.rtlModeAction(props.rtlMode);
     } else {
       props.rtlModeAction(rtlMode);
-     
     }
   });
 
   let history = useHistory();
 
-  const[btncolor, setBtncolor] = useState('loginButton')
+  const [btncolor, setBtncolor] = useState("loginButton");
 
   const registerHandler = (color) => {
     props.showModal(true);
-    setBtncolor(color)
+    setBtncolor(color);
   };
   const loginHandler = (color) => {
     props.showModal(false);
-    setBtncolor(color)
+    setBtncolor(color);
   };
   const toggleButton = () => {
     setShow((prevState) => !prevState);
@@ -115,13 +114,15 @@ const SignIn = (props) => {
             type="button"
             class="close"
             aria-label="Close"
-            style={{ color: "white", position:'relative', top:-15, left:3 }}
+            style={{ color: "white", position: "relative", top: -15, left: 3 }}
             onClick={() => {
               console.log("Hellow!");
               props.close(false);
             }}
           >
-            <span aria-hidden="true" style={{fontSize:33, fontWeight:1}}>&times;</span>
+            <span aria-hidden="true" style={{ fontSize: 33, fontWeight: 1 }}>
+              &times;
+            </span>
           </button>
           <div className="sign-in-page-data">
             <div className="sign-in-from w-100 m-auto">
@@ -136,8 +137,10 @@ const SignIn = (props) => {
                   <div class="btn-group registerToggleOuter">
                     <button
                       type="button"
-                      class="btn btn-secondary registerToggle" 
-                      onClick={()=>{registerHandler('registerButton')}}
+                      class="btn btn-secondary registerToggle"
+                      onClick={() => {
+                        registerHandler("registerButton");
+                      }}
                       //style={{borderColor: btncolor=='registerButton'?'#344452':'rgba 0.07, 0.13, 0.18, 1.0' }}
                     >
                       Register
@@ -145,9 +148,10 @@ const SignIn = (props) => {
                     <button
                       type="button"
                       class="btn btn-secondary registerToggle selected text-center"
-                      onClick={() => {loginHandler('loginButton')}}
+                      onClick={() => {
+                        loginHandler("loginButton");
+                      }}
                       // style={{backgroundColor: btncolor=='loginButton'?'#344452':'rgba 0.07, 0.13, 0.18, 1.0'}}
-
                     >
                       Sign In
                     </button>
@@ -166,7 +170,7 @@ const SignIn = (props) => {
                     placeholder=""
                     autoComplete="off"
                     required
-                    style={{ width: '100%' }}
+                    style={{ width: "100%" }}
                   />
                 </Form.Group>
                 <Form.Group>
@@ -182,7 +186,7 @@ const SignIn = (props) => {
                       id="exampleInputPassword2"
                       placeholder=""
                       required
-                      style={{ width: '100%' }}
+                      style={{ width: "100%" }}
                     />
                     <button
                       type="button"
@@ -198,8 +202,7 @@ const SignIn = (props) => {
                   <ReCAPTCHA
                     sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                     onChange={onChange}
-                    style={{ display:'flex', justifyContent:'center'}}
-                   
+                    style={{ display: "flex", justifyContent: "center" }}
                   />
                 </div>
 
@@ -211,7 +214,6 @@ const SignIn = (props) => {
                     variant="btn btn-primary"
                     style={{
                       color: "black",
-                      
                     }}
                     className="btn1"
                   >
@@ -277,9 +279,9 @@ const SignIn = (props) => {
             >
               Forgot Password
             </p>
-            <p className="privacyPolicy">
-              This site is protected by reCaptcha and the reCaptcha Privacy Policy
-              and Terms of Service apply.
+            <p className="privacyPolicy" style={{ color: "#B3BAD1" }}>
+              This site is protected by reCaptcha and the reCaptcha Privacy
+              Policy and Terms of Service apply.
             </p>
           </div>
         </div>
