@@ -4,13 +4,6 @@ import { Link, useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
-import { rtlModeAction, getRtlMode } from "../../../store/mode/rtlmode";
-import Google from "../../../assets/images/social/google.png";
-import FB from "../../../assets/images/social/facebook.png";
-import Line from "../../../assets/images/social/line.png";
-import Chat from "../../../assets/images/social/chat.png";
-import ReCAPTCHA from "react-google-recaptcha";
-
 import { BitCoinSVG, QRSVG, DownArrow, BitcoinsSVG2, EtheremcoinsSVG2, UsdcoinSVG2, TetherSVG2, DailogoSVG2, CurvedaotokenSVG2, BackArrow, Success } from "../../../views/backend/main/dashboardIcons";
 
 import OTPInput, { ResendOTP } from "otp-input-react";
@@ -133,7 +126,7 @@ export const Form2 = ({ setFormModal, close, prop }) => {
                     </div>
 
                     <div className="text-center">
-                        <p style={{ letterSpacing: 1 }}>Please enter the code below to continue</p>
+                        <p style={{ letterSpacing: 1, color:'white' }}>Please enter the code below to continue</p>
                     </div>
 
 
@@ -148,32 +141,6 @@ export const Form2 = ({ setFormModal, close, prop }) => {
                             borderRadius: 5,
                             color: 'white'
                         }} />
-
-
-                    {/* <div className="mt-3">
-
-                        <Row className="">
-                            <Col xs={6} md={6} className="text-center">
-                                <Button
-                                    type="button"
-                                    variant="btn btn-primary"
-                                    style={{
-                                        color: "black",
-                                        fontWeight: 'bold',
-                                        width:'100%'
-
-                                    }}
-                                    onClick={() => setFormModal2('btnform3')}
-
-                                >
-                                    Resend
-                                </Button>
-                            </Col>
-                            <Col xs={6} md={6} className="col-box">
-                                <span className="timer">02:35</span>
-                            </Col>
-                        </Row>
-                    </div> */}
 
                     <Timer setFormModal2={userBtn2} />
 
@@ -261,54 +228,13 @@ export const Form3 = ({ setFormModal2, close, prop }) => {
 
                     </div>
 
-                    <div className="text-center">
+                    <div className="text-center" style={{color:'white'}}>
                         <p>Please follow the link to verify your email address.</p>
                     </div>
-                    {/* <div className="mt-3">
-                        <Row className="">
-                            <Col xs={6} md={6} className="">
-                                <Button
-                                    type="button"
-                                    variant="btn btn-primary"
-                                    style={{
-                                        color: "black",
-                                        width: '100%',
-                                        float: 'right'
-
-                                    }}
-                                    onClick={() => setFormModal3('btnform4')}
-
-                                >
-                                    Resend
-                                </Button>
-                            </Col>
-                            <Col xs={6} md={6} className="col-box">
-                                <span className="time">02:35</span>
-                            </Col>
-                        </Row>
-                    </div> */}
+                   
 
                     <div className="App mt-3 container text-center timer-layout">
-                        {/* <Row className="mt-3">
-                            <Col xs={6} md={6} className="">
-                                <button type="button"
-                                    className='timer-button-2 '
-                                    style={{
-                                        color: "black",
-                                        fontWeight: 'bold',
-                                        // fontSize:'77%',
-                                       
-
-                                    }}
-                                    onClick={userBtn3}>Resend</button>
-                            </Col>
-                            <Col xs={6} md={6} className="col-box">
-                                <span className="timer">{timer}</span>
-                            </Col>
-
-
-                        </Row> */}
-
+                     
                         <div>
                             <button type="button"
                                 className='timer-button-2 '
@@ -528,12 +454,12 @@ export const Form5 = ({ setFormModal4, close }) => {
                             <span onClick={() => setFormModal4('btnform4')}><BackArrow /></span>
                         </div>
 
-                        <div className="text-center user-verification-5- ">
+                        <div className="text-center user-verification-5-header ">
                             <h3>Scan This Code With Your<br />Authenticatior App</h3>
 
                         </div>
 
-                        <div className=" text-center user-sub-5' mt-4">
+                        <div className=" text-center user-sub-5' mt-4" style={{color:'white'}}>
                             <p>Link your Authenticator app to your Yield Guru account by scanning the code<br /> below. When you’re done, press the next button to continue.</p>
                         </div>
 
@@ -544,7 +470,7 @@ export const Form5 = ({ setFormModal4, close }) => {
 
                         </div>
 
-                        <div className=" mt-1 text-center">
+                        <div className=" mt-1 text-center" style={{color:'white'}}>
                             <span> Or enter this code manually.</span>
                         </div>
 
@@ -565,17 +491,10 @@ export const Form5 = ({ setFormModal4, close }) => {
 
                                 }}
                                 onClick={() => setFormModal5('btnform6')}
-
-
                             >
                                 Next
                             </Button>
                         </div>
-
-
-
-
-
                     </div>
                     <div>
                         <Button
@@ -603,8 +522,6 @@ export const Form5 = ({ setFormModal4, close }) => {
         </>
     )
 }
-
-
 export const Form6 = ({ setFormModal5, close }) => {
 
     const [formModal6, setFormModal6] = useState()
@@ -619,12 +536,12 @@ export const Form6 = ({ setFormModal5, close }) => {
                     </div>
 
                     <div className="text-center user-verification-5- ">
-                        <h3>Enter Verification Code</h3>
+                        <h3 style={{color:'white'}}>Enter Verification Code</h3>
 
                     </div>
 
                     <div className=" text-center user-sub-5' mt-4">
-                        <p>Enter the verification code from your Authenticator app.</p>
+                        <p style={{color:'white'}}>Enter the verification code from your Authenticator app.</p>
                     </div>
                     <OTPInput value={OTP} onChange={setOTP} autoFocus OTPLength={5} otpType="number" disabled={false} style={{ display: 'flex', justifyContent: 'center' }}
                         inputStyles={{
@@ -676,7 +593,7 @@ export const Form7 = ({ close }) => {
                 </div>
 
                 <div className=" text-center user-sub-5' mt-4">
-                    <p>Your Two-factor authentication is now enabled.</p>
+                    <p style={{color:'white'}}>Your Two-factor authentication is now enabled.</p>
                 </div>
 
 
