@@ -1925,7 +1925,7 @@ input[type="range"]:focus {
   margin-top: -13.5px;
 }
 input[type="range"]:focus::-webkit-slider-runnable-track {
-  /* background: #053a5f; */
+  background: #053a5f;
 }
 input[type="range"]::-moz-range-track {
   width: 100%;

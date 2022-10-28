@@ -2,17 +2,23 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 import { WhiteiconSVG, YellowiconSVG, SaveiconSVG } from "../chatIcon";
 import Flag from "../../../assets/images/Ultrafair/flag.png";
+import IndianFlag from "../../../assets/images/Ultrafair/Indian_Flag.png";
 import Crossicon from "../../../assets/images/Ultrafair/cross-icon.svg";
 import "./ChatWeb.css";
 
- import { Modal } from "antd";
+import { Modal } from "antd";
 
 const ChatWeb = (props) => {
+  const [lng, setLng] = useState(false);
   const [show, setShow] = useState(props.show);
   const [width, setWidth] = useState(window.screen.width);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const lngChangeHandler = () => {
+    setLng(!lng);
+  };
 
   return (
     <>
@@ -20,22 +26,32 @@ const ChatWeb = (props) => {
         title={[
           <div className="chat-Web-topbar">
             <div>
-              <div className="d-flex justify-content-between">
+              <div
+                className="d-flex justify-content-between"
+                style={{ alignItems: "center", paddingTop: "10px" }}
+              >
                 <div>
                   <span
                     style={{ marginBlockStart: "5px !important" }}
                     className="m-1"
                   >
-                    <img src={Flag} height="30px" width="30px" />
+                    {lng ? (
+                      <img src={IndianFlag} height="30px" width="30px" />
+                    ) : (
+                      <img src={Flag} height="30px" width="30px" />
+                    )}
                   </span>
                   <select
-                    className="form-control-dropdown-topbar"
+                    className="form-control-dropdown-topbar-web"
                     id="exampleFormControlSelect2"
+                    onChange={lngChangeHandler}
                   >
                     <option style={{ fontSize: "12px !important" }}>
                       English
                     </option>
-                    <option>Hindi</option>
+                    <option style={{ fontSize: "12px !important" }}>
+                      Hindi
+                    </option>
                   </select>
                 </div>
                 <div></div>
@@ -236,25 +252,265 @@ const ChatWeb = (props) => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing.
                   </div>
                 </div>
+                <div className="userchat-web-innertext mt-4">
+                  <div className="d-flex justify-content-between">
+                    <div className="chat-inner-web-left-text d-flex">
+                      <span style={{ margin: "0px 5px 10px 0px" }}>
+                        <WhiteiconSVG />
+                      </span>
+                      user_name003
+                    </div>
+                    <div className="chat-inner-web-right-text d-flex">
+                      10:30 am
+                    </div>
+                  </div>
+                  <div className="chat-massage-inner-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  </div>
+                </div>
+                <div className="userchat-web-innertext mt-4">
+                  <div className="d-flex justify-content-between">
+                    <div className="chat-inner-web-left-text d-flex">
+                      <span style={{ margin: "0px 5px 10px 0px" }}>
+                        <YellowiconSVG />
+                      </span>
+                      user_name003
+                    </div>
+                    <div className="chat-inner-web-right-text d-flex">
+                      10:30 am
+                    </div>
+                  </div>
+                  <div className="chat-massage-web-inner-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  </div>
+                </div>
+                <div className="userchat-web-innertext mt-4">
+                  <div className="d-flex justify-content-between">
+                    <div className="chat-inner-web-left-text d-flex">
+                      <span style={{ margin: "0px 5px 10px 0px" }}>
+                        <WhiteiconSVG />
+                      </span>
+                      user_name003
+                    </div>
+                    <div className="chat-inner-web-right-text d-flex">
+                      10:30 am
+                    </div>
+                  </div>
+                  <div className="chat-massage-inner-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  </div>
+                </div>
+                <div className="userchat-web-innertext mt-4">
+                  <div className="d-flex justify-content-between">
+                    <div className="chat-inner-web-left-text d-flex">
+                      <span style={{ margin: "0px 5px 10px 0px" }}>
+                        <YellowiconSVG />
+                      </span>
+                      user_name003
+                    </div>
+                    <div className="chat-inner-web-right-text d-flex">
+                      10:30 am
+                    </div>
+                  </div>
+                  <div className="chat-massage-web-inner-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  </div>
+                </div>
+                <div className="userchat-web-innertext mt-4">
+                  <div className="d-flex justify-content-between">
+                    <div className="chat-inner-web-left-text d-flex">
+                      <span style={{ margin: "0px 5px 10px 0px" }}>
+                        <WhiteiconSVG />
+                      </span>
+                      user_name003
+                    </div>
+                    <div className="chat-inner-web-right-text d-flex">
+                      10:30 am
+                    </div>
+                  </div>
+                  <div className="chat-massage-inner-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  </div>
+                </div>
+                <div className="userchat-web-innertext mt-4">
+                  <div className="d-flex justify-content-between">
+                    <div className="chat-inner-web-left-text d-flex">
+                      <span style={{ margin: "0px 5px 10px 0px" }}>
+                        <YellowiconSVG />
+                      </span>
+                      user_name003
+                    </div>
+                    <div className="chat-inner-web-right-text d-flex">
+                      10:30 am
+                    </div>
+                  </div>
+                  <div className="chat-massage-web-inner-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  </div>
+                </div>
+                <div className="userchat-web-innertext mt-4">
+                  <div className="d-flex justify-content-between">
+                    <div className="chat-inner-web-left-text d-flex">
+                      <span style={{ margin: "0px 5px 10px 0px" }}>
+                        <WhiteiconSVG />
+                      </span>
+                      user_name003
+                    </div>
+                    <div className="chat-inner-web-right-text d-flex">
+                      10:30 am
+                    </div>
+                  </div>
+                  <div className="chat-massage-inner-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  </div>
+                </div>
+                <div className="userchat-web-innertext mt-4">
+                  <div className="d-flex justify-content-between">
+                    <div className="chat-inner-web-left-text d-flex">
+                      <span style={{ margin: "0px 5px 10px 0px" }}>
+                        <YellowiconSVG />
+                      </span>
+                      user_name003
+                    </div>
+                    <div className="chat-inner-web-right-text d-flex">
+                      10:30 am
+                    </div>
+                  </div>
+                  <div className="chat-massage-web-inner-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  </div>
+                </div>
+                <div className="userchat-web-innertext mt-4">
+                  <div className="d-flex justify-content-between">
+                    <div className="chat-inner-web-left-text d-flex">
+                      <span style={{ margin: "0px 5px 10px 0px" }}>
+                        <WhiteiconSVG />
+                      </span>
+                      user_name003
+                    </div>
+                    <div className="chat-inner-web-right-text d-flex">
+                      10:30 am
+                    </div>
+                  </div>
+                  <div className="chat-massage-inner-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  </div>
+                </div>
+                <div className="userchat-web-innertext mt-4">
+                  <div className="d-flex justify-content-between">
+                    <div className="chat-inner-web-left-text d-flex">
+                      <span style={{ margin: "0px 5px 10px 0px" }}>
+                        <YellowiconSVG />
+                      </span>
+                      user_name003
+                    </div>
+                    <div className="chat-inner-web-right-text d-flex">
+                      10:30 am
+                    </div>
+                  </div>
+                  <div className="chat-massage-web-inner-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  </div>
+                </div>
+                <div className="userchat-web-innertext mt-4">
+                  <div className="d-flex justify-content-between">
+                    <div className="chat-inner-web-left-text d-flex">
+                      <span style={{ margin: "0px 5px 10px 0px" }}>
+                        <WhiteiconSVG />
+                      </span>
+                      user_name003
+                    </div>
+                    <div className="chat-inner-web-right-text d-flex">
+                      10:30 am
+                    </div>
+                  </div>
+                  <div className="chat-massage-inner-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  </div>
+                </div>
+                <div className="userchat-web-innertext mt-4">
+                  <div className="d-flex justify-content-between">
+                    <div className="chat-inner-web-left-text d-flex">
+                      <span style={{ margin: "0px 5px 10px 0px" }}>
+                        <YellowiconSVG />
+                      </span>
+                      user_name003
+                    </div>
+                    <div className="chat-inner-web-right-text d-flex">
+                      10:30 am
+                    </div>
+                  </div>
+                  <div className="chat-massage-web-inner-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  </div>
+                </div>
+                <div className="userchat-web-innertext mt-4">
+                  <div className="d-flex justify-content-between">
+                    <div className="chat-inner-web-left-text d-flex">
+                      <span style={{ margin: "0px 5px 10px 0px" }}>
+                        <WhiteiconSVG />
+                      </span>
+                      user_name003
+                    </div>
+                    <div className="chat-inner-web-right-text d-flex">
+                      10:30 am
+                    </div>
+                  </div>
+                  <div className="chat-massage-inner-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  </div>
+                </div>
+                <div className="userchat-web-innertext mt-4">
+                  <div className="d-flex justify-content-between">
+                    <div className="chat-inner-web-left-text d-flex">
+                      <span style={{ margin: "0px 5px 10px 0px" }}>
+                        <YellowiconSVG />
+                      </span>
+                      user_name003
+                    </div>
+                    <div className="chat-inner-web-right-text d-flex">
+                      10:30 am
+                    </div>
+                  </div>
+                  <div className="chat-massage-web-inner-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  </div>
+                </div>
+                <div className="userchat-web-innertext mt-4">
+                  <div className="d-flex justify-content-between">
+                    <div className="chat-inner-web-left-text d-flex">
+                      <span style={{ margin: "0px 5px 10px 0px" }}>
+                        <WhiteiconSVG />
+                      </span>
+                      user_name003
+                    </div>
+                    <div className="chat-inner-web-right-text d-flex">
+                      10:30 am
+                    </div>
+                  </div>
+                  <div className="chat-massage-inner-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  </div>
+                </div>
+                <div className="userchat-web-innertext mt-4">
+                  <div className="d-flex justify-content-between">
+                    <div className="chat-inner-web-left-text d-flex">
+                      <span style={{ margin: "0px 5px 10px 0px" }}>
+                        <YellowiconSVG />
+                      </span>
+                      user_name003
+                    </div>
+                    <div className="chat-inner-web-right-text d-flex">
+                      10:30 am
+                    </div>
+                  </div>
+                  <div className="chat-massage-web-inner-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  </div>
+                </div>
               </div>
             </div>
           </div>{" "}
-          {/* <div>
-            <div classname="d-flex" style={{ display: "flex" }}>
-              <div className="">
-                <input
-                  type="text"
-                  className="text search-input chat-seachbar"
-                  placeholder="Type message here..."
-                />
-              </div>
-              <div className="">
-                <button type="button" class="btn-sm save-button">
-                  <SaveiconSVG />
-                </button>
-              </div>
-            </div>
-          </div> */}
         </div>
       </Modal>
     </>
