@@ -1251,6 +1251,15 @@ NOTE: This file contains the styling for responsive Template.
     z-index: 98 !important;
   }
   .LOGOO {
+    width: auto;
+    height: auto;
+    /* display: none; */
+  }
+  .FilterBtn {
+    /* width: 35% !important; */
+    display: none !important;
+  }
+  .LOGOO {
     width: 7vw;
     height: 14vw;
     display: none;
@@ -1273,6 +1282,184 @@ NOTE: This file contains the styling for responsive Template.
   .Cardcontain {
     margin-top: 20% !important;
   }
+}
+
+@media screen and (min-width: 600px) and (max-width: 830px) {
+  .headertop {
+    margin-top: 12.2% !important;
+    height: 5% !important;
+    z-index: 98 !important;
+  }
+  .LOGOO {
+    width: auto;
+    height: auto;
+    /* display: none !important; */
+  }
+}
+@media screen and (min-width: 829px) and (max-width: 913px) {
+  .headertop {
+    margin-top: 11.5% !important;
+    height: 5% !important;
+    z-index: 98 !important;
+  }
+}
+@media screen and (min-width: 512px) and (max-width: 540px) {
+  .headertop {
+    margin-top: 18.4% !important;
+    height: 5% !important;
+    z-index: 98 !important;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  .Cardresponsive {
+    display: flex !important;
+  }
+  .Responsivrbtn {
+    padding: 23px 30px !important;
+  }
+  .Flexcenter {
+    justify-content: center;
+  }
+  .Flexcenter {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1020px) and (max-width: 1030px) {
+  .headertop {
+    margin-top: 8.8% !important;
+    /* height: 5% !important; */
+    z-index: 98 !important;
+  }
+}
+
+.CARDTITLE {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0px;
+}
+
+.CENTERIT {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Bckg {
+  background-color: #344452;
+  padding: 10px;
+}
+.smallfont {
+  color: #b3bad1;
+  font-size: 11px;
+  font-weight: 400;
+}
+.largefont {
+  color: white;
+  font-size: 29px;
+  font-weight: 600;
+}
+.DoCol {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  padding: 10px;
+}
+.progfont {
+  font: 21px;
+  color: white;
+  font-weight: 500;
+}
+.Colmn {
+  display: flex;
+  flex-direction: column;
+}
+.w100 {
+  font-weight: 100;
+}
+.wbold {
+  font-weight: bolder;
+}
+.whit {
+  color: white;
+}
+.JUSTFLY {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  align-content: center;
+  align-items: center;
+  /* padding: 5px; */
+}
+.MR0a10 {
+  margin: 0;
+  margin-top: 20px;
+}
+.GRN {
+  color: #11ffbd;
+}
+.GREY {
+  color: #b3bad1;
+  font-size: 12px;
+}
+.INPUt {
+  background-color: #13212d;
+  border: 1px solid #13212d;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.CARDBTN {
+  background-color: #11ffbd;
+  border: 1px solid #11ffbd;
+  width: 100%;
+  color: #13212d;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.smallline {
+  font-size: 7px;
+}
+.CENTERTHAT {
+  position: absolute;
+  /* top: 50%;
+    left: 46%; */
+  background-color: #344452;
+  padding: 20px;
+  border-radius: 10px;
+}
+.Fontpopup {
+  font-size: 15px;
+  color: white;
+}
+.Flex1 {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  align-items: center;
+}
+
+.POPUPBTN {
+  background-color: #11ffbd;
+  padding: 10px 20px;
+  border: 1px solid #11ffbd;
+  margin: 10px;
+  width: fit-content;
+  border-radius: 10px;
+  align-self: center;
+  color: #13212d;
+  font-size: 14px;
+  font-weight: 600;
+}
+.Cardcontain {
+  margin-top: 20% !important;
 }
 
 @media screen and (min-width: 600px) and (max-width: 830px) {
@@ -1653,26 +1840,11 @@ NOTE: This file contains the styling for responsive Template.
 .EXPD {
   padding: 5px;
 }
-@media screen and (min-width: 1770px) and (max-width: 3080px) {
+@media screen and (min-width: 1770px) and (max-width: 4000px) {
   .MainContainer {
     margin-top: 10%;
   }
 }
-
-.Fire {
-  -webkit-appearance: none;
-  appearance: none;
-  background: white;
-  cursor: pointer;
-  width: 100%;
-}
-/* .Fire::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  background: red !important;
-  cursor: pointer;
-  width: 100%;
-} */
 
 @media not all and (min-resolution: 0.001dpcm) {
   .UltrafairLogo {
@@ -1689,4 +1861,112 @@ NOTE: This file contains the styling for responsive Template.
     background: #053a5f;
     height: 0.5rem;
   }
+}
+
+/* here is Input css  */
+
+input[type="range"] {
+  height: 43px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+.Blue input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #b4e1ff;
+  background: #b4e1ff;
+  border-radius: 5px;
+
+  border: 1px solid #b4e1ff;
+}
+.Green input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #11ffbd;
+  background: #11ffbd;
+  border-radius: 5px;
+
+  border: 1px solid #11ffbd;
+}
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #ffff;
+  border: 1px solid #ffffff;
+  height: 35px;
+  width: 35px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -13.5px;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  /* background: #053a5f; */
+}
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #11ffbd;
+  background: #11ffbd;
+  border-radius: 5px;
+  border: 1px solid #11ffbd;
+}
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #ffff;
+  border: 1px solid #ffffff;
+  height: 35px;
+  width: 35px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+  background: #11ffbd;
+  border: 1px solid #11ffbd;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #11ffbd;
+}
+input[type="range"]::-ms-fill-upper {
+  background: #11ffbd;
+  border: 1px solid #11ffbd;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #11ffbd;
+}
+input[type="range"]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 1px 1px 1px #ffff;
+  border: 1px solid #ffffff;
+  height: 35px;
+  width: 35px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type="range"]:focus::-ms-fill-lower {
+  background: #11ffbd;
+}
+input[type="range"]:focus::-ms-fill-upper {
+  background: #11ffbd;
+}
+
+.Fire {
+  background-color: transparent;
 }

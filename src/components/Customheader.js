@@ -10,7 +10,13 @@ const Customheader = ({ title, SVG, wid, Img, Headercls, mt, TaD }) => {
     <Row>
       <div
         className="iq-top-navbar headertop"
-        style={{ marginTop: "5.5%", background: "#1E2C37" }}
+        style={{
+          marginTop: "5.5%",
+          background: "#1E2C37",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
       >
         <div
           className="iq-navbar-custom"
@@ -18,10 +24,10 @@ const Customheader = ({ title, SVG, wid, Img, Headercls, mt, TaD }) => {
             display: "flex",
             flexDirection: "row-reverse",
             justifyContent: "space-between",
-            marginTop: TaD ? "21px" : "7.5px",
+            width: "100%",
           }}
         >
-          <div>
+          <div style={{alignSelf:'center'}}>
             <img src={Img} className="LOGOO" style={{ width: "13vw" }} />
           </div>
           <div
@@ -39,7 +45,7 @@ const Customheader = ({ title, SVG, wid, Img, Headercls, mt, TaD }) => {
              */}
             <span style={{ marginRight: "10px" }}>{SVG} </span>
             {/* <span style={{color:"#1E2C37"}} className="Freespace" >sdfs</span> */}
-            <h3>{title}</h3>
+            <span className="CustomHeaderTitle">{title}</span>
           </div>
         </div>
       </div>

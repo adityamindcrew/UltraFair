@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 import { WhiteiconSVG, YellowiconSVG, SaveiconSVG } from "../chatIcon";
 import Flag from "../../../assets/images/Ultrafair/flag.png";
-// import { Modal } from "react-bootstrap";
 import Crossicon from "../../../assets/images/Ultrafair/cross-icon.svg";
 import "./ChatWeb.css";
 

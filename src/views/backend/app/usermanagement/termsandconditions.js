@@ -15,7 +15,7 @@ const TermsAndConditions = () => {
             return (
               <div key={e} className="MRG-30">
                 <div className="Textcontainer">
-                  <span className="Header">Heading/title</span>
+                  <span className="Header">HEADING/TITTLE</span>
                   <span className="NormalTEXTa MRG-30">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna

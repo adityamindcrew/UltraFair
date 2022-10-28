@@ -1,5 +1,5 @@
-// import React,{useEffect} from 'react';
 import React, { useEffect } from "react";
+
 // Partials
 import HeaderStyle1 from "../../components/partials/backend/headerstyle/headerstyle1";
 import SidebarStyle from "../../components/partials/backend/sidebarstyle/sidebarstyle";

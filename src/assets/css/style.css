@@ -6201,12 +6201,12 @@ h6 span {
   padding-top: 12px;
 
   text-align: center;
-  /* margin: 2.5px; */
+  margin: 2.5px;
   /* margin-left: 15px !important; */
   transition: none !important;
   translate: none !important;
   padding-right: 18px;
-  padding-left: 0px;
+  padding-left: 2px;
 }
 .wallet-paragraph {
   font-family: "Montserrat";
@@ -6734,8 +6734,13 @@ h6 span {
 }
 /* -----------------------------MODAL USER VERIFICATION/ Aditya ------- */
 
-.img-fluid1 {
+/* .img-fluid1 {
   max-width: 100%;
+  height: auto;
+  width: auto !important;
+} */
+.img-fluid-one {
+  max-width: none;
   height: auto;
   width: auto !important;
 }
@@ -7260,15 +7265,12 @@ select {
       background-color: #11ffbd;
       border: none;
     }
+  }
 
-    /* .form-control {
-  background-color: #0d1d29!important;
-  color: #fff!important;
-  width: 84%;
-  border-radius: 6px;
-  padding-bottom: 5px;
-  width: 100%;
-  } */
+  @media screen and (min-width: 0px) and (max-width: 500px) {
+    .UltrafairLogo {
+      width: auto !important;
+    }
   }
 }
 
@@ -7311,7 +7313,6 @@ select {
     margin-top: 30%;
   }
 }
-
 .container-checkbox-new {
   display: inline-block;
   position: relative;
@@ -7323,9 +7324,19 @@ select {
   user-select: none;
   align-items: flex-start;
 }
-/* .lockup-slider{
-  background:linear-gradient(to right,red,green)
+
+.form-control-dropdown-side-bar {
+  background-color: #191919 !important;
+  border: none !important;
+  /* background: #191919 !important; */
+  height: 46px;
+  position: relative;
+  color: white;
+  /* background: ##191919; */
+  font-size: 14px;
+  outline: none;
+  border-radius: 6px;
+  padding-bottom: 2px;
+  -webkit-margin-start: 5px;
+  margin-inline-start: 5px;
 }
-.lockup-slider::-webkit-slider-thumb{
-  background-color: red !important
-} */
