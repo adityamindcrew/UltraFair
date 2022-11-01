@@ -211,6 +211,7 @@ const SignIn = (props) => {
                     variant="btn btn-primary"
                     style={{
                       color: "black",
+                      fontWeight:'bold'
                       
                     }}
                     className="btn1"

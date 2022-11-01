@@ -308,6 +308,7 @@ const SignUp = (props) => {
                   className="btn1"
                   style={{
                     color: "black",
+                    fontWeight:'bold'
                     
                   }}
                 >
@@ -319,7 +320,7 @@ const SignUp = (props) => {
          
           <br />
           <h6>
-            <span> OR </span>
+            <span style={{color:'white'}}> OR </span>
           </h6>
           <div className="cardSocialOut">
             <Card className="cardSocialIn">
