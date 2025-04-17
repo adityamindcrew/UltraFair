@@ -65,8 +65,9 @@ const ConfirmMail = (props) => {
                      <li className="dir-btn" data-mode="rtl" data-active="true" onClick={() => {props.rtlModeAction('rtl')}}  data-value="rtl"><Link to="#">RTL</Link></li>
                   </ul>
                </div>
-               <h3>Enter your name</h3>
-      <input value={name} onChange={(e) => setName(e.target.value)} />
+               <div onClick={handleClick} style={{ fontSize: 20, margin: 10 }}>
+      Click here to update count: {count}
+    </div>
             </div>
             <section className="sign-in-page">
                <Container className="h-100">
