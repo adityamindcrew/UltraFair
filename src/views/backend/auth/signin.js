@@ -174,7 +174,6 @@ const SignIn = (props) => {
                   />
                 </Form.Group>
                 <Form.Group>
-                  <Form.Label>Password</Form.Label>
                   <Form.Label style={{ color: "red", marginLeft: "5px" }}>
                     {" "}
                     *
