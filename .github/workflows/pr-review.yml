@@ -27,21 +27,26 @@ jobs:
 
       - name: Analyze Code with ChatGPT
         run: |
-          echo "## 🧠 ChatGPT Review Summary" >> pr_review.md
+          echo "## 🧠 ChatGPT Review Summary" > pr_review.md
           echo "\`\`\`" >> pr_review.md
+
           git fetch origin master
           git diff origin/master...HEAD -- . "src/**/*.js" "src/**/*.jsx" "src/**/*.ts" "src/**/*.tsx" > diff.txt
 
-          curl https://api.openai.com/v1/chat/completions \
+          DIFF_CONTENT=$(cat diff.txt | head -c 12000 | jq -Rs .)
+
+          RESPONSE=$(curl -s https://api.openai.com/v1/chat/completions \
             -H "Authorization: Bearer ${{ secrets.OPENAI_API_KEY }}" \
             -H "Content-Type: application/json" \
             -d '{
               "model": "gpt-4",
               "messages": [
                 {"role": "system", "content": "You are a senior React developer reviewing a pull request."},
-                {"role": "user", "content": "Here is the code diff:\n'"$(< diff.txt)"'\nPlease review and give suggestions."}
+                {"role": "user", "content": "Here is the code diff:\n'"$DIFF_CONTENT"'\nPlease review and give suggestions."}
               ]
-            }' | jq -r '.choices[0].message.content' >> pr_review.md
+            }')
+
+          echo "$RESPONSE" | jq -r '.choices[0].message.content' >> pr_review.md || echo "❌ ChatGPT response failed." >> pr_review.md
           echo "\`\`\`" >> pr_review.md
 
       - name: Comment on PR
