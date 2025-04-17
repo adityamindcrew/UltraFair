@@ -320,10 +320,7 @@ const SignUp = (props) => {
           <br />
          
           <div className="cardSocialOut">
-            <Card className="cardSocialIn">
-              {" "}
-              <img src={FB} className="socialImage-f" />
-            </Card>
+            
       
          
           </div>
