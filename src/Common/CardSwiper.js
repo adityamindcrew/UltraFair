@@ -32,7 +32,7 @@ function CardSwiper({classnm,classnm1}) {
     <div className="Swiperresp">
       <Card.Header className="d-flex justify-content-between align-items-center" style={{padding:0}}>
         <div>
-          <h3 className="card-title m-0">Providers</h3>
+          <h3 className="card-title m-0" style={{color:'white'}}>Providers</h3>
         </div>
         <div className="" id="swiper">
           <div

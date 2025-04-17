@@ -11,7 +11,7 @@ export default function WalletSlider(props) {
     }
   });
   return (
-    <div className="firstDiv">
+    <div className="App">
       <div className="slider-container">
         {/* <div className="value-container">
           <span id="demo" className="buble">

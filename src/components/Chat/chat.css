@@ -60,11 +60,13 @@
 .chat-inner-left-text {
   font-weight: 700;
   font-size: 12px;
+  color: #b3bad1;
 }
 
 .chat-inner-right-text {
   font-size: 12px;
   font-weight: 400;
+  color: #b3bad1;
 }
 
 .chat-massage-inner-text {

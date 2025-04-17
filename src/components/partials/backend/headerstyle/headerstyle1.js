@@ -273,7 +273,10 @@ const HeaderStyle1 = (props) => {
               <div className="iq-search-bar ml-auto"></div>
               <div className=" mt-2">
                 <Nav as="ul" className=" navbar-list iq-header">
-                  <div className="d-flex">
+                  <div
+                    className="d-flex"
+                    style={{ justifyContent: "center", alignItems: "center" }}
+                  >
                     <div className="d-flex">
                       <div class="vl hide-data"></div>
                     </div>

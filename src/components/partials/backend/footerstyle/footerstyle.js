@@ -104,7 +104,14 @@ const FooterStyle = (props) => {
       <footer className="iq-footer">
         <div className="container-fluid">
           <div class="contain">
-            <div class="col">
+            <div
+              class="col"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+              }}
+            >
               <h1>Casino</h1>
               <ul>
                 <li>Games</li>
@@ -112,7 +119,14 @@ const FooterStyle = (props) => {
                 <li>prmotions</li>
               </ul>
             </div>
-            <div class="col">
+            <div
+              class="col"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+              }}
+            >
               <h1>Supports</h1>
               <ul>
                 <li>Fairness</li>
@@ -138,7 +152,14 @@ const FooterStyle = (props) => {
                 </li>
               </ul>
             </div>
-            <div class="col">
+            <div
+              class="col"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+              }}
+            >
               <h1>Community</h1>
               <ul>
                 <li>Blog</li>
@@ -198,7 +219,14 @@ const FooterStyle = (props) => {
                 </li>
               </ul>
             </div>
-            <div class="col">
+            <div
+              class="col"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+              }}
+            >
               <h1>About Us</h1>
               <ul>
                 <li>Privacy Policy</li>
@@ -210,7 +238,14 @@ const FooterStyle = (props) => {
                 <li>Self Exclusion</li>
               </ul>
             </div>
-            <div class="col col-hide">
+            <div
+              class="col col-hide"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+              }}
+            >
               <h1>Language</h1>
               <ul>
                 <li>

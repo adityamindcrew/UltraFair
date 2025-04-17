@@ -19,6 +19,13 @@ color: #ffff;
 .Freespace{
     /* display: none;; */
 }
+.CustomHeaderTitle{
+    font-family: 'Kanit';
+
+font-weight: 700;
+font-size: 22px;
+
+}
 .LOGOO{
     width: 35vw !important;
     /* height: 10vh!important; */

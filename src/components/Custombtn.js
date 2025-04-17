@@ -133,7 +133,7 @@ const Pricing = ({ mr, flx }) => {
                 fill="#B3BAD1"
               />
             </svg>
-            Filter By
+         <span style={{color:'white'}}>   Filter By</span>
           </div>
     <div className="Providerr">
     <Select

@@ -49,15 +49,15 @@ const SignUp = (props) => {
 
   let history = useHistory();
 
-  const[btncolor, setBtncolor] = useState('registerButton')
+  const [btncolor, setBtncolor] = useState("registerButton");
 
   const registerHandler = (color) => {
     props.showModal(false);
-    setBtncolor(color)
+    setBtncolor(color);
   };
   const loginHandler = (color) => {
     props.showModal(true);
-    setBtncolor(color)
+    setBtncolor(color);
   };
   const toggleButton = () => {
     setShow((prevState) => !prevState);
@@ -69,22 +69,28 @@ const SignUp = (props) => {
 
   return (
     <>
-      
       <div className="sign-in-page">
-
-        <div className="sign-user_card" >
+        <div className="sign-user_card">
           <div className="sign-in-page-data">
             <button
               type="button"
               class="close"
               aria-label="Close"
-              style={{ color: "white", position:'relative', top:-15, left:3, fontSize:33}}
+              style={{
+                color: "white",
+                position: "relative",
+                top: -15,
+                left: 3,
+                fontSize: 33,
+              }}
               onClick={() => {
                 console.log("Hellow!");
                 props.close(false);
               }}
             >
-              <span aria-hidden="true" style={{fontWeight:1}}>&times;</span>
+              <span aria-hidden="true" style={{ fontWeight: 1 }}>
+                &times;
+              </span>
             </button>
             <div className="sign-in-from w-100 m-auto">
               <Form className="" action="/">
@@ -99,25 +105,24 @@ const SignUp = (props) => {
                     <button
                       type="button"
                       class="btn btn-secondary registerToggle selected"
-                      
-                      onClick={()=>{registerHandler('registerButton')}}
-                    
+                      onClick={() => {
+                        registerHandler("registerButton");
+                      }}
                     >
                       Register
                     </button>
                     <button
                       type="button"
                       class="btn btn-secondary registerToggle"
-                     
-                      onClick={()=>{loginHandler('loginButton')}}
-                   
+                      onClick={() => {
+                        loginHandler("loginButton");
+                      }}
                     >
                       Sign In
                     </button>
                   </div>
                 </div>
 
-                
                 <Col md="12">
                   <Form.Group>
                     <Form.Label>First Name </Form.Label>
@@ -132,11 +137,11 @@ const SignUp = (props) => {
                       placeholder=""
                       autoComplete="off"
                       required
-                      style={{width:'100%'}}
+                      style={{ width: "100%" }}
                     />
                   </Form.Group>
                 </Col>
-                 
+
                 <Col md="12">
                   <Form.Group>
                     <Form.Label>Last Name </Form.Label>
@@ -151,12 +156,11 @@ const SignUp = (props) => {
                       placeholder=""
                       autoComplete="off"
                       required
-                      style={{width:'100%'}}
+                      style={{ width: "100%" }}
                     />
                   </Form.Group>
                 </Col>
 
-               
                 <Col md="12">
                   <Form.Group>
                     <Form.Label>Email </Form.Label>
@@ -171,13 +175,11 @@ const SignUp = (props) => {
                       placeholder=""
                       autoComplete="off"
                       required
-                      style={{width:'100%'}}
+                      style={{ width: "100%" }}
                     />
                   </Form.Group>
                 </Col>
-               
 
-               
                 <Col md="12">
                   <Form.Group>
                     <Form.Label>Create Password </Form.Label>
@@ -192,7 +194,7 @@ const SignUp = (props) => {
                         id="exampleInputPassword6"
                         placeholder=""
                         required
-                        style={{width:'100%'}}
+                        style={{ width: "100%" }}
                       />
                       <button
                         type="button"
@@ -218,7 +220,7 @@ const SignUp = (props) => {
                         id="exampleInputPassword6"
                         placeholder=""
                         required
-                        style={{width:'100%'}}
+                        style={{ width: "100%" }}
                       />
                       <button
                         type="button"
@@ -270,7 +272,7 @@ const SignUp = (props) => {
                     </div>
                   </Form.Group>
                 </Col>
-               
+
                 <InputGroup
                   className="mb-3"
                   style={{
@@ -283,10 +285,10 @@ const SignUp = (props) => {
                     fontStyle: "normal",
                     fontWeight: "500",
                     lineHeight: "18px",
-                    marginTop:20
+                    marginTop: 20,
                   }}
                 >
-                  <InputGroup.Checkbox aria-label="Checkbox for following text input"/>
+                  <InputGroup.Checkbox aria-label="Checkbox for following text input" />
                   By clicking the checkbox, you are indicating that you have
                   read and acknowledge the Terms & Conditions
                 </InputGroup>
@@ -295,11 +297,10 @@ const SignUp = (props) => {
                   <ReCAPTCHA
                     sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                     onChange={onChange}
-                    style={{ display:'flex', justifyContent:'center'}}
-                   
+                    style={{ display: "flex", justifyContent: "center" }}
                   />
                 </div>
-               
+
                 <br />
                 <Button
                   type="button"
@@ -308,8 +309,6 @@ const SignUp = (props) => {
                   className="btn1"
                   style={{
                     color: "black",
-                    fontWeight:'bold'
-                    
                   }}
                 >
                   Play Now
@@ -317,7 +316,7 @@ const SignUp = (props) => {
               </Form>
             </div>
           </div>
-         
+
           <br />
           <h6>
             <span style={{color:'white'}}> OR </span>
@@ -339,12 +338,11 @@ const SignUp = (props) => {
               <img src={Chat} className="socialImage" />
             </Card>
           </div>
-          <p className="privacyPolicy">
+          <p className="privacyPolicy" style={{ color: "#B3BAD1" }}>
             This site is protected by reCaptcha and the reCaptcha Privacy Policy
             and Terms of Service apply.
           </p>
         </div>
-
       </div>
     </>
   );
