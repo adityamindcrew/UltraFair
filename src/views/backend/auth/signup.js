@@ -318,13 +318,7 @@ const SignUp = (props) => {
           </div>
 
           <br />
-         
-          <div className="cardSocialOut">
-            
-      
-         
-          </div>
-          
+
         </div>
       </div>
     </>
