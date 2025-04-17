@@ -1,18 +1,17 @@
-name: Code Review
-
-permissions:
-  contents: read
-  pull-requests: write
+name: Run Code Review with ChatGPT
 
 on:
-  pull_request:
-    types: [opened, reopened, synchronize]
+  push:
+    branches:
+      - master
 
 jobs:
-  GPT-CODE-REVIEW:
+  review-code:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: adityamindcrew/UltraFair@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run ChatGPT Reviewer
+        uses: adityamindcrew/UltraFair@master 
