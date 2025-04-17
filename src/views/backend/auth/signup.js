@@ -327,10 +327,7 @@ const SignUp = (props) => {
             <Card className="cardSocialIn">
               <img src={Google} className="socialImage" />
             </Card>
-            <Card className="cardSocialIn">
-              {" "}
-              <img src={Line} className="socialImage" />
-            </Card>
+       
          
           </div>
           
