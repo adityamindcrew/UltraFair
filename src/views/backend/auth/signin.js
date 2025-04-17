@@ -174,11 +174,7 @@ const SignIn = (props) => {
                   />
                 </Form.Group>
                 <Form.Group>
-                  <Form.Label>Password</Form.Label>
-                  <Form.Label style={{ color: "red", marginLeft: "5px" }}>
-                    {" "}
-                    *
-                  </Form.Label>
+             
                   <div className="password">
                     <Form.Control
                       type={show ? "text" : "password"}

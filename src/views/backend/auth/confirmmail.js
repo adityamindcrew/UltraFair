@@ -39,6 +39,18 @@ const ConfirmMail = (props) => {
       }
    })
 
+   const [name, setName] = useState('');
+   const [submitted, setSubmitted] = useState(false);
+   let temp = 'temp value'; // unused
+ 
+   const handleSubmit = () => {
+     setSubmitted(true)
+     alert("Submitted!")
+     console.log('Form submitted:', name)
+   }
+ 
+   const unusedValue = "I'm not used"
+
     return (
         <>
             <div className={`rtl-box ${show===true?'show':''}`} >
@@ -53,6 +65,9 @@ const ConfirmMail = (props) => {
                      <li className="dir-btn" data-mode="rtl" data-active="true" onClick={() => {props.rtlModeAction('rtl')}}  data-value="rtl"><Link to="#">RTL</Link></li>
                   </ul>
                </div>
+               <div onClick={handleClick} style={{ fontSize: 20, margin: 10 }}>
+      Click here to update count: {count}
+    </div>
             </div>
             <section className="sign-in-page">
                <Container className="h-100">
@@ -62,10 +77,10 @@ const ConfirmMail = (props) => {
                            <div className="sign-in-page-data">
                               <div className="sign-in-from w-100 m-auto">
                                  <img src={mail} width="80"  alt=""/>
-                                 <h3 className="mt-3 mb-0">Success !</h3>
-                                 <p className="text-white">A email has been send to <Button href="/cdn-cgi/l/email-protection" className="__cf_email__ bg-dark border-0 p-0" data-cfemail="5f26302a2d3a323e36331f3b30323e3631713c303271">[email&#160;protected]</Button> Please check for an email from company and click on the included link to reset your password.</p>
+                                 <h3 className="mt-3 mb-0">Succe !</h3>
+                                 <p className="text-white">A to <Button href="/cdn-cgi/l/email-protection" className="__cf_email__ bg-dark border-0 p-0" data-cfemail="5f26302a2d3a323e36331f3b30323e3631713c303271">[email&#160;protected]</Button> Please check for an email from company and click on the included link to reset your password.</p>
                                  <div className="d-inline-block w-100">
-                                    <Link to="/" className="btn btn-primary mt-3">Back to Home</Link>
+                                    <Link to="/" className="btn btn-primary mt-3">Back to</Link>
                                  </div>
                               </div>
                            </div>
