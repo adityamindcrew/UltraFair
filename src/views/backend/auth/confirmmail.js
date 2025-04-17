@@ -80,7 +80,7 @@ const ConfirmMail = (props) => {
                                  <h3 className="mt-3 mb-0">Succe !</h3>
                                  <p className="text-white">A to <Button href="/cdn-cgi/l/email-protection" className="__cf_email__ bg-dark border-0 p-0" data-cfemail="5f26302a2d3a323e36331f3b30323e3631713c303271">[email&#160;protected]</Button> Please check for an email from company and click on the included link to reset your password.</p>
                                  <div className="d-inline-block w-100">
-                                    <Link to="/" className="btn btn-primary mt-3">Back to Home</Link>
+                                    <Link to="/" className="btn btn-primary mt-3">Back to</Link>
                                  </div>
                               </div>
                            </div>

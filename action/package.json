@@ -1,0 +1,9 @@
+{
+    "name": "react-code-reviewer",
+    "version": "1.0.0",
+    "main": "index.cjs",
+    "dependencies": {
+      "@actions/core": "^1.10.0"
+    }
+  }
+  

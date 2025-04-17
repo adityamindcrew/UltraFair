@@ -1,32 +1,42 @@
 const core = require('@actions/core');
-const github = require('@actions/github');
-const { execSync } = require('child_process');
 const fs = require('fs');
-const { Configuration, OpenAIApi } = require("openai");
+const path = require('path');
 
-(async () => {
-  try {
-    const token = core.getInput("openai_token");
-    const config = new Configuration({ apiKey: token });
-    const openai = new OpenAIApi(config);
-
-    // Run eslint to get changed files
-    const changedFiles = execSync('git diff --name-only HEAD^ HEAD').toString().split('\n').filter(f => f.endsWith('.js') || f.endsWith('.jsx'));
-
-    for (const file of changedFiles) {
-      const content = fs.readFileSync(file, 'utf8');
-      const response = await openai.createChatCompletion({
-        model: "gpt-4",
-        messages: [
-          { role: "system", content: "You are a senior React developer doing a code review." },
-          { role: "user", content: `Review this React code and give feedback:\n\n${content}` }
-        ]
-      });
-
-      console.log(`💬 Review for ${file}:\n`, response.data.choices[0].message.content);
+function findJSFiles(dir, fileList = []) {
+  const files = fs.readdirSync(dir);
+  files.forEach(file => {
+    const fullPath = path.join(dir, file);
+    if (fs.statSync(fullPath).isDirectory()) {
+      findJSFiles(fullPath, fileList);
+    } else if (file.endsWith('.js') || file.endsWith('.jsx')) {
+      fileList.push(fullPath);
     }
+  });
+  return fileList;
+}
 
-  } catch (error) {
-    core.setFailed(error.message);
+function reviewReactCode() {
+  const srcDir = path.join(process.cwd(), 'src');
+  if (!fs.existsSync(srcDir)) {
+    core.warning('No src/ directory found. Is this a React project?');
+    return;
   }
-})();
+
+  const jsFiles = findJSFiles(srcDir);
+  core.info(`📁 Found ${jsFiles.length} JS/JSX files.`);
+
+  jsFiles.forEach(file => {
+    const content = fs.readFileSync(file, 'utf8');
+    if (content.includes('console.log')) {
+      core.warning(`⚠️ Avoid using console.log in production — found in ${file}`);
+    }
+  });
+}
+
+try {
+  core.startGroup('🔍 Reviewing React code...');
+  reviewReactCode();
+  core.endGroup();
+} catch (error) {
+  core.setFailed(`Action failed with error: ${error.message}`);
+}
