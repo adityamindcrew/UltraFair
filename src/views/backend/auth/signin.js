@@ -158,20 +158,9 @@ const SignIn = (props) => {
                   </div>
                 </div>
                 <Form.Group>
-                  <Form.Label>Email</Form.Label>
-                  <Form.Label style={{ color: "red", marginLeft: "5px" }}>
-                    {" "}
-                    *
-                  </Form.Label>
-                  <Form.Control
-                    type="email"
-                    className="mb-0"
-                    id="exampleInputEmail1"
-                    placeholder=""
-                    autoComplete="off"
-                    required
-                    style={{ width: "100%" }}
-                  />
+                  <Form.Label></Form.Label>
+                
+               
                 </Form.Group>
                 <Form.Group>
              
