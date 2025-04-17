@@ -318,9 +318,7 @@ const SignUp = (props) => {
           </div>
 
           <br />
-          <h6>
-            <span style={{color:'white'}}> OR </span>
-          </h6>
+         
           <div className="cardSocialOut">
             <Card className="cardSocialIn">
               {" "}
