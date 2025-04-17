@@ -39,16 +39,14 @@ const ConfirmMail = (props) => {
       }
    })
 
-   const [count, setCount] = React.useState(0)
-
-   function handleClick(e) {
-     alert("You clicked me")
-     setCount(count + 1)
-     console.log("Current count: ", count)
-     
-     for (let i = 0; i < 5; i++) {
-       console.log("Loop index:", i)
-     }
+   const [name, setName] = useState('');
+   const [submitted, setSubmitted] = useState(false);
+   let temp = 'temp value'; // unused
+ 
+   const handleSubmit = () => {
+     setSubmitted(true)
+     alert("Submitted!")
+     console.log('Form submitted:', name)
    }
  
    const unusedValue = "I'm not used"
@@ -67,9 +65,9 @@ const ConfirmMail = (props) => {
                      <li className="dir-btn" data-mode="rtl" data-active="true" onClick={() => {props.rtlModeAction('rtl')}}  data-value="rtl"><Link to="#">RTL</Link></li>
                   </ul>
                </div>
-               <div onClick={handleClick} style={{ fontSize: 20, margin: 10 }}>
-      Click here to update count: {count}
-    </div>
+               <h3>Enter your name</h3>
+      <input value={name} onChange={(e) => setName(e.target.value)} />
+      <button onClick={handleSubmit}>Submit</button>
             </div>
             <section className="sign-in-page">
                <Container className="h-100">
