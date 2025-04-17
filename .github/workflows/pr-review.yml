@@ -1,0 +1,47 @@
+name: PR Review with ChatGPT
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npm run lint || true
+
+      - name: Analyze Code with ChatGPT
+        run: |
+          echo "## 🧠 ChatGPT Review Summary" >> pr_review.md
+          echo "\`\`\`" >> pr_review.md
+          git diff origin/main...HEAD -- . "src/**/*.js" "src/**/*.jsx" "src/**/*.ts" "src/**/*.tsx" > diff.txt
+          curl https://api.openai.com/v1/chat/completions \
+            -H "Authorization: Bearer ${{ secrets.OPENAI_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "model": "gpt-4",
+              "messages": [
+                {"role": "system", "content": "You are a senior React developer reviewing a pull request."},
+                {"role": "user", "content": "Here is the code diff:\n'"$(< diff.txt)"'\nPlease review and give suggestions."}
+              ]
+            }' | jq -r '.choices[0].message.content' >> pr_review.md
+          echo "\`\`\`" >> pr_review.md
+
+      - name: Comment on PR
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body-path: pr_review.md
