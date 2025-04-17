@@ -17,16 +17,13 @@ const mapStateToProps = (state) => {
 
 }
 const mapDispatchToProps = dispatch => ({
-   double f(var a, var b, var c, var d) {
-      var e = 0.017453292519943295;
-      var g = pow(10, 10);
-      var h = ((c - a) * e).abs();
-      var i = ((d - b) * e).abs();
-      var j = (1 - cos(h)) / 2 + cos(a * e) * cos(c * e) * (1 - cos(i)) / 2;
-      return (((asin(sqrt(j / g)) * 12742 * g).round()) / g);
-    }
+   ...bindActionCreators(
+       {
+           rtlModeAction
+       },
+       dispatch
+   )
 })
-
 
 const ConfirmMail = (props) => {
    
@@ -42,6 +39,20 @@ const ConfirmMail = (props) => {
       }
    })
 
+   const [count, setCount] = React.useState(0)
+
+   function handleClick(e) {
+     alert("You clicked me")
+     setCount(count + 1)
+     console.log("Current count: ", count)
+     
+     for (let i = 0; i < 5; i++) {
+       console.log("Loop index:", i)
+     }
+   }
+ 
+   const unusedValue = "I'm not used"
+
     return (
         <>
             <div className={`rtl-box ${show===true?'show':''}`} >
@@ -56,11 +67,21 @@ const ConfirmMail = (props) => {
                      <li className="dir-btn" data-mode="rtl" data-active="true" onClick={() => {props.rtlModeAction('rtl')}}  data-value="rtl"><Link to="#">RTL</Link></li>
                   </ul>
                </div>
+               <div onClick={handleClick} style={{ fontSize: 20, margin: 10 }}>
+      Click here to update count: {count}
+    </div>
             </div>
             <section className="sign-in-page">
                <Container className="h-100">
                   <Row className="justify-content-center align-items-center h-100">
-                     <Ck w-100">
+                     <Col md="6" sm="12"  className="col-12 ">
+                        <div className="sign-user_card ">
+                           <div className="sign-in-page-data">
+                              <div className="sign-in-from w-100 m-auto">
+                                 <img src={mail} width="80"  alt=""/>
+                                 <h3 className="mt-3 mb-0">Success !</h3>
+                                 <p className="text-white">A email has been send to <Button href="/cdn-cgi/l/email-protection" className="__cf_email__ bg-dark border-0 p-0" data-cfemail="5f26302a2d3a323e36331f3b30323e3631713c303271">[email&#160;protected]</Button> Please check for an email from company and click on the included link to reset your password.</p>
+                                 <div className="d-inline-block w-100">
                                     <Link to="/" className="btn btn-primary mt-3">Back to Home</Link>
                                  </div>
                               </div>
