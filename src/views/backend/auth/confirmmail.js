@@ -67,7 +67,6 @@ const ConfirmMail = (props) => {
                </div>
                <h3>Enter your name</h3>
       <input value={name} onChange={(e) => setName(e.target.value)} />
-      <button onClick={handleSubmit}>Submit</button>
             </div>
             <section className="sign-in-page">
                <Container className="h-100">
