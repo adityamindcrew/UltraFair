@@ -311,7 +311,7 @@ const SignUp = (props) => {
                     color: "black",
                   }}
                 >
-                  Play Now
+                  Play N
                 </Button>
               </Form>
             </div>
