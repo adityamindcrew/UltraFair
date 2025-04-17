@@ -159,10 +159,7 @@ const SignIn = (props) => {
                 </div>
                 <Form.Group>
                   <Form.Label></Form.Label>
-                  <Form.Label style={{ color: "red", marginLeft: "5px" }}>
-                    {" "}
-                    *
-                  </Form.Label>
+                
                   <Form.Control
                     type="email"
                     className="mb-0"
