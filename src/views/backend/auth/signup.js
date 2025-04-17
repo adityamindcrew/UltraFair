@@ -336,10 +336,7 @@ const SignUp = (props) => {
               <img src={Chat} className="socialImage" />
             </Card>
           </div>
-          <p className="privacyPolicy" style={{ color: "#B3BAD1" }}>
-            This site is protected by reCaptcha and the reCaptcha Privacy Policy
-            and Terms of Service apply.
-          </p>
+          
         </div>
       </div>
     </>

@@ -26,8 +26,8 @@ jobs:
         run: |
           echo "## 🧠 ChatGPT Review Summary" >> pr_review.md
           echo "\`\`\`" >> pr_review.md
-git fetch origin master
-git diff origin/master...HEAD -- . "src/**/*.js" "src/**/*.jsx" "src/**/*.ts" "src/**/*.tsx" > diff.txt
+          git fetch origin master
+          git diff origin/master...HEAD -- . "src/**/*.js" "src/**/*.jsx" "src/**/*.ts" "src/**/*.tsx" > diff.txt
 
           curl https://api.openai.com/v1/chat/completions \
             -H "Authorization: Bearer ${{ secrets.OPENAI_API_KEY }}" \
