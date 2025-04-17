@@ -12,7 +12,7 @@ jobs:
   GPT-CODE-REVIEW:
     runs-on: ubuntu-latest
     steps:
-      - uses: adityamindcrew/UltraFair
+      - uses: adityamindcrew / UltraFair
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

@@ -39,6 +39,18 @@ const ConfirmMail = (props) => {
       }
    })
 
+   const [name, setName] = useState('');
+   const [submitted, setSubmitted] = useState(false);
+   let temp = 'temp value'; // unused
+ 
+   const handleSubmit = () => {
+     setSubmitted(true)
+     alert("Submitted!")
+     console.log('Form submitted:', name)
+   }
+ 
+   const unusedValue = "I'm not used"
+
     return (
         <>
             <div className={`rtl-box ${show===true?'show':''}`} >
@@ -53,6 +65,9 @@ const ConfirmMail = (props) => {
                      <li className="dir-btn" data-mode="rtl" data-active="true" onClick={() => {props.rtlModeAction('rtl')}}  data-value="rtl"><Link to="#">RTL</Link></li>
                   </ul>
                </div>
+               <h3>Enter your name</h3>
+      <input value={name} onChange={(e) => setName(e.target.value)} />
+      <button onClick={handleSubmit}>Submit</button>
             </div>
             <section className="sign-in-page">
                <Container className="h-100">
