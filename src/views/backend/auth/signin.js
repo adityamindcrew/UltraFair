@@ -157,11 +157,7 @@ const SignIn = (props) => {
                     </button>
                   </div>
                 </div>
-                <Form.Group>
-                  <Form.Label></Form.Label>
-                
-               
-                </Form.Group>
+        
                 <Form.Group>
              
                   <div className="password">
